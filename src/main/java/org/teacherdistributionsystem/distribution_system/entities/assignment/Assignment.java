@@ -2,6 +2,7 @@ package org.teacherdistributionsystem.distribution_system.entities.assignment;
 
 import jakarta.persistence.*;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 
 import java.time.LocalDate;
 
@@ -31,8 +32,9 @@ public class Assignment {
     @Column(name = "jour_numero", nullable = false)
     private Integer jourNumero;
 
-    @Column(length = 10, nullable = false)
-    private String seance;
+    @Enumerated(EnumType.STRING)
+    @Column( nullable = false)
+    private SeanceType seance;
 
     @Column(name = "is_subject_expert", columnDefinition = "BOOLEAN DEFAULT FALSE")
     private Boolean isSubjectExpert = false;

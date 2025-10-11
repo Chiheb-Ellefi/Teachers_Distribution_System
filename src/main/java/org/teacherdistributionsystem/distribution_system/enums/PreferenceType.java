@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.entities.teacher;
+package org.teacherdistributionsystem.distribution_system.enums;
 public enum PreferenceType {
     NOTHING,
     MORNING_PREFERRED,

@@ -1,7 +1,6 @@
-package org.teacherdistributionsystem.distribution_system.utils.data;
+package org.teacherdistributionsystem.distribution_system.enums;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter

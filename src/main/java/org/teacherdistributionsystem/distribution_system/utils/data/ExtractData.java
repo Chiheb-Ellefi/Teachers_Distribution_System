@@ -2,17 +2,14 @@ package org.teacherdistributionsystem.distribution_system.utils.data;
 
 
 import jakarta.annotation.PostConstruct;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import org.teacherdistributionsystem.distribution_system.entities.assignment.Exam;
-import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
+import org.teacherdistributionsystem.distribution_system.entities.assignment.*;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.*;
+import org.teacherdistributionsystem.distribution_system.enums.*;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamSessionRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.*;
@@ -20,8 +17,10 @@ import org.teacherdistributionsystem.distribution_system.repositories.teacher.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,22 +55,71 @@ public class ExtractData {
     }
     @PostConstruct
     @Order(0)
-    private void populateExamSession() {
-        //----------Example of session ( to set in production from input from desktop app )-----------------
-        LocalDate startDate = LocalDate.now().plusDays(10);
-        LocalDate endDate = LocalDate.now().plusDays(20);
-        ExamSession session=ExamSession.builder()
-                .academicYear("2025")
-                .semesterCode("S1")
-                .semesterLibelle("Semester 1")
-                .sessionLibelle("Partiel")
+    private void populateExamSession() throws IOException {
+
+        FileInputStream file = new FileInputStream(examDataFile);
+        Workbook workbook = new XSSFWorkbook(file);
+        Sheet sheet = workbook.getSheetAt(0);
+
+        LocalDate startDate = null;
+        LocalDate endDate = null;
+        String academicYear ;
+        String sessionLibelle = null;
+        String semesterLibelle = null;
+
+        for (Row row : sheet) {
+            if (row.getRowNum() == 0) continue;
+
+            Function<Integer, String> getString = i -> {
+                Cell cell = row.getCell(i);
+                if (cell == null) return "";
+                return switch (cell.getCellType()) {
+                    case STRING -> cell.getStringCellValue().trim();
+                    case NUMERIC -> {
+                        if (DateUtil.isCellDateFormatted(cell)) {
+                            yield cell.getLocalDateTimeCellValue().toLocalDate().toString();
+                        } else {
+                            yield String.valueOf((int) cell.getNumericCellValue());
+                        }
+                    }
+                    case BOOLEAN -> String.valueOf(cell.getBooleanCellValue());
+                    default -> "";
+                };
+            };
+
+            LocalDate examDate = getLocalDate(getString.apply(0));
+
+            if (startDate == null || examDate.isBefore(startDate)) {
+                startDate = examDate;
+            }
+            if (endDate == null || examDate.isAfter(endDate)) {
+                endDate = examDate;
+            }
+
+            sessionLibelle = SessionType.valueOf(getString.apply(3)).getLabel();
+            semesterLibelle = getString.apply(5);
+        }
+
+        if (endDate == null) {
+            throw new IllegalStateException("No valid exam dates found in Excel file.");
+        }
+
+        academicYear = String.valueOf(endDate.getYear());
+        int jourNumero = (int) ChronoUnit.DAYS.between(startDate, endDate) + 1;
+
+        ExamSession session = ExamSession.builder()
                 .startDate(startDate)
                 .endDate(endDate)
-                .numExamDays(10)
-                .seancesPerDay(4)
+                .sessionLibelle(sessionLibelle)
+                .academicYear(academicYear)
+                .semesterCode(SemesterType.fromLabel(semesterLibelle).getLabel())
+                .numExamDays(jourNumero)
+                .seancesPerDay(SeanceType.values().length)
+                .semesterLibelle(semesterLibelle)
                 .build();
         examSessionRepository.save(session);
     }
+
 
     @PostConstruct
     @Order(1)
@@ -196,12 +244,12 @@ public class ExtractData {
     teacherUnavailabilitRepository.saveAll(teacherUnavailabilityList);
  }
 
-
+ @Order(4)
     @PostConstruct
     public void populateExam() throws IOException {
         List<Exam> examList = new ArrayList<>();
-        try (FileInputStream file = new FileInputStream(examDataFile);
-             Workbook workbook = new XSSFWorkbook(file)) {
+        FileInputStream file = new FileInputStream(examDataFile);
+             Workbook workbook = new XSSFWorkbook(file);
 
             Sheet sheet = workbook.getSheetAt(0);
             sheet.forEach(row -> {
@@ -237,25 +285,44 @@ public class ExtractData {
                     return;
                 }
 
+                LocalDate examDate=getLocalDate(getString.apply(0));
+                LocalTime startTime=getLocalTime(getString.apply(1));
+                LocalTime endTime=getLocalTime(getString.apply(2));
+                assert examSession != null;
+                int jourNumero = (int)ChronoUnit.DAYS.between(LocalDate.of(2025,5,13),examDate)+1;
                 Exam exam = Exam.builder()
-                        .examDate(getString.apply(0))
-                        .startTime(getString.apply(1))
-                        .endTime(getString.apply(2))
+                        .examDate(examDate)
+                        .startTime(startTime)
+                        .endTime(endTime)
                         .examSession(examSession)
                         .examType(getString.apply(4))
                         .responsable(teacher)
                         .numRooms(getString.apply(7))
                         .requiredSupervisors(2)
-                        .seance("S1")
-                        .jourNumero(1)
+                        .seance(SeanceType.fromTime(startTime))
+                        .jourNumero(jourNumero)
                         .build();
 
                 examList.add(exam);
             });
 
             examRepository.saveAll(examList);
-        }
+
     }
+
+    private LocalTime getLocalTime(String dateTimeStr) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime dateTime = LocalDateTime.parse(dateTimeStr, formatter);
+        return dateTime.toLocalTime();
+
+    }
+    private LocalDate getLocalDate(String dateTimeStr) {
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return LocalDate.parse(dateTimeStr.trim(), formatter);
+
+    }
+
 
 
 

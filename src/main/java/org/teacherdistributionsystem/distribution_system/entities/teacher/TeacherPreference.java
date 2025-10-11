@@ -6,8 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
-
-
+import org.teacherdistributionsystem.distribution_system.enums.PreferenceType;
 
 
 @Entity

@@ -6,10 +6,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 
-import java.sql.Time;
 import java.time.LocalDate;
-import java.util.Date;
+import java.time.LocalTime;
 
 @Entity
 @Builder
@@ -31,18 +31,20 @@ public class Exam {
     private Teacher responsable;
 
     @Column(name = "exam_date", nullable = false)
-    private String examDate;
+    private LocalDate examDate;
 
     @Column(name = "jour_numero", nullable = false)
     private Integer jourNumero;
 
-    @Column(length = 10, nullable = false)
-    private String seance;
+    @Enumerated(EnumType.STRING)
     @Column( nullable = false)
-    private String startTime;
+    private SeanceType seance;
+
+    @Column( nullable = false)
+    private LocalTime startTime;
 
     @Column (nullable = false)
-    private String endTime;
+    private LocalTime endTime;
 
 
     @Column(name = "num_rooms", length = 10)
