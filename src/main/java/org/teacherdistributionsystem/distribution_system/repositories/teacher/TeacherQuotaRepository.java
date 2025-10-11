@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.repositories;
+package org.teacherdistributionsystem.distribution_system.repositories.teacher;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
