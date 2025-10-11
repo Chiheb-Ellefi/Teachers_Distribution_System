@@ -1,10 +1,18 @@
 package org.teacherdistributionsystem.distribution_system.entities.teacher;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 
 @Entity
 @Table(name = "teacher_unavailability")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 public class TeacherUnavailability {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +32,5 @@ public class TeacherUnavailability {
     @Column(length = 10, nullable = false)
     private String seance;
 
-    @Column(name = "is_absolute", columnDefinition = "BOOLEAN DEFAULT TRUE") // Hard constraint vs. soft preference
-    private Boolean isAbsolute = true;
 
 }

@@ -44,7 +44,5 @@ public class ExamSession {
     @Column(name = "seances_per_day", columnDefinition = "INTEGER DEFAULT 4") //S1, S2, S3 , S4
     private Integer seancesPerDay = 4;
 
-    @Column(name = "status", length = 20, columnDefinition = "VARCHAR(20) DEFAULT 'DRAFT'") // DRAFT, OPTIMIZING, COMPLETED, ARCHIVED
-    private String status = "DRAFT";
 
 }

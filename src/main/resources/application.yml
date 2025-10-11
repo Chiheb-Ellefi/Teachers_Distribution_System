@@ -2,7 +2,7 @@ spring:
   application:
     name: distribution_system
     teachersListFile: '/home/chihebellefi/Downloads/ens_dist/Enseignants avec code ensiegant responsable.xlsx'
-
+    teachersUnavailabilyFile: '/home/chihebellefi/Downloads/ens_dist/Souhaits Enseignants.xlsx'
   datasource:
     #url: jdbc:h2:mem:testdb #for memory
     url: jdbc:h2:file:./data/testdb

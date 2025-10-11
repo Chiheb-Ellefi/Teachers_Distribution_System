@@ -29,8 +29,11 @@ public class TeacherQuota {
     @Column(name = "assigned_quota", nullable = false)
     private Integer assignedQuota;
 
-    @Column(name = "quota_type", length = 20, columnDefinition = "VARCHAR(20) DEFAULT 'STANDARD'") // STANDARD, REDUCED, INCREASED
-    private String quotaType = "STANDARD";
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "quota_type", length = 20, nullable = false)
+    private QuotaType quotaType = QuotaType.STANDARD;
+
 
     @Column(length = 255)
     private String reason; //if its reduced or increased why
