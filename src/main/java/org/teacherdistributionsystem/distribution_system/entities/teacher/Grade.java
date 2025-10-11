@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-public class GradeType {
+public class Grade {
     @Id
     @Column(name = "grade_code", length = 10)
     private String gradeCode;

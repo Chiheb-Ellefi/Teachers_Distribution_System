@@ -32,6 +32,6 @@ public class AssignmentHistory {
 
     @Column(name = "weekend_count", columnDefinition = "INTEGER DEFAULT 0")
     private Integer weekendCount = 0;
-
-    //-------------- We can add an attribute to save the number of session that they didn't supervise  to add to their quota  the next session
+    @Column(name = "credit", columnDefinition = "INTEGER DEFAULT 0")
+    private Integer credit = 0;
 }

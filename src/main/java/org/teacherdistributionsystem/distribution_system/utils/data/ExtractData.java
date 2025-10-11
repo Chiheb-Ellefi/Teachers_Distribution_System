@@ -125,7 +125,7 @@ public class ExtractData {
     @Order(1)
  void populateTeachersTable() throws IOException {
         List<Teacher> teachers=new ArrayList<>();
-        List<GradeType> grades=new ArrayList<>();
+        List<Grade> grades=new ArrayList<>();
         List<TeacherQuota> teacherQuotas=new ArrayList<>();
         List<TeacherPreference> teacherPreferences=new ArrayList<>();
      FileInputStream file = new FileInputStream(teachersListFile);
@@ -167,17 +167,17 @@ public class ExtractData {
                      .build();
              teachers.add(teacher);
              //-----Build grade type instance------
-             GradeType gradeType=GradeType.builder()
+             Grade gradeType= Grade.builder()
                      .gradeCode(getString.apply(3))
-                     .gradeLibelle(GradeMap.fromCode(getString.apply(3)).getLabel())
-                     .defaultQuotaPerSession(GradeMap.fromCode(getString.apply(3)).getDefaultQuota())
-                     .priorityLevel(GradeMap.fromCode(getString.apply(3)).getPriority())
+                     .gradeLibelle(GradeType.fromCode(getString.apply(3)).getLabel())
+                     .defaultQuotaPerSession(GradeType.fromCode(getString.apply(3)).getDefaultQuota())
+                     .priorityLevel(GradeType.fromCode(getString.apply(3)).getPriority())
                      .build();
              grades.add(gradeType);
              //-------Build teacher quota instance -------
 
              TeacherQuota quota=TeacherQuota.builder()
-                     .assignedQuota(GradeMap.fromCode(getString.apply(3)).getDefaultQuota())
+                     .assignedQuota(GradeType.fromCode(getString.apply(3)).getDefaultQuota())
                      .teacher(teacher)
                      .examSession(session)
                      .quotaType(QuotaType.STANDARD)

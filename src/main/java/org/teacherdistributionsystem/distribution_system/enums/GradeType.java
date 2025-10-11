@@ -4,7 +4,7 @@ package org.teacherdistributionsystem.distribution_system.enums;
 import lombok.Getter;
 
 @Getter
-public enum GradeMap {
+public enum GradeType {
     PR("Professeur", 2, 0),
     PES("Professeur de l’Enseignement Supérieur", 2, 0),
     MC("Maître de Conférences", 3, 1),
@@ -20,13 +20,13 @@ public enum GradeMap {
     private final int defaultQuota;
     private final int priority;
 
-    GradeMap(String label, int defaultQuota, int priority) {
+    GradeType(String label, int defaultQuota, int priority) {
         this.label = label;
         this.defaultQuota = defaultQuota;
         this.priority = priority;
     }
-    public static GradeMap fromCode(String code) {
-        return GradeMap.valueOf(code);
+    public static GradeType fromCode(String code) {
+        return GradeType.valueOf(code);
     }
 
 }
