@@ -1,8 +1,12 @@
 package org.teacherdistributionsystem.distribution_system.entities.teacher;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "grade_types")
 public class GradeType {
     @Id
     @Column(name = "grade_code", length = 10)

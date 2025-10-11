@@ -9,6 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,7 +34,5 @@ public class Teacher {
     @Column(name = "participe_surveillance", columnDefinition = "BOOLEAN DEFAULT TRUE")
     private Boolean participeSurveillance = true;
 
-    @Column(length = 100)
-    private String department;
 
 }
