@@ -9,19 +9,36 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.teacherdistributionsystem.distribution_system.entities.teacher.GradeType;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.repositories.GradeTypeRepository;
+import org.teacherdistributionsystem.distribution_system.repositories.TeacherRepository;
 
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import java.util.function.Function;
 
 @Component
 public class ExtractData {
+
+    private final TeacherRepository teacherRepository;
+    private final GradeTypeRepository gradeTypeRepository;
     @Value("${spring.application.teachersListFile}")
     private  String teachersListFile;
+
+    public ExtractData(TeacherRepository teacherRepository, GradeTypeRepository gradeTypeRepository) {
+        this.teacherRepository = teacherRepository;
+        this.gradeTypeRepository = gradeTypeRepository;
+    }
+
     @PostConstruct
- void getDataFromExcel() throws IOException {
+ void populateTeachersTable() throws IOException {
+        List<Teacher> teachers=new ArrayList<>();
+        List<GradeType> grades=new ArrayList<>();
      FileInputStream file = new FileInputStream(teachersListFile);
      Workbook workbook = new XSSFWorkbook(file);
      Sheet sheet = workbook.getSheetAt(0);
@@ -56,12 +73,20 @@ public class ExtractData {
                      .codeSmartex(getInteger.apply(4))
                      .participeSurveillance(getBoolean.apply(5))
                      .build();
+             teachers.add(teacher);
 
-             System.out.println(teacher.getGradeCode());
+             GradeType gradeType=GradeType.builder()
+                     .gradeCode(getString.apply(3))
+                     .gradeLibelle(GradeMap.fromCode(getString.apply(3)).getLabel())
+                     .defaultQuotaPerSession(GradeMap.fromCode(getString.apply(3)).getDefaultQuota())
+                     .priorityLevel(GradeMap.fromCode(getString.apply(3)).getPriority())
+                     .build();
+             grades.add(gradeType);
          }
-
+        teacherRepository.saveAll(teachers);
+         gradeTypeRepository.saveAll(grades);
      });
 
-
  }
+
 }
