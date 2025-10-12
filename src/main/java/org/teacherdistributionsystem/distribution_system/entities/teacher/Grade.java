@@ -29,7 +29,4 @@ public class Grade {
     @Column(name = "priority_level", columnDefinition = "INTEGER DEFAULT 0")
     private Integer priorityLevel = 0;
 
-
-
-
 }

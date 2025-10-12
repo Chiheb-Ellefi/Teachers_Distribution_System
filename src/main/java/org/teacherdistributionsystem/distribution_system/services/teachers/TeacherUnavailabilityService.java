@@ -1,0 +1,85 @@
+package org.teacherdistributionsystem.distribution_system.services.teachers;
+
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.springframework.stereotype.Service;
+import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
+import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.entities.teacher.TeacherUnavailability;
+import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
+import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherUnavailabilityRepository;
+import org.teacherdistributionsystem.distribution_system.models.TeacherKey;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsInteger;
+import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsString;
+
+@Service
+public class TeacherUnavailabilityService {
+    private final TeacherUnavailabilityRepository teacherUnavailabilitRepository;
+    private final TeacherRepository teacherRepository;
+    public TeacherUnavailabilityService(TeacherUnavailabilityRepository teacherUnavailabilitRepository, TeacherRepository teacherRepository) {
+        this.teacherUnavailabilitRepository = teacherUnavailabilitRepository;
+        this.teacherRepository = teacherRepository;
+    }
+    public void addTeachersUnavailability(FileInputStream file, ExamSession session) throws IOException {
+
+        Map<TeacherKey, Teacher> teacherMap = teacherRepository.findAll()
+                .stream()
+                .collect(Collectors.toMap(
+                        t -> new TeacherKey(t.getNom(), t.getPrenom()),
+                        t -> t,
+                        (existing, duplicate) -> {
+                            System.err.println("WARNING: Duplicate teacher name found: " +
+                                    existing.getNom() + " " + existing.getPrenom() +
+                                    " (IDs: " + existing.getId() + " and " + duplicate.getId() +
+                                    "). Using ID: " + existing.getId());
+                            return existing;
+                        }
+                ));
+
+        List<TeacherUnavailability> teacherUnavailabilityList = getTeacherUnavailabilities(file, session, teacherMap);
+
+        teacherUnavailabilitRepository.saveAll(teacherUnavailabilityList);
+    }
+
+    private static List<TeacherUnavailability> getTeacherUnavailabilities(FileInputStream file, ExamSession session, Map<TeacherKey, Teacher> teacherMap) throws IOException {
+        List<TeacherUnavailability> teacherUnavailabilityList = new ArrayList<>();
+        Workbook workbook = new XSSFWorkbook(file);
+        workbook.forEach(sheet -> {
+            sheet.forEach(row -> {
+                if (row.getRowNum() == 0) return;
+
+                String nom = getCellAsString(row, 2);
+                String prenom = getCellAsString(row, 3);
+
+                TeacherKey key = new TeacherKey(
+                        getCellAsString(row, 2),
+                        getCellAsString(row, 3)
+                );
+                Teacher teacher = teacherMap.get(key);
+
+                if (teacher == null) {
+                    System.err.println("Teacher not found: " + nom + " " + prenom);
+                    return;
+                }
+                TeacherUnavailability teacherUnavailability = TeacherUnavailability.builder()
+                        .teacher(teacher)
+                        .examSession(session)
+                        .numeroJour(getCellAsInteger(row, 4))
+                        .seance(getCellAsString(row, 5))
+                        .build();
+
+                teacherUnavailabilityList.add(teacherUnavailability);
+            });
+        });
+        return teacherUnavailabilityList;
+    }
+}

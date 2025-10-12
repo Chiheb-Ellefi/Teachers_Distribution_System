@@ -1,10 +1,18 @@
 package org.teacherdistributionsystem.distribution_system.entities.assignment;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 
 @Entity
 @Table(name = "assignment_history")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 public class AssignmentHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

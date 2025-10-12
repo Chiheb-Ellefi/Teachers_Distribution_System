@@ -1,6 +1,10 @@
 package org.teacherdistributionsystem.distribution_system.entities.assignment;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 
@@ -8,6 +12,10 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "assignments")
+@Builder
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Assignment {
 
     @Id
@@ -37,7 +45,7 @@ public class Assignment {
     private SeanceType seance;
 
     @Column(name = "is_subject_expert", columnDefinition = "BOOLEAN DEFAULT FALSE")
-    private Boolean isSubjectExpert = false;
+    private Boolean isSubjectExpert = false;//true if his subject is being passed simultanously
 
     @Column(name = "room_number", length = 20)
     private String roomNumber;
