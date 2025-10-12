@@ -42,39 +42,33 @@ public class ExcelImportOrchestrator {
     @Transactional
     @PostConstruct
     public void importTeachersData() throws IOException {
-        // Process exam session first
+
         ExamSession examSession;
         try (FileInputStream examDataFile = new FileInputStream(examData)) {
             examSession = examSessionService.addSession(examDataFile);
         }
 
-        // Process teachers
         Map<String, Teacher> teacherMap;
         try (FileInputStream teachersListFile = new FileInputStream(teachersList)) {
             teacherMap = teacherService.populateTeachersTable(teachersListFile);
         }
 
-        // Process grades
         try (FileInputStream teachersListFile = new FileInputStream(teachersList)) {
             gradeService.addGrades(teachersListFile);
         }
 
-        // Process quotas
         try (FileInputStream teachersListFile = new FileInputStream(teachersList)) {
             quotaService.addTeachersQuota(teachersListFile, teacherMap, examSession);
         }
 
-        // Process preferences
         try (FileInputStream teachersListFile = new FileInputStream(teachersList)) {
             preferenceService.addTeachersPreference(teachersListFile, teacherMap, examSession);
         }
 
-        // Process exams
         try (FileInputStream examDataFile = new FileInputStream(examData)) {
             examService.addExams(examDataFile, examSession);
         }
 
-        // Process unavailability
         try (FileInputStream teachersUnavailabilityFile = new FileInputStream(teachersUnavailability)) {
             teacherUnavailabilityService.addTeachersUnavailability(teachersUnavailabilityFile, examSession);
         }
