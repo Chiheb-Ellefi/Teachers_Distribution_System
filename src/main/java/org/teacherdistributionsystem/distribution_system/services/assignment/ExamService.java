@@ -35,9 +35,8 @@ public class ExamService {
         this.examRepository = examRepository;
         this.teacherRepository = teacherRepository;
     }
-    public void addExams(FileInputStream file,ExamSession examSession) throws IOException {
+    public void addExams( Workbook workbook,ExamSession examSession) {
         List<Exam> examList = new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
         Map<Integer,Teacher> teacherMap = teacherRepository.findAll().stream().collect(Collectors.toMap(Teacher::getCodeSmartex, Function.identity()));
        workbook.forEach(sheet -> {
            sheet.forEach(row -> {

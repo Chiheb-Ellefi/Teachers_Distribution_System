@@ -25,8 +25,8 @@ public class ExamSessionService {
     public ExamSessionService(ExamSessionRepository examSessionRepository) {
         this.examSessionRepository = examSessionRepository;
     }
-    public ExamSession addSession(FileInputStream file) throws IOException {
-        Workbook workbook = new XSSFWorkbook(file);
+    public ExamSession addSession( Workbook workbook) {
+
         Sheet sheet = workbook.getSheetAt(0);
         LocalDate startDate = null;
         LocalDate endDate = null;

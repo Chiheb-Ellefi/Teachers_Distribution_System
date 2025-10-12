@@ -27,9 +27,8 @@ public class TeacherService {
 
     }
 
-   public Map<String,Teacher> populateTeachersTable(FileInputStream file) throws IOException {
+   public Map<String,Teacher> populateTeachersTable( Workbook workbook)  {
         List<Teacher> teachers=new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
    workbook.forEach(sheet -> {
        sheet.forEach(row -> {
            if (row.getRowNum() == 0) return;

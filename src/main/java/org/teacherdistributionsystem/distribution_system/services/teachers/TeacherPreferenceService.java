@@ -28,9 +28,9 @@ public class TeacherPreferenceService {
     }
 
 
-    public void addTeachersPreference(FileInputStream file, Map<String, Teacher> teacherMap,ExamSession examSession) throws IOException {
+    public void addTeachersPreference( Workbook workbook, Map<String, Teacher> teacherMap,ExamSession examSession)  {
         List<TeacherPreference> teacherPreferences=new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
+
          workbook.forEach(sheet -> {
              sheet.forEach(row -> {
                  if (row.getRowNum() == 0) return;

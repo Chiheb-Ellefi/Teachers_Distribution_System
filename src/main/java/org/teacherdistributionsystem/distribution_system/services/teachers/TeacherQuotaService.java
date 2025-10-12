@@ -25,9 +25,9 @@ public class TeacherQuotaService {
     public TeacherQuotaService(TeacherQuotaRepository teacherQuotaRepository) {
         this.teacherQuotaRepository = teacherQuotaRepository;
     }
-    public void addTeachersQuota(FileInputStream file, Map<String,Teacher> teacherMap,ExamSession session) throws IOException {
+    public void addTeachersQuota( Workbook workbook, Map<String,Teacher> teacherMap,ExamSession session) {
         List<TeacherQuota> teacherQuotas=new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
+
       workbook.forEach(sheet -> {
           sheet.forEach(row -> {
               if (row.getRowNum() == 0) return ;

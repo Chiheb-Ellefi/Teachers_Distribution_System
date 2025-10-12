@@ -22,9 +22,8 @@ public class GradeService {
         this.gradeTypeRepository = gradeTypeRepository;
     }
 
-    public void addGrades(FileInputStream file ) throws IOException {
+    public void addGrades(Workbook workbook) {
         List<Grade> grades=new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
        workbook.forEach(sheet -> {
            sheet.forEach(row -> {
                if (row.getRowNum() == 0) return;

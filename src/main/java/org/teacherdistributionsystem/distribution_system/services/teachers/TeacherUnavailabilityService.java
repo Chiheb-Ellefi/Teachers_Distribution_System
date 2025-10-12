@@ -29,7 +29,7 @@ public class TeacherUnavailabilityService {
         this.teacherUnavailabilitRepository = teacherUnavailabilitRepository;
         this.teacherRepository = teacherRepository;
     }
-    public void addTeachersUnavailability(FileInputStream file, ExamSession session) throws IOException {
+    public void addTeachersUnavailability( Workbook workbook, ExamSession session) {
 
         Map<TeacherKey, Teacher> teacherMap = teacherRepository.findAll()
                 .stream()
@@ -45,14 +45,14 @@ public class TeacherUnavailabilityService {
                         }
                 ));
 
-        List<TeacherUnavailability> teacherUnavailabilityList = getTeacherUnavailabilities(file, session, teacherMap);
+        List<TeacherUnavailability> teacherUnavailabilityList = getTeacherUnavailabilities(workbook, session, teacherMap);
 
         teacherUnavailabilitRepository.saveAll(teacherUnavailabilityList);
     }
 
-    private static List<TeacherUnavailability> getTeacherUnavailabilities(FileInputStream file, ExamSession session, Map<TeacherKey, Teacher> teacherMap) throws IOException {
+    private static List<TeacherUnavailability> getTeacherUnavailabilities( Workbook workbook, ExamSession session, Map<TeacherKey, Teacher> teacherMap)  {
         List<TeacherUnavailability> teacherUnavailabilityList = new ArrayList<>();
-        Workbook workbook = new XSSFWorkbook(file);
+
         workbook.forEach(sheet -> {
             sheet.forEach(row -> {
                 if (row.getRowNum() == 0) return;
