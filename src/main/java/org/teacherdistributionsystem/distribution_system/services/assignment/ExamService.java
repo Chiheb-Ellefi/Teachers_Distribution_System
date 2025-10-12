@@ -71,13 +71,12 @@ public class ExamService {
                         examDate,
                         startTime,
                         endTime,
-                        getCellAsString(row, 4), // examType
+                        getCellAsString(row, 4),
                         teacher.getId()
                 );
 
 
                 if (seenExams.contains(examKey)) {
-                    System.out.println("Skipping duplicate exam at row " + row.getRowNum());
                     return;
                 }
 
