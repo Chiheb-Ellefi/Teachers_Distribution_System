@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.models;
+package org.teacherdistributionsystem.distribution_system.models.keys;
 
 import java.time.LocalDate;
 import java.time.LocalTime;

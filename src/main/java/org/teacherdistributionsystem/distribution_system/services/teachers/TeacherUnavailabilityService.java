@@ -2,17 +2,15 @@ package org.teacherdistributionsystem.distribution_system.services.teachers;
 
 
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.TeacherUnavailability;
+import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherUnavailabilityRepository;
-import org.teacherdistributionsystem.distribution_system.models.TeacherKey;
+import org.teacherdistributionsystem.distribution_system.models.keys.TeacherKey;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -81,5 +79,8 @@ public class TeacherUnavailabilityService {
             });
         });
         return teacherUnavailabilityList;
+    }
+    public List<TeacherUnavailabilityProjection> getTeacherUnavailabilitiesBySessionId(Long sessionId) {
+       return teacherUnavailabilitRepository.getTeacherUnavailableByTeacherId(sessionId);
     }
 }

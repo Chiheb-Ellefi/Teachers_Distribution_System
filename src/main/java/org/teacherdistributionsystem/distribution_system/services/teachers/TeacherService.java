@@ -1,15 +1,15 @@
 package org.teacherdistributionsystem.distribution_system.services.teachers;
 
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 import org.springframework.stereotype.Service;
 
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -48,4 +48,31 @@ public class TeacherService {
        List<Teacher> savedTeachers=  teacherRepository.saveAll(teachers);
        return savedTeachers.stream().collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
     }
+
+    public List<Long> getTeachersId() {
+        return teacherRepository.getAllIds();
     }
+    public Map<Long, Boolean>getTeacherParticipeSurveillance(){
+        return teacherRepository.getAllParticipants().stream()
+                .collect(Collectors.toMap(
+                        row -> (Long) row[0],
+                        row -> (Boolean) row[1]
+                ));
+    }
+    public Map<Long, String>getAllGrades() {
+        return teacherRepository.getAllGrades().stream()
+                .collect(Collectors.toMap(
+                        row -> (Long) row[0],
+                        row -> (String) row[1]
+                ));
+    }
+    public Map<Long, String> getAllNames() {
+        return teacherRepository.getAllNames()
+                .stream()
+                .collect(Collectors.toMap(
+                        TeacherNameProjection::getId,
+                        t -> t.getPrenom() + " " + t.getNom()
+                ));
+    }
+
+}

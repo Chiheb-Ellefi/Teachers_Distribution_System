@@ -10,11 +10,11 @@ import org.teacherdistributionsystem.distribution_system.enums.GradeType;
 
 import org.teacherdistributionsystem.distribution_system.enums.QuotaType;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherQuotaRepository;
-import java.io.FileInputStream;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsString;
 
@@ -43,6 +43,14 @@ public class TeacherQuotaService {
       });
 
         teacherQuotaRepository.saveAll(teacherQuotas);
+
+    }
+   public Map<Long, Integer> getAllQuotas() {
+       return teacherQuotaRepository.getTeacherQuotaAndId().stream()
+                .collect(Collectors.toMap(
+                        row -> (Long) row[0],
+                        row -> (Integer) row[1]
+                ));
 
     }
 }

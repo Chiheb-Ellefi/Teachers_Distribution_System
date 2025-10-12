@@ -2,17 +2,15 @@ package org.teacherdistributionsystem.distribution_system.services.assignment;
 
 
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.Exam;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
-import org.teacherdistributionsystem.distribution_system.models.ExamKey;
+import org.teacherdistributionsystem.distribution_system.models.keys.ExamKey;
+import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -100,6 +98,11 @@ public class ExamService {
         });
 
         examRepository.saveAll(examList);
+    }
+
+    public List<ExamForAssignmentProjection> getExamsForAssignment(Long sessionId) {
+        return examRepository.getExamsBySessionIdForAssignment(sessionId);
+
     }
 
 

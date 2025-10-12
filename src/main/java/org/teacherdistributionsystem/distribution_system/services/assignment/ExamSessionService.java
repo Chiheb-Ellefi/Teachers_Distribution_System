@@ -1,12 +1,15 @@
 package org.teacherdistributionsystem.distribution_system.services.assignment;
 
+import org.apache.coyote.BadRequestException;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
+import org.teacherdistributionsystem.distribution_system.dtos.assignment.ExamSessionDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.enums.SemesterType;
 import org.teacherdistributionsystem.distribution_system.enums.SessionType;
+import org.teacherdistributionsystem.distribution_system.mappers.assignment.ExamSessionMapper;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamSessionRepository;
 
 import java.io.FileInputStream;
@@ -16,6 +19,7 @@ import java.time.LocalDate;
 
 import java.time.temporal.ChronoUnit;
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 import static org.teacherdistributionsystem.distribution_system.utils.data.HelperMethods.getLocalDate;
 
@@ -85,6 +89,10 @@ public class ExamSessionService {
                 .semesterLibelle(semesterLibelle)
                 .build();
       return   examSessionRepository.save(session);
+    }
+    ExamSessionDto getExamSessionDto(Long sessionId) throws BadRequestException {
+        Supplier<BadRequestException> exceptionSupplier = () -> new BadRequestException("No valid exam session found with id " + sessionId);
+        return ExamSessionMapper.toExamSessionDto(examSessionRepository.findById(sessionId).orElseThrow(exceptionSupplier));
     }
 
 }
