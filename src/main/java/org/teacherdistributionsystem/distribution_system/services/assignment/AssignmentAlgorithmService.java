@@ -54,7 +54,7 @@ public class AssignmentAlgorithmService {
     private String[] teacherNames;
     private Boolean[] teacherParticipateSurveillance;
     private String[] teacherGrades;
-    private String[] teacherDepartments;
+
     private boolean[][][] teacherUnavailable;
     private int[] quotaPerTeacher;
     private List<Exam> exams;
@@ -76,9 +76,6 @@ public class AssignmentAlgorithmService {
         this.examService = examService;
     }
 
-    /**
-     * Main method to execute the assignment algorithm
-     */
     public AssignmentResponseModel executeAssignment(Long sessionId) {
         try {
             loadData(sessionId);
@@ -102,7 +99,6 @@ public class AssignmentAlgorithmService {
 
         teacherGrades = new String[numTeachers];
         teacherNames = new String[numTeachers];
-        teacherDepartments = new String[numTeachers];
         quotaPerTeacher = new int[numTeachers];
 
         Map<Long, String> gradeMap = teacherService.getAllGrades();

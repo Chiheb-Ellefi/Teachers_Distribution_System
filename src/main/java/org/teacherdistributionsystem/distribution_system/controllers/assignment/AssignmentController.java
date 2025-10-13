@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
+import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
 
 @RestController
 @RequestMapping("/api/v1/assignments")
@@ -19,21 +20,22 @@ import org.teacherdistributionsystem.distribution_system.services.assignment.Ass
 public class AssignmentController {
 
     private final AssignmentAlgorithmService assignmentAlgorithmService;
+    private final AssignmentPersistenceService persistenceService;
 
-
-    @GetMapping("/execute/{sessionId}")
-   
+    @PostMapping("/execute/{sessionId}")
     public ResponseEntity<AssignmentResponseModel> executeAssignment(@PathVariable Long sessionId) {
 
         try {
             AssignmentResponseModel response = assignmentAlgorithmService.executeAssignment(sessionId);
 
+
             HttpStatus httpStatus = switch (response.getStatus()) {
                 case SUCCESS -> HttpStatus.OK;
-                case INFEASIBLE -> HttpStatus.OK;
+                case INFEASIBLE -> HttpStatus.OK; // still ok but there is no solution
                 case TIMEOUT -> HttpStatus.PARTIAL_CONTENT;
                 case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
             };
+            persistenceService.saveAssignmentResults(response);
 
             return ResponseEntity.status(httpStatus).body(response);
 
@@ -48,4 +50,10 @@ public class AssignmentController {
         }
     }
 
+    @GetMapping("/status/{sessionId}")
+    public ResponseEntity<Boolean> checkAssignmentStatus(@PathVariable Long sessionId) {
+
+        boolean exists = persistenceService.hasAssignments(sessionId);
+        return ResponseEntity.ok(exists);
+    }
 }

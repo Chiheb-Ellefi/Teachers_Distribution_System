@@ -70,7 +70,8 @@ public class ExamService {
                         startTime,
                         endTime,
                         getCellAsString(row, 4),
-                        teacher.getId()
+                        teacher.getId(),
+                        getCellAsString(row, 7)
                 );
 
 
