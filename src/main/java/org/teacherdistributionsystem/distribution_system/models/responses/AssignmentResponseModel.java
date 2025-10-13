@@ -11,9 +11,7 @@ import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Main response DTO for assignment algorithm results
- */
+
 @Data
 @Builder
 @NoArgsConstructor
