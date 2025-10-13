@@ -37,7 +37,7 @@ public class TeacherPreferenceService {
                  TeacherPreference teacherPreference=TeacherPreference.builder()
                          .examSession(examSession)
                          .teacher(teacherMap.get(getCellAsString(row,2)))
-                         .preferenceType(PreferenceType.NOTHING)
+                         .preferenceTypes(List.of(PreferenceType.NOTHING))
                          .priorityWeight(0)
                          .build();
                  teacherPreferences.add(teacherPreference);

@@ -81,6 +81,6 @@ public class TeacherUnavailabilityService {
         return teacherUnavailabilityList;
     }
     public List<TeacherUnavailabilityProjection> getTeacherUnavailabilitiesBySessionId(Long sessionId) {
-       return teacherUnavailabilitRepository.getTeacherUnavailableByTeacherId(sessionId);
+       return teacherUnavailabilitRepository.getTeacherUnavailableBySessionId(sessionId);
     }
 }

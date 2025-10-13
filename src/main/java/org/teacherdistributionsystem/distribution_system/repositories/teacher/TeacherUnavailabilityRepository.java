@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface TeacherUnavailabilityRepository extends JpaRepository<TeacherUnavailability, Long> {
     @Query("SELECT t.id AS id, t.numeroJour AS numeroJour, t.seance AS seance " +
-            "FROM TeacherUnavailability t WHERE t.teacher.id = ?1")
-    List<TeacherUnavailabilityProjection> getTeacherUnavailableByTeacherId(Long teacherId);
+            "FROM TeacherUnavailability t WHERE t.examSession.id = ?1 ")
+    List<TeacherUnavailabilityProjection> getTeacherUnavailableBySessionId(Long sessionId);
 
 }

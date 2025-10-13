@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.enums.PreferenceType;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @Table(name = "teacher_preferences")
@@ -29,9 +32,14 @@ public class TeacherPreference {
     private ExamSession examSession;
 
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(
+            name = "teacher_preference_types",
+            joinColumns = @JoinColumn(name = "teacher_preference_id")
+    )
     @Enumerated(EnumType.STRING)
-    @Column(name = "preference_type", length = 50, nullable = false)
-    private PreferenceType preferenceType = PreferenceType.NOTHING;
+    @Column(name = "preference_type", length = 50)
+    private List<PreferenceType> preferenceTypes =List.of(PreferenceType.NOTHING);
 
     @Column(name = "priority_weight", columnDefinition = "INTEGER DEFAULT 0")
     private Integer priorityWeight = 0;

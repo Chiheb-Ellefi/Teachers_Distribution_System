@@ -12,7 +12,7 @@ public class TeacherPreferenceMapper {
                 .id(dto.getId())
                 .teacher(teacher)
                 .examSession(examSession)
-                .preferenceType(dto.getPreferenceType())
+                .preferenceTypes(dto.getPreferenceTypes())
                 .priorityWeight(dto.getPriorityWeight())
                 .build();
     }
@@ -22,7 +22,7 @@ public class TeacherPreferenceMapper {
                 .id(teacherPreference.getId())
                 .teacherId(teacherPreference.getTeacher().getId())
                 .examSessionId(teacherPreference.getExamSession().getId())
-                .preferenceType(teacherPreference.getPreferenceType())
+                .preferenceTypes(teacherPreference.getPreferenceTypes())
                 .priorityWeight(teacherPreference.getPriorityWeight())
                 .build();
     }

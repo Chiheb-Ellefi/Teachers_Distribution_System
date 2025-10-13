@@ -4,17 +4,21 @@ package org.teacherdistributionsystem.distribution_system.enums;
 import lombok.Getter;
 
 @Getter
+// TESTING CONFIGURATION: Dramatically reduce quotas to force infeasibility
+// This will test if the cascading relaxation works for low-priority teachers
+
 public enum GradeType {
-    PR("Professeur", 4, 0),
-    PES("Professeur de l’Enseignement Supérieur", 4, 0),
-    MC("Maître de Conférences", 6, 1),
-    MA("Maître Assistant", 6, 2),
-    PTC("Professeur Technologue", 7, 2),
-    AC("Assistant Contractuel", 10, 3),
+    // High priority (0-2) - Keep reasonable quotas
+    PR("Professeur", 6, 0),
+    PES("Professeur de l'Enseignement Supérieur", 6, 0),
+    MC("Maître de Conférences", 8, 1),
+    MA("Maître Assistant", 7, 2),
+    PTC("Professeur Technologue", 8, 2),
+    AC("Assistant Contractuel", 7, 3),
     AS("Assistant", 7, 5),
     EX("Examinateur externe", 10, 4),
-    V("Vacataire", 7, 10),
-    VA("Vacataire Associé", 10, 4);
+    V("Vacataire", 8, 10),
+    VA("Vacataire Associé", 12, 10);                // Keep at 10
 
     private final String label;
     private final int defaultQuota;
@@ -25,8 +29,36 @@ public enum GradeType {
         this.defaultQuota = defaultQuota;
         this.priority = priority;
     }
+
     public static GradeType fromCode(String code) {
         return GradeType.valueOf(code);
     }
-
 }
+
+/*
+EXPECTED BEHAVIOR WITH THESE QUOTAS:
+
+Current situation:
+- 263 exams × 2 teachers = 526 supervisions needed
+- With reduced quotas, total capacity will be < 526
+- This creates artificial scarcity
+
+Priority Distribution (from your logs):
+- Priority 0: 8 teachers  × 3 quota = 24 supervisions
+- Priority 1: 3 teachers  × 4 quota = 12 supervisions
+- Priority 2: 48 teachers × 3-4 quota = ~168 supervisions
+- Priority 3: 8 teachers  × 4 quota = 32 supervisions
+- Priority 4: 3 teachers  × 6 quota = 18 supervisions
+- Priority 5: 3 teachers  × 4 quota = 12 supervisions
+- Priority 10: 14 teachers × 6-10 quota = ~112 supervisions
+Total: ~378 supervisions (vs 526 needed) ❌ INSUFFICIENT
+
+What should happen:
+1. [ATTEMPT 1] STRICT MODE → INFEASIBLE (not enough capacity + unavailability)
+2. [ATTEMPT 2] Relax priority > 2 → Still might be tight
+3. [ATTEMPT 3] Relax priority > 5 → Should help more
+4. [ATTEMPT 4] Relax priority > 10 → If needed (unlikely since V/VA have high quotas)
+
+The algorithm should be forced to use Vacataires (V) and Vacataires Associés (VA)
+even when they declared unavailability, to make the solution feasible.
+*/

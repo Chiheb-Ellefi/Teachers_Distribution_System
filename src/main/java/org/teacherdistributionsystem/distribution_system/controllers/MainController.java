@@ -5,18 +5,23 @@ import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.models.MainRequestBody;
+import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
 import org.teacherdistributionsystem.distribution_system.services.ExcelImportOrchestrator;
+import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
 
 
 import java.io.IOException;
+import java.util.List;
+
 @RequestMapping("/api/v1/assignments")
 @RestController
 public class MainController {
     private final ExcelImportOrchestrator excelImportOrchestrator;
+    private final TeacherUnavailabilityService teacherUnavailabilityService;
 
-    public MainController(ExcelImportOrchestrator excelImportOrchestrator ) {
+    public MainController(ExcelImportOrchestrator excelImportOrchestrator, TeacherUnavailabilityService teacherUnavailabilityService) {
         this.excelImportOrchestrator = excelImportOrchestrator;
-
+        this.teacherUnavailabilityService = teacherUnavailabilityService;
     }
 
     @PostMapping("/upload")
@@ -27,6 +32,13 @@ public class MainController {
        }catch (IOException e){
           throw new RuntimeException(e);
        }
+    }
+    @GetMapping
+    public ResponseEntity<List<TeacherUnavailabilityProjection>> mainController() {
+
+       List<TeacherUnavailabilityProjection>data= teacherUnavailabilityService.getTeacherUnavailabilitiesBySessionId(1L);
+       System.out.println(data);
+        return ResponseEntity.ok().body(data);
     }
 
 
