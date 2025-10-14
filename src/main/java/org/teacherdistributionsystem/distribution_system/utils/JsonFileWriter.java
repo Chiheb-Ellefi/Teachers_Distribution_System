@@ -1,9 +1,8 @@
-package org.teacherdistributionsystem.distribution_system.utils.data;
+package org.teacherdistributionsystem.distribution_system.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.models.responses.TeacherWorkloadModel;
 
 import java.io.File;

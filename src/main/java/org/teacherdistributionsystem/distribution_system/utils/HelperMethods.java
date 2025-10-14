@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.utils.data;
+package org.teacherdistributionsystem.distribution_system.utils;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

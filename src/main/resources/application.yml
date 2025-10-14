@@ -21,3 +21,8 @@ spring:
     console:
       enabled: true
       path: /h2-console
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+    min-response-size: 2KB

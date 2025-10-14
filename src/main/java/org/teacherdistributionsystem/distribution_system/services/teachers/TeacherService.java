@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.*;
+import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.*;
 
 @Service
 public class TeacherService {

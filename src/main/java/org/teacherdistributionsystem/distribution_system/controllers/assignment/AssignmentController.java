@@ -12,7 +12,7 @@ import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
-import org.teacherdistributionsystem.distribution_system.utils.data.JsonFileWriter;
+import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
 
 @RestController
 @RequestMapping("/api/v1/assignments")
@@ -39,7 +39,9 @@ public class AssignmentController {
             };
             persistenceService.saveAssignmentResults(response);
             jsonFileWriter.writeDataToJsonFile(response.getTeacherWorkloads());
-            return ResponseEntity.status(httpStatus).body("Data successfully saved to file");
+            response.setExamAssignments(null);
+            response.setTeacherWorkloads(null);
+            return ResponseEntity.status(httpStatus).body(response);
 
         } catch (Exception e) {
             AssignmentResponseModel errorResponse = AssignmentResponseModel.builder()

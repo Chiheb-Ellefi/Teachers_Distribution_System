@@ -1,10 +1,6 @@
 package org.teacherdistributionsystem.distribution_system.services.teachers;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
@@ -12,13 +8,11 @@ import org.teacherdistributionsystem.distribution_system.entities.teacher.Teache
 import org.teacherdistributionsystem.distribution_system.enums.PreferenceType;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherPreferenceRepository;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsString;
+import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.getCellAsString;
 
 @Service
 public class TeacherPreferenceService {

@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.utils.data;
+package org.teacherdistributionsystem.distribution_system.utils;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;

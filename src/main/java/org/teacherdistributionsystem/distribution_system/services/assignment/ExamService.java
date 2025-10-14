@@ -19,9 +19,9 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsString;
-import static org.teacherdistributionsystem.distribution_system.utils.data.HelperMethods.getLocalDate;
-import static org.teacherdistributionsystem.distribution_system.utils.data.HelperMethods.getLocalTime;
+import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.getCellAsString;
+import static org.teacherdistributionsystem.distribution_system.utils.HelperMethods.getLocalDate;
+import static org.teacherdistributionsystem.distribution_system.utils.HelperMethods.getLocalTime;
 
 @Service
 public class ExamService {

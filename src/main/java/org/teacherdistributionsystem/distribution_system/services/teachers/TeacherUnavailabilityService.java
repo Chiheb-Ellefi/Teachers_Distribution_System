@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsInteger;
-import static org.teacherdistributionsystem.distribution_system.utils.data.ExcelCellUtils.getCellAsString;
+import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.getCellAsInteger;
+import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.getCellAsString;
 
 @Service
 public class TeacherUnavailabilityService {
