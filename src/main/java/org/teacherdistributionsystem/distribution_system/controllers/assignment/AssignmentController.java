@@ -38,7 +38,7 @@ public class AssignmentController {
                 case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
             };
             persistenceService.saveAssignmentResults(response);
-            jsonFileWriter.writeDataToJsonFile(response);
+            jsonFileWriter.writeDataToJsonFile(response.getTeacherWorkloads());
             return ResponseEntity.status(httpStatus).body("Data successfully saved to file");
 
         } catch (Exception e) {
