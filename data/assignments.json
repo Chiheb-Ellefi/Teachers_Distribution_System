@@ -1,0 +1,4799 @@
+[ {
+  "teacherId" : 1,
+  "teacherName" : "Salah Salhi",
+  "email" : "salah.salhi@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 2,
+  "teacherName" : "Rania Mzid",
+  "email" : "rania.mzid@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 3,
+  "teacherName" : "Sourour Mheni",
+  "email" : "sourour.mhenni@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 4,
+  "teacherName" : "Nihel Ben youssef",
+  "email" : "nihel.benyoussef@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "38a90cb3-2307-496e-91f6-4fb010c0ce5e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "eeb09a0b-ce6f-4eea-b0dc-19c8a9330201",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "aa621487-d80b-4764-8da2-aae7d2590567",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "3459681a-a4eb-4d48-ad99-29707983429a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "0e08d80d-559e-48a8-8756-3236a8c63055",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "4194c849-f3ac-40ba-ac0f-c508f6cfd51b",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 5,
+  "teacherName" : "Walid Miladi",
+  "email" : "walid.miladi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 6,
+  "teacherName" : "Kroumi Anis",
+  "email" : "anis.kroumi@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "bb7ecfaa-f469-41f8-bbaf-7ce83567d22e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "7b2e1490-170f-426a-a348-f6f86bca8134",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "9ba75339-14fa-43c8-81ae-48d4c4230f62",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "01c1b3f4-056d-4969-b67e-dd98d5ef566b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "f3cc5c62-71d9-4e11-ad27-c97ee5b3cac2",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  } ]
+}, {
+  "teacherId" : 7,
+  "teacherName" : "Mayssa Frikha",
+  "email" : "mayssa.frikha@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 8,
+  "teacherName" : "Houda Aissa",
+  "email" : "houda.aissa@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "94ffba33-11ce-46fd-9824-8e153865976b",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "88996896-547b-4533-885b-5201a2e723c7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "d43fdb66-91f4-47bb-a4ba-59e4bb37cb7f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "872c4a44-3249-469e-a723-fa8c76535044",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "2d2cdbcd-ac05-4fbd-a67a-5bd7db436ea8",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "7fde5f61-5c19-4468-8b4c-f305bddd339c",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 9,
+  "teacherName" : "Yassine Manai",
+  "email" : "yassine.manai@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "85d79f2c-1758-47a3-9772-1cc913ef0167",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "158d71cf-2dc7-4a3b-84f7-60b58859b0f9",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "a0eeb697-65be-46d1-ba22-4735d079bcb1",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "062104c2-3223-421a-87fb-196b04da2972",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "53c4bf2a-4ae0-4371-9e1e-a5e6651cf0a2",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "97294132-c282-45b8-a18b-8e34ffc8a04e",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 10,
+  "teacherName" : "Yessine Bannour",
+  "email" : "yassine.bennour@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "df111e2c-1041-45b1-8936-dfda450c62df",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "3d448272-3ab1-4673-b662-0bd6d3ad69b3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "22b4155a-cd21-4cc2-94e1-fc3f0fc4af98",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "3ddc8217-c7e3-49d0-bef6-c6246e9cf29f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "dc92d19a-a6c9-4c65-ad88-fead2fae2ca7",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "2e4bc137-b7cf-43aa-b972-bcd9050a9b84",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  } ]
+}, {
+  "teacherId" : 11,
+  "teacherName" : "Fathi Dkhil",
+  "email" : "fathi.dkhil@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b0161f92-47af-4410-b445-7ea682a0fe60",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "f9d7f18a-daf0-4ab1-b77e-a3f72b9427c0",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "512d2b82-a6d4-459e-a3eb-34752dfd6d5d",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "1943fd94-357d-4a81-9e59-e9f63f4e0ea2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "e831d63b-b1ec-435f-bb2b-34968720fd1d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "d7e016a9-5ca7-4ba2-b5a1-0b464d550d1d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "2d99855f-9ce1-4702-acf4-a390b8176f3a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "bf073ca9-cab8-47cd-b04a-d0b4cead6085",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  } ]
+}, {
+  "teacherId" : 12,
+  "teacherName" : "Marouene Boubakri",
+  "email" : "marouane.boubakri@isi.utm.tn",
+  "grade" : "VA",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "85cfcfef-5b6b-4d79-b5b1-7ef9b69b2e1f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "29edd202-1b64-40a9-a1df-3ad32daf3d55",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "0a0cab6a-9910-463c-834d-63be77f8ae39",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "62d16c53-108a-4a40-886c-1454424e5be8",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "cb03a75a-4ed9-4b3f-8b64-40cf8faff565",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  } ]
+}, {
+  "teacherId" : 13,
+  "teacherName" : "Nadia Bridaa",
+  "email" : "nadia.bridaa@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "ccda01b9-c062-4b1a-8d5c-3b4b09c35e6f",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "523bde5d-389e-445e-bce1-bcdf2ff0569a",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "158d71cf-2dc7-4a3b-84f7-60b58859b0f9",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "64110f28-0fb0-4681-8a69-5c3715c975cc",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "10e84950-4afa-45f8-be54-2948761c0b98",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "e7744720-99dd-4d2e-87f5-ac2139f0c676",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 14,
+  "teacherName" : "Ines Daldoul",
+  "email" : "ines.daldoul@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "71d468b8-8416-4751-9169-1b330fd3c454",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "616113b1-867d-4cd0-b1c2-d9db47bb0651",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "0f8311a5-d4b2-4751-ab54-3a4a3fa15082",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "6c725fa8-cfbd-4b4e-84c9-ed621423d257",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "c6d13507-4342-4ce4-9d46-d2ed9e749752",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "a86d5340-01d2-47b7-82d7-9b96976ce58d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  } ]
+}, {
+  "teacherId" : 15,
+  "teacherName" : "Adel Khalfallah",
+  "email" : "adel.khalfallah@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 16,
+  "teacherName" : "Hanene Ben fradj",
+  "email" : "hanene.benfradj@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 17,
+  "teacherName" : "Amen Bidani",
+  "email" : "amen.bidani@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "47abcdc4-e5be-4722-b91e-70cbb54aa0a9",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "f0a455f8-b3fb-4078-82c3-71030a821a31",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "29edd202-1b64-40a9-a1df-3ad32daf3d55",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "c19fca7e-187a-4d8c-9af4-e590d1fb1011",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "91716183-3f75-4902-82e8-c9b9471e1e43",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "6b4cc918-c89c-49fe-8a66-063ce11301fd",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 18,
+  "teacherName" : "Thouraya Khemiri",
+  "email" : "thouraya.khemiri@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "a8901e4a-28a4-4edb-83a8-8126f89e1258",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "e1bfde15-206d-4a72-8462-914edb3046b8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "88722222-1712-4354-a061-7fedad6ddf36",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "b5a06398-4015-480c-8391-8863f5bf27e5",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "09007c40-fc87-4e96-a658-69a6cd41870c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "2d3e384a-bee5-48be-9a3c-9cc414589269",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 19,
+  "teacherName" : "Baraket Zina",
+  "email" : "zina.baraket@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f284a4f7-b6f8-44ba-8d65-768556c93439",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "a2a31544-8524-4d90-a470-df018d730fbd",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "99b688b8-7977-44b9-a7b4-925a675b424e",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "924e90e5-6277-4489-9275-a8a18a0bd5bf",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "2d3e384a-bee5-48be-9a3c-9cc414589269",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 20,
+  "teacherName" : "Imen Bousaoudia",
+  "email" : "imene.bessaoudia@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4cc42a8b-d2ff-4f62-8e9c-c0aa77d5bd1d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "09a60bdd-2358-4767-9680-28a13c49f8f3",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "4d760129-ec16-4ce1-a1bc-784da387e9d5",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "e36db339-1bbb-4650-b750-b0c9eed6c72f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "0f8311a5-d4b2-4751-ab54-3a4a3fa15082",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "ebb301b5-3252-427d-a7e8-0baf1f9d2a25",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  } ]
+}, {
+  "teacherId" : 21,
+  "teacherName" : "Amira Marzouki",
+  "email" : "amira.marzouki@isi.utm.tn",
+  "grade" : "VA",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "09a60bdd-2358-4767-9680-28a13c49f8f3",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "9374c1d6-df32-423c-bbb8-3ed804801e95",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "0f2dc049-7288-4941-9568-d56809020e59",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "7ba0d633-a6de-4111-8610-6b343f55b56b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "893acce8-2dba-49de-bcdf-e548dc62c61d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  } ]
+}, {
+  "teacherId" : 22,
+  "teacherName" : "Wassim Youssef",
+  "email" : "wassim.youssef@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 23,
+  "teacherName" : "Rahma Abed",
+  "email" : "rahma.abed@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "7bb7d62c-bae2-4c42-870c-862035359cde",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "bcaa9d73-308a-4bc9-b698-285addffe4ed",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "61439db8-1c18-4167-8681-facece96d91c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "626a29f8-2f24-4151-8e0d-98be2b139179",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "88722222-1712-4354-a061-7fedad6ddf36",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "104d41f0-2cd8-4690-9b48-119a2a358fe1",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  } ]
+}, {
+  "teacherId" : 24,
+  "teacherName" : "Riadh Zaafrani",
+  "email" : "riadh.zaafrani@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 25,
+  "teacherName" : "Safa Rejichi",
+  "email" : "safa.rejichi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 26,
+  "teacherName" : "Moez Ben Regaia",
+  "email" : "moez.benrkaya@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "a8901e4a-28a4-4edb-83a8-8126f89e1258",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "aa621487-d80b-4764-8da2-aae7d2590567",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "28e2a4dd-8b5f-4a2e-9289-aa698657ccc5",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "6080ee14-846c-47b4-9856-6142d839d30c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "f92138fe-fb74-48c3-8de5-acec98d748e7",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "91716183-3f75-4902-82e8-c9b9471e1e43",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 27,
+  "teacherName" : "Mouna Gouyaeib",
+  "email" : "mouna.gaieb@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "dc0b14f0-2cec-4400-a88c-a8bbaf19bceb",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "61e49a18-e1fa-4f29-bafc-94c9f4dc4ba2",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "4ff19edf-9cc5-4ac8-a7d8-5e27f49c2f50",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "094e17ba-ae04-472c-a3b4-1064b01f2591",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "2857ba55-1713-49de-86bf-70ac58b5f575",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "11b886c6-3fdb-4bc6-add1-2d6728d03ffc",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  } ]
+}, {
+  "teacherId" : 28,
+  "teacherName" : "Sofiene Touj",
+  "email" : "sofien.touj@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "3e3571b6-b1f2-4dac-a3f7-8532a66f6cb4",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "f3e7a26b-296a-4834-8af9-b1aecc263dca",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "0b3e35f5-b9de-489b-8c6a-c3d707ef597d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "11af4119-51ab-45be-a5cc-00602330cb0e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "dac14441-47bc-4b67-93b0-e8974da18a58",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "af642c17-1af5-4b37-88ab-4a0b7c3e4389",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 29,
+  "teacherName" : "Imen Lassoued",
+  "email" : "imen.lassoued@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "38a90cb3-2307-496e-91f6-4fb010c0ce5e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "517de672-bdd3-4349-8fd9-eb54265dad31",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "616113b1-867d-4cd0-b1c2-d9db47bb0651",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "94e89dea-3381-400a-bbba-eee0948344b1",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "094e17ba-ae04-472c-a3b4-1064b01f2591",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "6b4cc918-c89c-49fe-8a66-063ce11301fd",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 30,
+  "teacherName" : "Wafa Karoui",
+  "email" : "wafa.karoui@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "9ba75339-14fa-43c8-81ae-48d4c4230f62",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "2b1596b8-6887-4719-90cc-405b66f8897f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "e36db339-1bbb-4650-b750-b0c9eed6c72f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "f92138fe-fb74-48c3-8de5-acec98d748e7",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "0a2ba5a1-7a66-4c48-8adb-d1417cfccce5",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "a9318425-0cea-421c-bd21-1ec994d0153f",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 31,
+  "teacherName" : "Najet Arous",
+  "email" : "najet.arous@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4b29a37f-37ec-478f-badb-eb76cac43f33",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "75ccfc57-9668-4ec4-825a-794242e6ff77",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "93bc7b20-eda1-4616-9023-734fd636e419",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "53c4bf2a-4ae0-4371-9e1e-a5e6651cf0a2",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "ebb301b5-3252-427d-a7e8-0baf1f9d2a25",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "d6d044b7-5ee2-4a87-a164-304226cda6ed",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "1d4003b1-afd7-46a3-bd69-7af27b4e3efd",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "a61c8f49-d5b5-42bc-b4eb-400f515a48c7",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  } ]
+}, {
+  "teacherId" : 32,
+  "teacherName" : "Slim Rajia",
+  "email" : "rajia.slim@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "66e91e33-5254-491e-bc36-65192e65f2dd",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "3d448272-3ab1-4673-b662-0bd6d3ad69b3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "f4ff28fd-e1ae-4680-85e9-d4ca133d83d7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "5d2e52d0-f798-428c-8ea6-80ba58f132f5",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "1d4003b1-afd7-46a3-bd69-7af27b4e3efd",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 33,
+  "teacherName" : "Alia Khimiri",
+  "email" : "alia.khemiri@isi.utm.tn",
+  "grade" : "AS",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "571e6f13-c5dd-4a4c-835b-d8361dea4389",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "4f9ba4b6-e240-437c-a662-6e9e96a0b075",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "16ec672d-5c0c-4ad9-aa1e-b66e96817995",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "89a50b49-c1bb-4d61-a3a2-458d295cea67",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "2fdf4a5b-8a6d-4a53-8ee4-9cbd4c304959",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "5688c490-e9c2-4962-972b-c0d1459b5f97",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 34,
+  "teacherName" : "Hichem Ben ishak",
+  "email" : "hichem.benishak@isi.utm.tn",
+  "grade" : "EX",
+  "assignedSupervisions" : 7,
+  "quotaSupervisions" : 7,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "dc0b14f0-2cec-4400-a88c-a8bbaf19bceb",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "10c8aa51-c8e4-49b8-bfba-ed1d2f381e92",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "28e2a4dd-8b5f-4a2e-9289-aa698657ccc5",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "f3e7a26b-296a-4834-8af9-b1aecc263dca",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "dc024675-420d-472f-b0e3-43bd407d5090",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "0d56acaf-d60c-4067-bc10-34dc9821e409",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "09007c40-fc87-4e96-a658-69a6cd41870c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  } ]
+}, {
+  "teacherId" : 35,
+  "teacherName" : "Zouhour Ben Azzouz",
+  "email" : "zouhour.benazouz@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 36,
+  "teacherName" : "Rim Ben Elakhal",
+  "email" : "rim.benelakhal@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "ab1aea7c-8c4c-4658-8caa-e93157165cf6",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "0f2dc049-7288-4941-9568-d56809020e59",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "0cdb6762-8919-4b2e-b2cf-fe387d630940",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "24046187-e879-4e1b-aebd-bc5a6095e457",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "f405e83c-9fab-4a06-ad88-fc4047b95d56",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "a7094291-95a8-442a-a99b-279b72a9cc71",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  } ]
+}, {
+  "teacherId" : 37,
+  "teacherName" : "Zakia Zouaighia",
+  "email" : "zakia.zouaghia@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "c2667b9f-41d6-4875-94f5-699221ca0729",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "4d760129-ec16-4ce1-a1bc-784da387e9d5",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "3aad8720-406b-4a60-9bf1-a8cb849a6cd1",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "0a0cab6a-9910-463c-834d-63be77f8ae39",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "ffd26bf4-7a53-47c3-832a-97c2e8eb9a4c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "dc024675-420d-472f-b0e3-43bd407d5090",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  } ]
+}, {
+  "teacherId" : 38,
+  "teacherName" : "Salma Elaoud",
+  "email" : "salma.elaoud@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "9374c1d6-df32-423c-bbb8-3ed804801e95",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "612ad172-9f55-49de-accf-1f504e67bfb3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "b8cb8c96-1eec-4ea0-a247-42fcf0171cc2",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "0b828092-4c61-40fe-8bb7-4c194b44bab1",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "0a2ba5a1-7a66-4c48-8adb-d1417cfccce5",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "60d76efa-b11c-40c5-8566-9add5eb38d8c",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 39,
+  "teacherName" : "Hejer Metoui",
+  "email" : "hejer.metoui@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 40,
+  "teacherName" : "Meriem Feki",
+  "email" : "mariem.feki@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "933cab58-49af-45ba-b025-da84ea8f8168",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "93bc7b20-eda1-4616-9023-734fd636e419",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "5ac2cfa7-9842-41bc-a807-26f4e69c5478",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "930dda8f-81c1-4461-b043-e5280c51e1a1",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "d52ec016-76b9-46c4-ab34-dd8c2a731a94",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "62c7638a-226b-438c-8078-8f0183747016",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 41,
+  "teacherName" : "Ameni Chetouane",
+  "email" : "ameni.chetouane@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "bd0a7355-d3e8-4132-b6e9-ad8b9922ba94",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "82f23dda-6977-4120-be97-3839369b9fb2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "ee00759e-7b53-4cec-9601-7ba2f7efc61c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "f36fedb9-8e3d-49c5-9269-db534c64d620",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "855bb25c-1b7a-4266-bc75-a864d4d61f96",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "342d1be9-31ba-4ef2-a9e3-46b5804774b5",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 42,
+  "teacherName" : "Kermane Marzouki",
+  "email" : "kirmene.marzouki@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "e17df9a4-6cb1-4937-80a7-b9696e09a680",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "03977002-0d66-4391-bea6-46497fc850ed",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "de6a7b89-2c4c-4131-ae41-150c438db4be",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "8f81e5c6-79b5-4465-abb6-a3e0fd356419",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "4784e331-6916-4a98-b37d-78c93440d825",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "b54fb328-7edd-4ee0-b64d-bf7b3e46cf13",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 43,
+  "teacherName" : "Houli Ayoub",
+  "email" : "ayoub.houili@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "ccda01b9-c062-4b1a-8d5c-3b4b09c35e6f",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "df111e2c-1041-45b1-8936-dfda450c62df",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "03977002-0d66-4391-bea6-46497fc850ed",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "2d2cdbcd-ac05-4fbd-a67a-5bd7db436ea8",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "0d56acaf-d60c-4067-bc10-34dc9821e409",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  } ]
+}, {
+  "teacherId" : 44,
+  "teacherName" : "Samar Tlili",
+  "email" : "samar.tlili@isi.utm.tn",
+  "grade" : "PES",
+  "assignedSupervisions" : 7,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 87.5,
+  "assignments" : [ {
+    "examId" : "bcaa9d73-308a-4bc9-b698-285addffe4ed",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "72f76224-b295-4df5-81ee-43d4084cba54",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "6814e013-a904-4529-a60c-f1d7eca3eb1c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "153e5dfd-9fbd-49c6-a1e0-ec66746eeb55",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "924e90e5-6277-4489-9275-a8a18a0bd5bf",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "1ffd758c-206a-4a83-88c9-6f0449f7f553",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "4784e331-6916-4a98-b37d-78c93440d825",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  } ]
+}, {
+  "teacherId" : 45,
+  "teacherName" : "Faycel Yahya",
+  "email" : "faical.yahia@isi.utm.tn",
+  "grade" : "EX",
+  "assignedSupervisions" : 7,
+  "quotaSupervisions" : 7,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "9475571c-0434-468a-a95a-3865d32c903f",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "571e6f13-c5dd-4a4c-835b-d8361dea4389",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "3aad8720-406b-4a60-9bf1-a8cb849a6cd1",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "872c4a44-3249-469e-a723-fa8c76535044",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "d7e016a9-5ca7-4ba2-b5a1-0b464d550d1d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "0c32bee1-8a33-4496-9cf4-1666fc763814",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "88916b06-1af2-4789-9f55-b349bfaa921b",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 46,
+  "teacherName" : "Foued Oueslati",
+  "email" : "foued.oueslati@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "9475571c-0434-468a-a95a-3865d32c903f",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "41353992-3036-4b58-b074-df5dec875c5b",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "5d2e52d0-f798-428c-8ea6-80ba58f132f5",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "6c725fa8-cfbd-4b4e-84c9-ed621423d257",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "855bb25c-1b7a-4266-bc75-a864d4d61f96",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "1de879d3-30cf-4000-9b87-c6d260cb1972",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  } ]
+}, {
+  "teacherId" : 47,
+  "teacherName" : "Imene Hammi",
+  "email" : "imene.hammi@isi.utm.tn",
+  "grade" : "AS",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "104951bf-d038-4923-adf6-5206b8826e8c",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "baf07732-6983-4eed-8ace-1633fd392f75",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "512d2b82-a6d4-459e-a3eb-34752dfd6d5d",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "315b91cd-b093-47ad-a893-6e0b84059fcb",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "7752cf33-6dfa-4d00-b1e7-0044613d48ad",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "54168bb0-8536-488a-9320-b40b7e3e639f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 48,
+  "teacherName" : "Imen Belhouene",
+  "email" : "imen.belhouene@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "60768900-4d73-43b1-ab10-cc853d6dc9f8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "9b9b1b52-1ef3-44a0-bff2-d253e0a9c5bb",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "dc3c5241-c31c-41c1-a899-ee8e2e8fff7b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "d8fce60b-7d2b-4ff2-8eec-43ef0f41da32",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "cb03a75a-4ed9-4b3f-8b64-40cf8faff565",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "8068321a-1487-4fbe-9404-a1fb3bfad622",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 49,
+  "teacherName" : "Hayet Mogaadi",
+  "email" : "hayet.mogaadi@isi.utm.tn",
+  "grade" : "AS",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 50,
+  "teacherName" : "Ghada Besbes",
+  "email" : "ghada.besbes@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 83.33333333333333,
+  "assignments" : [ {
+    "examId" : "db1e3c90-83e6-4518-af6c-d72a913efb21",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "933cab58-49af-45ba-b025-da84ea8f8168",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "66a003f3-9ae3-47eb-ae42-64f83454c471",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "9ee2f301-1a17-4e77-be4c-559a6ce168ab",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "dac14441-47bc-4b67-93b0-e8974da18a58",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 51,
+  "teacherName" : "Garoui Essaied",
+  "email" : "essaied.garoui@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f284a4f7-b6f8-44ba-8d65-768556c93439",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "16e9e222-4515-4cc7-b36c-ba9a7ed45483",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "d8fce60b-7d2b-4ff2-8eec-43ef0f41da32",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "81fe0774-8668-4d4a-b09d-e36c2b23a397",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "342d1be9-31ba-4ef2-a9e3-46b5804774b5",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 52,
+  "teacherName" : "Sahbi Bahroun",
+  "email" : "sahbi.bahroun@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 53,
+  "teacherName" : "Nenni Mariem",
+  "email" : "meriem.nenni@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4445bbc3-9e42-47fe-af3c-487c0906941e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "e17df9a4-6cb1-4937-80a7-b9696e09a680",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "7b2e1490-170f-426a-a348-f6f86bca8134",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "22b4155a-cd21-4cc2-94e1-fc3f0fc4af98",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "99b688b8-7977-44b9-a7b4-925a675b424e",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  } ]
+}, {
+  "teacherId" : 54,
+  "teacherName" : "Lobna Derbal",
+  "email" : "lobna.derbal@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "517de672-bdd3-4349-8fd9-eb54265dad31",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "aeacbbea-1bac-48fe-b7fb-56de6d1d4c38",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "dc3c5241-c31c-41c1-a899-ee8e2e8fff7b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "3ddc8217-c7e3-49d0-bef6-c6246e9cf29f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "0fdbbad0-a7f4-409c-aabf-5d7c1c649b14",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "bc5a433c-b08f-49db-a3c7-da88a11fcbe2",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 55,
+  "teacherName" : "Kharoubi Banene",
+  "email" : "benene.kharroubi@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "540019d4-48fc-4cfc-be46-20698f8baa39",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "d196dd3f-70c4-4ee9-b4c1-bb79b9897354",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "0b1f6135-ffe3-4a83-bcd3-cb356aa36397",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "97294132-c282-45b8-a18b-8e34ffc8a04e",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "c6d13507-4342-4ce4-9d46-d2ed9e749752",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  } ]
+}, {
+  "teacherId" : 56,
+  "teacherName" : "Salah Salhi",
+  "email" : "direction@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 57,
+  "teacherName" : "Zohra Channouf",
+  "email" : "zohra.channouf@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "7f1bed42-cc79-4427-85c7-56bba4ec3247",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "eae72657-21c5-4bac-aa2e-13a708d30cef",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "f36fedb9-8e3d-49c5-9269-db534c64d620",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "de6a7b89-2c4c-4131-ae41-150c438db4be",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "11af4119-51ab-45be-a5cc-00602330cb0e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "ffd26bf4-7a53-47c3-832a-97c2e8eb9a4c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 58,
+  "teacherName" : "Azza Ouled Zaied",
+  "email" : "azza.ouledzaid@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4cc42a8b-d2ff-4f62-8e9c-c0aa77d5bd1d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "112c5687-51e2-497d-975e-817d7eeab395",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "ad45ca87-8992-4eee-83a6-fae4b69ad6a8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "684cd7bf-ec7a-4701-ad3d-e58806847200",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "062104c2-3223-421a-87fb-196b04da2972",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "a86d5340-01d2-47b7-82d7-9b96976ce58d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "15132b58-5a2a-4998-a0e6-36a1b7469413",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "8068321a-1487-4fbe-9404-a1fb3bfad622",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 59,
+  "teacherName" : "Mourad Ouertani",
+  "email" : "mourad.ouertani@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f4ff28fd-e1ae-4680-85e9-d4ca133d83d7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "3e020218-a0d2-4422-9043-c6f1eaedafb7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "315b91cd-b093-47ad-a893-6e0b84059fcb",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "6b647f7a-28ac-4003-9240-928d081bdd3a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "b765125c-9e37-4901-9a1c-6e5e6ec0d63d",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "d52ec016-76b9-46c4-ab34-dd8c2a731a94",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 60,
+  "teacherName" : "Kaouther Bouriel",
+  "email" : "kaouther.bouriel@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "ab1aea7c-8c4c-4658-8caa-e93157165cf6",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "9b9b1b52-1ef3-44a0-bff2-d253e0a9c5bb",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "e1bfde15-206d-4a72-8462-914edb3046b8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "c69e1c8b-852f-4325-9278-f97a615c747b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "bdb64758-909d-426d-bd32-2ac04693b929",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "60d76efa-b11c-40c5-8566-9add5eb38d8c",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 61,
+  "teacherName" : "Ali Sghaier Tlili",
+  "email" : "ali.tlili@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b91d0b8b-0923-4de3-bd8a-103ce4761f36",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "0f03f82b-cc5e-4182-8fa1-a2752e2f074f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "64110f28-0fb0-4681-8a69-5c3715c975cc",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "4556ac78-1833-454b-91e6-045577632674",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "c19fca7e-187a-4d8c-9af4-e590d1fb1011",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "89a50b49-c1bb-4d61-a3a2-458d295cea67",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "2e4bc137-b7cf-43aa-b972-bcd9050a9b84",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "e40b2242-ad63-42cf-9a54-d547df6a9cb5",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 62,
+  "teacherName" : "Khaled Sammoud",
+  "email" : "khaled.sammoud@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "16e9e222-4515-4cc7-b36c-ba9a7ed45483",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "2d3e529f-ca7f-410b-9c76-e2aee71b081d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "01c1b3f4-056d-4969-b67e-dd98d5ef566b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "9ee2f301-1a17-4e77-be4c-559a6ce168ab",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "b765125c-9e37-4901-9a1c-6e5e6ec0d63d",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "758c4749-9394-4117-9adf-80e7ad387c70",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 63,
+  "teacherName" : "Sahbi Zahaf",
+  "email" : "sahbi.zahaf@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "66e91e33-5254-491e-bc36-65192e65f2dd",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "293ba4f7-c7d2-4429-bbe2-88d00518d11d",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "24046187-e879-4e1b-aebd-bc5a6095e457",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "7752cf33-6dfa-4d00-b1e7-0044613d48ad",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "d6d044b7-5ee2-4a87-a164-304226cda6ed",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "d363ebec-14f3-4058-b3ff-c5ede474ffc4",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 64,
+  "teacherName" : "Yasmin Ben Soula",
+  "email" : "yasmin.bensoula@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "baf07732-6983-4eed-8ace-1633fd392f75",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "7b43992a-9899-4507-bd4c-c6db025db8f7",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "c64668bf-3c6f-4447-833a-426441d66a9c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "fcde4400-8c56-4ffc-8c99-2ad8adcb8efc",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "fc6457ab-ec05-4bd5-a68c-dd1559da9f0c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "82defa1b-ed87-47a7-8568-ff269e570fae",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 65,
+  "teacherName" : "Najiba Bellaaj Mrabet",
+  "email" : "najiba.bellaaj@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 66,
+  "teacherName" : "Mediha Ajabi",
+  "email" : "mediha.ghedamsi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 67,
+  "teacherName" : "Mariem Kallel",
+  "email" : "mariem.kallel@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "7b43992a-9899-4507-bd4c-c6db025db8f7",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "2b1596b8-6887-4719-90cc-405b66f8897f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "d9a43f84-cc0c-4060-84e4-1dabe48da539",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "b5a06398-4015-480c-8391-8863f5bf27e5",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "bdb64758-909d-426d-bd32-2ac04693b929",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "77b7ec5a-007f-46c3-be7c-d993a921fa7e",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  } ]
+}, {
+  "teacherId" : 68,
+  "teacherName" : "Cyrine Baccar",
+  "email" : "cyrine.baccar@isi.utm.tn",
+  "grade" : "MC",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b4f02963-33fd-400c-8c98-f52e539d7ac2",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "5a65dbd0-f8eb-41be-a973-827061873214",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "82f23dda-6977-4120-be97-3839369b9fb2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "a5ddf167-8816-4cdb-8a3a-bce94d87ce38",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "8662cf2b-5ff2-4db2-b554-7ab677b2bcf3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "54168bb0-8536-488a-9320-b40b7e3e639f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "bc5a433c-b08f-49db-a3c7-da88a11fcbe2",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "634f1f7a-21b2-431e-83be-c93a30d91952",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 69,
+  "teacherName" : "Hamza Ben Krid",
+  "email" : "hamza.benkrid@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "85d79f2c-1758-47a3-9772-1cc913ef0167",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "c64668bf-3c6f-4447-833a-426441d66a9c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "2eff07f4-70d9-461c-998b-a099bccbac7e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "0b3e35f5-b9de-489b-8c6a-c3d707ef597d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "aa4b6045-917b-46a4-9f74-6c37ca9c852a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "6d85e238-5f6e-4d4c-be70-14237c573a15",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 70,
+  "teacherName" : "Hajer Ouerghi",
+  "email" : "hajer.ouerghi@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "aa2b3f6f-782b-45ef-969b-a43ae267b4f4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "c9079c46-f4ff-4338-8db2-4bcfb8ff0ba0",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "4f9ba4b6-e240-437c-a662-6e9e96a0b075",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "d92dd414-b290-4873-82e9-3c52a4125ee6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "55529ddc-1d7a-4646-a854-549bfaf1ee2d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "07857719-c257-46d4-9cfd-cd2525fe8c46",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 71,
+  "teacherName" : "Sonia Ben Rejeb",
+  "email" : "sonia.benrejeb@isi.utm.tn",
+  "grade" : "MC",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "c2667b9f-41d6-4875-94f5-699221ca0729",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "f4066331-8f3b-429a-ab50-e9769f35e2f8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "0c9b9c79-2009-4be6-973e-b3774b7482d3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "dc576b2c-5081-4d1f-9c5c-3cdae8c9325a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "0fdbbad0-a7f4-409c-aabf-5d7c1c649b14",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "11b886c6-3fdb-4bc6-add1-2d6728d03ffc",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "6b647f7a-28ac-4003-9240-928d081bdd3a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "bf073ca9-cab8-47cd-b04a-d0b4cead6085",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  } ]
+}, {
+  "teacherId" : 72,
+  "teacherName" : "Sonia Zaouali",
+  "email" : "zaouali.sonia@isi.utm.tn",
+  "grade" : "PES",
+  "assignedSupervisions" : 7,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 87.5,
+  "assignments" : [ {
+    "examId" : "18def11a-4d08-4568-9da5-8f02bf95c8b8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "aa2b3f6f-782b-45ef-969b-a43ae267b4f4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "ad45ca87-8992-4eee-83a6-fae4b69ad6a8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "f4066331-8f3b-429a-ab50-e9769f35e2f8",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "4a9d3e1d-0fad-40a7-a429-7b8889689227",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "fc6457ab-ec05-4bd5-a68c-dd1559da9f0c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "fc1037dc-b5ca-4532-8b8e-349fcd8e179f",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 73,
+  "teacherName" : "Anis Younes",
+  "email" : "anis.younes@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "e2c3a4e1-5b5b-435e-bd6d-da49fcd5a0c7",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "fcde4400-8c56-4ffc-8c99-2ad8adcb8efc",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "0b1f6135-ffe3-4a83-bcd3-cb356aa36397",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "8c5dfc7a-8723-4b6b-b53c-ea460ccd5367",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "71a9cc1b-d3a3-4215-8ba3-044be52604df",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "88916b06-1af2-4789-9f55-b349bfaa921b",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 74,
+  "teacherName" : "Ines Rekik",
+  "email" : "ines.rekik@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f590f3dc-7c4f-41d1-bbb3-fe997120d6b8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "2d960f26-9aa4-4443-87ee-cc9005efdb59",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "bd0a7355-d3e8-4132-b6e9-ad8b9922ba94",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "8662cf2b-5ff2-4db2-b554-7ab677b2bcf3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "36ae789e-2e38-4be0-868d-cb632abe92c6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "f3cc5c62-71d9-4e11-ad27-c97ee5b3cac2",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  } ]
+}, {
+  "teacherId" : 75,
+  "teacherName" : "Hamed Chaabouni",
+  "email" : "hamed.chaabouni@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 76,
+  "teacherName" : "Rabii Ben Henda",
+  "email" : "raby.benhenda@isi.utm.tn",
+  "grade" : "PES",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "5a65dbd0-f8eb-41be-a973-827061873214",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "55d699f9-7f89-4785-b169-c0432a20440d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "2d3e529f-ca7f-410b-9c76-e2aee71b081d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "62d16c53-108a-4a40-886c-1454424e5be8",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "89737c53-2ef4-41c0-b472-2bca5931dbd7",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "ab7214b3-1c1b-48b4-90fb-985e8734a467",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "af642c17-1af5-4b37-88ab-4a0b7c3e4389",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "d363ebec-14f3-4058-b3ff-c5ede474ffc4",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 77,
+  "teacherName" : "Olfa Limam",
+  "email" : "olfa.limam@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 78,
+  "teacherName" : "Ines Sansa",
+  "email" : "ines.sansa@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f9d7f18a-daf0-4ab1-b77e-a3f72b9427c0",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "b91d0b8b-0923-4de3-bd8a-103ce4761f36",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "6080ee14-846c-47b4-9856-6142d839d30c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "930dda8f-81c1-4461-b043-e5280c51e1a1",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "6d85e238-5f6e-4d4c-be70-14237c573a15",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 79,
+  "teacherName" : "Dorra Ben Ayed",
+  "email" : "dorra.benayed@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 80,
+  "teacherName" : "Amen Bel Hadj Ali",
+  "email" : "amen.benhadjali@isi.utm.tn",
+  "grade" : "AS",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "bb7ecfaa-f469-41f8-bbaf-7ce83567d22e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "94ffba33-11ce-46fd-9824-8e153865976b",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "115e94bb-3a52-4ca3-87ef-601cc95d29e6",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "6814e013-a904-4529-a60c-f1d7eca3eb1c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "4556ac78-1833-454b-91e6-045577632674",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "e8a96e47-0a1d-4dec-9c2b-77a8b60a3c70",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 81,
+  "teacherName" : "Nefissa Annabi",
+  "email" : "nefissa.annabi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "41353992-3036-4b58-b074-df5dec875c5b",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "8316f4c8-59aa-4c2b-86b9-8140dc67bbcf",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "68a4a51e-da90-416e-b41c-208a047f1d91",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "153e5dfd-9fbd-49c6-a1e0-ec66746eeb55",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "09ccc017-914d-4807-b598-a92dcee84bd4",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "07857719-c257-46d4-9cfd-cd2525fe8c46",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 82,
+  "teacherName" : "Ezzedine Zaghrouba",
+  "email" : "ezzeddine.zagrouba@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 83,
+  "teacherName" : "Imen Ayachi",
+  "email" : "imen.ayachi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 84,
+  "teacherName" : "Imen Ben Hfaiedh",
+  "email" : "imen.benhafaiedh@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 85,
+  "teacherName" : "Rayen Kammarti",
+  "email" : "rayen.kammarti@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "23d68473-62de-45e4-8f7d-3441617453cc",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "d196dd3f-70c4-4ee9-b4c1-bb79b9897354",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "2eff07f4-70d9-461c-998b-a099bccbac7e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "5ac2cfa7-9842-41bc-a807-26f4e69c5478",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "16ec672d-5c0c-4ad9-aa1e-b66e96817995",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "b54fb328-7edd-4ee0-b64d-bf7b3e46cf13",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 86,
+  "teacherName" : "Olfa Ben Sassi",
+  "email" : "olfa.bensassi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "23d68473-62de-45e4-8f7d-3441617453cc",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "2d960f26-9aa4-4443-87ee-cc9005efdb59",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "4b29a37f-37ec-478f-badb-eb76cac43f33",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "75ccfc57-9668-4ec4-825a-794242e6ff77",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "aa4b6045-917b-46a4-9f74-6c37ca9c852a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "0c32bee1-8a33-4496-9cf4-1666fc763814",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 87,
+  "teacherName" : "Med Anis Loghmari",
+  "email" : "anis.loghmari@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 88,
+  "teacherName" : "Asma Nafti",
+  "email" : "asma.nafti@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "540019d4-48fc-4cfc-be46-20698f8baa39",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "1664bb29-e48b-4452-8ef5-d86eac4608bb",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "a680c4df-5aef-4a5b-b732-dbeef2da4ad1",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "f0f44e08-f52a-4683-9aea-2d18303487a0",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "89737c53-2ef4-41c0-b472-2bca5931dbd7",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "7fde5f61-5c19-4468-8b4c-f305bddd339c",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 89,
+  "teacherName" : "Houda Ben Abdallah",
+  "email" : "houda.benabdallah@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "64172334-252f-4803-ae0f-2a9912ad1571",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "be25cc01-e7df-4119-a3b3-e5dafd6f41a4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "85cfcfef-5b6b-4d79-b5b1-7ef9b69b2e1f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "4ff19edf-9cc5-4ac8-a7d8-5e27f49c2f50",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "88996896-547b-4533-885b-5201a2e723c7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "66a003f3-9ae3-47eb-ae42-64f83454c471",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  } ]
+}, {
+  "teacherId" : 90,
+  "teacherName" : "Olfa Mourali",
+  "email" : "olfa.mourali@isi.utm.tn",
+  "grade" : "MC",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 91,
+  "teacherName" : "Gaddour Radhia",
+  "email" : "radhia.gaddour@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 4,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 80.0,
+  "assignments" : [ {
+    "examId" : "7f1bed42-cc79-4427-85c7-56bba4ec3247",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "a5ddf167-8816-4cdb-8a3a-bce94d87ce38",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "d92dd414-b290-4873-82e9-3c52a4125ee6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "758c4749-9394-4117-9adf-80e7ad387c70",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 92,
+  "teacherName" : "Ghayet Elmouna Zhioua",
+  "email" : "gem.zhioua@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 93,
+  "teacherName" : "Sonia Bouajina",
+  "email" : "sonia.bouajina@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 94,
+  "teacherName" : "Arfa Wassim",
+  "email" : "wassim.arfa@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b4f02963-33fd-400c-8c98-f52e539d7ac2",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "61439db8-1c18-4167-8681-facece96d91c",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "dc92d19a-a6c9-4c65-ad88-fead2fae2ca7",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "2fdf4a5b-8a6d-4a53-8ee4-9cbd4c304959",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "5688c490-e9c2-4962-972b-c0d1459b5f97",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 95,
+  "teacherName" : "Hassen Mibar",
+  "email" : "hassen.mibar@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 96,
+  "teacherName" : "Alaa Eddine Touihri",
+  "email" : "alaeddinne.touihri@isi.utm.tn",
+  "grade" : "EX",
+  "assignedSupervisions" : 7,
+  "quotaSupervisions" : 7,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4cef01eb-8351-4105-a6ec-b6f2bc467c37",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "18aa6307-d342-4352-a46f-e567401ea206",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "0c9b9c79-2009-4be6-973e-b3774b7482d3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "09ccc017-914d-4807-b598-a92dcee84bd4",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "0b828092-4c61-40fe-8bb7-4c194b44bab1",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "9b6b2345-bc27-439f-bba1-59a56c162ec1",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "15132b58-5a2a-4998-a0e6-36a1b7469413",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  } ]
+}, {
+  "teacherId" : 97,
+  "teacherName" : "Yousra Najar",
+  "email" : "yousra.najar@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "e4c90401-1c72-4485-961a-6acfc2547750",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "30d25195-a3a5-4c40-a31b-1ff174b0ddea",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "8b897e5c-359c-48ff-b11e-1e85bd5c3d7f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "349b83f6-b0dc-4051-9c41-cdde448efceb",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "81fe0774-8668-4d4a-b09d-e36c2b23a397",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "fc1037dc-b5ca-4532-8b8e-349fcd8e179f",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 98,
+  "teacherName" : "Fatma Choura",
+  "email" : "fatma.choura@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "7bb7d62c-bae2-4c42-870c-862035359cde",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "9fa7be0c-72cf-4266-b9fd-282f74dd22b3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "117a983b-a197-4aa5-8181-972722a88360",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "aeacbbea-1bac-48fe-b7fb-56de6d1d4c38",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "a2a31544-8524-4d90-a470-df018d730fbd",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "ee00759e-7b53-4cec-9601-7ba2f7efc61c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 99,
+  "teacherName" : "Omar Khouja",
+  "email" : "omar.khouaja@isi.utm.tn",
+  "grade" : "AC",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 83.33333333333333,
+  "assignments" : [ {
+    "examId" : "4cef01eb-8351-4105-a6ec-b6f2bc467c37",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "61e49a18-e1fa-4f29-bafc-94c9f4dc4ba2",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "8b897e5c-359c-48ff-b11e-1e85bd5c3d7f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "c181f401-c08c-4c40-80d7-e809f8acc8b5",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "9b6b2345-bc27-439f-bba1-59a56c162ec1",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 100,
+  "teacherName" : "Hela Limam",
+  "email" : "hela.limam@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "8316f4c8-59aa-4c2b-86b9-8140dc67bbcf",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "117a983b-a197-4aa5-8181-972722a88360",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "626a29f8-2f24-4151-8e0d-98be2b139179",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "f0f44e08-f52a-4683-9aea-2d18303487a0",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "2d99855f-9ce1-4702-acf4-a390b8176f3a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "a61c8f49-d5b5-42bc-b4eb-400f515a48c7",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  } ]
+}, {
+  "teacherId" : 101,
+  "teacherName" : "Guesmi Med Amine",
+  "email" : "guesmi.amine@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "115e94bb-3a52-4ca3-87ef-601cc95d29e6",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "112c5687-51e2-497d-975e-817d7eeab395",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "b8cb8c96-1eec-4ea0-a247-42fcf0171cc2",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "d43fdb66-91f4-47bb-a4ba-59e4bb37cb7f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "a7094291-95a8-442a-a99b-279b72a9cc71",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  } ]
+}, {
+  "teacherId" : 102,
+  "teacherName" : "Meher Helaoui",
+  "email" : "maher.helaoui@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 103,
+  "teacherName" : "Imene Hmouda",
+  "email" : "imen.hmouda@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b11e2564-de2a-48cc-80cf-2d9dd7bd5d96",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "e2c3a4e1-5b5b-435e-bd6d-da49fcd5a0c7",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "55d699f9-7f89-4785-b169-c0432a20440d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "293ba4f7-c7d2-4429-bbe2-88d00518d11d",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "47abcdc4-e5be-4722-b91e-70cbb54aa0a9",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "8f81e5c6-79b5-4465-abb6-a3e0fd356419",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  } ]
+}, {
+  "teacherId" : 104,
+  "teacherName" : "Wiem Mrabet",
+  "email" : "wiem.mrabet@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 83.33333333333333,
+  "assignments" : [ {
+    "examId" : "be25cc01-e7df-4119-a3b3-e5dafd6f41a4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "684cd7bf-ec7a-4701-ad3d-e58806847200",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "7ba0d633-a6de-4111-8610-6b343f55b56b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "0788e7a8-207f-402b-a271-9fa3121d1a3a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "55529ddc-1d7a-4646-a854-549bfaf1ee2d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  } ]
+}, {
+  "teacherId" : 105,
+  "teacherName" : "Moez Ferchichi",
+  "email" : "moez.ferchichi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 106,
+  "teacherName" : "Ben Miled Atef",
+  "email" : "atef.benmiled@isi.utm.tn",
+  "grade" : "V",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 5,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b11e2564-de2a-48cc-80cf-2d9dd7bd5d96",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "c9079c46-f4ff-4338-8db2-4bcfb8ff0ba0",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "50ac7e5f-4862-4d22-8a0a-3d105e7d8286",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "ab7214b3-1c1b-48b4-90fb-985e8734a467",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "71a9cc1b-d3a3-4215-8ba3-044be52604df",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 107,
+  "teacherName" : "Leila Samir",
+  "email" : "leila.samir@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "18def11a-4d08-4568-9da5-8f02bf95c8b8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "0cdb6762-8919-4b2e-b2cf-fe387d630940",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "dc576b2c-5081-4d1f-9c5c-3cdae8c9325a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "7dfad4a1-ff70-4418-b219-ea4bf82f722d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "36ae789e-2e38-4be0-868d-cb632abe92c6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "634f1f7a-21b2-431e-83be-c93a30d91952",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  } ]
+}, {
+  "teacherId" : 108,
+  "teacherName" : "Monia Najjar",
+  "email" : "monia.najar@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 109,
+  "teacherName" : "Chiraz Seddik",
+  "email" : "chiraz.seddik@isi.utm.tn",
+  "grade" : "MC",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "64172334-252f-4803-ae0f-2a9912ad1571",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "3459681a-a4eb-4d48-ad99-29707983429a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "72f76224-b295-4df5-81ee-43d4084cba54",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "0788e7a8-207f-402b-a271-9fa3121d1a3a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "349b83f6-b0dc-4051-9c41-cdde448efceb",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "e7744720-99dd-4d2e-87f5-ac2139f0c676",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "1de879d3-30cf-4000-9b87-c6d260cb1972",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "4883273d-8fb3-4620-8442-10d1234673c3",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 110,
+  "teacherName" : "Amel Borgi",
+  "email" : "amel.borgi@isi.utm.tn",
+  "grade" : "PR",
+  "assignedSupervisions" : 8,
+  "quotaSupervisions" : 8,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "4445bbc3-9e42-47fe-af3c-487c0906941e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "71d468b8-8416-4751-9169-1b330fd3c454",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "523bde5d-389e-445e-bce1-bcdf2ff0569a",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "612ad172-9f55-49de-accf-1f504e67bfb3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "18ea355d-ed95-432d-b8ad-aa5a1c46d68c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "94e89dea-3381-400a-bbba-eee0948344b1",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "f405e83c-9fab-4a06-ad88-fc4047b95d56",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "a9318425-0cea-421c-bd21-1ec994d0153f",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 111,
+  "teacherName" : "Rachid Zagrouba",
+  "email" : "rachid.zagrouba@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "60768900-4d73-43b1-ab10-cc853d6dc9f8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "9fa7be0c-72cf-4266-b9fd-282f74dd22b3",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "50ac7e5f-4862-4d22-8a0a-3d105e7d8286",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "eae72657-21c5-4bac-aa2e-13a708d30cef",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "f0a455f8-b3fb-4078-82c3-71030a821a31",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "62c7638a-226b-438c-8078-8f0183747016",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  } ]
+}, {
+  "teacherId" : 112,
+  "teacherName" : "Nadia Boulifa",
+  "email" : "nadia.boulifa@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "18aa6307-d342-4352-a46f-e567401ea206",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "c69e1c8b-852f-4325-9278-f97a615c747b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "4bbf2ace-bf0c-48d0-8161-e1f8ef8cbb95",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "a680c4df-5aef-4a5b-b732-dbeef2da4ad1",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "c181f401-c08c-4c40-80d7-e809f8acc8b5",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "1ffd758c-206a-4a83-88c9-6f0449f7f553",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  } ]
+}, {
+  "teacherId" : 113,
+  "teacherName" : "Rim Kaabi",
+  "email" : "rim.kaabi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 5,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 83.33333333333333,
+  "assignments" : [ {
+    "examId" : "eeb09a0b-ce6f-4eea-b0dc-19c8a9330201",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "e831d63b-b1ec-435f-bb2b-34968720fd1d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "4a9d3e1d-0fad-40a7-a429-7b8889689227",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "8c5dfc7a-8723-4b6b-b53c-ea460ccd5367",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "77b7ec5a-007f-46c3-be7c-d993a921fa7e",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  } ]
+}, {
+  "teacherId" : 114,
+  "teacherName" : "Feten Ben Aicha",
+  "email" : "faten.benaicha@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 115,
+  "teacherName" : "Narjes Ben Hariz",
+  "email" : "narjes.benhariz@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 116,
+  "teacherName" : "Bakhta Haouari",
+  "email" : "bakhta.haouari@isi.utm.tn",
+  "grade" : "AS",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 117,
+  "teacherName" : "Mohamed Glaoui",
+  "email" : "mohamed.glaoui@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 118,
+  "teacherName" : "Meha Hachani",
+  "email" : "meha.hachani@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 119,
+  "teacherName" : "Aymen Ayari",
+  "email" : "aymen.ayari@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 0,
+  "quotaSupervisions" : 0,
+  "utilizationPercentage" : 0.0,
+  "assignments" : [ ]
+}, {
+  "teacherId" : 120,
+  "teacherName" : "Sameh Masmoudi Touj",
+  "email" : "sameh.masmoudi@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "3e3571b6-b1f2-4dac-a3f7-8532a66f6cb4",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "18ea355d-ed95-432d-b8ad-aa5a1c46d68c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "024f0330-5b6c-45b7-8537-bd79ad5aac30",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "4194c849-f3ac-40ba-ac0f-c508f6cfd51b",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "893acce8-2dba-49de-bcdf-e548dc62c61d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
+  }, {
+    "examId" : "e40b2242-ad63-42cf-9a54-d547df6a9cb5",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  } ]
+}, {
+  "teacherId" : 121,
+  "teacherName" : "Sami Ouali",
+  "email" : "sami.ouali@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "f590f3dc-7c4f-41d1-bbb3-fe997120d6b8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "1943fd94-357d-4a81-9e59-e9f63f4e0ea2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "d9a43f84-cc0c-4060-84e4-1dabe48da539",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "30d25195-a3a5-4c40-a31b-1ff174b0ddea",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "0e08d80d-559e-48a8-8756-3236a8c63055",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "10e84950-4afa-45f8-be54-2948761c0b98",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  } ]
+}, {
+  "teacherId" : 122,
+  "teacherName" : "Lamia Landolsi",
+  "email" : "lamia.landolsi@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "e4c90401-1c72-4485-961a-6acfc2547750",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "10c8aa51-c8e4-49b8-bfba-ed1d2f381e92",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "db1e3c90-83e6-4518-af6c-d72a913efb21",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "4bbf2ace-bf0c-48d0-8161-e1f8ef8cbb95",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "024f0330-5b6c-45b7-8537-bd79ad5aac30",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "2857ba55-1713-49de-86bf-70ac58b5f575",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  } ]
+}, {
+  "teacherId" : 123,
+  "teacherName" : "Feten Katlane Kateb",
+  "email" : "faten.kateb@isi.utm.tn",
+  "grade" : "MA",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "104951bf-d038-4923-adf6-5206b8826e8c",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "a0eeb697-65be-46d1-ba22-4735d079bcb1",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "3e020218-a0d2-4422-9043-c6f1eaedafb7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "68a4a51e-da90-416e-b41c-208a047f1d91",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "104d41f0-2cd8-4690-9b48-119a2a358fe1",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "4883273d-8fb3-4620-8442-10d1234673c3",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  } ]
+}, {
+  "teacherId" : 124,
+  "teacherName" : "Sonia Mzoughi",
+  "email" : "sonia.mzoughi@isi.utm.tn",
+  "grade" : "PTC",
+  "assignedSupervisions" : 6,
+  "quotaSupervisions" : 6,
+  "utilizationPercentage" : 100.0,
+  "assignments" : [ {
+    "examId" : "b0161f92-47af-4410-b445-7ea682a0fe60",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "0f03f82b-cc5e-4182-8fa1-a2752e2f074f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "1664bb29-e48b-4452-8ef5-d86eac4608bb",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "7dfad4a1-ff70-4418-b219-ea4bf82f722d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "e8a96e47-0a1d-4dec-9c2b-77a8b60a3c70",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "82defa1b-ed87-47a7-8568-ff269e570fae",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  } ]
+} ]
