@@ -46,7 +46,7 @@ public class AssignmentAlgorithmService {
 
     static class TeacherContribution {
         int teacherIdx;
-        int contribution; // Number of slots this teacher can contribute
+        int contribution;
 
         public TeacherContribution(int teacherIdx, int contribution) {
             this.teacherIdx = teacherIdx;
@@ -65,10 +65,10 @@ public class AssignmentAlgorithmService {
     private String[] teacherGrades;
     private int[] teacherPriorities;
 
-    private boolean[][][] teacherUnavailable; // Original unavailability data
-    private int[] baseQuotas; // Original quotas from database
-    private int[] effectiveQuotas; // Adjusted quotas after considering unavailability
-    private Set<Integer> teachersWithRelaxedUnavailability; // Teachers whose unavailability we're ignoring
+    private boolean[][][] teacherUnavailable;
+    private int[] baseQuotas;
+    private int[] effectiveQuotas;
+    private Set<Integer> teachersWithRelaxedUnavailability;
 
     private List<Exam> exams;
     private final int teachersPerExam = 2;
@@ -94,166 +94,70 @@ public class AssignmentAlgorithmService {
             teachersWithRelaxedUnavailability = new HashSet<>();
 
             System.out.println("========================================");
-            System.out.println("Starting assignment algorithm for session: " + sessionId);
+            System.out.println("HUMAN-LIKE ASSIGNMENT STRATEGY");
             System.out.println("========================================");
 
-            // Calculate initial effective quotas (base quota - unavailability slots)
+            // Calculate initial effective quotas
             calculateEffectiveQuotas();
 
             int totalSupervisionNeeded = numExams * teachersPerExam;
-            int totalEffectiveCapacity = calculateTotalEffectiveCapacity();
+            int totalCapacity = calculateTotalCapacity();
+            int availableExamSlots = calculateAvailableExamSlots();
 
-            System.out.println("\n=== INITIAL CAPACITY CHECK ===");
+            System.out.println("\n=== PHASE 1: CAPACITY CHECK ===");
             System.out.println("Total supervisions needed: " + totalSupervisionNeeded);
-            System.out.println("Total effective capacity (after unavailability): " + totalEffectiveCapacity);
+            System.out.println("Total teacher capacity (quotas): " + totalCapacity);
+            System.out.println("Available exam-teacher slot pairs: " + availableExamSlots);
 
-            // ATTEMPT 1: Try with all unavailability respected
-            if (totalEffectiveCapacity >= totalSupervisionNeeded) {
-                System.out.println("✓ Sufficient capacity with all unavailability respected");
-                System.out.println("\n[ATTEMPT 1] Solving with strict unavailability constraints...");
+            // Check if there's enough capacity even considering unavailability
+            boolean sufficientCapacity = totalCapacity >= totalSupervisionNeeded;
+            boolean sufficientAvailableSlots = availableExamSlots >= totalSupervisionNeeded;
 
-                model = new CpModel();
-                createVariables();
-                addConstraints();
-                AssignmentResponseModel result = solve();
+            System.out.println("\nFeasibility indicators:");
+            System.out.println("  Quota capacity sufficient: " + (sufficientCapacity ? "✓" : "✗"));
+            System.out.println("  Available slots sufficient: " + (sufficientAvailableSlots ? "✓" : "✗"));
 
-                if (result.getStatus() == AssignmentStatus.SUCCESS) {
-                    System.out.println("[SUCCESS] Solution found with all unavailability respected!");
-                    System.out.println("========================================\n");
-                    return result;
-                }
+            // PHASE 1: Try solving with strict unavailability + priority assignments
+            System.out.println("\n=== PHASE 2: TRY WITH STRICT UNAVAILABILITY ===");
+            System.out.println("Strategy: Use optimization to prefer available teachers for conflict slots");
 
-                System.out.println("[INFEASIBLE] Even though capacity is sufficient, no valid assignment found.");
-                System.out.println("This may be due to time slot conflicts or other constraints.");
+            model = new CpModel();
+            createVariables();
+            addConstraintsWithPriority();
+            AssignmentResponseModel result = solve();
+
+            if (result.getStatus() == AssignmentStatus.SUCCESS) {
+                System.out.println("[SUCCESS] Solution found with all unavailability respected!");
+                System.out.println("========================================\n");
+                return result;
+            }
+
+            // PHASE 2: If infeasible, try progressive relaxation
+            System.out.println("[INFEASIBLE] Could not solve with strict unavailability.");
+
+            // Check if relaxation can help
+            if (!sufficientCapacity) {
+                System.out.println("\n[ANALYSIS] Insufficient total capacity.");
+                System.out.println("  Need to relax unavailability to reach capacity.");
             } else {
-                System.out.println("✗ Insufficient capacity - need to relax unavailability");
-                System.out.println("Deficit: " + (totalSupervisionNeeded - totalEffectiveCapacity) + " supervisions");
+                System.out.println("\n[ANALYSIS] Capacity is sufficient but constraints conflict.");
+                System.out.println("  This could be due to:");
+                System.out.println("  - Time slot distribution (too many exams at certain times)");
+                System.out.println("  - Ownership conflicts (owners can't cover their own slots)");
+                System.out.println("  - Unavailability clustering");
+                System.out.println("  Attempting progressive relaxation...");
             }
 
-            // ATTEMPT 2+: Progressively relax unavailability for low-priority teachers
-            System.out.println("\n=== RELAXING UNAVAILABILITY FOR LOW-PRIORITY TEACHERS ===");
-
-            // Group participating teachers by priority (highest priority first)
-            List<Integer> participatingTeacherIndices = new ArrayList<>();
-            for (int t = 0; t < numTeachers; t++) {
-                if (teacherParticipateSurveillance[t]) {
-                    participatingTeacherIndices.add(t);
-                }
-            }
-
-            // Sort by priority (ascending = low priority first for relaxation)
-            participatingTeacherIndices.sort(Comparator.comparingInt(t -> -teacherPriorities[t]));
-
-            System.out.println("Teachers sorted by priority (lowest first):");
-            for (int t : participatingTeacherIndices) {
-                int unavailableSlots = countUnavailableSlots(t);
-                System.out.println("  Teacher " + teacherIds[t] + " (" + teacherNames[t] + ")" +
-                        " - Priority: " + teacherPriorities[t] +
-                        " - Grade: " + teacherGrades[t] +
-                        " - Base Quota: " + baseQuotas[t] +
-                        " - Unavailable Slots: " + unavailableSlots +
-                        " - Effective Quota: " + effectiveQuotas[t]);
-            }
-
-            // Calculate how many teachers we need to relax to meet capacity
-            int capacityDeficit = totalSupervisionNeeded - totalEffectiveCapacity;
-            System.out.println("\nCapacity deficit to fill: " + capacityDeficit);
-
-            // Build list of teachers with their potential contribution
-            List<TeacherContribution> contributions = new ArrayList<>();
-            for (int teacherIdx : participatingTeacherIndices) {
-                int unavailableSlots = countUnavailableSlots(teacherIdx);
-                if (unavailableSlots > 0) {
-                    contributions.add(new TeacherContribution(teacherIdx, unavailableSlots));
-                }
-            }
-
-            // Try batch relaxation strategy
-            int attemptNumber = 2;
-            int batchSize = Math.max(1, (int) Math.ceil(contributions.size() * 0.2)); // Start with 20% of teachers
-
-            while (!contributions.isEmpty()) {
-                // Calculate how many teachers we need based on current deficit
-                int currentDeficit = totalSupervisionNeeded - calculateTotalEffectiveCapacity();
-                if (currentDeficit <= 0) {
-                    System.out.println("\n✓ Sufficient capacity reached!");
-                    break;
-                }
-
-                // Estimate how many teachers we need
-                int avgContribution = contributions.stream()
-                        .mapToInt(c -> c.contribution)
-                        .sum() / contributions.size();
-                int estimatedTeachersNeeded = Math.max(1, (currentDeficit + avgContribution - 1) / avgContribution);
-
-                // Add a buffer (50% more) to account for constraint conflicts
-                int teachersToAdd = (int) Math.ceil(estimatedTeachersNeeded * 1.5);
-                teachersToAdd = Math.min(teachersToAdd, contributions.size()); // Don't exceed available
-                teachersToAdd = Math.max(teachersToAdd, batchSize); // At least the batch size
-
-                System.out.println("\n[ATTEMPT " + attemptNumber + "] Adding batch of " + teachersToAdd + " teacher(s)");
-                System.out.println("  Current deficit: " + currentDeficit);
-                System.out.println("  Estimated teachers needed: " + estimatedTeachersNeeded +
-                        " (adding " + teachersToAdd + " with buffer)");
-
-                // Relax the next batch of teachers
-                List<TeacherContribution> batch = contributions.subList(0, Math.min(teachersToAdd, contributions.size()));
-                int totalRestoredSlots = 0;
-
-                for (TeacherContribution tc : batch) {
-                    teachersWithRelaxedUnavailability.add(tc.teacherIdx);
-                    effectiveQuotas[tc.teacherIdx] = baseQuotas[tc.teacherIdx];
-                    totalRestoredSlots += tc.contribution;
-
-                    System.out.println("  + Teacher " + teacherIds[tc.teacherIdx] +
-                            " (" + teacherNames[tc.teacherIdx] + ") - Priority: " +
-                            teacherPriorities[tc.teacherIdx] +
-                            " - Restoring " + tc.contribution + " slots");
-                }
-
-                contributions = contributions.subList(Math.min(teachersToAdd, contributions.size()), contributions.size());
-
-                int newCapacity = calculateTotalEffectiveCapacity();
-                System.out.println("  Total restored slots: " + totalRestoredSlots);
-                System.out.println("  New total capacity: " + newCapacity + " / " + totalSupervisionNeeded);
-
-                // Try to solve with current batch
-                model = new CpModel();
-                createVariables();
-                addConstraints();
-                AssignmentResponseModel result = solve();
-
-                if (result.getStatus() == AssignmentStatus.SUCCESS) {
-                    String relaxationNote = getRelaxationMessage();
-                    System.out.println("[SUCCESS] Solution found with relaxed unavailability!");
-                    System.out.println("  → " + relaxationNote);
-                    System.out.println("========================================\n");
-                    result.setMessage(result.getMessage() + " " + relaxationNote);
-                    return result;
-                }
-
-                System.out.println("  → Still infeasible, trying next batch...");
-                attemptNumber++;
-
-                // If we still have deficit and teachers available, continue
-                // Otherwise break to avoid infinite loop
-                if (contributions.isEmpty() || newCapacity >= totalSupervisionNeeded) {
-                    break;
-                }
-            }
-
-            // If we exhausted all teachers and still no solution
-            System.out.println("\n[FAILED] All relaxation attempts exhausted. No feasible solution found.");
-            System.out.println("========================================\n");
-
-            return buildInfeasibleResponse(0.0);
+            // Always attempt relaxation if strict mode failed
+            System.out.println("\n=== PHASE 3: PROGRESSIVE RELAXATION ===");
+            return attemptProgressiveRelaxation(totalSupervisionNeeded);
 
         } catch (Exception e) {
-            System.err.println("[ERROR] Exception during assignment: " + e.getMessage());
+            System.err.println("[ERROR] " + e.getMessage());
             e.printStackTrace();
             return AssignmentResponseModel.builder()
                     .status(AssignmentStatus.ERROR)
-                    .message("Error executing assignment: " + e.getMessage())
+                    .message("Error: " + e.getMessage())
                     .generatedAt(LocalDateTime.now())
                     .build();
         }
@@ -277,9 +181,6 @@ public class AssignmentAlgorithmService {
         Map<Long, String> nameMap = teacherService.getAllNames();
         Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas();
 
-        int participatingCount = 0;
-        Map<Integer, Integer> priorityDistribution = new HashMap<>();
-
         for (int i = 0; i < numTeachers; i++) {
             teacherGrades[i] = gradeMap.get(teacherIds[i]);
             teacherNames[i] = nameMap.getOrDefault(teacherIds[i], "Unknown");
@@ -291,19 +192,7 @@ public class AssignmentAlgorithmService {
             } catch (IllegalArgumentException e) {
                 teacherPriorities[i] = Integer.MAX_VALUE;
             }
-
-            if (teacherParticipateSurveillance[i]) {
-                participatingCount++;
-                priorityDistribution.merge(teacherPriorities[i], 1, Integer::sum);
-            }
         }
-
-        System.out.println("Total teachers: " + numTeachers);
-        System.out.println("Participating teachers: " + participatingCount);
-        System.out.println("Priority distribution:");
-        priorityDistribution.entrySet().stream()
-                .sorted(Map.Entry.comparingByKey())
-                .forEach(e -> System.out.println("  Priority " + e.getKey() + ": " + e.getValue() + " teachers"));
 
         teacherIdToIndex = new HashMap<>();
         for (int i = 0; i < numTeachers; i++) {
@@ -318,7 +207,6 @@ public class AssignmentAlgorithmService {
         int numSeances = SeanceType.values().length;
         teacherUnavailable = new boolean[numTeachers][numDays][numSeances];
 
-        int unavailabilityCount = 0;
         for (TeacherUnavailabilityProjection t : teacherUnavailability) {
             Integer teacherIdx = teacherIdToIndex.get(t.getId());
             if (teacherIdx == null) continue;
@@ -328,11 +216,8 @@ public class AssignmentAlgorithmService {
 
             if (dayIdx >= 0 && dayIdx < numDays && seanceIdx >= 0 && seanceIdx < numSeances) {
                 teacherUnavailable[teacherIdx][dayIdx][seanceIdx] = true;
-                unavailabilityCount++;
             }
         }
-
-        System.out.println("Total unavailability declarations: " + unavailabilityCount);
 
         List<ExamForAssignmentProjection> examsList = examService.getExamsForAssignment(currentSession.getId());
         exams = new ArrayList<>();
@@ -345,12 +230,14 @@ public class AssignmentAlgorithmService {
         });
         numExams = exams.size();
 
-        System.out.println("Total exams: " + numExams);
+        System.out.println("Teachers: " + numTeachers + ", Exams: " + numExams);
         System.out.println("===================\n");
     }
 
     private void calculateEffectiveQuotas() {
-        System.out.println("\n=== CALCULATING EFFECTIVE QUOTAS ===");
+        // IMPORTANT: Quota is a limit on total assignments, NOT reduced by unavailability
+        // Unavailability blocks specific exams, but doesn't reduce the quota itself
+        // The solver will naturally assign up to quota only to AVAILABLE exams
 
         for (int t = 0; t < numTeachers; t++) {
             if (!teacherParticipateSurveillance[t]) {
@@ -358,22 +245,13 @@ public class AssignmentAlgorithmService {
                 continue;
             }
 
-            // If this teacher's unavailability is relaxed, use full quota
-            if (teachersWithRelaxedUnavailability.contains(t)) {
-                effectiveQuotas[t] = baseQuotas[t];
-                continue;
-            }
-
-            // Otherwise, subtract unavailable slots from quota
-            int unavailableSlots = countUnavailableSlots(t);
-            effectiveQuotas[t] = Math.max(0, baseQuotas[t] - unavailableSlots);
-
-            System.out.println("Teacher " + teacherIds[t] + ": Base=" + baseQuotas[t] +
-                    ", Unavailable=" + unavailableSlots +
-                    ", Effective=" + effectiveQuotas[t]);
+            // Always use base quota
+            // The unavailability constraints will prevent assignment to specific exams
+            effectiveQuotas[t] = baseQuotas[t];
         }
 
-        System.out.println("===================================\n");
+        System.out.println("\nQuota calculation:");
+        System.out.println("  Using BASE quotas (unavailability handled by constraints, not quota reduction)");
     }
 
     private int countUnavailableSlots(int teacherIdx) {
@@ -389,14 +267,179 @@ public class AssignmentAlgorithmService {
         return count;
     }
 
-    private int calculateTotalEffectiveCapacity() {
+    private int calculateTotalCapacity() {
         int total = 0;
         for (int t = 0; t < numTeachers; t++) {
             if (teacherParticipateSurveillance[t]) {
-                total += effectiveQuotas[t];
+                total += baseQuotas[t];
             }
         }
         return total;
+    }
+
+    private int calculateAvailableExamSlots() {
+        // Count how many (teacher, exam) pairs are available
+        // (not blocked by unavailability or ownership)
+        int available = 0;
+
+        for (int t = 0; t < numTeachers; t++) {
+            if (!teacherParticipateSurveillance[t]) continue;
+            if (teachersWithRelaxedUnavailability.contains(t)) {
+                // All exams available for this teacher (except owned)
+                available += numExams;
+                // Subtract owned exams
+                for (Exam exam : exams) {
+                    if (exam.ownerTeacherId != null && exam.ownerTeacherId.equals(teacherIds[t])) {
+                        available--;
+                    }
+                }
+            } else {
+                // Count only available slots
+                for (int e = 0; e < numExams; e++) {
+                    Exam exam = exams.get(e);
+
+                    // Skip if teacher owns this exam
+                    if (exam.ownerTeacherId != null && exam.ownerTeacherId.equals(teacherIds[t])) {
+                        continue;
+                    }
+
+                    // Skip if teacher is unavailable
+                    if (exam.day < teacherUnavailable[t].length &&
+                            exam.seance < teacherUnavailable[t][exam.day].length &&
+                            teacherUnavailable[t][exam.day][exam.seance]) {
+                        continue;
+                    }
+
+                    available++;
+                }
+            }
+        }
+
+        return available;
+    }
+
+    private AssignmentResponseModel attemptProgressiveRelaxation(int totalSupervisionNeeded) {
+        // Calculate theoretical maximum capacity (all teachers, all unavailability ignored)
+        int maxTheoreticalCapacity = calculateTotalCapacity();
+
+        System.out.println("\nCapacity Analysis:");
+        System.out.println("  Supervisions needed: " + totalSupervisionNeeded);
+        System.out.println("  Current total capacity: " + maxTheoreticalCapacity);
+        System.out.println("  Deficit: " + (totalSupervisionNeeded - maxTheoreticalCapacity));
+
+        // If even ignoring ALL unavailability we don't have enough capacity, stop immediately
+        if (maxTheoreticalCapacity < totalSupervisionNeeded) {
+            System.out.println("\n❌ IMPOSSIBLE: Even with all unavailability ignored,");
+            System.out.println("   total capacity (" + maxTheoreticalCapacity + ") < needed (" + totalSupervisionNeeded + ")");
+            System.out.println("\n💡 SOLUTIONS:");
+            System.out.println("   1. Increase teacher quotas (need +" + (totalSupervisionNeeded - maxTheoreticalCapacity) + " more slots)");
+            System.out.println("   2. Reduce number of exams");
+            System.out.println("   3. Add more teachers to supervision pool");
+
+            return AssignmentResponseModel.builder()
+                    .status(AssignmentStatus.INFEASIBLE)
+                    .message("Insufficient total capacity: " + maxTheoreticalCapacity +
+                            " < " + totalSupervisionNeeded +
+                            ". Need to increase quotas by " + (totalSupervisionNeeded - maxTheoreticalCapacity))
+                    .metadata(AssignmentMetadata.builder()
+                            .sessionId(currentSession.getId())
+                            .sessionName(currentSession.getSessionLibelle())
+                            .totalExams(numExams)
+                            .totalTeachers(numTeachers)
+                            .build())
+                    .generatedAt(LocalDateTime.now())
+                    .build();
+        }
+
+        System.out.println("  ✓ Theoretical capacity sufficient - trying progressive relaxation\n");
+
+        // Sort teachers by priority (lowest first)
+        List<Integer> participatingTeacherIndices = new ArrayList<>();
+        for (int t = 0; t < numTeachers; t++) {
+            if (teacherParticipateSurveillance[t]) {
+                participatingTeacherIndices.add(t);
+            }
+        }
+        participatingTeacherIndices.sort(Comparator.comparingInt(t -> -teacherPriorities[t]));
+
+        // Build contributions list
+        List<TeacherContribution> contributions = new ArrayList<>();
+        for (int teacherIdx : participatingTeacherIndices) {
+            int unavailableSlots = countUnavailableSlots(teacherIdx);
+            if (unavailableSlots > 0) {
+                contributions.add(new TeacherContribution(teacherIdx, unavailableSlots));
+            }
+        }
+
+        System.out.println("Teachers available for relaxation: " + contributions.size());
+
+        // Try relaxing in small batches
+        int attemptNumber = 1;
+        int maxAttempts = 15; // Increased to allow more attempts
+
+        // Start with smaller batches for more gradual relaxation
+        int batchSize = Math.max(1, contributions.size() / 20); // 5% at a time
+
+        while (!contributions.isEmpty() && attemptNumber <= maxAttempts) {
+            int teachersToAdd = Math.min(batchSize, contributions.size());
+
+            System.out.println("\n[RELAXATION ATTEMPT " + attemptNumber + "] Adding " +
+                    teachersToAdd + " teacher(s)");
+
+            // Relax batch
+            List<TeacherContribution> batch = contributions.subList(0, teachersToAdd);
+            for (TeacherContribution tc : batch) {
+                teachersWithRelaxedUnavailability.add(tc.teacherIdx);
+                System.out.println("  + " + teacherNames[tc.teacherIdx] +
+                        " (Priority: " + teacherPriorities[tc.teacherIdx] +
+                        ", restores " + tc.contribution + " exam slots)");
+            }
+            contributions = contributions.subList(teachersToAdd, contributions.size());
+
+            // Show progress
+            int relaxedCount = teachersWithRelaxedUnavailability.size();
+            double relaxedPercentage = (relaxedCount * 100.0) / numTeachers;
+            System.out.println("  → Total relaxed: " + relaxedCount + "/" + numTeachers +
+                    " (" + String.format("%.1f%%", relaxedPercentage) + ")");
+
+            // Try solving
+            model = new CpModel();
+            createVariables();
+            addConstraintsWithPriority();
+            AssignmentResponseModel result = solve();
+
+            if (result.getStatus() == AssignmentStatus.SUCCESS) {
+                String note = getRelaxationMessage();
+                System.out.println("[SUCCESS] " + note);
+                System.out.println("========================================\n");
+                result.setMessage(result.getMessage() + " " + note);
+                return result;
+            }
+
+            // If we've relaxed >50% of teachers and still infeasible, likely structural issue
+            if (relaxedPercentage > 50) {
+                System.out.println("\n⚠️  WARNING: Relaxed over 50% of teachers with no solution");
+                System.out.println("   This suggests structural constraints beyond unavailability:");
+                System.out.println("   - Time slot conflicts (too many exams at same time)");
+                System.out.println("   - Ownership conflicts (teacher owns exam during high-demand slot)");
+                System.out.println("   - Quota distribution issues");
+            }
+
+            attemptNumber++;
+
+            // Increase batch size gradually for faster convergence
+            if (attemptNumber > 3) {
+                batchSize = Math.max(batchSize, contributions.size() / 10); // 10% batches
+            }
+            if (attemptNumber > 7) {
+                batchSize = Math.max(batchSize, contributions.size() / 5); // 20% batches
+            }
+        }
+
+        System.out.println("\n[FAILED] Could not find solution even with relaxation");
+        System.out.println("Final status: " + teachersWithRelaxedUnavailability.size() + " teachers relaxed");
+
+        return buildInfeasibleResponse(0.0);
     }
 
     private void createVariables() {
@@ -408,8 +451,8 @@ public class AssignmentAlgorithmService {
         }
     }
 
-    private void addConstraints() {
-        System.out.println("\n--- Adding Constraints ---");
+    private void addConstraintsWithPriority() {
+        System.out.println("\n--- Adding Constraints with Priority Logic ---");
 
         // 1. Each exam needs exactly 2 teachers
         for (int e = 0; e < numExams; e++) {
@@ -419,24 +462,71 @@ public class AssignmentAlgorithmService {
             }
             model.addEquality(sum, teachersPerExam);
         }
-        System.out.println("✓ Each exam needs exactly " + teachersPerExam + " teachers");
+        System.out.println("✓ Each exam needs " + teachersPerExam + " teachers");
 
-        // 2. Non-participating teachers can't be assigned
-        int nonParticipating = 0;
+        // 2. Non-participating teachers excluded
         for (int t = 0; t < numTeachers; t++) {
             if (!teacherParticipateSurveillance[t]) {
                 for (int e = 0; e < numExams; e++) {
                     model.addEquality(assignment[t][e], 0);
                 }
-                nonParticipating++;
             }
         }
-        System.out.println("✓ Non-participating teachers excluded (" + nonParticipating + " teachers)");
+        System.out.println("✓ Non-participating teachers excluded");
 
-        // 3. Unavailability (only for teachers whose unavailability is NOT relaxed)
+        // 3. CRITICAL: Exam ownership constraints
+        // Owner cannot supervise their own exam BUT MUST supervise another exam in same slot
+        int ownershipConstraints = 0;
+        int mustSuperviseConstraints = 0;
+
+        for (int e = 0; e < numExams; e++) {
+            Exam exam = exams.get(e);
+            if (exam.ownerTeacherId != null && teacherIdToIndex.containsKey(exam.ownerTeacherId)) {
+                int ownerIdx = teacherIdToIndex.get(exam.ownerTeacherId);
+
+                // Hard constraint: Owner cannot supervise their own exam
+                model.addEquality(assignment[ownerIdx][e], 0);
+                ownershipConstraints++;
+
+                // Hard constraint: If owner is participating, they MUST supervise another exam in same slot
+                // This is now SAFE because we discarded their unavailability for this slot during data loading
+                if (teacherParticipateSurveillance[ownerIdx]) {
+                    List<Integer> otherExamsInSlot = new ArrayList<>();
+
+                    for (int otherE = 0; otherE < numExams; otherE++) {
+                        if (otherE == e) continue; // Skip their own exam
+
+                        Exam otherExam = exams.get(otherE);
+                        if (otherExam.day == exam.day && otherExam.seance == exam.seance) {
+                            // Owner is guaranteed available for this slot (unavailability was discarded)
+                            // But still need to check if they own this exam too
+                            if (otherExam.ownerTeacherId == null ||
+                                    !otherExam.ownerTeacherId.equals(exam.ownerTeacherId)) {
+                                otherExamsInSlot.add(otherE);
+                            }
+                        }
+                    }
+
+                    // If there are other exams in the same slot, owner must supervise at least one
+                    if (!otherExamsInSlot.isEmpty()) {
+                        LinearExprBuilder sumOtherExams = LinearExpr.newBuilder();
+                        for (int otherE : otherExamsInSlot) {
+                            sumOtherExams.addTerm(assignment[ownerIdx][otherE], 1);
+                        }
+                        model.addGreaterOrEqual(sumOtherExams, 1);
+                        mustSuperviseConstraints++;
+                    }
+                }
+            }
+        }
+
+        System.out.println("✓ Cannot supervise own exam (" + ownershipConstraints + " constraints)");
+        System.out.println("✓ Exam owners MUST supervise another exam in same slot (" +
+                mustSuperviseConstraints + " hard constraints)");
+
+        // 4. Unavailability (only for non-relaxed teachers)
         int unavailabilityConstraints = 0;
         for (int t = 0; t < numTeachers; t++) {
-            // Skip unavailability for teachers in the relaxed set
             if (teachersWithRelaxedUnavailability.contains(t)) {
                 continue;
             }
@@ -452,10 +542,10 @@ public class AssignmentAlgorithmService {
                 }
             }
         }
-        System.out.println("✓ Unavailability constraints: " + unavailabilityConstraints +
-                " (" + teachersWithRelaxedUnavailability.size() + " teachers have relaxed unavailability)");
+        System.out.println("✓ Unavailability enforced (" + unavailabilityConstraints + " constraints, " +
+                teachersWithRelaxedUnavailability.size() + " teachers relaxed)");
 
-        // 4. Teacher effective quota
+        // 5. Teacher quota limits
         for (int t = 0; t < numTeachers; t++) {
             LinearExprBuilder sum = LinearExpr.newBuilder();
             for (int e = 0; e < numExams; e++) {
@@ -463,22 +553,9 @@ public class AssignmentAlgorithmService {
             }
             model.addLessOrEqual(sum, effectiveQuotas[t]);
         }
-        System.out.println("✓ Teacher quota limits (using effective quotas)");
+        System.out.println("✓ Teacher quota limits applied");
 
-        // 5. Can't supervise own exam
-        int ownershipConstraints = 0;
-        for (int e = 0; e < numExams; e++) {
-            Exam exam = exams.get(e);
-            if (exam.ownerTeacherId != null && teacherIdToIndex.containsKey(exam.ownerTeacherId)) {
-                int ownerIdx = teacherIdToIndex.get(exam.ownerTeacherId);
-                model.addEquality(assignment[ownerIdx][e], 0);
-                ownershipConstraints++;
-            }
-        }
-        System.out.println("✓ Can't supervise own exam (" + ownershipConstraints + " constraints)");
-
-        // 6. No time conflicts
-        int timeConflictConstraints = 0;
+        // 6. No time conflicts - one exam per slot
         for (int t = 0; t < numTeachers; t++) {
             Map<String, List<Integer>> timeSlots = new HashMap<>();
             for (int e = 0; e < numExams; e++) {
@@ -493,12 +570,73 @@ public class AssignmentAlgorithmService {
                         assignments.add(assignment[t][e]);
                     }
                     model.addAtMostOne(assignments);
-                    timeConflictConstraints++;
                 }
             }
         }
-        System.out.println("✓ No time conflicts (" + timeConflictConstraints + " constraints)");
-        System.out.println("-------------------------------\n");
+        System.out.println("✓ No time conflicts");
+
+        // 7. PRIORITY STRATEGY: Optimize for better assignments
+        System.out.println("\n--- Priority Assignment Strategy ---");
+
+        // Build conflict map and optimization objective
+        int[] examConflictScore = new int[numExams];
+
+        for (int e = 0; e < numExams; e++) {
+            Exam exam = exams.get(e);
+            int conflictCount = 0;
+
+            for (int t = 0; t < numTeachers; t++) {
+                if (!teacherParticipateSurveillance[t] || teachersWithRelaxedUnavailability.contains(t)) {
+                    continue;
+                }
+
+                if (exam.day < teacherUnavailable[t].length &&
+                        exam.seance < teacherUnavailable[t][exam.day].length &&
+                        teacherUnavailable[t][exam.day][exam.seance]) {
+                    conflictCount++;
+                }
+            }
+            examConflictScore[e] = conflictCount;
+        }
+
+        LinearExprBuilder objectiveBuilder = LinearExpr.newBuilder();
+        int totalConflictPairs = 0;
+
+        // Minimize assignments of unavailable teachers (relaxed ones)
+        for (int e = 0; e < numExams; e++) {
+            Exam exam = exams.get(e);
+
+            for (int t = 0; t < numTeachers; t++) {
+                if (!teacherParticipateSurveillance[t]) continue;
+
+                // Heavy penalty for relaxed teachers assigned to their originally unavailable slots
+                if (teachersWithRelaxedUnavailability.contains(t)) {
+                    if (exam.day < teacherUnavailable[t].length &&
+                            exam.seance < teacherUnavailable[t][exam.day].length &&
+                            teacherUnavailable[t][exam.day][exam.seance]) {
+                        objectiveBuilder.addTerm(assignment[t][e], 1000);
+                        totalConflictPairs++;
+                    }
+                }
+
+                // Soft penalty for high-conflict slots
+                if (examConflictScore[e] > 0) {
+                    objectiveBuilder.addTerm(assignment[t][e], examConflictScore[e]);
+                }
+            }
+        }
+
+        // Set objective to minimize
+        if (totalConflictPairs > 0 || Arrays.stream(examConflictScore).sum() > 0) {
+            model.minimize(objectiveBuilder);
+            System.out.println("✓ Optimization objective set:");
+            System.out.println("  - Minimize forced assignments to originally unavailable slots");
+            System.out.println("  - Prefer available teachers for high-conflict time slots");
+            System.out.println("  - Conflict pairs to avoid: " + totalConflictPairs);
+        } else {
+            System.out.println("✓ No conflicts detected - standard assignment");
+        }
+        System.out.println("----------------------------------------------\n");
     }
 
     private String getRelaxationMessage() {
@@ -511,8 +649,8 @@ public class AssignmentAlgorithmService {
             relaxedTeachers.add(teacherNames[t] + " (" + teacherGrades[t] + ")");
         }
 
-        return "(Note: Unavailability ignored for " + teachersWithRelaxedUnavailability.size() +
-                " low-priority teacher(s): " + String.join(", ", relaxedTeachers) + ")";
+        return "(Unavailability relaxed for " + teachersWithRelaxedUnavailability.size() +
+                " teacher(s): " + String.join(", ", relaxedTeachers) + ")";
     }
 
     private AssignmentResponseModel solve() {
@@ -523,8 +661,7 @@ public class AssignmentAlgorithmService {
         CpSolverStatus status = solver.solve(model);
         double solutionTime = (System.currentTimeMillis() - startTime) / 1000.0;
 
-        System.out.println("Solver Status: " + status);
-        System.out.println("Solution Time: " + String.format("%.3f", solutionTime) + " seconds");
+        System.out.println("Status: " + status + " (Time: " + String.format("%.3f", solutionTime) + "s)");
 
         if (status == CpSolverStatus.OPTIMAL || status == CpSolverStatus.FEASIBLE) {
             return buildSuccessResponse(solver, status, solutionTime);

@@ -8,17 +8,16 @@ import lombok.Getter;
 // This will test if the cascading relaxation works for low-priority teachers
 
 public enum GradeType {
-    // High priority (0-2) - Keep reasonable quotas
-    PR("Professeur", 6, 0),
-    PES("Professeur de l'Enseignement Supérieur", 6, 0),
-    MC("Maître de Conférences", 8, 1),
-    MA("Maître Assistant", 7, 2),
-    PTC("Professeur Technologue", 8, 2),
-    AC("Assistant Contractuel", 7, 3),
-    AS("Assistant", 7, 5),
-    EX("Examinateur externe", 10, 4),
-    V("Vacataire", 8, 10),
-    VA("Vacataire Associé", 12, 10);                // Keep at 10
+    PR("Professeur", 8, 0),                           // 8 × 8 = 64
+    PES("Professeur de l'Enseignement Supérieur", 8, 0),
+    MC("Maître de Conférences", 8, 1),                // 3 × 8 = 24
+    MA("Maître Assistant", 6, 2),                     // 48 × 6 = 288
+    PTC("Professeur Technologue", 6, 2),
+    AC("Assistant Contractuel", 6, 3),                // 8 × 6 = 48
+    AS("Assistant", 6, 5),                            // 3 × 6 = 18
+    EX("Examinateur externe", 7, 4),                  // 3 × 7 = 21
+    V("Vacataire", 5, 10),                            // 14 × 5 = 70
+    VA("Vacataire Associé", 5, 10);// Keep at 10
 
     private final String label;
     private final int defaultQuota;
