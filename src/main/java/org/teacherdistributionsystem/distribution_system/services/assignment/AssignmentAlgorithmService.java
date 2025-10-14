@@ -28,6 +28,7 @@ public class AssignmentAlgorithmService {
     private final ExamService examService;
     private final TeacherService teacherService;
 
+
     static class Exam {
         String examId;
         int day;
@@ -75,6 +76,8 @@ public class AssignmentAlgorithmService {
     private final int teachersPerExam = 2;
     private Map<Long, Integer> teacherIdToIndex;
     private ExamSessionDto currentSession;
+    private int totalConstraintsAdded = 0;
+    private int relaxationAttemptNumber = 0;
 
     public AssignmentAlgorithmService(TeacherService teacherService,
                                       TeacherQuotaService teacherQuotaService,
@@ -378,16 +381,17 @@ public class AssignmentAlgorithmService {
         System.out.println("Teachers available for relaxation: " + contributions.size());
 
         // Try relaxing in small batches
-        int attemptNumber = 1;
+        relaxationAttemptNumber = 0;
         int maxAttempts = 15; // Increased to allow more attempts
 
         // Start with smaller batches for more gradual relaxation
         int batchSize = Math.max(1, contributions.size() / 20); // 5% at a time
 
-        while (!contributions.isEmpty() && attemptNumber <= maxAttempts) {
+        while (!contributions.isEmpty() && relaxationAttemptNumber <= maxAttempts) {
+            relaxationAttemptNumber++;
             int teachersToAdd = Math.min(batchSize, contributions.size());
 
-            System.out.println("\n[RELAXATION ATTEMPT " + attemptNumber + "] Adding " +
+            System.out.println("\n[RELAXATION ATTEMPT " + relaxationAttemptNumber + "] Adding " +
                     teachersToAdd + " teacher(s)");
 
             // Relax batch
@@ -416,12 +420,16 @@ public class AssignmentAlgorithmService {
                 // Update metadata
                 result.getMetadata().setIsOptimal(false);
                 result.getMetadata().setRelaxedTeachersCount(teachersWithRelaxedUnavailability.size());
+                result.getMetadata().setTotalConstraints(totalConstraintsAdded);
+                result.getMetadata().setRelaxationAttempts(relaxationAttemptNumber);
 
                 // Clear message
                 result.setMessage(
                         "Solution found with relaxed constraints. " +
-                                teachersWithRelaxedUnavailability.size() + " teacher(s) assigned to originally unavailable slots."
+                                teachersWithRelaxedUnavailability.size() + " teacher(s) assigned to originally unavailable slots. " +
+                                "Found after " + relaxationAttemptNumber + " relaxation attempts."
                 );
+
 
                 return result;
             }
@@ -435,19 +443,20 @@ public class AssignmentAlgorithmService {
                 System.out.println("   - Quota distribution issues");
             }
 
-            attemptNumber++;
+            relaxationAttemptNumber++;
 
             // Increase batch size gradually for faster convergence
-            if (attemptNumber > 3) {
+            if (relaxationAttemptNumber > 3) {
                 batchSize = Math.max(batchSize, contributions.size() / 10); // 10% batches
             }
-            if (attemptNumber > 7) {
+            if (relaxationAttemptNumber > 7) {
                 batchSize = Math.max(batchSize, contributions.size() / 5); // 20% batches
             }
         }
 
         System.out.println("\n[FAILED] Could not find solution even with relaxation");
         System.out.println("Final status: " + teachersWithRelaxedUnavailability.size() + " teachers relaxed");
+        System.out.println("Total attempts: " + relaxationAttemptNumber);
 
         return buildInfeasibleResponse(0.0);
     }
@@ -463,7 +472,7 @@ public class AssignmentAlgorithmService {
 
     private void addConstraintsWithPriority() {
         System.out.println("\n--- Adding Constraints with Priority Logic ---");
-
+        totalConstraintsAdded = 0;
         // 1. Each exam needs exactly 2 teachers
         for (int e = 0; e < numExams; e++) {
             LinearExprBuilder sum = LinearExpr.newBuilder();
@@ -471,68 +480,128 @@ public class AssignmentAlgorithmService {
                 sum.addTerm(assignment[t][e], 1);
             }
             model.addEquality(sum, teachersPerExam);
+            totalConstraintsAdded++;
         }
         System.out.println("✓ Each exam needs " + teachersPerExam + " teachers");
 
         // 2. Non-participating teachers excluded
+        int nonParticipatingConstraints = 0;
         for (int t = 0; t < numTeachers; t++) {
             if (!teacherParticipateSurveillance[t]) {
                 for (int e = 0; e < numExams; e++) {
                     model.addEquality(assignment[t][e], 0);
+                    nonParticipatingConstraints++;
                 }
             }
         }
+        totalConstraintsAdded += nonParticipatingConstraints;
         System.out.println("✓ Non-participating teachers excluded");
 
         // 3. CRITICAL: Exam ownership constraints
-        // Owner cannot supervise their own exam BUT MUST supervise another exam in same slot
+// Owner cannot supervise their own exam BUT at least one owner MUST supervise another exam in same slot
         int ownershipConstraints = 0;
         int mustSuperviseConstraints = 0;
 
+// First, identify logical exams (group by day + seance + room)
+// This handles future case where same exam has multiple owner rows in DB
+        Map<String, List<Integer>> logicalExams = new HashMap<>();
+        Map<String, Set<Long>> examOwners = new HashMap<>();
+
         for (int e = 0; e < numExams; e++) {
             Exam exam = exams.get(e);
-            if (exam.ownerTeacherId != null && teacherIdToIndex.containsKey(exam.ownerTeacherId)) {
-                int ownerIdx = teacherIdToIndex.get(exam.ownerTeacherId);
-
-                // Hard constraint: Owner cannot supervise their own exam
-                model.addEquality(assignment[ownerIdx][e], 0);
-                ownershipConstraints++;
-
-                // Hard constraint: If owner is participating, they MUST supervise another exam in same slot
-                // This is now SAFE because we discarded their unavailability for this slot during data loading
-                if (teacherParticipateSurveillance[ownerIdx]) {
-                    List<Integer> otherExamsInSlot = new ArrayList<>();
-
-                    for (int otherE = 0; otherE < numExams; otherE++) {
-                        if (otherE == e) continue; // Skip their own exam
-
-                        Exam otherExam = exams.get(otherE);
-                        if (otherExam.day == exam.day && otherExam.seance == exam.seance) {
-                            // Owner is guaranteed available for this slot (unavailability was discarded)
-                            // But still need to check if they own this exam too
-                            if (otherExam.ownerTeacherId == null ||
-                                    !otherExam.ownerTeacherId.equals(exam.ownerTeacherId)) {
-                                otherExamsInSlot.add(otherE);
-                            }
-                        }
-                    }
-
-                    // If there are other exams in the same slot, owner must supervise at least one
-                    if (!otherExamsInSlot.isEmpty()) {
-                        LinearExprBuilder sumOtherExams = LinearExpr.newBuilder();
-                        for (int otherE : otherExamsInSlot) {
-                            sumOtherExams.addTerm(assignment[ownerIdx][otherE], 1);
-                        }
-                        model.addGreaterOrEqual(sumOtherExams, 1);
-                        mustSuperviseConstraints++;
-                    }
-                }
+            String examKey = exam.day + "_" + exam.seance + "_" + exam.salle;
+            logicalExams.computeIfAbsent(examKey, k -> new ArrayList<>()).add(e);
+            if (exam.ownerTeacherId != null) {
+                examOwners.computeIfAbsent(examKey, k -> new HashSet<>()).add(exam.ownerTeacherId);
             }
         }
 
+// Group exams by time slot for finding alternatives
+        Map<String, List<String>> examKeysBySlot = new HashMap<>();
+        for (String examKey : logicalExams.keySet()) {
+            String[] parts = examKey.split("_");
+            String slotKey = parts[0] + "_" + parts[1]; // day_seance
+            examKeysBySlot.computeIfAbsent(slotKey, k -> new ArrayList<>()).add(examKey);
+        }
+
+// Process each logical exam only once
+        for (Map.Entry<String, List<Integer>> entry : logicalExams.entrySet()) {
+            String examKey = entry.getKey();
+            List<Integer> examIndices = entry.getValue(); // All DB rows for this exam
+            Set<Long> ownerIds = examOwners.getOrDefault(examKey, new HashSet<>());
+
+            if (ownerIds.isEmpty()) continue;
+
+            // Block all owners from supervising any instance of their exam
+            for (int examIdx : examIndices) {
+                for (Long ownerId : ownerIds) {
+                    if (teacherIdToIndex.containsKey(ownerId)) {
+                        int ownerIdx = teacherIdToIndex.get(ownerId);
+                        model.addEquality(assignment[ownerIdx][examIdx], 0);
+                        ownershipConstraints++;
+                    }
+                }
+            }
+
+            // Get participating owners only
+            List<Integer> participatingOwners = ownerIds.stream()
+                    .filter(teacherIdToIndex::containsKey)
+                    .map(teacherIdToIndex::get)
+                    .filter(idx -> teacherParticipateSurveillance[idx])
+                    .collect(Collectors.toList());
+
+            if (participatingOwners.isEmpty()) continue;
+
+            // Find other exams in same slot
+            String[] parts = examKey.split("_");
+            String slotKey = parts[0] + "_" + parts[1];
+
+            List<Integer> otherExamIndices = new ArrayList<>();
+            for (String otherExamKey : examKeysBySlot.get(slotKey)) {
+                if (otherExamKey.equals(examKey)) continue;
+
+                Set<Long> otherOwners = examOwners.getOrDefault(otherExamKey, new HashSet<>());
+                List<Integer> otherIndices = logicalExams.get(otherExamKey);
+
+                // For each owner, check if they can supervise this other exam
+                for (int ownerIdx : participatingOwners) {
+                    Long ownerId = teacherIds[ownerIdx];
+
+                    // Can supervise if they don't own the other exam
+                    if (!otherOwners.contains(ownerId)) {
+                        otherExamIndices.addAll(otherIndices);
+                        break; // Only add indices once per other exam
+                    }
+                }
+            }
+
+            if (otherExamIndices.isEmpty()) continue;
+
+            // KEY: At least ONE participating owner must supervise at least ONE other exam
+            // This creates a SINGLE constraint per logical exam
+            LinearExprBuilder atLeastOneOwnerPresent = LinearExpr.newBuilder();
+
+            for (int ownerIdx : participatingOwners) {
+                for (int otherExamIdx : otherExamIndices) {
+                    Exam otherExam = exams.get(otherExamIdx);
+
+                    // Double-check: owner doesn't own this specific exam instance
+                    if (otherExam.ownerTeacherId == null ||
+                            !otherExam.ownerTeacherId.equals(teacherIds[ownerIdx])) {
+                        atLeastOneOwnerPresent.addTerm(assignment[ownerIdx][otherExamIdx], 1);
+                    }
+                }
+            }
+
+            model.addGreaterOrEqual(atLeastOneOwnerPresent, 1);
+            mustSuperviseConstraints++;
+        }
+        totalConstraintsAdded += ownershipConstraints;
+        totalConstraintsAdded += mustSuperviseConstraints;
+
         System.out.println("✓ Cannot supervise own exam (" + ownershipConstraints + " constraints)");
-        System.out.println("✓ Exam owners MUST supervise another exam in same slot (" +
-                mustSuperviseConstraints + " hard constraints)");
+        System.out.println("✓ At least one exam owner MUST supervise another exam in same slot (" +
+                mustSuperviseConstraints + " constraints)");
 
         // 4. Unavailability (only for non-relaxed teachers)
         int unavailabilityConstraints = 0;
@@ -552,6 +621,7 @@ public class AssignmentAlgorithmService {
                 }
             }
         }
+        totalConstraintsAdded += unavailabilityConstraints;
         System.out.println("✓ Unavailability enforced (" + unavailabilityConstraints + " constraints, " +
                 teachersWithRelaxedUnavailability.size() + " teachers relaxed)");
 
@@ -562,10 +632,12 @@ public class AssignmentAlgorithmService {
                 sum.addTerm(assignment[t][e], 1);
             }
             model.addLessOrEqual(sum, effectiveQuotas[t]);
+            totalConstraintsAdded++;
         }
         System.out.println("✓ Teacher quota limits applied");
 
         // 6. No time conflicts - one exam per slot
+        int timeConflictConstraints = 0;
         for (int t = 0; t < numTeachers; t++) {
             Map<String, List<Integer>> timeSlots = new HashMap<>();
             for (int e = 0; e < numExams; e++) {
@@ -580,9 +652,11 @@ public class AssignmentAlgorithmService {
                         assignments.add(assignment[t][e]);
                     }
                     model.addAtMostOne(assignments);
+                    timeConflictConstraints++;
                 }
             }
         }
+        totalConstraintsAdded += timeConflictConstraints;
         System.out.println("✓ No time conflicts");
 
         // 7. PRIORITY STRATEGY: Optimize for better assignments
@@ -720,6 +794,8 @@ public class AssignmentAlgorithmService {
                 .solutionTimeSeconds(solutionTime)
                 .isOptimal(status == CpSolverStatus.OPTIMAL)
                 .totalAssignmentsMade(totalAssignments)
+                .totalConstraints(totalConstraintsAdded)
+                .relaxationAttempts(relaxationAttemptNumber)
                 .build();
 
         return AssignmentResponseModel.builder()

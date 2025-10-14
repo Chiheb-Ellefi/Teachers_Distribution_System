@@ -34,47 +34,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "56597aaa-7771-43de-b3f2-d0c1fe881057",
+    "examId" : "ef01844a-8d15-4927-8810-78945e72e0a8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "3a140973-b617-4731-9ec9-caf210880e56",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A408"
+    "room" : "A406"
   }, {
-    "examId" : "e032a617-6523-49fd-873b-013cd54d28fe",
+    "examId" : "c7a78ac8-53db-4b78-bdcb-48074c9f636f",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A207"
+    "room" : "A102"
   }, {
-    "examId" : "e38fedf1-7248-4cd2-9d5b-04c952d6a7fb",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A206"
-  }, {
-    "examId" : "4e0307bf-d4d1-40e8-9778-e3fa09ccccc4",
+    "examId" : "da95a444-21ab-41e0-adcf-e95d92794723",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A207"
-  }, {
-    "examId" : "eb35d32a-b9dc-4f38-934b-2c533f7422e2",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A208"
+    "room" : "A102"
   }, {
-    "examId" : "2c8d348d-321a-4cb6-bd53-311579ec9ba2",
+    "examId" : "c991fbf8-73c2-45e8-b1a1-945037641467",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "0a1775a4-8874-4d69-a530-734511bfee4d",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
   } ]
 }, {
   "teacherId" : 5,
@@ -94,40 +94,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "9fd85904-addd-4933-9f2d-a269eff9b821",
+    "examId" : "fc9b641a-b787-41b7-a907-32e467198c41",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A208"
+    "room" : "B303"
   }, {
-    "examId" : "be26eece-1f67-46c1-875b-6ec6d41d59bd",
+    "examId" : "9695e65b-09d5-44c7-89fa-0b00ae23f4e8",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B303"
+    "room" : "A124"
   }, {
-    "examId" : "f130b466-16b3-4fd5-b236-5fa6d02e578a",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A407"
-  }, {
-    "examId" : "506710d2-98c8-49df-ae83-55dacecb8446",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "6baf1480-a19e-49d4-86de-f7f04a85e29e",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A131"
+    "room" : "A405"
   }, {
-    "examId" : "090048b3-c4bb-4ce6-9ef6-de1f1218abdb",
+    "examId" : "509b1729-14ff-40b4-8c41-c44cf03b2cac",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B203"
+    "room" : "A407"
+  }, {
+    "examId" : "2c2c7484-d998-459f-b3cb-7de2fb01f0eb",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 7,
@@ -147,47 +147,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d3a0d0c0-aa22-4ba0-b646-d460845a8ca5",
-    "day" : 1,
-    "dayLabel" : "Day 1",
+    "examId" : "6398f4b5-8adb-411c-8ac9-87966ca6b62a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "B401"
   }, {
-    "examId" : "e21b50b8-92fb-49a9-9e4b-2bbf0e022c42",
+    "examId" : "a56f2bb7-2dc4-4063-8814-68a273921d2d",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B303"
+    "room" : "A124"
   }, {
-    "examId" : "fc9b4dd0-bbbb-449d-9660-a354249aee92",
+    "examId" : "3d872a47-0969-40d1-8b32-6abb1f35e704",
     "day" : 3,
     "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
+  }, {
+    "examId" : "8aab5c83-e1e9-4efb-9357-08cf2f42a98f",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "6bcc2e78-72d1-4e92-9d24-b2d33c70f293",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
+    "room" : "A124"
   }, {
-    "examId" : "c13d049f-16b7-428c-97c7-ab34d878c8ed",
+    "examId" : "a06ebc2c-0e5a-4178-bf30-c0b449e0efb4",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "371e8f88-65af-4bff-973e-831c15dc3de7",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
-  }, {
-    "examId" : "f97b02fa-c0a4-4a7c-bfce-ca58c6e52a38",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
+    "room" : "A209"
   } ]
 }, {
   "teacherId" : 9,
@@ -198,47 +198,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "fcef361b-0fe2-4520-9cfd-3eabd64c0335",
+    "examId" : "775cb882-76f9-48b3-aa99-da1b88021b41",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A405"
-  }, {
-    "examId" : "3664efb4-6f60-4f12-a5d1-0778d1a7d518",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B401"
-  }, {
-    "examId" : "ce4ff002-5d75-44cb-acd5-b8408d8dcb18",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A131"
-  }, {
-    "examId" : "fbad2903-4fa4-4a7c-8df3-e46dbe62e385",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "A407"
   }, {
-    "examId" : "704265c0-7365-4123-a6b6-309dd69cbc85",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A405"
-  }, {
-    "examId" : "54a5c1b1-979a-425b-8eac-ab83d59758ea",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "98fdb14c-4556-4da9-adb0-c7f7102b96c2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "ec2f69c9-d3c9-487d-89c2-80cd5c6bcb31",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "80be2e4e-9ffd-430e-b7ed-2aee35d72526",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "c45e8f51-f2a5-4b19-9b69-7d9686ab8518",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A102"
+  }, {
+    "examId" : "c8caf2eb-c651-4289-a5e3-74367f6b582a",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 10,
@@ -249,47 +249,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "94d8def7-596d-419a-a4ff-99774336f019",
+    "examId" : "53356071-43af-41f1-b338-e9186f74ec37",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
   }, {
-    "examId" : "5c4aeacb-c6db-4255-beea-10cd33651153",
+    "examId" : "b5b470c1-139f-4825-a244-aea2509d9240",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "58102bd6-0fa3-4648-97c0-2f53e341ee20",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A208"
   }, {
-    "examId" : "475b7c29-d1d7-4e83-abd4-4a813da4cb12",
+    "examId" : "553ba48f-5e7e-43c5-91ee-56bfc48bb3ee",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A407"
+    "room" : "A405"
   }, {
-    "examId" : "39f52135-38ff-4dbd-8a7b-cd0e2cd6bca1",
+    "examId" : "56179c32-2e0d-4822-bfb8-7f944de36748",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A209"
+    "room" : "A102"
   }, {
-    "examId" : "30d40442-640c-4014-818b-7f48d96f8b50",
+    "examId" : "d291848a-3764-4a91-935f-4a8212845661",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A407"
-  }, {
-    "examId" : "d5ebbce5-82f0-4ae0-9446-6ab91dae5ed7",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 11,
@@ -300,61 +300,61 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "1f5ddb01-074e-4717-a6b7-d0df040a2cb6",
+    "examId" : "37d4ed6e-94e6-4390-ac7e-adeeb7873dad",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A206"
   }, {
-    "examId" : "e84f4f8f-db62-4c1a-8f99-141172b21630",
+    "examId" : "d1b4528d-72d8-42b9-851f-b475f3044c4e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "bb3acf49-5be2-406e-8b9c-451fbdfe0b25",
-    "day" : 2,
-    "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B303"
+    "room" : "B302"
   }, {
-    "examId" : "145aae7b-7fe7-4a70-8707-757d2c0370b9",
+    "examId" : "cb58bc12-56c7-4657-bde1-3754a6b4dfc4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "4dd4ae38-3de5-4153-8d02-645e81528bca",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A405"
-  }, {
-    "examId" : "0a05ca01-f5a2-4716-a674-e45dbc85fbcb",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B401"
-  }, {
-    "examId" : "28097c3f-226c-4382-b486-8cea1f676057",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
-  }, {
-    "examId" : "b2ed6220-3a70-431c-b59c-af877abca7ac",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
     "room" : "B303"
   }, {
-    "examId" : "79af122c-d71c-4ea8-96a5-67bec85287aa",
+    "examId" : "1da9d704-e3fc-44ad-b216-87f789bb9028",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
+  }, {
+    "examId" : "b805e1cf-eff1-461e-8abf-5df01abb9e56",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "fea2b300-8f0f-4b49-ace5-c88b343695a8",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "8177d7e1-4237-47b6-9d6b-7c5a36b0e5eb",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A406"
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 12,
@@ -365,40 +365,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "ebc3da52-6602-4ee6-8fa6-3d5a2976f7ae",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A208"
-  }, {
-    "examId" : "742b8845-5660-4e3a-b457-2eda3b4add0e",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B203"
-  }, {
-    "examId" : "fb49866f-ed98-4c8e-ae69-b6f53efacce8",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "4d4f8a90-28c2-47e5-bc46-42ca5622a85d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A406"
   }, {
-    "examId" : "c3c6d6de-9bca-4d10-adb9-c014d9795b7c",
+    "examId" : "9fa2a0bb-03ca-4131-8df4-9ba510d48354",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "20b0d5fe-3ef4-40bd-93f3-1352f8d08982",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A124"
+    "room" : "A408"
   }, {
-    "examId" : "4f688319-9168-4a75-8635-b8c4c1bfabfe",
+    "examId" : "469547a5-40d0-4b52-98c5-69ac1084d2fd",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "fd742740-be4b-450a-a770-b308a3d0ba53",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
   } ]
 }, {
   "teacherId" : 13,
@@ -409,47 +409,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "fad86b37-29b7-4732-aa4d-76a832ac70f8",
+    "examId" : "6200a53f-fceb-4847-80b1-117a4e4f3846",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A209"
+    "room" : "A405"
   }, {
-    "examId" : "12dde837-d2d7-4bb0-aa2b-e53613373b2d",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A131"
-  }, {
-    "examId" : "3664efb4-6f60-4f12-a5d1-0778d1a7d518",
+    "examId" : "d0ba986d-f92d-42d4-9015-efedeeece33a",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B401"
-  }, {
-    "examId" : "19af3258-cf64-40c9-80f2-4ef974489965",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A206"
-  }, {
-    "examId" : "c3063d7a-ed50-4de1-8604-3f9ec9789850",
-    "day" : 4,
-    "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B302"
+    "room" : "A209"
   }, {
-    "examId" : "7a60235f-5639-4362-9fc0-1a6393f615f4",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "b6bedd5e-6934-4fd3-b27e-d4d1b91aad83",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A102"
+    "room" : "B302"
+  }, {
+    "examId" : "30efdcc6-66fb-4fdc-9a35-0fe99aaf491a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "d5cb1744-c39b-4759-88b3-d31504eba91f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "e894da46-bc3f-4727-a857-b9ee8d2ec0bb",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
   } ]
 }, {
   "teacherId" : 14,
@@ -460,47 +460,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "8fbb0d2a-d123-4766-8bd8-367e65619e4d",
+    "examId" : "df0c3834-69d8-4c5b-bdc2-27093ccb4404",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "A408"
   }, {
-    "examId" : "dac7da4a-a500-432e-82d6-0014b7d4309d",
+    "examId" : "2a445df6-a4c9-402d-910f-3669e3a10338",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A102"
-  }, {
-    "examId" : "8a34bada-f9fe-46b4-9434-86366a180d19",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A405"
-  }, {
-    "examId" : "a09c364d-d19f-4506-8298-33e8d12a5854",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
-  }, {
-    "examId" : "8b981f77-15d6-462b-b6bb-0d7cb6bc5219",
-    "day" : 4,
-    "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A208"
+    "room" : "B302"
   }, {
-    "examId" : "c6b06612-9eb0-429f-812d-b8b5639c6de7",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "ddea11f3-f56c-46a9-b9c2-7ff5d16e51d7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A405"
+    "room" : "A207"
+  }, {
+    "examId" : "60b7dd24-926e-40d4-8891-f31bb3269863",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "3e0b2812-bdc6-4508-9d3f-fe50e7e051db",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "6d93212e-9432-415e-bfc4-05d1ae682819",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
   } ]
 }, {
   "teacherId" : 15,
@@ -529,47 +529,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "dc469ff2-6d1f-4e99-8a26-f34ad5a8f9d1",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
-  }, {
-    "examId" : "8dca3c9c-97a3-4e54-9ffc-dd71db8a4671",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A208"
-  }, {
-    "examId" : "742b8845-5660-4e3a-b457-2eda3b4add0e",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "76a6e319-2f16-4e58-87d0-fdc6107f8d97",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B203"
+    "room" : "A206"
   }, {
-    "examId" : "b0049728-5a29-41ec-8b1f-d8356edc30e8",
+    "examId" : "19d2e2dc-741f-472d-89fc-99a996e275ee",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "20b0d5fe-3ef4-40bd-93f3-1352f8d08982",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "A408"
   }, {
-    "examId" : "4dc11f58-046d-46e4-9aa2-46a03b183ade",
+    "examId" : "00f835dc-a105-4e8d-ab65-2368fb3aa5a6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
+  }, {
+    "examId" : "1432f0e8-3a78-4d68-a53a-824abc8f3a95",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B401"
+    "room" : "A406"
   }, {
-    "examId" : "a8559706-55c1-4cd2-a98d-af214eaf7326",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "be579d8c-27b4-42dc-be60-c0e9fbd8387f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B302"
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 18,
@@ -580,47 +580,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "84d4d547-0255-46e8-adf9-986fb44d7e2c",
+    "examId" : "8dcfffcd-b7ea-4627-b42a-12f5212dff50",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
-  }, {
-    "examId" : "aeabdc71-8e09-4f97-9874-30f85bdfa015",
-    "day" : 2,
-    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "4d6fa0c1-be58-4e5a-a097-28ed7bb79a09",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A206"
   }, {
-    "examId" : "308b424a-be09-46ee-b95d-35a152edf7ce",
+    "examId" : "8023b1eb-4351-4d0d-b3fb-6c1ee63eee8b",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "A208"
   }, {
-    "examId" : "d580bea6-0205-4703-b373-8a02e1163b7a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A207"
+    "examId" : "632eb55c-c109-45d7-88fd-6fea44a2807b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
   }, {
-    "examId" : "ee47442a-b166-4bd1-8d0a-1b549d636d8a",
+    "examId" : "f066deba-2769-4f65-ab29-ba99d4d337df",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A207"
+    "room" : "A407"
   }, {
-    "examId" : "1a38201c-b117-45fd-ad8d-7f87e35fd9f0",
+    "examId" : "02976708-3d3c-4b06-8198-1f888800ffe5",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A102"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 19,
@@ -631,40 +631,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "60f564e7-f537-4b01-ad2f-160aac09360b",
+    "examId" : "e1f7b9c7-e0c7-4f9e-9b06-04c115d15b20",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B401"
-  }, {
-    "examId" : "15826516-052f-4613-8dca-aca4aae9bd6c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A131"
-  }, {
-    "examId" : "6d3216e3-eaaa-476f-b1fd-7eeb33cbbbcc",
-    "day" : 2,
-    "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A405"
+    "room" : "A408"
   }, {
-    "examId" : "cfc029ec-d467-458d-93c4-31a2cb451868",
+    "examId" : "9fa2a0bb-03ca-4131-8df4-9ba510d48354",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "f25517e2-ce8c-4d43-961f-7c22a243b56e",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A408"
+    "room" : "A406"
   }, {
-    "examId" : "1a38201c-b117-45fd-ad8d-7f87e35fd9f0",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "66892d28-ba64-475f-9171-e073ef8503c4",
+    "day" : 5,
+    "dayLabel" : "Day 5",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A102"
+    "room" : "B303"
+  }, {
+    "examId" : "75ced122-d11e-410a-bc84-2b2e8c8cd467",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 20,
@@ -675,47 +675,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d17a2731-68ea-41fc-84a1-7f9f658e57bc",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A124"
-  }, {
-    "examId" : "9fb878d3-9934-4c46-9ef6-f82765bb231b",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A124"
-  }, {
-    "examId" : "6e548fc0-a212-4c55-aaae-582e7ac8ebc1",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A206"
-  }, {
-    "examId" : "9dd1915a-309d-44f3-920e-bac82effa239",
+    "examId" : "544e6c00-ed93-4780-a9c0-87e3865b4741",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "8a34bada-f9fe-46b4-9434-86366a180d19",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A405"
+    "room" : "A102"
   }, {
-    "examId" : "a2478009-b8a4-43f2-a256-fd11830bef7d",
+    "examId" : "524dd297-22f5-4311-b890-2d51020d039e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "94dfb424-ac76-4742-829c-cbb3ccf5df11",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "78adbddd-9b66-4b3a-94c0-813ecb5b22dd",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "9acf61db-e2c1-4640-be9c-1129f6a4f810",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A206"
+    "room" : "A209"
+  }, {
+    "examId" : "e9bf7bc4-3a03-40a9-8e68-4a664d0e355c",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
   } ]
 }, {
   "teacherId" : 21,
@@ -726,40 +726,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "9fb878d3-9934-4c46-9ef6-f82765bb231b",
+    "examId" : "3b3e4b2d-4260-47c0-8ffb-9831ab829e63",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A124"
+    "room" : "A131"
   }, {
-    "examId" : "4e6c62ac-f6bb-417a-8bce-6e7787ff5e3b",
+    "examId" : "4af9d5bf-f12f-40b5-bed8-db921776b1e4",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A405"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
   }, {
-    "examId" : "b6bcbf8a-cfe9-4d58-a5b2-90341d3816d3",
+    "examId" : "c570b895-4931-4e98-8e89-b2e48512c9cc",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "8b3d66a9-f1b9-4962-8df0-01e0abd67b5b",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A206"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
   }, {
-    "examId" : "d9a28947-161c-48ab-82d4-d44f9b8eab3e",
+    "examId" : "38eeaae9-d523-4687-9bdc-da228ba6b57a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A208"
-  }, {
-    "examId" : "fbd85c71-df29-4f67-8763-672ce4310f6a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A408"
+    "room" : "A207"
   } ]
 }, {
   "teacherId" : 22,
@@ -779,47 +779,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "c45274b5-9f0d-45ff-9a8a-6052b5c83d69",
+    "examId" : "39277c0c-f11e-44d2-88b2-8199e3029f3e",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B401"
-  }, {
-    "examId" : "152f41d8-02ca-4fb5-a182-5abb230a5f5f",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A207"
-  }, {
-    "examId" : "f7b2ea9e-5b6a-4950-88b4-9374b1b0ac2e",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
     "room" : "B302"
   }, {
-    "examId" : "df31d6bc-09cf-45c1-9afc-613b1785c2b0",
+    "examId" : "e1f7b9c7-e0c7-4f9e-9b06-04c115d15b20",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "88bf43a1-2b80-42ad-9a6e-3d1b17176399",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A406"
+    "room" : "B302"
   }, {
-    "examId" : "308b424a-be09-46ee-b95d-35a152edf7ce",
+    "examId" : "a9c1a20d-ee43-488b-aff2-851ee5996776",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "94dfb424-ac76-4742-829c-cbb3ccf5df11",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "A407"
   }, {
-    "examId" : "19ffde5e-7c74-470c-9522-748a2005cd1b",
-    "day" : 5,
-    "dayLabel" : "Day 5",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
+    "examId" : "a866d4fa-917d-43ad-8704-a17d8832309b",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
   } ]
 }, {
   "teacherId" : 24,
@@ -848,47 +848,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "84d4d547-0255-46e8-adf9-986fb44d7e2c",
+    "examId" : "aa3eb6fe-c7a3-4838-b675-50652270dfd0",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B303"
+    "room" : "A207"
   }, {
-    "examId" : "e38fedf1-7248-4cd2-9d5b-04c952d6a7fb",
+    "examId" : "e7ebbf39-13a7-4d6c-93f1-26d987b40909",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A206"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
   }, {
-    "examId" : "09d2dcb8-e8ef-47fe-bbd2-5940ebf1ae16",
+    "examId" : "df4f948b-457b-4a09-87f9-96b09df702ef",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A209"
+    "room" : "A207"
   }, {
-    "examId" : "3bbcd845-9847-4a88-9467-a30794625cb5",
+    "examId" : "a4f55060-291c-4b24-8f22-2d1c54d561c7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "4e0c3ead-da06-467f-9b01-dcdd3c2da735",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
+    "room" : "A124"
+  }, {
+    "examId" : "3d872a47-0969-40d1-8b32-6abb1f35e704",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A102"
-  }, {
-    "examId" : "49afda51-8c93-487f-b8ec-e4181b930cbb",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
-  }, {
-    "examId" : "4dc11f58-046d-46e4-9aa2-46a03b183ade",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B401"
   } ]
 }, {
   "teacherId" : 27,
@@ -899,47 +899,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "b49935a4-00b0-4828-b92f-cf88406ab583",
+    "examId" : "ba569db5-d4ad-4058-ad83-2df2ff6d4983",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
   }, {
-    "examId" : "34c1b648-9e87-4852-8387-66813677af32",
+    "examId" : "e80e7262-c4b2-4b80-a814-a9b1ebf07ac3",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A207"
+    "room" : "A102"
   }, {
-    "examId" : "6f724bb9-7907-411a-9f82-393424a654a3",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A405"
+    "examId" : "b4bd1bd2-7d63-485d-85aa-0506b0093a65",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
   }, {
-    "examId" : "5a84e8ee-d9bf-44dc-af5a-c5a891da2d54",
+    "examId" : "8a80a286-1884-4f97-a360-65921846216a",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A405"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   }, {
-    "examId" : "d6741fbd-b6f6-404c-aae4-d88c251a3ec2",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A208"
-  }, {
-    "examId" : "aef53e7a-67ea-442d-a829-52bedd15d366",
+    "examId" : "e9bf7bc4-3a03-40a9-8e68-4a664d0e355c",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A206"
+    "room" : "A209"
+  }, {
+    "examId" : "75ced122-d11e-410a-bc84-2b2e8c8cd467",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 28,
@@ -950,47 +950,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "c0ffe250-83a0-4aae-9e4b-abe49eca29c7",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "53356071-43af-41f1-b338-e9186f74ec37",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "bb5d9b65-cd6f-4a33-a9ff-72bb0e0987dd",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A406"
+    "room" : "B303"
   }, {
-    "examId" : "78b9e835-a256-49f6-b979-ceca2bfc5980",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "778fbc2f-f842-4f40-afb7-82fe827e189c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A207"
-  }, {
-    "examId" : "befec38b-3df2-4688-84b5-18a0e7727ae7",
+    "examId" : "27b7cba6-a0bf-4474-abb7-93a83b2f7cb3",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A408"
   }, {
-    "examId" : "c21545c9-1000-40a7-b66b-cbe51e688ffa",
+    "examId" : "04e68bc9-9667-4f8a-a0ba-6bc7ede90efe",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "B302"
   }, {
-    "examId" : "60527dec-e017-474c-951f-d569bad8f043",
+    "examId" : "a915bebf-d09f-427d-a9f8-6fd43a622435",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A209"
+    "room" : "A131"
+  }, {
+    "examId" : "6c1dc968-f559-44f1-a45f-1158e95d68e0",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
   } ]
 }, {
   "teacherId" : 29,
@@ -1001,47 +1001,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "56597aaa-7771-43de-b3f2-d0c1fe881057",
+    "examId" : "df35d975-7314-415f-aacb-66ed7b1eb4dc",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A408"
+    "room" : "A405"
   }, {
-    "examId" : "3bff6a41-13e0-45a2-91e1-6de10a50fb5e",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A407"
-  }, {
-    "examId" : "dac7da4a-a500-432e-82d6-0014b7d4309d",
+    "examId" : "b67becd6-5c1c-4432-a7c6-d5cee840b590",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A102"
+    "room" : "B401"
   }, {
-    "examId" : "afeac61c-8b01-46c7-b68f-0dfecd290fdf",
+    "examId" : "16ebe111-0fac-4102-8fa8-614eee59034f",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A407"
   }, {
-    "examId" : "5a84e8ee-d9bf-44dc-af5a-c5a891da2d54",
+    "examId" : "469547a5-40d0-4b52-98c5-69ac1084d2fd",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A405"
   }, {
-    "examId" : "a8559706-55c1-4cd2-a98d-af214eaf7326",
+    "examId" : "4a41d220-4460-44bc-ae79-08fc80e3a546",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "21038e35-75ad-42b6-828a-7c78e5323b15",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B302"
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 30,
@@ -1052,47 +1052,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "f130b466-16b3-4fd5-b236-5fa6d02e578a",
+    "examId" : "cb58bc12-56c7-4657-bde1-3754a6b4dfc4",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A407"
   }, {
-    "examId" : "2552a191-a60e-4aab-a5b9-cc28d424651c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A208"
-  }, {
-    "examId" : "9dd1915a-309d-44f3-920e-bac82effa239",
+    "examId" : "4d6fa0c1-be58-4e5a-a097-28ed7bb79a09",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A102"
+    "room" : "A206"
   }, {
-    "examId" : "49afda51-8c93-487f-b8ec-e4181b930cbb",
+    "examId" : "19d2e2dc-741f-472d-89fc-99a996e275ee",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "de3c30cc-8df9-4dba-815a-33dadac3487e",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
   }, {
-    "examId" : "ea980c2d-18c0-45de-993e-b32a3efe33cc",
+    "examId" : "067efbf4-c998-41f3-a0c8-c0e6ee74c843",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "A131"
   }, {
-    "examId" : "0c1fd68f-540b-4614-9d20-41183fa07abe",
+    "examId" : "7c71e73a-a64a-416f-ba1a-690569ba1226",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "A407"
   } ]
 }, {
   "teacherId" : 31,
@@ -1103,61 +1103,61 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "97eafb9c-29c0-431b-8598-c00dba06d635",
+    "examId" : "4cc93324-b2a3-4e3a-b668-508b9126c6b1",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "9a2de73c-a73e-4d15-9d8a-0f6fcb938f1a",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B401"
+    "room" : "A208"
   }, {
-    "examId" : "dece277a-adea-4c15-9b1c-c7f52d12d8a7",
+    "examId" : "376e60dd-9ebd-4dd6-a74a-d4ab6d05bd62",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
-  }, {
-    "examId" : "114a7775-9907-4265-be4c-d55ebfc5707e",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "B302"
   }, {
-    "examId" : "704265c0-7365-4123-a6b6-309dd69cbc85",
+    "examId" : "2e4af94c-cde8-4f9c-8b9b-c18cf430e289",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A405"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
   }, {
-    "examId" : "a2478009-b8a4-43f2-a256-fd11830bef7d",
+    "examId" : "0a33426a-4dbc-43eb-9a62-261054c51f21",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A206"
+    "room" : "A208"
   }, {
-    "examId" : "2e2984de-43fe-4a47-867d-c5f152eca6ed",
+    "examId" : "44ed87f6-27f5-4169-8753-fa00e4a517f0",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A124"
-  }, {
-    "examId" : "0696b0fe-8133-4f61-ba5e-8af003495359",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
     "room" : "A131"
   }, {
-    "examId" : "bd934054-f3d0-424e-843b-0f3c62d491ef",
+    "examId" : "a915bebf-d09f-427d-a9f8-6fd43a622435",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "7c71e73a-a64a-416f-ba1a-690569ba1226",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A405"
+    "room" : "A407"
   } ]
 }, {
   "teacherId" : 32,
@@ -1168,40 +1168,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "ac672220-d378-4b55-8f1e-cd20f8b44b21",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A408"
-  }, {
-    "examId" : "5c4aeacb-c6db-4255-beea-10cd33651153",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A208"
-  }, {
-    "examId" : "d6b28ae7-c12e-4612-a7d8-51a88e965595",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A124"
-  }, {
-    "examId" : "548e3ad6-cb9d-4490-9bea-f689df9104d6",
+    "examId" : "df4f948b-457b-4a09-87f9-96b09df702ef",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A407"
+    "room" : "A207"
   }, {
-    "examId" : "0696b0fe-8133-4f61-ba5e-8af003495359",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "4dd4ae38-3de5-4153-8d02-645e81528bca",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "6aed8113-48de-438a-bbc0-76a37c3f290b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "60c71c6e-a462-4eea-ace9-eaf2275b2bb8",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A131"
+    "room" : "B203"
+  }, {
+    "examId" : "0c7c9ea9-f67e-4664-9eb8-57450529f63a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 33,
@@ -1212,47 +1212,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "e2904af9-834f-4c3b-8daa-9f8e4dcf00e3",
+    "examId" : "a7bc77b2-9747-42fb-b8b4-a7e048bc3bd4",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "ba22ec27-62bb-4d64-bfaf-6ac13e175e42",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A407"
+    "room" : "A206"
   }, {
-    "examId" : "d0f7c5a3-8801-4f70-a6a5-5db4977ab0ad",
+    "examId" : "3777b4ab-e80e-4299-813c-9ce74718edf4",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "1da9d704-e3fc-44ad-b216-87f789bb9028",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B203"
-  }, {
-    "examId" : "b9652999-9fff-4d90-9dce-283a425112f2",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A406"
-  }, {
-    "examId" : "61ea41ff-0d52-4a56-9263-c77d23acb67c",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A131"
-  }, {
-    "examId" : "f2e6d9dc-530a-4b20-a58c-f85412145c15",
-    "day" : 4,
-    "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A407"
+    "room" : "A206"
   }, {
-    "examId" : "a262d83f-3a62-4705-872b-8f8f95501c90",
-    "day" : 8,
-    "dayLabel" : "Day 8",
+    "examId" : "23cd5501-d0a8-4f17-a880-65a8028256ae",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "d1d4c813-4eb6-45ad-a51f-aa53e3df5dd0",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "A405"
   } ]
 }, {
   "teacherId" : 34,
@@ -1263,54 +1263,54 @@
   "quotaSupervisions" : 7,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "b49935a4-00b0-4828-b92f-cf88406ab583",
+    "examId" : "fc9b641a-b787-41b7-a907-32e467198c41",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "B303"
   }, {
-    "examId" : "eae542bf-de9f-4230-ac99-4f61dbcc57b3",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A407"
-  }, {
-    "examId" : "09d2dcb8-e8ef-47fe-bbd2-5940ebf1ae16",
+    "examId" : "04a2bc90-7ba7-45a9-8180-1f9332ac3964",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A209"
+    "room" : "A131"
   }, {
-    "examId" : "78b9e835-a256-49f6-b979-ceca2bfc5980",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "b1e385dd-fd3d-497b-abb2-7fad68475d80",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A408"
+    "room" : "A206"
   }, {
-    "examId" : "41707e88-99cc-430b-9456-57b046ebf484",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "d9d773bd-4ef6-407e-9fdb-f482f227a559",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "47fcf9a2-38a0-4ca2-a816-36152220b1db",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A207"
+    "room" : "B203"
   }, {
-    "examId" : "1165d9b1-cef4-4f08-8705-599b61f3eace",
+    "examId" : "577034e3-a080-4b99-9824-575651acdbca",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A405"
+    "room" : "A408"
   }, {
-    "examId" : "ee47442a-b166-4bd1-8d0a-1b549d636d8a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A207"
+    "examId" : "fea2b300-8f0f-4b49-ace5-c88b343695a8",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
   } ]
 }, {
   "teacherId" : 35,
@@ -1330,47 +1330,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d0949e5e-5e95-46dd-b62f-97f66096ae32",
+    "examId" : "a2dfdb26-f951-4137-8dd2-f6892f59832e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
   }, {
-    "examId" : "b6bcbf8a-cfe9-4d58-a5b2-90341d3816d3",
+    "examId" : "59d87d2c-ebb0-4e83-9507-df2b3a7749a7",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A206"
+    "room" : "A408"
   }, {
-    "examId" : "5e636662-c901-4833-9671-52c36cef564d",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B203"
-  }, {
-    "examId" : "b111258c-e4dc-4f8b-a3f7-9fe6c1a1fa92",
+    "examId" : "4e0c3ead-da06-467f-9b01-dcdd3c2da735",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A207"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   }, {
-    "examId" : "f89cc3ba-0784-48e9-8862-5eb296c6d8fc",
+    "examId" : "6bcc2e78-72d1-4e92-9d24-b2d33c70f293",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B401"
+    "room" : "A124"
   }, {
-    "examId" : "f515a8db-db7a-463a-80ba-a0a9695a8f89",
+    "examId" : "a5a23170-667c-4c44-a62a-cab93d6b1d43",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A208"
+    "room" : "A405"
+  }, {
+    "examId" : "0316090e-c263-4fff-a9c8-824d4026b1ad",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 37,
@@ -1381,47 +1381,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "872092c9-bfc1-4fc2-9acf-4cfd5df50852",
+    "examId" : "b6304c33-bedc-4dd9-b123-62162223e80c",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A405"
+    "room" : "B303"
   }, {
-    "examId" : "6e548fc0-a212-4c55-aaae-582e7ac8ebc1",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A206"
+    "examId" : "6398f4b5-8adb-411c-8ac9-87966ca6b62a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
   }, {
-    "examId" : "7e19f613-e150-4a45-b42f-88ab737d0b67",
+    "examId" : "59d87d2c-ebb0-4e83-9507-df2b3a7749a7",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "A408"
   }, {
-    "examId" : "fb49866f-ed98-4c8e-ae69-b6f53efacce8",
+    "examId" : "376e60dd-9ebd-4dd6-a74a-d4ab6d05bd62",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "a1e22c06-a256-4b45-bf96-976201a179ee",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A406"
+    "room" : "A405"
   }, {
-    "examId" : "cec7e4b7-a293-4fba-a55e-d758a7c50063",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B401"
-  }, {
-    "examId" : "41707e88-99cc-430b-9456-57b046ebf484",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A207"
+    "examId" : "a866d4fa-917d-43ad-8704-a17d8832309b",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
   } ]
 }, {
   "teacherId" : 38,
@@ -1432,47 +1432,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "4e6c62ac-f6bb-417a-8bce-6e7787ff5e3b",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A405"
-  }, {
-    "examId" : "5a132a22-98fc-4485-83a2-b5bdf768abd8",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A208"
-  }, {
-    "examId" : "6970c86b-c375-4860-85c1-d918c6183c68",
+    "examId" : "c04f8fc9-88a7-4c1b-81ee-e52ddb0f3431",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A407"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
   }, {
-    "examId" : "8eee4b76-2e25-4633-82e0-3b12397cc31d",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A206"
-  }, {
-    "examId" : "ea980c2d-18c0-45de-993e-b32a3efe33cc",
+    "examId" : "9e61d3fd-bca6-4c33-97f7-c78f5e678a74",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "A207"
   }, {
-    "examId" : "253fd610-a163-49ea-9f0f-d600b4b7cd2d",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "fb133e6f-5722-46e4-bcb4-034985b101fc",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
+    "room" : "A102"
+  }, {
+    "examId" : "f36bbb65-7520-4d29-b8ff-0c0950b780ef",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A209"
+  }, {
+    "examId" : "6b2cd8de-30ca-460d-b0e1-658a6a0f5a90",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "74ccf662-401c-48be-8849-cc2928139802",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
   } ]
 }, {
   "teacherId" : 39,
@@ -1492,42 +1492,42 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d9a46f51-b69a-4302-bd46-448205971e53",
+    "examId" : "381668a1-d0fa-4753-a4ee-7cd61727ce36",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "55807497-95c1-4744-9a5d-744565d48dc2",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A408"
+    "room" : "A102"
   }, {
-    "examId" : "114a7775-9907-4265-be4c-d55ebfc5707e",
+    "examId" : "83feda80-c82e-4679-9667-a4e39ee42c11",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "8023b1eb-4351-4d0d-b3fb-6c1ee63eee8b",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B302"
+    "room" : "A208"
   }, {
-    "examId" : "1d76a1e4-4bd8-4213-aefd-1e423c76eee0",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B302"
-  }, {
-    "examId" : "84af36ea-7ca0-4c6e-83b7-4cda03a07947",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B302"
-  }, {
-    "examId" : "2c31b6f3-a45e-47e0-b863-3d7c34c0f7fa",
+    "examId" : "92f8720e-39e7-4462-a509-91cffd68d84c",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A102"
+    "room" : "B302"
   }, {
-    "examId" : "56ec34e0-0c17-4239-b397-7e7bacf74605",
+    "examId" : "6fe73b57-2fba-4386-8035-0e7a76c18797",
     "day" : 8,
     "dayLabel" : "Day 8",
     "seance" : 3,
@@ -1543,47 +1543,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "66ed3c96-11b0-46ec-b168-042c681c6ea4",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A207"
-  }, {
-    "examId" : "97514659-0f31-4a02-9706-6f339e2be0b4",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A207"
-  }, {
-    "examId" : "91aedf86-dd4c-4fb7-9589-b2101ebca6a4",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
-  }, {
-    "examId" : "0d8f6566-6aef-43a5-87aa-6f223324c118",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A406"
-  }, {
-    "examId" : "514e4567-9062-4f26-ae38-7fcd6fa6d868",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "b0c6ec84-7a53-40e8-a57f-d1e0e13e2ad2",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "A209"
   }, {
-    "examId" : "58fac22c-40d8-42f6-a258-d847b1dfd7c5",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "c7a78ac8-53db-4b78-bdcb-48074c9f636f",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "A102"
+  }, {
+    "examId" : "0d1315b3-9316-453d-8616-5ff9e82b8b23",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "e30e9095-fc54-4dcb-ab1b-25f193b98bb6",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "bb15ea9d-0efe-4afa-bd4a-af758981cbab",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A407"
+  }, {
+    "examId" : "067efbf4-c998-41f3-a0c8-c0e6ee74c843",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
   } ]
 }, {
   "teacherId" : 42,
@@ -1594,46 +1594,46 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d25820d5-e7d0-40ca-959c-c1fa03e4a08b",
+    "examId" : "ba569db5-d4ad-4058-ad83-2df2ff6d4983",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A407"
-  }, {
-    "examId" : "2a3465d3-fb09-4220-a1d0-3ef15a4ff2a8",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A206"
+    "room" : "A209"
   }, {
-    "examId" : "dd310083-bd3d-4302-b399-b72c3f0e5856",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "070c3094-4917-4433-a488-4c398306f47b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "e6c5c27f-8d0a-4195-a150-6f5e97416eef",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A208"
+    "room" : "A408"
   }, {
-    "examId" : "478d1adc-56bb-40b3-b740-bcf9fd41cd7b",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B401"
-  }, {
-    "examId" : "e3a3265b-f664-4450-9435-b54ffdcc7d6a",
+    "examId" : "170071bb-0ff0-4ac0-bc87-a88824d2f385",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "A406"
   }, {
-    "examId" : "82e6748d-af7c-4109-bf17-eba0ee02e6e7",
+    "examId" : "171ceea4-046b-4ea1-bdff-f1dddca616e4",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "6b2cd8de-30ca-460d-b0e1-658a6a0f5a90",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 1,
-    "seanceLabel" : "S1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
     "room" : "A124"
   } ]
 }, {
@@ -1641,43 +1641,36 @@
   "teacherName" : "Houli Ayoub",
   "email" : "ayoub.houili@isi.utm.tn",
   "grade" : "V",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 4,
   "quotaSupervisions" : 5,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 80.0,
   "assignments" : [ {
-    "examId" : "fad86b37-29b7-4732-aa4d-76a832ac70f8",
-    "day" : 1,
-    "dayLabel" : "Day 1",
+    "examId" : "553ba48f-5e7e-43c5-91ee-56bfc48bb3ee",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
+  }, {
+    "examId" : "b9575461-e82e-41de-953a-05a90e34048c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A209"
+    "room" : "B303"
   }, {
-    "examId" : "94d8def7-596d-419a-a4ff-99774336f019",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
-  }, {
-    "examId" : "2a3465d3-fb09-4220-a1d0-3ef15a4ff2a8",
+    "examId" : "0c7c9ea9-f67e-4664-9eb8-57450529f63a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A206"
+    "room" : "B401"
   }, {
-    "examId" : "371e8f88-65af-4bff-973e-831c15dc3de7",
+    "examId" : "6cb6b6e6-3046-4811-9ece-d7bb16167dea",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A124"
-  }, {
-    "examId" : "1165d9b1-cef4-4f08-8705-599b61f3eace",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
     "room" : "A405"
   } ]
 }, {
@@ -1685,58 +1678,65 @@
   "teacherName" : "Samar Tlili",
   "email" : "samar.tlili@isi.utm.tn",
   "grade" : "PES",
-  "assignedSupervisions" : 7,
+  "assignedSupervisions" : 8,
   "quotaSupervisions" : 8,
-  "utilizationPercentage" : 87.5,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "152f41d8-02ca-4fb5-a182-5abb230a5f5f",
+    "examId" : "93352718-c29b-4d72-8a22-5f8502153dda",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "A207"
   }, {
-    "examId" : "32ea8d90-6680-47bb-a513-bbed443ab071",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B203"
+    "examId" : "769cdd5e-fd69-4f8e-bf6c-3bb124525db9",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
   }, {
-    "examId" : "49f0f881-a16b-41e4-86c3-2f5f6226a8f8",
+    "examId" : "d231c856-8799-4e86-974d-446bfafbd2ed",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B302"
+    "room" : "A207"
   }, {
-    "examId" : "8229ba91-1fb6-4bb6-a628-4fdbb52131c2",
+    "examId" : "58102bd6-0fa3-4648-97c0-2f53e341ee20",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "a9c1a20d-ee43-488b-aff2-851ee5996776",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A124"
+    "room" : "A405"
   }, {
-    "examId" : "cfc029ec-d467-458d-93c4-31a2cb451868",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "1703606d-55c2-466a-933d-838ebc7ad265",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A408"
   }, {
-    "examId" : "25011fbb-fabc-4d22-8359-f64579743d90",
+    "examId" : "a06ebc2c-0e5a-4178-bf30-c0b449e0efb4",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A208"
+    "room" : "A209"
   }, {
-    "examId" : "e3a3265b-f664-4450-9435-b54ffdcc7d6a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A406"
+    "examId" : "e04fcb21-2499-4886-9612-2dd63adeccc4",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
   } ]
 }, {
   "teacherId" : 45,
@@ -1747,105 +1747,98 @@
   "quotaSupervisions" : 7,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "505ef6d7-ae9c-4a1c-b04c-8a9f90ec62e4",
+    "examId" : "30b6221c-133c-4b53-ba78-b6fadf13312e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
   }, {
-    "examId" : "e2904af9-834f-4c3b-8daa-9f8e4dcf00e3",
+    "examId" : "9695e65b-09d5-44c7-89fa-0b00ae23f4e8",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "cb1508d0-6832-4342-8714-325a8469930f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A407"
+    "room" : "B203"
   }, {
-    "examId" : "7e19f613-e150-4a45-b42f-88ab737d0b67",
+    "examId" : "e1083a81-2049-45f6-9578-ce2b3e633359",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "A131"
   }, {
-    "examId" : "c13d049f-16b7-428c-97c7-ab34d878c8ed",
+    "examId" : "2e4af94c-cde8-4f9c-8b9b-c18cf430e289",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A209"
+  }, {
+    "examId" : "0a33426a-4dbc-43eb-9a62-261054c51f21",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "764c294c-73f9-42b6-82a2-3b0e4fcbea2c",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "28097c3f-226c-4382-b486-8cea1f676057",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
-  }, {
-    "examId" : "a998d1c3-2879-4b9a-98f1-ecd8a355fb12",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
-  }, {
-    "examId" : "1ff11c17-2d68-4a0b-9023-4ce9b63250c0",
-    "day" : 8,
-    "dayLabel" : "Day 8",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "B203"
   } ]
 }, {
   "teacherId" : 46,
   "teacherName" : "Foued Oueslati",
   "email" : "foued.oueslati@isi.utm.tn",
   "grade" : "PTC",
-  "assignedSupervisions" : 6,
+  "assignedSupervisions" : 5,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 83.33333333333333,
   "assignments" : [ {
-    "examId" : "505ef6d7-ae9c-4a1c-b04c-8a9f90ec62e4",
+    "examId" : "c570b895-4931-4e98-8e89-b2e48512c9cc",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
   }, {
-    "examId" : "8adb349a-0cc0-49be-9249-7a29dc8ce49b",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A209"
-  }, {
-    "examId" : "548e3ad6-cb9d-4490-9bea-f689df9104d6",
+    "examId" : "8a28acee-c127-4e07-a9a8-a2f0fbd885ef",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A407"
-  }, {
-    "examId" : "a09c364d-d19f-4506-8298-33e8d12a5854",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "A124"
   }, {
-    "examId" : "514e4567-9062-4f26-ae38-7fcd6fa6d868",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
-  }, {
-    "examId" : "46eb468e-0aab-4d06-b936-7f4b997f00eb",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "b4bd1bd2-7d63-485d-85aa-0506b0093a65",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A407"
+    "room" : "A131"
+  }, {
+    "examId" : "50a6c273-a15a-4966-9411-a1c3fd44978f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "ed2cc79b-b696-45d2-8eea-da2ff4449f3a",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 47,
@@ -1856,98 +1849,91 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "7515b54c-ab8e-4fb7-8529-859c1b168f9a",
+    "examId" : "34b9b6c6-6766-4e9c-839c-9b3d8cb5a9c0",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
-  }, {
-    "examId" : "52634bad-20b5-4577-9457-0f03dfe88fe0",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B401"
-  }, {
-    "examId" : "bb3acf49-5be2-406e-8b9c-451fbdfe0b25",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
-  }, {
-    "examId" : "c3a4c629-6847-457c-a20f-75350f234ea6",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A206"
+    "room" : "B401"
   }, {
-    "examId" : "baae55d3-8557-4dda-9b3d-a229a3ad4e13",
+    "examId" : "462d49bb-6b52-4a43-9580-87c1e9831e7b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A406"
+  }, {
+    "examId" : "9e7c576f-0bc5-4f4e-a33f-61e83218717a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A206"
+    "room" : "A207"
   }, {
-    "examId" : "9e70f89e-0d8b-407b-aa05-ad12fefdb526",
+    "examId" : "9acf61db-e2c1-4640-be9c-1129f6a4f810",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A209"
+  }, {
+    "examId" : "7fea3baf-289f-4a5d-9a6f-bef37dbafa98",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "9a7d9cec-865d-4e2b-a156-d8d0a61e11e3",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
   } ]
 }, {
   "teacherId" : 48,
   "teacherName" : "Imen Belhouene",
   "email" : "imen.belhouene@isi.utm.tn",
   "grade" : "PTC",
-  "assignedSupervisions" : 6,
+  "assignedSupervisions" : 5,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 83.33333333333333,
   "assignments" : [ {
-    "examId" : "2924018a-1a74-4a5f-bf84-297267c7c21b",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
-  }, {
-    "examId" : "36a86b7d-ee69-48d7-a6ce-79bb1a5878c7",
+    "examId" : "6aac8d40-497f-4e56-9b71-b78e75f39d91",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "650ded34-7f4c-486f-b5b3-51c379a44d52",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
     "room" : "B302"
   }, {
-    "examId" : "82091037-c9e4-45a7-919f-e331fc20c827",
+    "examId" : "070c3094-4917-4433-a488-4c398306f47b",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "70bbba32-7b86-4b7b-9082-f1bf1f97a397",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B203"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
   }, {
-    "examId" : "4f688319-9168-4a75-8635-b8c4c1bfabfe",
+    "examId" : "25644c9b-5ea3-483a-b437-4f73377bf1e0",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A408"
+    "room" : "A131"
   }, {
-    "examId" : "d73ca0b0-bf6d-46f2-9e60-dcade095a04a",
-    "day" : 8,
-    "dayLabel" : "Day 8",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
+    "examId" : "bb1854ed-55a6-4028-b208-316425bc0ac7",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
   } ]
 }, {
   "teacherId" : 49,
@@ -1963,44 +1949,51 @@
   "teacherName" : "Ghada Besbes",
   "email" : "ghada.besbes@isi.utm.tn",
   "grade" : "MA",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 6,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 83.33333333333333,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "4e7865ef-abe8-48dc-821c-38816af455b1",
+    "examId" : "6528e00c-f991-49fd-b6f1-97c4e8cbce42",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
-  }, {
-    "examId" : "d9a46f51-b69a-4302-bd46-448205971e53",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
-  }, {
-    "examId" : "0ce55471-af9e-43d2-b6c4-28198226015e",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A407"
-  }, {
-    "examId" : "b9f8e830-7b7f-440c-83bf-f72ce98ef3ef",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
-  }, {
-    "examId" : "c21545c9-1000-40a7-b66b-cbe51e688ffa",
-    "day" : 4,
-    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "B302"
+  }, {
+    "examId" : "c5d93a5f-cf61-444d-a277-8a3cb1ecf301",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B203"
+  }, {
+    "examId" : "8e02fdd5-8ffd-420e-995e-cc7e498fb5dc",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "5c72097a-4640-44a2-913b-8da02c047f52",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "a6572901-3fb2-4be0-90c0-da9ef3411e1c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "577034e3-a080-4b99-9824-575651acdbca",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 51,
@@ -2011,40 +2004,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "60f564e7-f537-4b01-ad2f-160aac09360b",
+    "examId" : "df0c3834-69d8-4c5b-bdc2-27093ccb4404",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B401"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A408"
   }, {
-    "examId" : "10c0b6fb-8c32-4085-8d5a-23420044ed92",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "examId" : "dccd2210-7b4e-4162-b981-358a288d6ecd",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "fd5fec8d-ce20-497a-b27e-a19296bf8222",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A406"
   }, {
-    "examId" : "82091037-c9e4-45a7-919f-e331fc20c827",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "ed5170c4-47a8-478c-a0fc-355c4cda09d3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B203"
+    "room" : "A206"
   }, {
-    "examId" : "808e6250-1fab-4db1-8bfd-e6fbd1f6d0f7",
+    "examId" : "107c4369-e796-479c-afe5-04994c113532",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
-  }, {
-    "examId" : "58fac22c-40d8-42f6-a258-d847b1dfd7c5",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B401"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 52,
@@ -2060,44 +2053,37 @@
   "teacherName" : "Nenni Mariem",
   "email" : "meriem.nenni@isi.utm.tn",
   "grade" : "V",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 4,
   "quotaSupervisions" : 5,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 80.0,
   "assignments" : [ {
-    "examId" : "448f277d-567f-4c61-8816-43e9fef975a3",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
-  }, {
-    "examId" : "d25820d5-e7d0-40ca-959c-c1fa03e4a08b",
+    "examId" : "aa3eb6fe-c7a3-4838-b675-50652270dfd0",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A407"
+    "room" : "A207"
   }, {
-    "examId" : "be26eece-1f67-46c1-875b-6ec6d41d59bd",
-    "day" : 1,
-    "dayLabel" : "Day 1",
+    "examId" : "8e02fdd5-8ffd-420e-995e-cc7e498fb5dc",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "d2c513ce-01b7-4942-a8f0-9e5710940016",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "d8f03e4f-c797-4c97-bbc9-58e1ce4fd2a2",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "B303"
-  }, {
-    "examId" : "475b7c29-d1d7-4e83-abd4-4a813da4cb12",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A407"
-  }, {
-    "examId" : "6d3216e3-eaaa-476f-b1fd-7eeb33cbbbcc",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
   } ]
 }, {
   "teacherId" : 54,
@@ -2108,47 +2094,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "3bff6a41-13e0-45a2-91e1-6de10a50fb5e",
+    "examId" : "e80e7262-c4b2-4b80-a814-a9b1ebf07ac3",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "775cb882-76f9-48b3-aa99-da1b88021b41",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "d9c21ee8-6faf-43f5-9ff8-5016fcc82107",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A407"
+    "room" : "A408"
   }, {
-    "examId" : "59a70f92-0dfa-494b-acdc-2260453c8507",
+    "examId" : "9af0ab7d-5441-4b2f-b5c1-d2b02097d1c4",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A124"
+    "room" : "A407"
   }, {
-    "examId" : "650ded34-7f4c-486f-b5b3-51c379a44d52",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "6d93212e-9432-415e-bfc4-05d1ae682819",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "B302"
   }, {
-    "examId" : "39f52135-38ff-4dbd-8a7b-cd0e2cd6bca1",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A209"
-  }, {
-    "examId" : "0bce6c42-71ce-4e9d-9cf7-589133d2aeed",
+    "examId" : "f47797c4-6bd9-4a6d-b246-8eda4b83342e",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B303"
-  }, {
-    "examId" : "ddccd24d-6bee-4367-bf75-6cbb6ad677b1",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A209"
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 55,
@@ -2159,40 +2145,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "927bf343-dcc1-4e31-833a-b6af047e101c",
+    "examId" : "4af9d5bf-f12f-40b5-bed8-db921776b1e4",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A131"
   }, {
-    "examId" : "5453a5b8-95ab-48ab-bbda-321860712099",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "fb619365-4fe0-4359-8546-2d99e331ec97",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A406"
+    "room" : "A124"
   }, {
-    "examId" : "d3f76725-c8f1-4334-b23d-ef7db351e160",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A207"
-  }, {
-    "examId" : "54a5c1b1-979a-425b-8eac-ab83d59758ea",
+    "examId" : "eeb054e5-5397-4ae2-8765-2bac020c01f4",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "B302"
   }, {
-    "examId" : "8b981f77-15d6-462b-b6bb-0d7cb6bc5219",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "8177d7e1-4237-47b6-9d6b-7c5a36b0e5eb",
+    "day" : 7,
+    "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A208"
+    "room" : "B401"
+  }, {
+    "examId" : "fd742740-be4b-450a-a770-b308a3d0ba53",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
   } ]
 }, {
   "teacherId" : 56,
@@ -2212,47 +2198,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "901979b9-ba6f-4b0a-9c38-c375d4632993",
+    "examId" : "769cdd5e-fd69-4f8e-bf6c-3bb124525db9",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B302"
+    "room" : "A406"
   }, {
-    "examId" : "99e3cb29-32f9-4e21-b244-55dac48db5fd",
+    "examId" : "5f2c7a78-6a29-40dd-9f16-28f625a96e46",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "eb3fc314-cb1e-4b03-80fc-6aac3cc8d545",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
+  }, {
+    "examId" : "2dddbe5b-cbd8-4405-89f4-67c8bb6b9e6a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "0d8f6566-6aef-43a5-87aa-6f223324c118",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A406"
-  }, {
-    "examId" : "dd310083-bd3d-4302-b399-b72c3f0e5856",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
     "room" : "A208"
   }, {
-    "examId" : "befec38b-3df2-4688-84b5-18a0e7727ae7",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "cec7e4b7-a293-4fba-a55e-d758a7c50063",
+    "examId" : "cb6892e6-4838-48e5-8774-86a8289adc84",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "A131"
+  }, {
+    "examId" : "f47797c4-6bd9-4a6d-b246-8eda4b83342e",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 58,
@@ -2263,61 +2249,61 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d17a2731-68ea-41fc-84a1-7f9f658e57bc",
+    "examId" : "583c9f1b-0c05-4a28-b5bf-489d3f127704",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A124"
   }, {
-    "examId" : "46335aac-d805-4b73-bfa9-37206e9eda3c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
+    "examId" : "8dcfffcd-b7ea-4627-b42a-12f5212dff50",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
   }, {
-    "examId" : "71ad7a08-0f01-4976-aafa-9a913d27b550",
+    "examId" : "3777b4ab-e80e-4299-813c-9ce74718edf4",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A131"
+    "room" : "A408"
   }, {
-    "examId" : "059843c2-cbe0-4113-b324-000f4ef4a20b",
+    "examId" : "587979e9-0e0b-4223-be13-465b3785bed9",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A102"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A407"
   }, {
-    "examId" : "fbad2903-4fa4-4a7c-8df3-e46dbe62e385",
+    "examId" : "eb3fc314-cb1e-4b03-80fc-6aac3cc8d545",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "A407"
   }, {
-    "examId" : "c6b06612-9eb0-429f-812d-b8b5639c6de7",
+    "examId" : "ef337147-9f29-4d92-b920-86ff50bdd4f6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "6cb6b6e6-3046-4811-9ece-d7bb16167dea",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A405"
-  }, {
-    "examId" : "1201250f-c0ce-4910-8110-3d0ff1f7ea28",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
-  }, {
-    "examId" : "d73ca0b0-bf6d-46f2-9e60-dcade095a04a",
-    "day" : 8,
-    "dayLabel" : "Day 8",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A124"
+    "room" : "A405"
+  }, {
+    "examId" : "c8caf2eb-c651-4289-a5e3-74367f6b582a",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 59,
@@ -2328,47 +2314,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d6b28ae7-c12e-4612-a7d8-51a88e965595",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "3a140973-b617-4731-9ec9-caf210880e56",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A124"
-  }, {
-    "examId" : "5e5530c5-f266-4253-91b2-4f4aaefe9114",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
-  }, {
-    "examId" : "c3a4c629-6847-457c-a20f-75350f234ea6",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A206"
-  }, {
-    "examId" : "1917a4a2-23f8-48f9-afd8-dddd8f59195a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
     "room" : "A406"
   }, {
-    "examId" : "b2c01ebf-1c38-4967-9bfd-5bafe49960aa",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A131"
-  }, {
-    "examId" : "2c31b6f3-a45e-47e0-b863-3d7c34c0f7fa",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "75ae9a8e-82b5-4090-af7c-2ee687180553",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
+    "room" : "A124"
+  }, {
+    "examId" : "a2e73855-ed82-4493-ada0-8ede441d1138",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
     "room" : "A102"
+  }, {
+    "examId" : "27b7cba6-a0bf-4474-abb7-93a83b2f7cb3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
+  }, {
+    "examId" : "30efdcc6-66fb-4fdc-9a35-0fe99aaf491a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "e894da46-bc3f-4727-a857-b9ee8d2ec0bb",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
   } ]
 }, {
   "teacherId" : 60,
@@ -2379,112 +2365,105 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d0949e5e-5e95-46dd-b62f-97f66096ae32",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
-  }, {
-    "examId" : "36a86b7d-ee69-48d7-a6ce-79bb1a5878c7",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A408"
-  }, {
-    "examId" : "aeabdc71-8e09-4f97-9874-30f85bdfa015",
+    "examId" : "34cb8efa-0c3e-418e-b127-18a9eb7e83ba",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A206"
   }, {
-    "examId" : "7eb85c81-9a5e-4046-81ee-d19635caeb92",
+    "examId" : "fb71504e-1cfe-412d-97be-9d6943e674fe",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A406"
-  }, {
-    "examId" : "80ed68c5-21b4-4cc4-a46d-f319703cdb20",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A407"
-  }, {
-    "examId" : "253fd610-a163-49ea-9f0f-d600b4b7cd2d",
-    "day" : 7,
-    "dayLabel" : "Day 7",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A209"
+    "room" : "B303"
+  }, {
+    "examId" : "47fcf9a2-38a0-4ca2-a816-36152220b1db",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
+  }, {
+    "examId" : "7434636f-fc1a-4349-a284-0e75044bd622",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "25644c9b-5ea3-483a-b437-4f73377bf1e0",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "c45e8f51-f2a5-4b19-9b69-7d9686ab8518",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 61,
   "teacherName" : "Ali Sghaier Tlili",
   "email" : "ali.tlili@isi.utm.tn",
   "grade" : "PR",
-  "assignedSupervisions" : 8,
+  "assignedSupervisions" : 7,
   "quotaSupervisions" : 8,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 87.5,
   "assignments" : [ {
-    "examId" : "320907c1-73a4-48c5-952c-a662156019de",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A131"
-  }, {
-    "examId" : "02a90a14-dc60-4afd-a043-044100182076",
+    "examId" : "c0004209-df71-4c24-b52b-b539a1182ef3",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A206"
   }, {
-    "examId" : "19af3258-cf64-40c9-80f2-4ef974489965",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A206"
+    "examId" : "548a1779-2b41-4e23-8f3f-b6f951a336b9",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
   }, {
-    "examId" : "0046a989-7c17-47a1-a0a7-b10e917cabbd",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
-  }, {
-    "examId" : "b0049728-5a29-41ec-8b1f-d8356edc30e8",
+    "examId" : "de3c30cc-8df9-4dba-815a-33dadac3487e",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A408"
+    "room" : "A206"
   }, {
-    "examId" : "61ea41ff-0d52-4a56-9263-c77d23acb67c",
+    "examId" : "4926d986-e774-49cf-99c3-6e9188657203",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A131"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
   }, {
-    "examId" : "d5ebbce5-82f0-4ae0-9446-6ab91dae5ed7",
+    "examId" : "2d5fc31b-2b56-4bac-aa51-508d61bfa6ba",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "1f3097af-b0e3-4dbb-9057-d4b45b2e9a6f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B303"
+    "room" : "A405"
   }, {
-    "examId" : "2a4cb49e-8ac9-4fea-86da-585e25527f6d",
+    "examId" : "ed142a75-2940-4057-8e30-e53b59c83991",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A124"
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 62,
@@ -2495,47 +2474,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "10c0b6fb-8c32-4085-8d5a-23420044ed92",
+    "examId" : "a2dfdb26-f951-4137-8dd2-f6892f59832e",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A406"
+    "room" : "B303"
   }, {
-    "examId" : "0695d77d-b6b2-4c49-912c-c0f7fd671a6d",
+    "examId" : "3b56f653-2d21-42f7-9454-ccfe7dd6f3d6",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A406"
+    "room" : "A206"
   }, {
-    "examId" : "506710d2-98c8-49df-ae83-55dacecb8446",
+    "examId" : "d2c513ce-01b7-4942-a8f0-9e5710940016",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
   }, {
-    "examId" : "b9f8e830-7b7f-440c-83bf-f72ce98ef3ef",
+    "examId" : "f066deba-2769-4f65-ab29-ba99d4d337df",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A408"
+    "room" : "A407"
   }, {
-    "examId" : "b2c01ebf-1c38-4967-9bfd-5bafe49960aa",
+    "examId" : "d84fa5bd-ce7e-489c-bc0a-1aa85a1586df",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
+  }, {
+    "examId" : "21038e35-75ad-42b6-828a-7c78e5323b15",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A131"
-  }, {
-    "examId" : "0eac27f2-732a-4150-adab-431cca05cae2",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 63,
@@ -2546,47 +2525,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "ac672220-d378-4b55-8f1e-cd20f8b44b21",
+    "examId" : "4891a297-09f2-4ce3-bbe2-dbf4f75b87de",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A408"
+    "room" : "A209"
   }, {
-    "examId" : "9efe650c-5781-4a52-b76e-e87ffd4aa9c3",
+    "examId" : "6200a53f-fceb-4847-80b1-117a4e4f3846",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A405"
+  }, {
+    "examId" : "34cb8efa-0c3e-418e-b127-18a9eb7e83ba",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A207"
-  }, {
-    "examId" : "b111258c-e4dc-4f8b-a3f7-9fe6c1a1fa92",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A207"
-  }, {
-    "examId" : "baae55d3-8557-4dda-9b3d-a229a3ad4e13",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A206"
   }, {
-    "examId" : "2e2984de-43fe-4a47-867d-c5f152eca6ed",
+    "examId" : "e3e22ce7-028c-4afb-a5c9-4be772d7c52c",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A124"
+    "room" : "A102"
   }, {
-    "examId" : "c460defc-a33d-4a00-8fb0-9bf7c3bd04ae",
+    "examId" : "f1f5859c-c48a-475f-9b9a-aff6c177567d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B401"
+  }, {
+    "examId" : "02976708-3d3c-4b06-8198-1f888800ffe5",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B302"
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 64,
@@ -2597,47 +2576,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "52634bad-20b5-4577-9457-0f03dfe88fe0",
+    "examId" : "1d612261-4b23-4562-a296-a28673baa04e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B401"
-  }, {
-    "examId" : "93eb90cc-555b-490d-adfb-2551fab4b21a",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A209"
-  }, {
-    "examId" : "77676794-ce6a-49c7-bbc8-7139a8bbdf4b",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A206"
-  }, {
-    "examId" : "ba12756c-2922-4b4b-a79f-070e6b4f0896",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A209"
-  }, {
-    "examId" : "a60eea56-b0d3-4a24-9a05-55bc757b3066",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A408"
-  }, {
-    "examId" : "7c8f03b3-bd35-4a78-9cfd-f780c3516e70",
-    "day" : 7,
-    "dayLabel" : "Day 7",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "B302"
+  }, {
+    "examId" : "88bf43a1-2b80-42ad-9a6e-3d1b17176399",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "d9d773bd-4ef6-407e-9fdb-f482f227a559",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
+  }, {
+    "examId" : "3e0b2812-bdc6-4508-9d3f-fe50e7e051db",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A206"
+  }, {
+    "examId" : "b55d8a61-a242-49cc-ab30-3438c400cb30",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "941bff40-c034-495e-b9bf-0a3be47d7afb",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 65,
@@ -2666,47 +2645,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "93eb90cc-555b-490d-adfb-2551fab4b21a",
+    "examId" : "3b3e4b2d-4260-47c0-8ffb-9831ab829e63",
     "day" : 1,
     "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "c991fbf8-73c2-45e8-b1a1-945037641467",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A209"
   }, {
-    "examId" : "2552a191-a60e-4aab-a5b9-cc28d424651c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A208"
-  }, {
-    "examId" : "c1a9e8e2-5d6d-48e7-9855-6844903dd5d2",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "38eeaae9-d523-4687-9bdc-da228ba6b57a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A405"
+    "room" : "A207"
   }, {
-    "examId" : "d580bea6-0205-4703-b373-8a02e1163b7a",
+    "examId" : "70bbba32-7b86-4b7b-9082-f1bf1f97a397",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A207"
+    "room" : "A206"
   }, {
-    "examId" : "80ed68c5-21b4-4cc4-a46d-f319703cdb20",
+    "examId" : "fb133e6f-5722-46e4-bcb4-034985b101fc",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A407"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   }, {
-    "examId" : "a7e2692c-c7c0-480b-9f10-52b08ee00d3d",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "3f685dd9-1429-4ce7-8b8f-00017ce2cdb7",
+    "day" : 8,
+    "dayLabel" : "Day 8",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B303"
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 68,
@@ -2717,61 +2696,61 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "2130b13f-ddcc-4375-af97-7d637777c94f",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B203"
-  }, {
-    "examId" : "9be486c8-cd01-434c-9192-6df05379b000",
+    "examId" : "37d4ed6e-94e6-4390-ac7e-adeeb7873dad",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A207"
+    "room" : "A206"
   }, {
-    "examId" : "97514659-0f31-4a02-9706-6f339e2be0b4",
+    "examId" : "e7ebbf39-13a7-4d6c-93f1-26d987b40909",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
+  }, {
+    "examId" : "e1083a81-2049-45f6-9578-ce2b3e633359",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A207"
+    "room" : "A131"
   }, {
-    "examId" : "07c75947-57f8-4e16-86c4-fb0c027585c0",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A408"
-  }, {
-    "examId" : "4abddd4f-612f-4791-92e5-967b56347b37",
+    "examId" : "16ebe111-0fac-4102-8fa8-614eee59034f",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A207"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
   }, {
-    "examId" : "9e70f89e-0d8b-407b-aa05-ad12fefdb526",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A209"
-  }, {
-    "examId" : "ddccd24d-6bee-4367-bf75-6cbb6ad677b1",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A209"
-  }, {
-    "examId" : "39f9c229-deca-4a77-b0fd-915e8553288d",
+    "examId" : "04e68bc9-9667-4f8a-a0ba-6bc7ede90efe",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "a7e87a55-ffc6-4023-96e9-c3e86ba24aca",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "e04fcb21-2499-4886-9612-2dd63adeccc4",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
     "room" : "A209"
+  }, {
+    "examId" : "3e0fa1cc-e91c-45dc-bf3f-d2dedd654d6b",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 69,
@@ -2782,47 +2761,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "fcef361b-0fe2-4520-9cfd-3eabd64c0335",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
+    "examId" : "d1d4c813-4eb6-45ad-a51f-aa53e3df5dd0",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A405"
   }, {
-    "examId" : "77676794-ce6a-49c7-bbc8-7139a8bbdf4b",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A206"
-  }, {
-    "examId" : "963386b5-0473-4168-9330-00857c572fcc",
+    "examId" : "b830eeac-f772-4a99-8d79-deb846b41eed",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
   }, {
-    "examId" : "778fbc2f-f842-4f40-afb7-82fe827e189c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A207"
-  }, {
-    "examId" : "a9399f16-a235-4960-8b4e-c07c63edb94e",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A407"
-  }, {
-    "examId" : "b08f325d-470e-4e95-a38a-125bceeb7178",
+    "examId" : "1432f0e8-3a78-4d68-a53a-824abc8f3a95",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A102"
+    "room" : "A406"
+  }, {
+    "examId" : "2d5fc31b-2b56-4bac-aa51-508d61bfa6ba",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "a7e87a55-ffc6-4023-96e9-c3e86ba24aca",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "c9998cb2-23df-43ed-bf8f-7db6756e2e6a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 70,
@@ -2833,47 +2812,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "d8a27438-8833-4842-992f-104ee832225c",
+    "examId" : "af2ac938-b19f-43c7-851a-b594ebf7c182",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
+  }, {
+    "examId" : "d9c21ee8-6faf-43f5-9ff8-5016fcc82107",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A406"
+    "room" : "A408"
   }, {
-    "examId" : "18cb1ed7-b2fd-4b9f-8ac6-03105df72462",
+    "examId" : "353e135b-8032-453f-8922-4bc033ba0991",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "B401"
   }, {
-    "examId" : "d0f7c5a3-8801-4f70-a6a5-5db4977ab0ad",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B203"
-  }, {
-    "examId" : "50f647f9-b963-47b1-9afe-2cbaa300ad2c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A406"
-  }, {
-    "examId" : "cc2898d4-3a78-453f-a656-77d3890a3616",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "5ab742a0-e313-4a15-aff1-2acb4a6d3b6f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A406"
   }, {
-    "examId" : "c4d36f14-c7c5-4c9d-844d-c39bddbe59dd",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "23cd5501-d0a8-4f17-a880-65a8028256ae",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
+    "room" : "B302"
+  }, {
+    "examId" : "d65c52ab-113a-4c67-8240-34779831fa22",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 71,
@@ -2884,119 +2863,126 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "872092c9-bfc1-4fc2-9acf-4cfd5df50852",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A405"
-  }, {
-    "examId" : "f9e7ae45-7db0-4ab3-ad4f-3bbf439d0e93",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A408"
-  }, {
-    "examId" : "52e9f179-b3f9-4705-9bea-37b49b19fa48",
+    "examId" : "c9e68d79-b77a-48a4-bb6c-483fa1c91b96",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A407"
+    "room" : "A209"
   }, {
-    "examId" : "e6fd8b1b-d266-4264-955a-ba11fa9fbf50",
+    "examId" : "e13f160d-b89b-45b6-859a-90bef37dc28e",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "d291848a-3764-4a91-935f-4a8212845661",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "2bb16073-0ff9-4614-9c90-1ef36c6e4a3e",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "A209"
   }, {
-    "examId" : "0bce6c42-71ce-4e9d-9cf7-589133d2aeed",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
+    "examId" : "b830eeac-f772-4a99-8d79-deb846b41eed",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
   }, {
-    "examId" : "aef53e7a-67ea-442d-a829-52bedd15d366",
+    "examId" : "1f5519fc-e988-458d-874d-524064d9539f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A206"
+    "room" : "B303"
   }, {
-    "examId" : "1917a4a2-23f8-48f9-afd8-dddd8f59195a",
+    "examId" : "1703606d-55c2-466a-933d-838ebc7ad265",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A406"
+    "room" : "A408"
   }, {
-    "examId" : "79af122c-d71c-4ea8-96a5-67bec85287aa",
+    "examId" : "7fea3baf-289f-4a5d-9a6f-bef37dbafa98",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A406"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 72,
   "teacherName" : "Sonia Zaouali",
   "email" : "zaouali.sonia@isi.utm.tn",
   "grade" : "PES",
-  "assignedSupervisions" : 7,
+  "assignedSupervisions" : 8,
   "quotaSupervisions" : 8,
-  "utilizationPercentage" : 87.5,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "6de53732-8fe3-440c-a22f-4cf27bdd9089",
+    "examId" : "d1a2cc37-e8f8-400c-8877-3393c50a0818",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "A208"
   }, {
-    "examId" : "d8a27438-8833-4842-992f-104ee832225c",
+    "examId" : "99809537-b5f7-48bc-9114-f49150f86c30",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A406"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
   }, {
-    "examId" : "71ad7a08-0f01-4976-aafa-9a913d27b550",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
+    "examId" : "39277c0c-f11e-44d2-88b2-8199e3029f3e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
   }, {
-    "examId" : "f9e7ae45-7db0-4ab3-ad4f-3bbf439d0e93",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "70b4fe05-04f4-4696-8ee2-f0f3d3945ae0",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A408"
+    "room" : "A124"
   }, {
-    "examId" : "8042990a-0a50-482b-a170-7c0a2f489688",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A206"
+    "examId" : "5f2c7a78-6a29-40dd-9f16-28f625a96e46",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
   }, {
-    "examId" : "a60eea56-b0d3-4a24-9a05-55bc757b3066",
+    "examId" : "524dd297-22f5-4311-b890-2d51020d039e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "de0c43f2-0fd5-4bb8-9307-29f790f73946",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A408"
+    "room" : "B203"
   }, {
-    "examId" : "18f8df15-e30d-4a1f-9c07-985ee194d2c7",
+    "examId" : "ed142a75-2940-4057-8e30-e53b59c83991",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A124"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 73,
@@ -3007,47 +2993,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "411dd4b7-46d4-4034-bfd5-eb5a6b1b25f0",
+    "examId" : "583c9f1b-0c05-4a28-b5bf-489d3f127704",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A208"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   }, {
-    "examId" : "ba12756c-2922-4b4b-a79f-070e6b4f0896",
+    "examId" : "89e2be14-bd67-448a-8948-3c61e31f81c6",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A209"
+    "room" : "A131"
   }, {
-    "examId" : "d3f76725-c8f1-4334-b23d-ef7db351e160",
+    "examId" : "9e7c576f-0bc5-4f4e-a33f-61e83218717a",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
+  }, {
+    "examId" : "80be2e4e-9ffd-430e-b7ed-2aee35d72526",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "A207"
   }, {
-    "examId" : "dd7ed55b-9137-4c10-b953-e3c20aa91006",
+    "examId" : "bc233704-5564-446a-9e70-6d80bb8555a5",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "39757f58-a902-4820-8c69-b3ab5a95c586",
-    "day" : 5,
-    "dayLabel" : "Day 5",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
-  }, {
-    "examId" : "1ff11c17-2d68-4a0b-9023-4ce9b63250c0",
-    "day" : 8,
-    "dayLabel" : "Day 8",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "A124"
+  }, {
+    "examId" : "3e0fa1cc-e91c-45dc-bf3f-d2dedd654d6b",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 74,
@@ -3058,47 +3044,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "1380b327-f47a-42d7-9ed8-95299d7b1d63",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A208"
+    "examId" : "8a28acee-c127-4e07-a9a8-a2f0fbd885ef",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   }, {
-    "examId" : "c12720e5-63a0-44c5-8855-c06b31683150",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
+    "examId" : "da95a444-21ab-41e0-adcf-e95d92794723",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
   }, {
-    "examId" : "66ed3c96-11b0-46ec-b168-042c681c6ea4",
+    "examId" : "587979e9-0e0b-4223-be13-465b3785bed9",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A207"
+    "room" : "A407"
   }, {
-    "examId" : "4abddd4f-612f-4791-92e5-967b56347b37",
+    "examId" : "ef337147-9f29-4d92-b920-86ff50bdd4f6",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "3b6f1d1e-3c09-4f77-b098-7b6632f9834a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A207"
+    "room" : "A131"
   }, {
-    "examId" : "33e8c935-3e11-4823-86ed-c7989c447ab1",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
-  }, {
-    "examId" : "090048b3-c4bb-4ce6-9ef6-de1f1218abdb",
+    "examId" : "8a80a286-1884-4f97-a360-65921846216a",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B203"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 75,
@@ -3114,65 +3100,58 @@
   "teacherName" : "Rabii Ben Henda",
   "email" : "raby.benhenda@isi.utm.tn",
   "grade" : "PES",
-  "assignedSupervisions" : 8,
+  "assignedSupervisions" : 7,
   "quotaSupervisions" : 8,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 87.5,
   "assignments" : [ {
-    "examId" : "9be486c8-cd01-434c-9192-6df05379b000",
-    "day" : 1,
-    "dayLabel" : "Day 1",
+    "examId" : "c9e68d79-b77a-48a4-bb6c-483fa1c91b96",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A207"
+    "room" : "A209"
   }, {
-    "examId" : "4248c362-5153-4276-82e5-bc910d42bd15",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
-  }, {
-    "examId" : "0695d77d-b6b2-4c49-912c-c0f7fd671a6d",
-    "day" : 1,
-    "dayLabel" : "Day 1",
+    "examId" : "b8b1f7ee-81e9-4824-8897-27a79d8ec04d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A406"
+    "room" : "A208"
   }, {
-    "examId" : "c3c6d6de-9bca-4d10-adb9-c014d9795b7c",
+    "examId" : "fb619365-4fe0-4359-8546-2d99e331ec97",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "A124"
   }, {
-    "examId" : "805f9acb-fa7f-4fb6-a3c4-6d4ee6b9cc40",
+    "examId" : "b55d8a61-a242-49cc-ab30-3438c400cb30",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "a5a23170-667c-4c44-a62a-cab93d6b1d43",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A406"
+    "room" : "A405"
   }, {
-    "examId" : "0e913a9c-0690-4839-92ea-879e3b87b170",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A124"
-  }, {
-    "examId" : "60527dec-e017-474c-951f-d569bad8f043",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A209"
-  }, {
-    "examId" : "c460defc-a33d-4a00-8fb0-9bf7c3bd04ae",
+    "examId" : "6c1dc968-f559-44f1-a45f-1158e95d68e0",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B302"
+    "room" : "A405"
+  }, {
+    "examId" : "b7c52ae6-6ee3-40ba-9306-5c823b8bb77b",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 77,
@@ -3192,40 +3171,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "e84f4f8f-db62-4c1a-8f99-141172b21630",
+    "examId" : "07cd1825-2b51-4098-ba01-9b4ff908dd95",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
   }, {
-    "examId" : "320907c1-73a4-48c5-952c-a662156019de",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A131"
+    "examId" : "d1a2cc37-e8f8-400c-8877-3393c50a0818",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
   }, {
-    "examId" : "3bbcd845-9847-4a88-9467-a30794625cb5",
+    "examId" : "ae3c8e1e-b6a9-40d2-a6cd-f2c48cc7178a",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A102"
-  }, {
-    "examId" : "84af36ea-7ca0-4c6e-83b7-4cda03a07947",
-    "day" : 4,
-    "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B302"
+    "room" : "B303"
   }, {
-    "examId" : "b08f325d-470e-4e95-a38a-125bceeb7178",
+    "examId" : "f25517e2-ce8c-4d43-961f-7c22a243b56e",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "764c294c-73f9-42b6-82a2-3b0e4fcbea2c",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A102"
+    "room" : "B203"
   } ]
 }, {
   "teacherId" : 79,
@@ -3245,47 +3224,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "9fd85904-addd-4933-9f2d-a269eff9b821",
+    "examId" : "d1b4528d-72d8-42b9-851f-b475f3044c4e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A208"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
   }, {
-    "examId" : "d3a0d0c0-aa22-4ba0-b646-d460845a8ca5",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A102"
-  }, {
-    "examId" : "7992d44c-756e-49cd-ac20-fe213f6d019c",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A206"
-  }, {
-    "examId" : "49f0f881-a16b-41e4-86c3-2f5f6226a8f8",
+    "examId" : "c0004209-df71-4c24-b52b-b539a1182ef3",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B302"
+    "room" : "A206"
   }, {
-    "examId" : "0046a989-7c17-47a1-a0a7-b10e917cabbd",
+    "examId" : "a2e73855-ed82-4493-ada0-8ede441d1138",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "81d01bad-cd5f-4ae2-90ed-bb2441d53c64",
     "day" : 3,
     "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "eeb054e5-5397-4ae2-8765-2bac020c01f4",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "342884d3-18c0-4a75-9995-23513e45e356",
+    "day" : 8,
+    "dayLabel" : "Day 8",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "A102"
-  }, {
-    "examId" : "f22dcffa-1de8-4d59-ae33-a1ec2b3a88be",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A131"
   } ]
 }, {
   "teacherId" : 81,
@@ -3296,47 +3275,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "8adb349a-0cc0-49be-9249-7a29dc8ce49b",
+    "examId" : "b0c6ec84-7a53-40e8-a57f-d1e0e13e2ad2",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
     "room" : "A209"
   }, {
-    "examId" : "f587a0be-2a31-4d30-9f53-d3f354fa9c0d",
+    "examId" : "76a6e319-2f16-4e58-87d0-fdc6107f8d97",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "d5ceca14-7c94-4270-afc9-e7f454081455",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B302"
+    "room" : "A124"
   }, {
-    "examId" : "a28fcf8f-39d5-4dbc-acc7-d036897db675",
+    "examId" : "00f835dc-a105-4e8d-ab65-2368fb3aa5a6",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B302"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A408"
   }, {
-    "examId" : "8229ba91-1fb6-4bb6-a628-4fdbb52131c2",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "bc233704-5564-446a-9e70-6d80bb8555a5",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
     "room" : "A124"
   }, {
-    "examId" : "ee82a8e7-8cf1-4469-9b9a-19bb698416d7",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A405"
-  }, {
-    "examId" : "c4d36f14-c7c5-4c9d-844d-c39bddbe59dd",
+    "examId" : "bb1854ed-55a6-4028-b208-316425bc0ac7",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A131"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
   } ]
 }, {
   "teacherId" : 82,
@@ -3374,47 +3353,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "980074a4-9637-4fb6-b06f-dce370193ee3",
+    "examId" : "dcdf73dd-f717-4ed8-a377-c0f92d43a84e",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A406"
+    "room" : "A407"
   }, {
-    "examId" : "5453a5b8-95ab-48ab-bbda-321860712099",
+    "examId" : "544e6c00-ed93-4780-a9c0-87e3865b4741",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A406"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   }, {
-    "examId" : "963386b5-0473-4168-9330-00857c572fcc",
+    "examId" : "98fdb14c-4556-4da9-adb0-c7f7102b96c2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "8aab5c83-e1e9-4efb-9357-08cf2f42a98f",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
-  }, {
-    "examId" : "1d76a1e4-4bd8-4213-aefd-1e423c76eee0",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "B302"
   }, {
-    "examId" : "b9652999-9fff-4d90-9dce-283a425112f2",
+    "examId" : "cb6892e6-4838-48e5-8774-86a8289adc84",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A406"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
   }, {
-    "examId" : "82e6748d-af7c-4109-bf17-eba0ee02e6e7",
+    "examId" : "63a6041e-768a-419a-8d66-174cf1229f8e",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A124"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 86,
@@ -3425,47 +3404,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "980074a4-9637-4fb6-b06f-dce370193ee3",
+    "examId" : "5e2483a9-1875-42c9-9a1d-a9e0546b0c8c",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A406"
+    "room" : "A102"
   }, {
-    "examId" : "c12720e5-63a0-44c5-8855-c06b31683150",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
-  }, {
-    "examId" : "97eafb9c-29c0-431b-8598-c00dba06d635",
+    "examId" : "c5d93a5f-cf61-444d-a277-8a3cb1ecf301",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B401"
+    "room" : "B203"
   }, {
-    "examId" : "dece277a-adea-4c15-9b1c-c7f52d12d8a7",
+    "examId" : "a1e22c06-a256-4b45-bf96-976201a179ee",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B303"
+    "room" : "A405"
   }, {
-    "examId" : "a9399f16-a235-4960-8b4e-c07c63edb94e",
+    "examId" : "f1d15722-9c21-4655-ab2c-f57a70c935fa",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "f36bbb65-7520-4d29-b8ff-0c0950b780ef",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A407"
+    "room" : "A209"
   }, {
-    "examId" : "a998d1c3-2879-4b9a-98f1-ecd8a355fb12",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
+    "examId" : "9a7d9cec-865d-4e2b-a156-d8d0a61e11e3",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
   } ]
 }, {
   "teacherId" : 87,
@@ -3485,47 +3464,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "927bf343-dcc1-4e31-833a-b6af047e101c",
+    "examId" : "7b6a06f4-ddcc-4e77-b032-5add6940dd22",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A209"
+  }, {
+    "examId" : "70b4fe05-04f4-4696-8ee2-f0f3d3945ae0",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A131"
+    "room" : "A124"
   }, {
-    "examId" : "3cc4a9b6-81bf-43a1-ae35-b41f19b4274c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A207"
-  }, {
-    "examId" : "fa58598e-1b15-4973-a77c-6b78ceaba7eb",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
-  }, {
-    "examId" : "ae909fce-4c78-4962-9f9e-24c52ef1686a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
-  }, {
-    "examId" : "805f9acb-fa7f-4fb6-a3c4-6d4ee6b9cc40",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "a56f2bb7-2dc4-4063-8814-68a273921d2d",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
+    "room" : "A124"
+  }, {
+    "examId" : "fd5fec8d-ce20-497a-b27e-a19296bf8222",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A406"
   }, {
-    "examId" : "f97b02fa-c0a4-4a7c-bfce-ca58c6e52a38",
+    "examId" : "cda6f7d1-dce4-4726-9ca9-72c0d9b90b95",
     "day" : 7,
     "dayLabel" : "Day 7",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A124"
+    "room" : "A102"
+  }, {
+    "examId" : "92f8720e-39e7-4462-a509-91cffd68d84c",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
   } ]
 }, {
   "teacherId" : 89,
@@ -3536,47 +3515,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "16c5c66d-e839-4be7-83c1-1947f1398bdd",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B302"
-  }, {
-    "examId" : "08f52aef-0f4d-4de2-8a89-dc055e2b90e7",
+    "examId" : "97d2e87d-5acc-4bac-9bf5-f59da29d2499",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A124"
+    "room" : "B401"
   }, {
-    "examId" : "ebc3da52-6602-4ee6-8fa6-3d5a2976f7ae",
+    "examId" : "462d49bb-6b52-4a43-9580-87c1e9831e7b",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A208"
+    "room" : "A406"
   }, {
-    "examId" : "6f724bb9-7907-411a-9f82-393424a654a3",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "d2f16ed6-2236-4dd2-832b-2555e67adad0",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B401"
+  }, {
+    "examId" : "a6572901-3fb2-4be0-90c0-da9ef3411e1c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "A405"
   }, {
-    "examId" : "e21b50b8-92fb-49a9-9e4b-2bbf0e022c42",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
-  }, {
-    "examId" : "0ce55471-af9e-43d2-b6c4-28198226015e",
+    "examId" : "170071bb-0ff0-4ac0-bc87-a88824d2f385",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A407"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
+  }, {
+    "examId" : "171ceea4-046b-4ea1-bdff-f1dddca616e4",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
   } ]
 }, {
   "teacherId" : 90,
@@ -3592,37 +3571,44 @@
   "teacherName" : "Gaddour Radhia",
   "email" : "radhia.gaddour@isi.utm.tn",
   "grade" : "V",
-  "assignedSupervisions" : 4,
+  "assignedSupervisions" : 5,
   "quotaSupervisions" : 5,
-  "utilizationPercentage" : 80.0,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "901979b9-ba6f-4b0a-9c38-c375d4632993",
+    "examId" : "ef01844a-8d15-4927-8810-78945e72e0a8",
     "day" : 1,
     "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "55be0c79-ab03-4d33-a74d-c1732163cb36",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "55807497-95c1-4744-9a5d-744565d48dc2",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B302"
+    "room" : "A102"
   }, {
-    "examId" : "07c75947-57f8-4e16-86c4-fb0c027585c0",
+    "examId" : "8b3d66a9-f1b9-4962-8df0-01e0abd67b5b",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A408"
+    "room" : "A208"
   }, {
-    "examId" : "50f647f9-b963-47b1-9afe-2cbaa300ad2c",
+    "examId" : "bb5d9b65-cd6f-4a33-a9ff-72bb0e0987dd",
     "day" : 3,
     "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A406"
-  }, {
-    "examId" : "0eac27f2-732a-4150-adab-431cca05cae2",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 92,
@@ -3651,40 +3637,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "2130b13f-ddcc-4375-af97-7d637777c94f",
+    "examId" : "07cd1825-2b51-4098-ba01-9b4ff908dd95",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "B203"
   }, {
-    "examId" : "f7b2ea9e-5b6a-4950-88b4-9374b1b0ac2e",
+    "examId" : "e13f160d-b89b-45b6-859a-90bef37dc28e",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B302"
-  }, {
-    "examId" : "30d40442-640c-4014-818b-7f48d96f8b50",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A407"
-  }, {
-    "examId" : "f2e6d9dc-530a-4b20-a58c-f85412145c15",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A407"
-  }, {
-    "examId" : "a262d83f-3a62-4705-872b-8f8f95501c90",
-    "day" : 8,
-    "dayLabel" : "Day 8",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "A406"
+  }, {
+    "examId" : "81d01bad-cd5f-4ae2-90ed-bb2441d53c64",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A131"
+  }, {
+    "examId" : "f1d15722-9c21-4655-ab2c-f57a70c935fa",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A209"
+  }, {
+    "examId" : "50a6c273-a15a-4966-9411-a1c3fd44978f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
   } ]
 }, {
   "teacherId" : 95,
@@ -3704,54 +3690,54 @@
   "quotaSupervisions" : 7,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "28683a33-b7fc-47cb-a2ee-53ab49f381da",
+    "examId" : "6bb45773-d375-4e97-a830-ed56558f16b6",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "B203"
   }, {
-    "examId" : "efee5226-74d1-4180-89a5-7953d4bfdb29",
+    "examId" : "99809537-b5f7-48bc-9114-f49150f86c30",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "B401"
   }, {
-    "examId" : "52e9f179-b3f9-4705-9bea-37b49b19fa48",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A407"
-  }, {
-    "examId" : "ee82a8e7-8cf1-4469-9b9a-19bb698416d7",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "33feec1f-a28d-4770-8cf1-6362eb0f838d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A405"
+    "room" : "A207"
   }, {
-    "examId" : "8eee4b76-2e25-4633-82e0-3b12397cc31d",
+    "examId" : "ba22ec27-62bb-4d64-bfaf-6ac13e175e42",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "b458aa55-f903-4b79-8a82-9d321d531c57",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "d5cb1744-c39b-4759-88b3-d31504eba91f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A206"
+  }, {
+    "examId" : "e3e22ce7-028c-4afb-a5c9-4be772d7c52c",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A206"
-  }, {
-    "examId" : "90ec8cc8-5bb7-4687-a1bd-13f0dac1955b",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 2,
-    "seanceLabel" : "S2",
     "room" : "A102"
-  }, {
-    "examId" : "1201250f-c0ce-4910-8110-3d0ff1f7ea28",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
   } ]
 }, {
   "teacherId" : 97,
@@ -3762,47 +3748,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "09c4f0e4-b31c-4964-85ab-dd2c74970a26",
+    "examId" : "fcc9e6ed-d5a6-4710-bf1a-11c4af2a6de2",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B302"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   }, {
-    "examId" : "8e1b521b-b76a-47f5-a2a3-61797f5ef8dc",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
+    "examId" : "34b9b6c6-6766-4e9c-839c-9b3d8cb5a9c0",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   }, {
-    "examId" : "4c70c0eb-fe79-4921-a789-6794967d81d5",
+    "examId" : "a4f55060-291c-4b24-8f22-2d1c54d561c7",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A207"
+  }, {
+    "examId" : "b458aa55-f903-4b79-8a82-9d321d531c57",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A407"
+    "room" : "A208"
   }, {
-    "examId" : "d789c44e-828e-4e54-bdfe-50635ff0750a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "ed5170c4-47a8-478c-a0fc-355c4cda09d3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
+    "room" : "A206"
   }, {
-    "examId" : "808e6250-1fab-4db1-8bfd-e6fbd1f6d0f7",
+    "examId" : "107c4369-e796-479c-afe5-04994c113532",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
-  }, {
-    "examId" : "18f8df15-e30d-4a1f-9c07-985ee194d2c7",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A124"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A408"
   } ]
 }, {
   "teacherId" : 98,
@@ -3813,91 +3799,98 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "c45274b5-9f0d-45ff-9a8a-6052b5c83d69",
+    "examId" : "b6917150-179b-4e62-a7b1-3dfce406ed1e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "30b6221c-133c-4b53-ba78-b6fadf13312e",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B401"
+    "room" : "A408"
   }, {
-    "examId" : "653475a0-4d40-4740-bd24-7a2ca5c48010",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
-  }, {
-    "examId" : "1f6e1f75-88e3-41ac-91d9-8a0bf54d596c",
+    "examId" : "0d1315b3-9316-453d-8616-5ff9e82b8b23",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "A209"
   }, {
-    "examId" : "59a70f92-0dfa-494b-acdc-2260453c8507",
+    "examId" : "e30e9095-fc54-4dcb-ab1b-25f193b98bb6",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
+  }, {
+    "examId" : "1f5519fc-e988-458d-874d-524064d9539f",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "b7c52ae6-6ee3-40ba-9306-5c823b8bb77b",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A124"
-  }, {
-    "examId" : "15826516-052f-4613-8dca-aca4aae9bd6c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A131"
-  }, {
-    "examId" : "91aedf86-dd4c-4fb7-9589-b2101ebca6a4",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
   } ]
 }, {
   "teacherId" : 99,
   "teacherName" : "Omar Khouja",
   "email" : "omar.khouaja@isi.utm.tn",
   "grade" : "AC",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 6,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 83.33333333333333,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "28683a33-b7fc-47cb-a2ee-53ab49f381da",
+    "examId" : "6bb45773-d375-4e97-a830-ed56558f16b6",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
     "room" : "B203"
   }, {
-    "examId" : "34c1b648-9e87-4852-8387-66813677af32",
+    "examId" : "4891a297-09f2-4ce3-bbe2-dbf4f75b87de",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A207"
-  }, {
-    "examId" : "4c70c0eb-fe79-4921-a789-6794967d81d5",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A407"
-  }, {
-    "examId" : "2ee8093f-507d-4fbf-8d16-67bc326a07b3",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
     "room" : "A209"
   }, {
-    "examId" : "90ec8cc8-5bb7-4687-a1bd-13f0dac1955b",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "353e135b-8032-453f-8922-4bc033ba0991",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
+  }, {
+    "examId" : "02d19514-6285-412b-9e0b-632a08a94dae",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "A131"
+  }, {
+    "examId" : "66892d28-ba64-475f-9171-e073ef8503c4",
+    "day" : 5,
+    "dayLabel" : "Day 5",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "3f685dd9-1429-4ce7-8b8f-00017ce2cdb7",
+    "day" : 8,
+    "dayLabel" : "Day 8",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 100,
@@ -3908,47 +3901,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "f587a0be-2a31-4d30-9f53-d3f354fa9c0d",
+    "examId" : "381668a1-d0fa-4753-a4ee-7cd61727ce36",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "55be0c79-ab03-4d33-a74d-c1732163cb36",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A208"
+  }, {
+    "examId" : "e6c5c27f-8d0a-4195-a150-6f5e97416eef",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B302"
+    "room" : "A408"
   }, {
-    "examId" : "1f6e1f75-88e3-41ac-91d9-8a0bf54d596c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
-  }, {
-    "examId" : "df31d6bc-09cf-45c1-9afc-613b1785c2b0",
+    "examId" : "6baf1480-a19e-49d4-86de-f7f04a85e29e",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A406"
+    "room" : "A405"
   }, {
-    "examId" : "ae909fce-4c78-4962-9f9e-24c52ef1686a",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
+    "examId" : "56179c32-2e0d-4822-bfb8-7f944de36748",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   }, {
-    "examId" : "b2ed6220-3a70-431c-b59c-af877abca7ac",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B303"
-  }, {
-    "examId" : "bd934054-f3d0-424e-843b-0f3c62d491ef",
+    "examId" : "941bff40-c034-495e-b9bf-0a3be47d7afb",
     "day" : 7,
     "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A405"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A124"
   } ]
 }, {
   "teacherId" : 101,
@@ -3959,40 +3952,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "7992d44c-756e-49cd-ac20-fe213f6d019c",
+    "examId" : "fcc9e6ed-d5a6-4710-bf1a-11c4af2a6de2",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A206"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A102"
   }, {
-    "examId" : "46335aac-d805-4b73-bfa9-37206e9eda3c",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A124"
-  }, {
-    "examId" : "6970c86b-c375-4860-85c1-d918c6183c68",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A407"
-  }, {
-    "examId" : "fc9b4dd0-bbbb-449d-9660-a354249aee92",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "9cc1996c-a09d-40f2-a39b-df75ad74e0ad",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
+    "room" : "A124"
   }, {
-    "examId" : "f515a8db-db7a-463a-80ba-a0a9695a8f89",
-    "day" : 4,
-    "dayLabel" : "Day 4",
+    "examId" : "d5ceca14-7c94-4270-afc9-e7f454081455",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "c3df2998-7335-470e-a37c-23f716a82dae",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A208"
+    "room" : "A406"
+  }, {
+    "examId" : "de0c43f2-0fd5-4bb8-9307-29f790f73946",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B203"
   } ]
 }, {
   "teacherId" : 102,
@@ -4012,91 +4005,98 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "7b9d10ce-a501-4dda-aeec-b5686a86879d",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A102"
-  }, {
-    "examId" : "411dd4b7-46d4-4034-bfd5-eb5a6b1b25f0",
+    "examId" : "4cc93324-b2a3-4e3a-b668-508b9126c6b1",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A208"
-  }, {
-    "examId" : "4248c362-5153-4276-82e5-bc910d42bd15",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
-  }, {
-    "examId" : "9efe650c-5781-4a52-b76e-e87ffd4aa9c3",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
     "room" : "A207"
   }, {
-    "examId" : "dc469ff2-6d1f-4e99-8a26-f34ad5a8f9d1",
+    "examId" : "2a445df6-a4c9-402d-910f-3669e3a10338",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B302"
+  }, {
+    "examId" : "b67becd6-5c1c-4432-a7c6-d5cee840b590",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B303"
+    "room" : "B401"
   }, {
-    "examId" : "478d1adc-56bb-40b3-b740-bcf9fd41cd7b",
+    "examId" : "c04f8fc9-88a7-4c1b-81ee-e52ddb0f3431",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
+  }, {
+    "examId" : "509b1729-14ff-40b4-8c41-c44cf03b2cac",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B401"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A407"
+  }, {
+    "examId" : "cda6f7d1-dce4-4726-9ca9-72c0d9b90b95",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 104,
   "teacherName" : "Wiem Mrabet",
   "email" : "wiem.mrabet@isi.utm.tn",
   "grade" : "MA",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 6,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 83.33333333333333,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "08f52aef-0f4d-4de2-8a89-dc055e2b90e7",
+    "examId" : "af2ac938-b19f-43c7-851a-b594ebf7c182",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A124"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A208"
   }, {
-    "examId" : "059843c2-cbe0-4113-b324-000f4ef4a20b",
+    "examId" : "04a2bc90-7ba7-45a9-8180-1f9332ac3964",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A131"
+  }, {
+    "examId" : "cb1508d0-6832-4342-8714-325a8469930f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A102"
+    "room" : "B203"
   }, {
-    "examId" : "d9a28947-161c-48ab-82d4-d44f9b8eab3e",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A208"
-  }, {
-    "examId" : "939b24b5-36b0-4074-8369-e8fc07eebeaa",
+    "examId" : "83feda80-c82e-4679-9667-a4e39ee42c11",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "A406"
   }, {
-    "examId" : "cc2898d4-3a78-453f-a656-77d3890a3616",
+    "examId" : "3b6f1d1e-3c09-4f77-b098-7b6632f9834a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A406"
+    "room" : "A131"
+  }, {
+    "examId" : "63a6041e-768a-419a-8d66-174cf1229f8e",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 105,
@@ -4116,40 +4116,40 @@
   "quotaSupervisions" : 5,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "7b9d10ce-a501-4dda-aeec-b5686a86879d",
+    "examId" : "a7bc77b2-9747-42fb-b8b4-a7e048bc3bd4",
     "day" : 1,
     "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "b9575461-e82e-41de-953a-05a90e34048c",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A102"
+    "room" : "B303"
   }, {
-    "examId" : "18cb1ed7-b2fd-4b9f-8ac6-03105df72462",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
+    "examId" : "6aed8113-48de-438a-bbc0-76a37c3f290b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 2,
+    "seanceLabel" : "S2",
     "room" : "B401"
   }, {
-    "examId" : "dfcfb5c7-4e68-4ec7-bf84-ee9a339d49b2",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A209"
-  }, {
-    "examId" : "0e913a9c-0690-4839-92ea-879e3b87b170",
+    "examId" : "78adbddd-9b66-4b3a-94c0-813ecb5b22dd",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A124"
+    "room" : "B401"
   }, {
-    "examId" : "39757f58-a902-4820-8c69-b3ab5a95c586",
-    "day" : 5,
-    "dayLabel" : "Day 5",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
+    "examId" : "d84fa5bd-ce7e-489c-bc0a-1aa85a1586df",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
   } ]
 }, {
   "teacherId" : 107,
@@ -4160,47 +4160,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "6de53732-8fe3-440c-a22f-4cf27bdd9089",
+    "examId" : "33feec1f-a28d-4770-8cf1-6362eb0f838d",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A208"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
   }, {
-    "examId" : "5e636662-c901-4833-9671-52c36cef564d",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "4d4f8a90-28c2-47e5-bc46-42ca5622a85d",
+    "day" : 1,
+    "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B203"
+    "room" : "A406"
   }, {
-    "examId" : "e6fd8b1b-d266-4264-955a-ba11fa9fbf50",
+    "examId" : "6528e00c-f991-49fd-b6f1-97c4e8cbce42",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B302"
+  }, {
+    "examId" : "5c72097a-4640-44a2-913b-8da02c047f52",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A209"
+    "room" : "A408"
   }, {
-    "examId" : "7329bc57-b30c-44aa-bef1-2618067226ea",
-    "day" : 3,
-    "dayLabel" : "Day 3",
+    "examId" : "44ed87f6-27f5-4169-8753-fa00e4a517f0",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A131"
+  }, {
+    "examId" : "f1f5859c-c48a-475f-9b9a-aff6c177567d",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
     "room" : "B401"
-  }, {
-    "examId" : "33e8c935-3e11-4823-86ed-c7989c447ab1",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A209"
-  }, {
-    "examId" : "39f9c229-deca-4a77-b0fd-915e8553288d",
-    "day" : 4,
-    "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A209"
   } ]
 }, {
   "teacherId" : 108,
@@ -4220,61 +4220,61 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "16c5c66d-e839-4be7-83c1-1947f1398bdd",
+    "examId" : "6aac8d40-497f-4e56-9b71-b78e75f39d91",
     "day" : 1,
     "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B302"
+  }, {
+    "examId" : "d0ba986d-f92d-42d4-9015-efedeeece33a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A209"
+  }, {
+    "examId" : "b6bedd5e-6934-4fd3-b27e-d4d1b91aad83",
+    "day" : 2,
+    "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
     "room" : "B302"
   }, {
-    "examId" : "4e0307bf-d4d1-40e8-9778-e3fa09ccccc4",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "d2f16ed6-2236-4dd2-832b-2555e67adad0",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A207"
+    "room" : "B401"
   }, {
-    "examId" : "32ea8d90-6680-47bb-a513-bbed443ab071",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B203"
-  }, {
-    "examId" : "939b24b5-36b0-4074-8369-e8fc07eebeaa",
+    "examId" : "2bb16073-0ff9-4614-9c90-1ef36c6e4a3e",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "B401"
+    "room" : "A209"
   }, {
-    "examId" : "d789c44e-828e-4e54-bdfe-50635ff0750a",
+    "examId" : "c3df2998-7335-470e-a37c-23f716a82dae",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A406"
+  }, {
+    "examId" : "9e61d3fd-bca6-4c33-97f7-c78f5e678a74",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A207"
+  }, {
+    "examId" : "bb15ea9d-0efe-4afa-bd4a-af758981cbab",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
-  }, {
-    "examId" : "7a60235f-5639-4362-9fc0-1a6393f615f4",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "46eb468e-0aab-4d06-b936-7f4b997f00eb",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
     "room" : "A407"
-  }, {
-    "examId" : "85430344-9932-4708-8923-7a2978c5a0a0",
-    "day" : 8,
-    "dayLabel" : "Day 8",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
   } ]
 }, {
   "teacherId" : 110,
@@ -4285,107 +4285,100 @@
   "quotaSupervisions" : 8,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "448f277d-567f-4c61-8816-43e9fef975a3",
+    "examId" : "7b6a06f4-ddcc-4e77-b032-5add6940dd22",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "B302"
+    "room" : "A209"
   }, {
-    "examId" : "8fbb0d2a-d123-4766-8bd8-367e65619e4d",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B401"
-  }, {
-    "examId" : "12dde837-d2d7-4bb0-aa2b-e53613373b2d",
+    "examId" : "97d2e87d-5acc-4bac-9bf5-f59da29d2499",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A131"
+    "room" : "B401"
   }, {
-    "examId" : "5a132a22-98fc-4485-83a2-b5bdf768abd8",
+    "examId" : "b6917150-179b-4e62-a7b1-3dfce406ed1e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A206"
+  }, {
+    "examId" : "b5b470c1-139f-4825-a244-aea2509d9240",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
+  }, {
+    "examId" : "9a2de73c-a73e-4d15-9d8a-0f6fcb938f1a",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A208"
+  }, {
+    "examId" : "548a1779-2b41-4e23-8f3f-b6f951a336b9",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A208"
-  }, {
-    "examId" : "0a987122-6f68-4dc8-885f-aa43c3fba876",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B401"
-  }, {
-    "examId" : "afeac61c-8b01-46c7-b68f-0dfecd290fdf",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
     "room" : "A407"
   }, {
-    "examId" : "f89cc3ba-0784-48e9-8862-5eb296c6d8fc",
+    "examId" : "1f3097af-b0e3-4dbb-9057-d4b45b2e9a6f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B401"
+    "room" : "A405"
   }, {
-    "examId" : "0c1fd68f-540b-4614-9d20-41183fa07abe",
-    "day" : 7,
-    "dayLabel" : "Day 7",
+    "examId" : "0316090e-c263-4fff-a9c8-824d4026b1ad",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A131"
+    "room" : "A102"
   } ]
 }, {
   "teacherId" : 111,
   "teacherName" : "Rachid Zagrouba",
   "email" : "rachid.zagrouba@isi.utm.tn",
   "grade" : "MA",
-  "assignedSupervisions" : 6,
+  "assignedSupervisions" : 5,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 100.0,
+  "utilizationPercentage" : 83.33333333333333,
   "assignments" : [ {
-    "examId" : "2924018a-1a74-4a5f-bf84-297267c7c21b",
+    "examId" : "93352718-c29b-4d72-8a22-5f8502153dda",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "A207"
+  }, {
+    "examId" : "ed485406-2808-4fe0-b2b1-1ae2b0ff8474",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A405"
+    "room" : "B303"
   }, {
-    "examId" : "653475a0-4d40-4740-bd24-7a2ca5c48010",
+    "examId" : "ddea11f3-f56c-46a9-b9c2-7ff5d16e51d7",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A102"
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A207"
   }, {
-    "examId" : "dfcfb5c7-4e68-4ec7-bf84-ee9a339d49b2",
-    "day" : 2,
-    "dayLabel" : "Day 2",
+    "examId" : "60c71c6e-a462-4eea-ace9-eaf2275b2bb8",
+    "day" : 3,
+    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A209"
+    "room" : "B203"
   }, {
-    "examId" : "99e3cb29-32f9-4e21-b244-55dac48db5fd",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "8dca3c9c-97a3-4e54-9ffc-dd71db8a4671",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A208"
-  }, {
-    "examId" : "56ec34e0-0c17-4239-b397-7e7bacf74605",
+    "examId" : "6fe73b57-2fba-4386-8035-0e7a76c18797",
     "day" : 8,
     "dayLabel" : "Day 8",
     "seance" : 3,
@@ -4401,91 +4394,98 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "efee5226-74d1-4180-89a5-7953d4bfdb29",
+    "examId" : "5e2483a9-1875-42c9-9a1d-a9e0546b0c8c",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A131"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A102"
   }, {
-    "examId" : "7eb85c81-9a5e-4046-81ee-d19635caeb92",
+    "examId" : "8b5f9e12-ce1c-4250-8cfd-9bbb7b075f68",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "ec2f69c9-d3c9-487d-89c2-80cd5c6bcb31",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
+  }, {
+    "examId" : "de727473-a73b-40d6-ba15-af5e0b1855d5",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A406"
+    "room" : "A405"
   }, {
-    "examId" : "84cd7791-84dc-45bd-a845-8dab0b56e327",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A124"
-  }, {
-    "examId" : "fa58598e-1b15-4973-a77c-6b78ceaba7eb",
+    "examId" : "05deb787-77be-4956-a2c1-cadbb600b9a3",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
     "seanceLabel" : "S3",
-    "room" : "A405"
+    "room" : "A124"
   }, {
-    "examId" : "2ee8093f-507d-4fbf-8d16-67bc326a07b3",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A209"
-  }, {
-    "examId" : "25011fbb-fabc-4d22-8359-f64579743d90",
+    "examId" : "0a1775a4-8874-4d69-a530-734511bfee4d",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A208"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
   } ]
 }, {
   "teacherId" : 113,
   "teacherName" : "Rim Kaabi",
   "email" : "rim.kaabi@isi.utm.tn",
   "grade" : "MA",
-  "assignedSupervisions" : 5,
+  "assignedSupervisions" : 6,
   "quotaSupervisions" : 6,
-  "utilizationPercentage" : 83.33333333333333,
+  "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "e032a617-6523-49fd-873b-013cd54d28fe",
+    "examId" : "df35d975-7314-415f-aacb-66ed7b1eb4dc",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A207"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A405"
   }, {
-    "examId" : "0a05ca01-f5a2-4716-a674-e45dbc85fbcb",
+    "examId" : "5ab742a0-e313-4a15-aff1-2acb4a6d3b6f",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A406"
+  }, {
+    "examId" : "ae3c8e1e-b6a9-40d2-a6cd-f2c48cc7178a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B401"
+    "room" : "B303"
   }, {
-    "examId" : "8042990a-0a50-482b-a170-7c0a2f489688",
+    "examId" : "b8b1f7ee-81e9-4824-8897-27a79d8ec04d",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
+  }, {
+    "examId" : "2c2c7484-d998-459f-b3cb-7de2fb01f0eb",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A206"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A408"
   }, {
-    "examId" : "dd7ed55b-9137-4c10-b953-e3c20aa91006",
+    "examId" : "b805e1cf-eff1-461e-8abf-5df01abb9e56",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A102"
-  }, {
-    "examId" : "a7e2692c-c7c0-480b-9f10-52b08ee00d3d",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B303"
+    "room" : "A208"
   } ]
 }, {
   "teacherId" : 114,
@@ -4550,46 +4550,46 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "c0ffe250-83a0-4aae-9e4b-abe49eca29c7",
+    "examId" : "1d612261-4b23-4562-a296-a28673baa04e",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B302"
+  }, {
+    "examId" : "8b5f9e12-ce1c-4250-8cfd-9bbb7b075f68",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A405"
+  }, {
+    "examId" : "89e2be14-bd67-448a-8948-3c61e31f81c6",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
     "seanceLabel" : "S2",
+    "room" : "A131"
+  }, {
+    "examId" : "632eb55c-c109-45d7-88fd-6fea44a2807b",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 1,
+    "seanceLabel" : "S1",
     "room" : "A406"
   }, {
-    "examId" : "0a987122-6f68-4dc8-885f-aa43c3fba876",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B401"
-  }, {
-    "examId" : "8904baa9-e3ef-47f3-8361-585c2fb48e7c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
-  }, {
-    "examId" : "2c8d348d-321a-4cb6-bd53-311579ec9ba2",
+    "examId" : "4a41d220-4460-44bc-ae79-08fc80e3a546",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B302"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A208"
   }, {
-    "examId" : "fbd85c71-df29-4f67-8763-672ce4310f6a",
+    "examId" : "be579d8c-27b4-42dc-be60-c0e9fbd8387f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A408"
-  }, {
-    "examId" : "2a4cb49e-8ac9-4fea-86da-585e25527f6d",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 3,
-    "seanceLabel" : "S3",
     "room" : "A124"
   } ]
 }, {
@@ -4601,47 +4601,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "1380b327-f47a-42d7-9ed8-95299d7b1d63",
+    "examId" : "3b56f653-2d21-42f7-9454-ccfe7dd6f3d6",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "A208"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A206"
   }, {
-    "examId" : "145aae7b-7fe7-4a70-8707-757d2c0370b9",
+    "examId" : "75ae9a8e-82b5-4090-af7c-2ee687180553",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "A405"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A124"
   }, {
-    "examId" : "c1a9e8e2-5d6d-48e7-9855-6844903dd5d2",
+    "examId" : "fb71504e-1cfe-412d-97be-9d6943e674fe",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A405"
+    "room" : "B303"
   }, {
-    "examId" : "8e1b521b-b76a-47f5-a2a3-61797f5ef8dc",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A408"
-  }, {
-    "examId" : "eb35d32a-b9dc-4f38-934b-2c533f7422e2",
+    "examId" : "60b7dd24-926e-40d4-8891-f31bb3269863",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A208"
+    "room" : "A131"
   }, {
-    "examId" : "c3063d7a-ed50-4de1-8604-3f9ec9789850",
+    "examId" : "4926d986-e774-49cf-99c3-6e9188657203",
     "day" : 4,
     "dayLabel" : "Day 4",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "B302"
+    "seance" : 1,
+    "seanceLabel" : "S1",
+    "room" : "B303"
+  }, {
+    "examId" : "c9998cb2-23df-43ed-bf8f-7db6756e2e6a",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "B303"
   } ]
 }, {
   "teacherId" : 122,
@@ -4652,47 +4652,47 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "09c4f0e4-b31c-4964-85ab-dd2c74970a26",
+    "examId" : "b6304c33-bedc-4dd9-b123-62162223e80c",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B302"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
   }, {
-    "examId" : "eae542bf-de9f-4230-ac99-4f61dbcc57b3",
-    "day" : 1,
-    "dayLabel" : "Day 1",
-    "seance" : 3,
-    "seanceLabel" : "S3",
-    "room" : "A407"
-  }, {
-    "examId" : "4e7865ef-abe8-48dc-821c-38816af455b1",
+    "examId" : "9af0ab7d-5441-4b2f-b5c1-d2b02097d1c4",
     "day" : 2,
     "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
-  }, {
-    "examId" : "84cd7791-84dc-45bd-a845-8dab0b56e327",
-    "day" : 3,
-    "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A124"
+    "room" : "A407"
   }, {
-    "examId" : "8904baa9-e3ef-47f3-8361-585c2fb48e7c",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 2,
-    "seanceLabel" : "S2",
-    "room" : "B303"
+    "examId" : "de727473-a73b-40d6-ba15-af5e0b1855d5",
+    "day" : 2,
+    "dayLabel" : "Day 2",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A405"
   }, {
-    "examId" : "d6741fbd-b6f6-404c-aae4-d88c251a3ec2",
+    "examId" : "d65c52ab-113a-4c67-8240-34779831fa22",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "A208"
+    "room" : "A102"
+  }, {
+    "examId" : "7434636f-fc1a-4349-a284-0e75044bd622",
+    "day" : 4,
+    "dayLabel" : "Day 4",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B303"
+  }, {
+    "examId" : "ed2cc79b-b696-45d2-8eea-da2ff4449f3a",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "B401"
   } ]
 }, {
   "teacherId" : 123,
@@ -4703,42 +4703,42 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "7515b54c-ab8e-4fb7-8529-859c1b168f9a",
+    "examId" : "ed485406-2808-4fe0-b2b1-1ae2b0ff8474",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A131"
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
   }, {
-    "examId" : "ce4ff002-5d75-44cb-acd5-b8408d8dcb18",
+    "examId" : "dccd2210-7b4e-4162-b981-358a288d6ecd",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "A131"
+    "room" : "A208"
   }, {
-    "examId" : "5e5530c5-f266-4253-91b2-4f4aaefe9114",
-    "day" : 2,
-    "dayLabel" : "Day 2",
-    "seance" : 2,
-    "seanceLabel" : "S2",
+    "examId" : "05deb787-77be-4956-a2c1-cadbb600b9a3",
+    "day" : 3,
+    "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
     "room" : "A124"
   }, {
-    "examId" : "a28fcf8f-39d5-4dbc-acc7-d036897db675",
+    "examId" : "2dddbe5b-cbd8-4405-89f4-67c8bb6b9e6a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
     "seanceLabel" : "S4",
-    "room" : "B302"
+    "room" : "A208"
   }, {
-    "examId" : "19ffde5e-7c74-470c-9522-748a2005cd1b",
-    "day" : 5,
-    "dayLabel" : "Day 5",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "B303"
+    "examId" : "74ccf662-401c-48be-8849-cc2928139802",
+    "day" : 7,
+    "dayLabel" : "Day 7",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "A406"
   }, {
-    "examId" : "85430344-9932-4708-8923-7a2978c5a0a0",
+    "examId" : "342884d3-18c0-4a75-9995-23513e45e356",
     "day" : 8,
     "dayLabel" : "Day 8",
     "seance" : 3,
@@ -4754,46 +4754,46 @@
   "quotaSupervisions" : 6,
   "utilizationPercentage" : 100.0,
   "assignments" : [ {
-    "examId" : "1f5ddb01-074e-4717-a6b7-d0df040a2cb6",
+    "examId" : "dcdf73dd-f717-4ed8-a377-c0f92d43a84e",
     "day" : 1,
     "dayLabel" : "Day 1",
-    "seance" : 1,
-    "seanceLabel" : "S1",
-    "room" : "A206"
+    "seance" : 4,
+    "seanceLabel" : "S4",
+    "room" : "A407"
   }, {
-    "examId" : "02a90a14-dc60-4afd-a043-044100182076",
+    "examId" : "9cc1996c-a09d-40f2-a39b-df75ad74e0ad",
+    "day" : 1,
+    "dayLabel" : "Day 1",
+    "seance" : 2,
+    "seanceLabel" : "S2",
+    "room" : "A124"
+  }, {
+    "examId" : "d231c856-8799-4e86-974d-446bfafbd2ed",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A206"
+    "room" : "A207"
   }, {
-    "examId" : "3cc4a9b6-81bf-43a1-ae35-b41f19b4274c",
+    "examId" : "b1e385dd-fd3d-497b-abb2-7fad68475d80",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
     "seanceLabel" : "S1",
-    "room" : "A207"
+    "room" : "A206"
   }, {
-    "examId" : "7329bc57-b30c-44aa-bef1-2618067226ea",
+    "examId" : "d8f03e4f-c797-4c97-bbc9-58e1ce4fd2a2",
     "day" : 3,
     "dayLabel" : "Day 3",
+    "seance" : 3,
+    "seanceLabel" : "S3",
+    "room" : "B303"
+  }, {
+    "examId" : "02d19514-6285-412b-9e0b-632a08a94dae",
+    "day" : 4,
+    "dayLabel" : "Day 4",
     "seance" : 2,
     "seanceLabel" : "S2",
-    "room" : "B401"
-  }, {
-    "examId" : "f22dcffa-1de8-4d59-ae33-a1ec2b3a88be",
-    "day" : 3,
-    "dayLabel" : "Day 3",
-    "seance" : 4,
-    "seanceLabel" : "S4",
     "room" : "A131"
-  }, {
-    "examId" : "7c8f03b3-bd35-4a78-9cfd-f780c3516e70",
-    "day" : 7,
-    "dayLabel" : "Day 7",
-    "seance" : 4,
-    "seanceLabel" : "S4",
-    "room" : "B401"
   } ]
 } ]

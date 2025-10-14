@@ -21,4 +21,6 @@ public class AssignmentMetadata {
     private Boolean isOptimal;
     private Integer totalAssignmentsMade;
     private Integer relaxedTeachersCount;
+    private Integer totalConstraints;
+    private Integer relaxationAttempts;
 }
