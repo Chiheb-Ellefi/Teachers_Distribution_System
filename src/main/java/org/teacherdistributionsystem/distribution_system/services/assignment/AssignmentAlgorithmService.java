@@ -410,13 +410,19 @@ public class AssignmentAlgorithmService {
             model = new CpModel();
             createVariables();
             addConstraintsWithPriority();
-            AssignmentResponseModel result = solve();
 
+            AssignmentResponseModel result = solve();
             if (result.getStatus() == AssignmentStatus.SUCCESS) {
-                String note = getRelaxationMessage();
-                System.out.println("[SUCCESS] " + note);
-                System.out.println("========================================\n");
-                result.setMessage(result.getMessage() + " " + note);
+                // Update metadata
+                result.getMetadata().setIsOptimal(false);
+                result.getMetadata().setRelaxedTeachersCount(teachersWithRelaxedUnavailability.size());
+
+                // Clear message
+                result.setMessage(
+                        "Solution found with relaxed constraints. " +
+                                teachersWithRelaxedUnavailability.size() + " teacher(s) assigned to originally unavailable slots."
+                );
+
                 return result;
             }
 
@@ -643,19 +649,6 @@ public class AssignmentAlgorithmService {
         System.out.println("----------------------------------------------\n");
     }
 
-    private String getRelaxationMessage() {
-        if (teachersWithRelaxedUnavailability.isEmpty()) {
-            return "";
-        }
-
-        List<String> relaxedTeachers = new ArrayList<>();
-        for (int t : teachersWithRelaxedUnavailability) {
-            relaxedTeachers.add(teacherNames[t] + " (" + teacherGrades[t] + ")");
-        }
-
-        return "(Unavailability relaxed for " + teachersWithRelaxedUnavailability.size() +
-                " teacher(s): " + String.join(", ", relaxedTeachers) + ")";
-    }
 
     private AssignmentResponseModel solve() {
         long startTime = System.currentTimeMillis();
@@ -668,7 +661,12 @@ public class AssignmentAlgorithmService {
         System.out.println("Status: " + status + " (Time: " + String.format("%.3f", solutionTime) + "s)");
 
         if (status == CpSolverStatus.OPTIMAL || status == CpSolverStatus.FEASIBLE) {
-            return buildSuccessResponse(solver, status, solutionTime);
+            AssignmentResponseModel response = buildSuccessResponse(solver, status, solutionTime);
+            // Mark if this required relaxation
+            if (!teachersWithRelaxedUnavailability.isEmpty()) {
+                response.getMetadata().setIsOptimal(false); // Not optimal for original problem
+            }
+            return response;
         } else if (status == CpSolverStatus.INFEASIBLE) {
             return buildInfeasibleResponse(solutionTime);
         } else {
