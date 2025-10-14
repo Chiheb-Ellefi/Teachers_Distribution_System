@@ -14,6 +14,7 @@ import java.util.List;
 public class TeacherWorkloadModel {
     private Long teacherId;
     private String teacherName;
+    private String email;
     private String grade;
     private Integer assignedSupervisions;
     private Integer quotaSupervisions;

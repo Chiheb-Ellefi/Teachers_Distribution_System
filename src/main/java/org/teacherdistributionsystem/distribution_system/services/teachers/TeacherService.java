@@ -66,6 +66,13 @@ public class TeacherService {
                         row -> (String) row[1]
                 ));
     }
+     public Map<Long, String>getAllEmails() {
+        return teacherRepository.getAllEmails().stream()
+                .collect(Collectors.toMap(
+                        row -> (Long) row[0],
+                        row -> (String) row[1]
+                ));
+    }
     public Map<Long, String> getAllNames() {
         return teacherRepository.getAllNames()
                 .stream()

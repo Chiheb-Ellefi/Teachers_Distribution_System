@@ -20,6 +20,8 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
     List<Object[]> getAllParticipants();
     @Query("SELECT t.id, t.gradeCode FROM Teacher t")
     List<Object[]> getAllGrades();
+    @Query("SELECT t.id, t.email FROM Teacher t")
+    List<Object[]> getAllEmails();
 
     @Query("SELECT t.id AS id, t.nom AS nom, t.prenom AS prenom FROM Teacher t")
     List<TeacherNameProjection> getAllNames();

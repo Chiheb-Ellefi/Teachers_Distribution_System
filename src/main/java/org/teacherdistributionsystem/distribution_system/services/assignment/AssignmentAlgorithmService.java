@@ -61,6 +61,7 @@ public class AssignmentAlgorithmService {
 
     private Long[] teacherIds;
     private String[] teacherNames;
+    private String[] teacherEmails;
     private Boolean[] teacherParticipateSurveillance;
     private String[] teacherGrades;
     private int[] teacherPriorities;
@@ -173,6 +174,7 @@ public class AssignmentAlgorithmService {
 
         teacherGrades = new String[numTeachers];
         teacherNames = new String[numTeachers];
+        teacherEmails=new String[numTeachers];
         baseQuotas = new int[numTeachers];
         effectiveQuotas = new int[numTeachers];
         teacherPriorities = new int[numTeachers];
@@ -180,10 +182,12 @@ public class AssignmentAlgorithmService {
         Map<Long, String> gradeMap = teacherService.getAllGrades();
         Map<Long, String> nameMap = teacherService.getAllNames();
         Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas();
+        Map<Long,String> emailMap = teacherService.getAllEmails();
 
         for (int i = 0; i < numTeachers; i++) {
             teacherGrades[i] = gradeMap.get(teacherIds[i]);
             teacherNames[i] = nameMap.getOrDefault(teacherIds[i], "Unknown");
+            teacherEmails[i]=emailMap.getOrDefault(teacherIds[i], "Unknown");
             baseQuotas[i] = quotaMap.getOrDefault(teacherIds[i], 0);
 
             try {
@@ -760,6 +764,7 @@ public class AssignmentAlgorithmService {
                     .teacherId(teacherIds[t])
                     .teacherName(teacherNames[t])
                     .grade(teacherGrades[t])
+                    .email(teacherEmails[t])
                     .assignedSupervisions(assignedCount)
                     .quotaSupervisions(effectiveQuotas[t])
                     .utilizationPercentage(utilization)

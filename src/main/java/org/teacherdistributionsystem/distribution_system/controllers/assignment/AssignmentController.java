@@ -12,6 +12,7 @@ import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
+import org.teacherdistributionsystem.distribution_system.utils.data.JsonFileWriter;
 
 @RestController
 @RequestMapping("/api/v1/assignments")
@@ -21,9 +22,10 @@ public class AssignmentController {
 
     private final AssignmentAlgorithmService assignmentAlgorithmService;
     private final AssignmentPersistenceService persistenceService;
+    private final JsonFileWriter jsonFileWriter;
 
-    @PostMapping("/execute/{sessionId}")
-    public ResponseEntity<AssignmentResponseModel> executeAssignment(@PathVariable Long sessionId) {
+    @GetMapping("/execute/{sessionId}")
+    public ResponseEntity<Object> executeAssignment(@PathVariable Long sessionId) {
 
         try {
             AssignmentResponseModel response = assignmentAlgorithmService.executeAssignment(sessionId);
@@ -36,8 +38,8 @@ public class AssignmentController {
                 case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
             };
             persistenceService.saveAssignmentResults(response);
-
-            return ResponseEntity.status(httpStatus).body(response);
+            jsonFileWriter.writeDataToJsonFile(response);
+            return ResponseEntity.status(httpStatus).body("Data successfully saved to file");
 
         } catch (Exception e) {
             AssignmentResponseModel errorResponse = AssignmentResponseModel.builder()

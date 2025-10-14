@@ -4,6 +4,8 @@ spring:
     teachersListFile: '/home/chihebellefi/Downloads/ens_dist/mini/Enseignants avec code ensiegant responsable.xlsx'
     teachersUnavailabilyFile: '/home/chihebellefi/Downloads/ens_dist/mini/Souhaits Enseignants.xlsx'
     examDataFile: '/home/chihebellefi/Downloads/ens_dist/mini/repartition_salle.xlsx'
+    outputFileName: 'assignments.json'
+    outputDir: './data'
   datasource:
     #url: jdbc:h2:mem:testdb #for memory
     url: jdbc:h2:file:./data/testdb
