@@ -14,6 +14,14 @@ import java.sql.SQLIntegrityConstraintViolationException;
 
 @RestControllerAdvice
 public class GeneralExceptionHandler {
+
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ErrorDetails> handleBadRequestException(BadRequestException e) {
+        String message = e.getMessage();
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+       ErrorDetails error= ErrorDetails.builder().message(message).details(message).build();
+        return ResponseEntity.status(status).body(error);
+    }
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorDetails> runtimeExceptionHandler(RuntimeException ex) {
 

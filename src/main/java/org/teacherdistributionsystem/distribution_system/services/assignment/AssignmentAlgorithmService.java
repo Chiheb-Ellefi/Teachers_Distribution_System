@@ -11,6 +11,7 @@ import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
 import org.teacherdistributionsystem.distribution_system.models.responses.*;
+import org.teacherdistributionsystem.distribution_system.services.teachers.QuotaPerGradeService;
 import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherQuotaService;
 import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherService;
 import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
@@ -27,6 +28,7 @@ public class AssignmentAlgorithmService {
     private final ExamSessionService examSessionService;
     private final ExamService examService;
     private final TeacherService teacherService;
+    private final QuotaPerGradeService quotaPerGradeService;
 
 
     static class Exam {
@@ -83,13 +85,14 @@ public class AssignmentAlgorithmService {
                                       TeacherQuotaService teacherQuotaService,
                                       TeacherUnavailabilityService teacherUnavailabilityService,
                                       ExamSessionService examSessionService,
-                                      ExamService examService) {
+                                      ExamService examService, QuotaPerGradeService quotaPerGradeService) {
         Loader.loadNativeLibraries();
         this.teacherService = teacherService;
         this.teacherQuotaService = teacherQuotaService;
         this.teacherUnavailabilityService = teacherUnavailabilityService;
         this.examSessionService = examSessionService;
         this.examService = examService;
+        this.quotaPerGradeService = quotaPerGradeService;
     }
 
     public AssignmentResponseModel executeAssignment(Long sessionId) {
@@ -186,6 +189,7 @@ public class AssignmentAlgorithmService {
         Map<Long, String> nameMap = teacherService.getAllNames();
         Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas();
         Map<Long,String> emailMap = teacherService.getAllEmails();
+        Map<GradeType,Integer> priorityPerGradeMap=quotaPerGradeService.getPrioritiesByGrade();
 
         for (int i = 0; i < numTeachers; i++) {
             teacherGrades[i] = gradeMap.get(teacherIds[i]);
@@ -195,7 +199,7 @@ public class AssignmentAlgorithmService {
 
             try {
                 GradeType gradeType = GradeType.valueOf(teacherGrades[i]);
-                teacherPriorities[i] = gradeType.getPriority();
+                teacherPriorities[i] = priorityPerGradeMap.get(gradeType);
             } catch (IllegalArgumentException e) {
                 teacherPriorities[i] = Integer.MAX_VALUE;
             }
