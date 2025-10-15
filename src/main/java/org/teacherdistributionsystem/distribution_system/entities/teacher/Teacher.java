@@ -2,6 +2,7 @@ package org.teacherdistributionsystem.distribution_system.entities.teacher;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "teachers")
@@ -30,9 +31,13 @@ public class Teacher {
 
     @JoinColumn(name = "grade_code", nullable = false)
     private String gradeCode;
+    @Column(name = "participe_surveillance")
+    private Boolean participeSurveillance ;
 
-    @Column(name = "participe_surveillance", columnDefinition = "BOOLEAN DEFAULT TRUE")
-    private Boolean participeSurveillance = true;
+    @Column(name = "quota_credit")
+    private Integer quotaCredit;
+
+
 
 
 }

@@ -9,6 +9,7 @@ import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.enums.SemesterType;
 import org.teacherdistributionsystem.distribution_system.enums.SessionType;
 import org.teacherdistributionsystem.distribution_system.mappers.assignment.ExamSessionMapper;
+import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamSessionRepository;
 
 import java.time.LocalDate;
@@ -87,9 +88,22 @@ public class ExamSessionService {
                 .build();
       return   examSessionRepository.save(session);
     }
-    ExamSessionDto getExamSessionDto(Long sessionId) throws BadRequestException {
+    public ExamSessionDto getExamSessionDto(Long sessionId) throws BadRequestException {
         Supplier<BadRequestException> exceptionSupplier = () -> new BadRequestException("No valid exam session found with id " + sessionId);
         return ExamSessionMapper.toExamSessionDto(examSessionRepository.findById(sessionId).orElseThrow(exceptionSupplier));
+    }
+
+    public ExamSessionDto setTeachersPerExam(Long sessionId,Integer teachersPerExam) throws BadRequestException {
+        if(sessionId==null){
+            throw new BadRequestException("sessionId is null" );
+        }
+        if(teachersPerExam==null){
+            throw new BadRequestException("teachersPerExam is null" );
+        }
+        Supplier<BadRequestException> e=()->new BadRequestException("No session Found with this id" +sessionId );
+       ExamSession oldExamSession= examSessionRepository.findById(sessionId).orElseThrow(e);
+       oldExamSession.setTeachersPerExam(teachersPerExam);
+       return ExamSessionMapper.toExamSessionDto(examSessionRepository.save(oldExamSession));
     }
 
 }

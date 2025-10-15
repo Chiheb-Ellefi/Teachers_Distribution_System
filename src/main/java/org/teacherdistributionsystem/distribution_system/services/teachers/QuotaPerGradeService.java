@@ -3,6 +3,7 @@ package org.teacherdistributionsystem.distribution_system.services.teachers;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.QuotaPerGradeDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.QuotaPerGrade;
 import org.teacherdistributionsystem.distribution_system.enums.GradeType;
@@ -19,8 +20,8 @@ import java.util.stream.Collectors;
 public class QuotaPerGradeService {
     private final QuotaPerGradeRepository quotaPerGradeRepository;
 
-    public List<QuotaPerGradeDto> saveAll(List<QuotaPerGrade> quotaPerGrades) {
-        return quotaPerGradeRepository.saveAll(quotaPerGrades).stream().map(QuotaPerGradeMapper::toDto).toList();
+    public void saveAll(List<QuotaPerGrade> quotaPerGrades) {
+        quotaPerGradeRepository.saveAll(quotaPerGrades);
     }
     public QuotaPerGradeDto getQuotaByGrade(GradeType grade) throws BadRequestException {
         Supplier<BadRequestException> exceptionSupplier = () -> new BadRequestException("Grade is not valid");
@@ -32,5 +33,9 @@ public class QuotaPerGradeService {
                         row -> (GradeType) row[0],
                         row -> (Integer) row[1]
                 ));
+    }
+    @Transactional
+    public void clearAllQuotasPerGrade() {
+        quotaPerGradeRepository.deleteAllInBatch();
     }
 }

@@ -1,10 +1,8 @@
 package org.teacherdistributionsystem.distribution_system.entities.assignment;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDate;
 
@@ -14,6 +12,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
 public class ExamSession {
 
     @Id
@@ -41,8 +40,13 @@ public class ExamSession {
     @Column(name = "num_exam_days", nullable = false) // 10
     private Integer numExamDays;
 
-    @Column(name = "seances_per_day", columnDefinition = "INTEGER DEFAULT 4") //S1, S2, S3 , S4
-    private Integer seancesPerDay = 4;
+    @Column(name = "seances_per_day")
+    @ColumnDefault("4")
+    private Integer seancesPerDay;
+
+    @Column(name = "teachers_per_exam")
+    private Integer teachersPerExam ;
+
 
 
 }

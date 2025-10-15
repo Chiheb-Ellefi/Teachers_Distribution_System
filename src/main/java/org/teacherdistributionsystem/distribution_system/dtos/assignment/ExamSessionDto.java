@@ -24,4 +24,5 @@ public class ExamSessionDto {
 
     private Integer numExamDays;
     private Integer seancesPerDay;
+    private Integer teachersPerExam;
 }

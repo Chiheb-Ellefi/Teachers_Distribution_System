@@ -1,28 +1,29 @@
 package org.teacherdistributionsystem.distribution_system.controllers;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.*;
+import org.teacherdistributionsystem.distribution_system.dtos.assignment.ExamSessionDto;
+import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
 import org.teacherdistributionsystem.distribution_system.models.MainRequestBody;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
 import org.teacherdistributionsystem.distribution_system.services.ExcelImportOrchestrator;
+import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
 import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
 
 
 import java.io.IOException;
 import java.util.List;
 
-@RequestMapping("/api/v1/assignments")
+@RequestMapping("/api/v1/session")
 @RestController
+@RequiredArgsConstructor
 public class MainController {
     private final ExcelImportOrchestrator excelImportOrchestrator;
-    private final TeacherUnavailabilityService teacherUnavailabilityService;
+    private final ExamSessionService examSessionService;
 
-    public MainController(ExcelImportOrchestrator excelImportOrchestrator, TeacherUnavailabilityService teacherUnavailabilityService) {
-        this.excelImportOrchestrator = excelImportOrchestrator;
-        this.teacherUnavailabilityService = teacherUnavailabilityService;
-    }
 
     @PostMapping("/upload")
     public ResponseEntity<String> mainController(@RequestBody MainRequestBody request) {
@@ -34,6 +35,14 @@ public class MainController {
        }
     }
 
+    @PatchMapping("/{sessionId}/teachers-per-exam")
+    public ResponseEntity<ExamSessionDto> setNumberTeachersPerExam(@PathVariable Long sessionId, @RequestBody Integer teachersPerExam) throws org.apache.coyote.BadRequestException {
+        if(sessionId == null || teachersPerExam == null) {
+            throw new BadRequestException("Bad Request","Exam session id is null or teachersPerExam is null");
+        }
+       ExamSessionDto response= examSessionService.setTeachersPerExam(sessionId,teachersPerExam);
+        return ResponseEntity.ok(response);
+    }
 
 
 }

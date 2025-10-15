@@ -18,6 +18,7 @@ public class TeacherWorkloadModel {
     private String grade;
     private Integer assignedSupervisions;
     private Integer quotaSupervisions;
+    private Integer unavailabilityCredit;
     private Double utilizationPercentage; // (assigned/quota) * 100
     private List<WorkloadDetailModel> assignments;
 }

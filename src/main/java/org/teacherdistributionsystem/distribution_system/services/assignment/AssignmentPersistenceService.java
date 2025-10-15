@@ -6,12 +6,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignedTeacherModel;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentMetadata;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
-import org.teacherdistributionsystem.distribution_system.models.responses.ExamAssignmentModel;
+import org.teacherdistributionsystem.distribution_system.models.responses.*;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.AssignmentSessionRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
+import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -23,6 +21,7 @@ public class AssignmentPersistenceService {
 
     private final TeacherExamAssignmentRepository assignmentRepository;
     private final AssignmentSessionRepository sessionRepository;
+    private final TeacherRepository teacherRepository;
 
 
     @Transactional
@@ -52,7 +51,11 @@ public class AssignmentPersistenceService {
                         .build();
 
                 assignments.add(assignment);
+
             }
+        }
+        for(TeacherWorkloadModel workloadModel : response.getTeacherWorkloads()){
+            updateTeacherCredit(workloadModel.getTeacherId(),workloadModel.getUnavailabilityCredit());
         }
 
         assignmentRepository.saveAll(assignments);
@@ -117,5 +120,9 @@ public class AssignmentPersistenceService {
         if (session != null) {
             sessionRepository.delete(session);
         }
+    }
+
+    private void updateTeacherCredit(Long teacherId, Integer credit){
+        teacherRepository.updateQuotaCreditById(teacherId,credit);
     }
 }

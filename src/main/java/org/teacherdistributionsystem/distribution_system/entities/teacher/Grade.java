@@ -1,13 +1,11 @@
 package org.teacherdistributionsystem.distribution_system.entities.teacher;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "grade_types")
@@ -26,7 +24,9 @@ public class Grade {
     @Column(name = "default_quota_per_session", nullable = false)
     private Integer defaultQuotaPerSession;
 
-    @Column(name = "priority_level", columnDefinition = "INTEGER DEFAULT 0")
-    private Integer priorityLevel = 0;
+    @Column(name = "priority_level")
+    private Integer priorityLevel;
+
+
 
 }

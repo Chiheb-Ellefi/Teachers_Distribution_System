@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.QuotaPerGradeDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Grade;
 import org.teacherdistributionsystem.distribution_system.enums.GradeType;
@@ -50,5 +51,9 @@ public class GradeService {
 
     }
 
+    @Transactional
+    public void clearAllGrades() {
+        gradeTypeRepository.deleteAllInBatch();
+    }
 
 }

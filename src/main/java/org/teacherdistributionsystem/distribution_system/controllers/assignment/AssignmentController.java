@@ -15,6 +15,10 @@ import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestEx
 import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
+import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
+import org.teacherdistributionsystem.distribution_system.services.teachers.GradeService;
+import org.teacherdistributionsystem.distribution_system.services.teachers.QuotaPerGradeService;
+import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherQuotaService;
 import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
 
 import java.util.List;
@@ -29,6 +33,10 @@ public class AssignmentController {
     private final AssignmentPersistenceService persistenceService;
     private final JsonFileWriter jsonFileWriter;
     private final AssignmentPersistenceService assignmentPersistenceService;
+    private final GradeService gradeService;
+    private final QuotaPerGradeService quotaPerGradeService;
+    private final TeacherQuotaService teacherQuotaService;
+    private final ExamService examService;
 
     @GetMapping("/{sessionId}")
     public ResponseEntity<List<TeacherExamAssignment>> getAssignmentsForSession(@PathVariable Long sessionId) {
@@ -74,6 +82,8 @@ public class AssignmentController {
 
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body(errorResponse);
+        }finally {
+            cleanUp();
         }
     }
 
@@ -108,6 +118,13 @@ public class AssignmentController {
         }
         assignmentPersistenceService.deleteAssignments(sessionId);
         return ResponseEntity.accepted().body("Assignments deleted for session: " + sessionId);
+    }
+
+    private void cleanUp(){
+        examService.clearAllExams();
+        teacherQuotaService.clearAllQuotas();
+        quotaPerGradeService.clearAllQuotasPerGrade();
+        gradeService.clearAllGrades();
     }
 
 }

@@ -15,6 +15,7 @@ public class ExamSessionMapper {
                 .startDate(dto.getStartDate())
                 .endDate(dto.getEndDate())
                 .numExamDays(dto.getNumExamDays())
+                .teachersPerExam(dto.getTeachersPerExam())
                 .seancesPerDay(dto.getSeancesPerDay())
                 .build();
     }
@@ -29,6 +30,7 @@ public class ExamSessionMapper {
                 .startDate(examSession.getStartDate())
                 .endDate(examSession.getEndDate())
                 .numExamDays(examSession.getNumExamDays())
+                .teachersPerExam(examSession.getTeachersPerExam())
                 .seancesPerDay(examSession.getSeancesPerDay())
                 .build();
     }

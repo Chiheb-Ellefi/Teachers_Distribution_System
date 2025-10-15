@@ -20,17 +20,16 @@ public class ExcelImportOrchestrator {
     private final TeacherService teacherService;
     private final TeacherQuotaService quotaService;
     private final GradeService gradeService;
-    private final TeacherPreferenceService preferenceService;
     private final ExamSessionService examSessionService;
     private final ExamService examService;
     private final TeacherUnavailabilityService teacherUnavailabilityService;
 
     ExcelImportOrchestrator(TeacherService teacherService, TeacherQuotaService quotaService, GradeService gradeService,
-                            TeacherPreferenceService preferenceService, ExamSessionService examSessionService, ExamService examService, TeacherUnavailabilityService teacherUnavailabilityService) {
+                             ExamSessionService examSessionService, ExamService examService, TeacherUnavailabilityService teacherUnavailabilityService) {
         this.teacherService = teacherService;
         this.quotaService = quotaService;
         this.gradeService = gradeService;
-        this.preferenceService = preferenceService;
+
         this.examSessionService = examSessionService;
         this.examService = examService;
         this.teacherUnavailabilityService = teacherUnavailabilityService;
@@ -49,7 +48,6 @@ public class ExcelImportOrchestrator {
             teacherMap = teacherService.populateTeachersTable(teachersWorkbook);
             gradeService.addGrades(teachersWorkbook);
             quotaService.addTeachersQuota(teachersWorkbook, teacherMap, examSession);
-            preferenceService.addTeachersPreference(teachersWorkbook, teacherMap, examSession);
         }
         try (FileInputStream examDataFile = new FileInputStream(examDataFilePath);
              Workbook examWorkbook = new XSSFWorkbook(examDataFile)) {

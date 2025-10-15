@@ -27,26 +27,49 @@ public class TeacherService {
 
     }
 
-   public Map<String,Teacher> populateTeachersTable( Workbook workbook)  {
-        List<Teacher> teachers=new ArrayList<>();
-   workbook.forEach(sheet -> {
-       sheet.forEach(row -> {
-           if (row.getRowNum() == 0) return;
+    public Map<String, Teacher> populateTeachersTable(Workbook workbook) {
+        List<Teacher> teachers = new ArrayList<>();
 
-           Teacher teacher = Teacher.builder()
-                   .nom(getCellAsString(row,0))
-                   .prenom(getCellAsString(row,1))
-                   .email(getCellAsString(row,2))
-                   .gradeCode(getCellAsString(row,3))
-                   .codeSmartex(getCellAsInteger(row,4))
-                   .participeSurveillance(getCellAsBoolean(row,5))
-                   .build();
-           teachers.add(teacher);
-       });
-   });
+        workbook.forEach(sheet -> {
+            sheet.forEach(row -> {
+                if (row.getRowNum() == 0) return;
 
-       List<Teacher> savedTeachers=  teacherRepository.saveAll(teachers);
-       return savedTeachers.stream().collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
+                Teacher teacher = Teacher.builder()
+                        .nom(getCellAsString(row, 0))
+                        .prenom(getCellAsString(row, 1))
+                        .email(getCellAsString(row, 2))
+                        .gradeCode(getCellAsString(row, 3))
+                        .codeSmartex(getCellAsInteger(row, 4))
+                        .participeSurveillance(getCellAsBoolean(row, 5))
+                        .quotaCredit(0)
+                        .build();
+                teachers.add(teacher);
+            });
+        });
+
+        boolean isEmpty = teacherRepository.count() == 0;
+
+        if (isEmpty) {
+            // Table is empty - populate with all teachers from Excel
+            List<Teacher> savedTeachers = teacherRepository.saveAll(teachers);
+            return savedTeachers.stream()
+                    .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
+        } else {
+            // Table has data - add only new teachers
+            List<Integer> existingCodes = teacherRepository.findAllCodesSmartex();
+            List<Teacher> newTeachers = teachers.stream()
+                    .filter(t -> !existingCodes.contains(t.getCodeSmartex()))
+                    .toList();
+
+            if (!newTeachers.isEmpty()) {
+                teacherRepository.saveAll(newTeachers);
+            }
+
+            // Return ALL teachers (existing + newly added)
+            List<Teacher> allTeachers = teacherRepository.findAll();
+            return allTeachers.stream()
+                    .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
+        }
     }
 
     public List<Long> getTeachersId() {
