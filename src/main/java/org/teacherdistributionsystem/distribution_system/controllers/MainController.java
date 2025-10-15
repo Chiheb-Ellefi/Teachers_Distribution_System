@@ -33,13 +33,7 @@ public class MainController {
           throw new RuntimeException(e);
        }
     }
-    @GetMapping
-    public ResponseEntity<List<TeacherUnavailabilityProjection>> mainController() {
 
-       List<TeacherUnavailabilityProjection>data= teacherUnavailabilityService.getTeacherUnavailabilitiesBySessionId(1L);
-       System.out.println(data);
-        return ResponseEntity.ok().body(data);
-    }
 
 
 }
