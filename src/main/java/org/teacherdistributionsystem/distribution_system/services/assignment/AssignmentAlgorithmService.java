@@ -77,7 +77,6 @@
         private Set<Integer> teachersWithRelaxedUnavailability;
 
         private List<Exam> exams;
-        private  int teachersPerExam = 2;
         private Map<Long, Integer> teacherIdToIndex;
         private ExamSessionDto currentSession;
         private int totalConstraintsAdded = 0;
@@ -217,7 +216,7 @@
             }
 
             currentSession = examSessionService.getExamSessionDto(sessionId);
-            teachersPerExam = currentSession.getTeachersPerExam(); // Default fallback
+
 
             List<TeacherUnavailabilityProjection> teacherUnavailability =
                     teacherUnavailabilityService.getTeacherUnavailabilitiesBySessionId(currentSession.getId());
