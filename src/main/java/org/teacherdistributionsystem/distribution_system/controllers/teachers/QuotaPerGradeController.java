@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/grade")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class QuotaPerGradeController {
     private final QuotaPerGradeService quotaPerGradeService;
 

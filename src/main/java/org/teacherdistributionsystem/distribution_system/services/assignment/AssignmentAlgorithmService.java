@@ -3,6 +3,7 @@
     import com.google.ortools.Loader;
     import com.google.ortools.sat.*;
     import org.apache.coyote.BadRequestException;
+    import org.springframework.scheduling.annotation.Async;
     import org.springframework.stereotype.Service;
     import org.teacherdistributionsystem.distribution_system.dtos.assignment.*;
     import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
@@ -18,6 +19,7 @@
 
     import java.time.LocalDateTime;
     import java.util.*;
+    import java.util.concurrent.CompletableFuture;
     import java.util.stream.Collectors;
 
     @Service
@@ -97,7 +99,8 @@
             this.quotaPerGradeService = quotaPerGradeService;
         }
 
-        public AssignmentResponseModel executeAssignment(Long sessionId) {
+        @Async
+        public CompletableFuture<AssignmentResponseModel> executeAssignment(Long sessionId) {
             try {
                 loadData(sessionId);
                 teachersWithRelaxedUnavailability = new HashSet<>();
@@ -141,7 +144,7 @@
                 if (result.getStatus() == AssignmentStatus.SUCCESS) {
                     System.out.println("[SUCCESS] Solution found with all unavailability respected!");
                     System.out.println("========================================\n");
-                    return result;
+                    return CompletableFuture.completedFuture(result);
                 }
 
                 // PHASE 2: If infeasible, try progressive relaxation
@@ -162,16 +165,16 @@
 
                 // Always attempt relaxation if strict mode failed
                 System.out.println("\n=== PHASE 3: PROGRESSIVE RELAXATION ===");
-                return attemptProgressiveRelaxation(totalSupervisionNeeded);
+                return CompletableFuture.completedFuture(attemptProgressiveRelaxation(totalSupervisionNeeded));
 
             } catch (Exception e) {
                 System.err.println("[ERROR] " + e.getMessage());
                 e.printStackTrace();
-                return AssignmentResponseModel.builder()
+                return CompletableFuture.completedFuture(AssignmentResponseModel.builder()
                         .status(AssignmentStatus.ERROR)
                         .message("Error: " + e.getMessage())
                         .generatedAt(LocalDateTime.now())
-                        .build();
+                        .build());
             }
         }
 

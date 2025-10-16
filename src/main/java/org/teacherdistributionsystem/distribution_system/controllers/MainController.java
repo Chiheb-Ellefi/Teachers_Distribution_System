@@ -20,6 +20,7 @@ import java.util.List;
 @RequestMapping("/api/v1/session")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class MainController {
     private final ExcelImportOrchestrator excelImportOrchestrator;
     private final ExamSessionService examSessionService;
