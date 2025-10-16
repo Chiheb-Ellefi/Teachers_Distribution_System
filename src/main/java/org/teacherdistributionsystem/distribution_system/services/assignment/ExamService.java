@@ -131,4 +131,8 @@ public class ExamService {
         examRepository.deleteAllInBatch();
     }
 
+    public Boolean dataExists(){
+       return  examRepository.count()!=0;
+    }
+
 }
