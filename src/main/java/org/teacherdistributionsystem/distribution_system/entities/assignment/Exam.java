@@ -50,8 +50,8 @@ public class Exam {
     @Column(name = "num_rooms", length = 10)
     private String numRooms;
 
-    @Column(name = "required_supervisors", nullable = false, columnDefinition = "INTEGER DEFAULT 2")
-    private Integer requiredSupervisors = 2;
+    @Column(name = "required_supervisors", nullable = false)
+    private Integer requiredSupervisors ;
 
     @Column(nullable = false,length = 20)
     private String examType;

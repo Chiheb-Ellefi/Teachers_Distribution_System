@@ -80,6 +80,7 @@
         private ExamSessionDto currentSession;
         private int totalConstraintsAdded = 0;
         private int relaxationAttemptNumber = 0;
+        private Map<String, Set<Long>> examOwnersByKey;
 
         public AssignmentAlgorithmService(TeacherService teacherService,
                                           TeacherQuotaService teacherQuotaService,
@@ -180,7 +181,7 @@
 
             teacherGrades = new String[numTeachers];
             teacherNames = new String[numTeachers];
-            teacherEmails=new String[numTeachers];
+            teacherEmails = new String[numTeachers];
             baseQuotas = new int[numTeachers];
             effectiveQuotas = new int[numTeachers];
             teacherPriorities = new int[numTeachers];
@@ -188,13 +189,13 @@
             Map<Long, String> gradeMap = teacherService.getAllGrades();
             Map<Long, String> nameMap = teacherService.getAllNames();
             Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas();
-            Map<Long,String> emailMap = teacherService.getAllEmails();
-            Map<GradeType,Integer> priorityPerGradeMap=quotaPerGradeService.getPrioritiesByGrade();
+            Map<Long, String> emailMap = teacherService.getAllEmails();
+            Map<GradeType, Integer> priorityPerGradeMap = quotaPerGradeService.getPrioritiesByGrade();
 
             for (int i = 0; i < numTeachers; i++) {
                 teacherGrades[i] = gradeMap.get(teacherIds[i]);
                 teacherNames[i] = nameMap.getOrDefault(teacherIds[i], "Unknown");
-                teacherEmails[i]=emailMap.getOrDefault(teacherIds[i], "Unknown");
+                teacherEmails[i] = emailMap.getOrDefault(teacherIds[i], "Unknown");
                 baseQuotas[i] = quotaMap.getOrDefault(teacherIds[i], 0);
 
                 try {
@@ -211,7 +212,7 @@
             }
 
             currentSession = examSessionService.getExamSessionDto(sessionId);
-            teachersPerExam=currentSession.getTeachersPerExam();
+            teachersPerExam = currentSession.getTeachersPerExam();
             List<TeacherUnavailabilityProjection> teacherUnavailability =
                     teacherUnavailabilityService.getTeacherUnavailabilitiesBySessionId(currentSession.getId());
 
@@ -231,20 +232,85 @@
                 }
             }
 
+            // ========================================
+            // FIX: Deduplicate exams based on day + seance + room
+            // Multiple DB rows with same (day, seance, room) = ONE logical exam with multiple owners
+            // ========================================
             List<ExamForAssignmentProjection> examsList = examService.getExamsForAssignment(currentSession.getId());
-            exams = new ArrayList<>();
-            examsList.forEach(e -> {
+
+            // Group exams by logical key (day + seance + room)
+            Map<String, List<ExamForAssignmentProjection>> examGroups = new HashMap<>();
+
+            for (ExamForAssignmentProjection e : examsList) {
                 int dayIdx = e.getJourNumero() - 1;
                 int seanceIdx = e.getSeance().ordinal();
+
                 if (dayIdx >= 0 && dayIdx < numDays && seanceIdx >= 0 && seanceIdx < numSeances) {
-                    exams.add(new Exam(e.getId(), dayIdx, seanceIdx, e.getNumRooms(), e.getResponsableId()));
+                    String examKey = dayIdx + "_" + seanceIdx + "_" + e.getNumRooms();
+                    examGroups.computeIfAbsent(examKey, k -> new ArrayList<>()).add(e);
                 }
-            });
+            }
+
+            // Create ONE exam per logical group
+            exams = new ArrayList<>();
+            Map<String, Set<Long>> examOwnersByKeyMap = new HashMap<>();
+
+            for (Map.Entry<String, List<ExamForAssignmentProjection>> entry : examGroups.entrySet()) {
+                String examKey = entry.getKey();
+                List<ExamForAssignmentProjection> group = entry.getValue();
+
+                // Use the first exam as representative
+                ExamForAssignmentProjection representative = group.get(0);
+                int dayIdx = representative.getJourNumero() - 1;
+                int seanceIdx = representative.getSeance().ordinal();
+
+                // Collect ALL owner IDs for this logical exam
+                Set<Long> ownerIds = new HashSet<>();
+                for (ExamForAssignmentProjection exam : group) {
+                    if (exam.getResponsableId() != null) {
+                        ownerIds.add(exam.getResponsableId());
+                    }
+                }
+
+                // Store owners for this exam
+                examOwnersByKeyMap.put(examKey, ownerIds);
+
+                // For the Exam object, we'll use a special marker for multiple owners
+                // We'll store the first owner ID, but check examOwnersByKey for all owners
+                Long representativeOwnerId = ownerIds.isEmpty() ? null : ownerIds.iterator().next();
+
+                exams.add(new Exam(
+                        representative.getId(),
+                        dayIdx,
+                        seanceIdx,
+                        representative.getNumRooms(),
+                        representativeOwnerId  // This will be replaced by examOwnersByKey lookup
+                ));
+            }
+
             numExams = exams.size();
 
             System.out.println("Teachers: " + numTeachers + ", Exams: " + numExams);
+            System.out.println("Original DB rows: " + examsList.size() + ", Deduplicated logical exams: " + numExams);
+
+            // Log any exams with multiple owners
+            int multiOwnerCount = 0;
+            for (Set<Long> owners : examOwnersByKeyMap.values()) {
+                if (owners.size() > 1) {
+                    multiOwnerCount++;
+                }
+            }
+            if (multiOwnerCount > 0) {
+                System.out.println("Exams with multiple owners: " + multiOwnerCount);
+            }
+
             System.out.println("===================\n");
+
+            // Store the owner mapping for use in constraints
+            this.examOwnersByKey = examOwnersByKeyMap;
         }
+
+
 
         private void calculateEffectiveQuotas() {
             // IMPORTANT: Quota is a limit on total assignments, NOT reduced by unavailability
@@ -503,48 +569,35 @@
             System.out.println("✓ Non-participating teachers excluded");
 
             // 3. CRITICAL: Exam ownership constraints
-    // Owner cannot supervise their own exam BUT at least one owner MUST supervise another exam in same slot
+            // Owner cannot supervise their own exam BUT at least one owner MUST supervise another exam in same slot
             int ownershipConstraints = 0;
             int mustSuperviseConstraints = 0;
 
-    // First, identify logical exams (group by day + seance + room)
-    // This handles future case where same exam has multiple owner rows in DB
-            Map<String, List<Integer>> logicalExams = new HashMap<>();
-            Map<String, Set<Long>> examOwners = new HashMap<>();
+            // Since exams are already deduplicated, we can work directly with them
+            // Group exams by time slot for finding alternatives
+            Map<String, List<Integer>> examsBySlot = new HashMap<>();
+            for (int e = 0; e < numExams; e++) {
+                Exam exam = exams.get(e);
+                String slotKey = exam.day + "_" + exam.seance;
+                examsBySlot.computeIfAbsent(slotKey, k -> new ArrayList<>()).add(e);
+            }
 
+            // Process each exam
             for (int e = 0; e < numExams; e++) {
                 Exam exam = exams.get(e);
                 String examKey = exam.day + "_" + exam.seance + "_" + exam.salle;
-                logicalExams.computeIfAbsent(examKey, k -> new ArrayList<>()).add(e);
-                if (exam.ownerTeacherId != null) {
-                    examOwners.computeIfAbsent(examKey, k -> new HashSet<>()).add(exam.ownerTeacherId);
-                }
-            }
 
-    // Group exams by time slot for finding alternatives
-            Map<String, List<String>> examKeysBySlot = new HashMap<>();
-            for (String examKey : logicalExams.keySet()) {
-                String[] parts = examKey.split("_");
-                String slotKey = parts[0] + "_" + parts[1]; // day_seance
-                examKeysBySlot.computeIfAbsent(slotKey, k -> new ArrayList<>()).add(examKey);
-            }
-
-    // Process each logical exam only once
-            for (Map.Entry<String, List<Integer>> entry : logicalExams.entrySet()) {
-                String examKey = entry.getKey();
-                List<Integer> examIndices = entry.getValue(); // All DB rows for this exam
-                Set<Long> ownerIds = examOwners.getOrDefault(examKey, new HashSet<>());
+                // Get all owners for this exam
+                Set<Long> ownerIds = examOwnersByKey.getOrDefault(examKey, new HashSet<>());
 
                 if (ownerIds.isEmpty()) continue;
 
-                // Block all owners from supervising any instance of their exam
-                for (int examIdx : examIndices) {
-                    for (Long ownerId : ownerIds) {
-                        if (teacherIdToIndex.containsKey(ownerId)) {
-                            int ownerIdx = teacherIdToIndex.get(ownerId);
-                            model.addEquality(assignment[ownerIdx][examIdx], 0);
-                            ownershipConstraints++;
-                        }
+                // Block all owners from supervising their own exam
+                for (Long ownerId : ownerIds) {
+                    if (teacherIdToIndex.containsKey(ownerId)) {
+                        int ownerIdx = teacherIdToIndex.get(ownerId);
+                        model.addEquality(assignment[ownerIdx][e], 0);
+                        ownershipConstraints++;
                     }
                 }
 
@@ -553,46 +606,51 @@
                         .filter(teacherIdToIndex::containsKey)
                         .map(teacherIdToIndex::get)
                         .filter(idx -> teacherParticipateSurveillance[idx])
-                        .collect(Collectors.toList());
+                        .toList();
 
                 if (participatingOwners.isEmpty()) continue;
 
                 // Find other exams in same slot
-                String[] parts = examKey.split("_");
-                String slotKey = parts[0] + "_" + parts[1];
-
+                String slotKey = exam.day + "_" + exam.seance;
                 List<Integer> otherExamIndices = new ArrayList<>();
-                for (String otherExamKey : examKeysBySlot.get(slotKey)) {
-                    if (otherExamKey.equals(examKey)) continue;
 
-                    Set<Long> otherOwners = examOwners.getOrDefault(otherExamKey, new HashSet<>());
-                    List<Integer> otherIndices = logicalExams.get(otherExamKey);
+                for (int otherExamIdx : examsBySlot.get(slotKey)) {
+                    if (otherExamIdx == e) continue; // Skip same exam
 
-                    // For each owner, check if they can supervise this other exam
+                    Exam otherExam = exams.get(otherExamIdx);
+                    String otherExamKey = otherExam.day + "_" + otherExam.seance + "_" + otherExam.salle;
+                    Set<Long> otherOwners = examOwnersByKey.getOrDefault(otherExamKey, new HashSet<>());
+
+                    // Check if at least one owner can supervise this other exam
+                    boolean atLeastOneOwnerCanSupervise = false;
                     for (int ownerIdx : participatingOwners) {
                         Long ownerId = teacherIds[ownerIdx];
-
-                        // Can supervise if they don't own the other exam
                         if (!otherOwners.contains(ownerId)) {
-                            otherExamIndices.addAll(otherIndices);
-                            break; // Only add indices once per other exam
+                            atLeastOneOwnerCanSupervise = true;
+                            break;
                         }
+                    }
+
+                    if (atLeastOneOwnerCanSupervise) {
+                        otherExamIndices.add(otherExamIdx);
                     }
                 }
 
                 if (otherExamIndices.isEmpty()) continue;
 
                 // KEY: At least ONE participating owner must supervise at least ONE other exam
-                // This creates a SINGLE constraint per logical exam
                 LinearExprBuilder atLeastOneOwnerPresent = LinearExpr.newBuilder();
 
                 for (int ownerIdx : participatingOwners) {
+                    Long ownerId = teacherIds[ownerIdx];
+
                     for (int otherExamIdx : otherExamIndices) {
                         Exam otherExam = exams.get(otherExamIdx);
+                        String otherExamKey = otherExam.day + "_" + otherExam.seance + "_" + otherExam.salle;
+                        Set<Long> otherOwners = examOwnersByKey.getOrDefault(otherExamKey, new HashSet<>());
 
-                        // Double-check: owner doesn't own this specific exam instance
-                        if (otherExam.ownerTeacherId == null ||
-                                !otherExam.ownerTeacherId.equals(teacherIds[ownerIdx])) {
+                        // This owner can supervise if they don't own the other exam
+                        if (!otherOwners.contains(ownerId)) {
                             atLeastOneOwnerPresent.addTerm(assignment[ownerIdx][otherExamIdx], 1);
                         }
                     }
@@ -601,13 +659,13 @@
                 model.addGreaterOrEqual(atLeastOneOwnerPresent, 1);
                 mustSuperviseConstraints++;
             }
+
             totalConstraintsAdded += ownershipConstraints;
             totalConstraintsAdded += mustSuperviseConstraints;
 
             System.out.println("✓ Cannot supervise own exam (" + ownershipConstraints + " constraints)");
             System.out.println("✓ At least one exam owner MUST supervise another exam in same slot (" +
                     mustSuperviseConstraints + " constraints)");
-
             // 4. Unavailability (only for non-relaxed teachers)
             int unavailabilityConstraints = 0;
             for (int t = 0; t < numTeachers; t++) {
