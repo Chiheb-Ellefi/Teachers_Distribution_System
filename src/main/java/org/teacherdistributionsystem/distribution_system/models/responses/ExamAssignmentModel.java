@@ -18,6 +18,7 @@ public class ExamAssignmentModel {
     private Integer seance;
     private String seanceLabel;
     private String room;
+    private int requiredSupervisors;
     private Long ownerTeacherId;
     private String ownerTeacherName;
     private List<AssignedTeacherModel> assignedTeachers;

@@ -8,4 +8,5 @@ public interface ExamForAssignmentProjection {
     Integer getJourNumero();
     String getNumRooms();
     Long getResponsableId();
+    Integer getRequiredSupervisors();
 }

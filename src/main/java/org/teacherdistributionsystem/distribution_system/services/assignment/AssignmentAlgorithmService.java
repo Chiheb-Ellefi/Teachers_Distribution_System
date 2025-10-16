@@ -37,13 +37,15 @@
             int seance;
             String salle;
             Long ownerTeacherId;
+            int requiredSupervisors;
 
-            public Exam(String examId, int day, int seance, String salle, Long ownerTeacherId) {
+            public Exam(String examId, int day, int seance, String salle, Long ownerTeacherId, int requiredSupervisors) {
                 this.examId = examId;
                 this.day = day;
                 this.seance = seance;
                 this.salle = salle;
                 this.ownerTeacherId = ownerTeacherId;
+                this.requiredSupervisors = requiredSupervisors;
             }
         }
 
@@ -105,10 +107,14 @@
                 System.out.println("HUMAN-LIKE ASSIGNMENT STRATEGY");
                 System.out.println("========================================");
 
-                // Calculate initial effective quotas
                 calculateEffectiveQuotas();
 
-                int totalSupervisionNeeded = numExams * teachersPerExam;
+                // Calculate total supervision needed based on EACH exam's requirements
+                int totalSupervisionNeeded = 0;
+                for (Exam exam : exams) {
+                    totalSupervisionNeeded += exam.requiredSupervisors;
+                }
+
                 int totalCapacity = calculateTotalCapacity();
                 int availableExamSlots = calculateAvailableExamSlots();
 
@@ -117,7 +123,6 @@
                 System.out.println("Total teacher capacity (quotas): " + totalCapacity);
                 System.out.println("Available exam-teacher slot pairs: " + availableExamSlots);
 
-                // Check if there's enough capacity even considering unavailability
                 boolean sufficientCapacity = totalCapacity >= totalSupervisionNeeded;
                 boolean sufficientAvailableSlots = availableExamSlots >= totalSupervisionNeeded;
 
@@ -212,7 +217,8 @@
             }
 
             currentSession = examSessionService.getExamSessionDto(sessionId);
-            teachersPerExam = currentSession.getTeachersPerExam();
+            teachersPerExam = currentSession.getTeachersPerExam(); // Default fallback
+
             List<TeacherUnavailabilityProjection> teacherUnavailability =
                     teacherUnavailabilityService.getTeacherUnavailabilitiesBySessionId(currentSession.getId());
 
@@ -233,8 +239,7 @@
             }
 
             // ========================================
-            // FIX: Deduplicate exams based on day + seance + room
-            // Multiple DB rows with same (day, seance, room) = ONE logical exam with multiple owners
+            // FIX: Deduplicate exams and handle dynamic supervisor counts
             // ========================================
             List<ExamForAssignmentProjection> examsList = examService.getExamsForAssignment(currentSession.getId());
 
@@ -253,7 +258,11 @@
 
             // Create ONE exam per logical group
             exams = new ArrayList<>();
-            Map<String, Set<Long>> examOwnersByKeyMap = new HashMap<>();
+            examOwnersByKey = new HashMap<>();
+
+            int totalSupervisorsNeeded = 0;
+            int minSupervisors = Integer.MAX_VALUE;
+            int maxSupervisors = Integer.MIN_VALUE;
 
             for (Map.Entry<String, List<ExamForAssignmentProjection>> entry : examGroups.entrySet()) {
                 String examKey = entry.getKey();
@@ -264,6 +273,17 @@
                 int dayIdx = representative.getJourNumero() - 1;
                 int seanceIdx = representative.getSeance().ordinal();
 
+                // IMPORTANT: All rows for same logical exam should have same requiredSupervisors
+                // Use the first one (they should all be identical)
+                int requiredSupervisors = representative.getRequiredSupervisors();
+
+                // Validate consistency (optional but recommended)
+                for (ExamForAssignmentProjection exam : group) {
+                    if (exam.getRequiredSupervisors() != requiredSupervisors) {
+                        System.err.println("WARNING: Inconsistent requiredSupervisors for exam at " + examKey);
+                    }
+                }
+
                 // Collect ALL owner IDs for this logical exam
                 Set<Long> ownerIds = new HashSet<>();
                 for (ExamForAssignmentProjection exam : group) {
@@ -272,11 +292,8 @@
                     }
                 }
 
-                // Store owners for this exam
-                examOwnersByKeyMap.put(examKey, ownerIds);
+                examOwnersByKey.put(examKey, ownerIds);
 
-                // For the Exam object, we'll use a special marker for multiple owners
-                // We'll store the first owner ID, but check examOwnersByKey for all owners
                 Long representativeOwnerId = ownerIds.isEmpty() ? null : ownerIds.iterator().next();
 
                 exams.add(new Exam(
@@ -284,18 +301,25 @@
                         dayIdx,
                         seanceIdx,
                         representative.getNumRooms(),
-                        representativeOwnerId  // This will be replaced by examOwnersByKey lookup
+                        representativeOwnerId,
+                        requiredSupervisors
                 ));
+
+                totalSupervisorsNeeded += requiredSupervisors;
+                minSupervisors = Math.min(minSupervisors, requiredSupervisors);
+                maxSupervisors = Math.max(maxSupervisors, requiredSupervisors);
             }
 
             numExams = exams.size();
 
             System.out.println("Teachers: " + numTeachers + ", Exams: " + numExams);
             System.out.println("Original DB rows: " + examsList.size() + ", Deduplicated logical exams: " + numExams);
+            System.out.println("Total supervisors needed: " + totalSupervisorsNeeded);
+            System.out.println("Supervisor requirements - Min: " + minSupervisors + ", Max: " + maxSupervisors);
 
             // Log any exams with multiple owners
             int multiOwnerCount = 0;
-            for (Set<Long> owners : examOwnersByKeyMap.values()) {
+            for (Set<Long> owners : examOwnersByKey.values()) {
                 if (owners.size() > 1) {
                     multiOwnerCount++;
                 }
@@ -305,9 +329,6 @@
             }
 
             System.out.println("===================\n");
-
-            // Store the owner mapping for use in constraints
-            this.examOwnersByKey = examOwnersByKeyMap;
         }
 
 
@@ -546,14 +567,15 @@
             totalConstraintsAdded = 0;
             // 1. Each exam needs exactly 2 teachers
             for (int e = 0; e < numExams; e++) {
+                Exam exam = exams.get(e);
                 LinearExprBuilder sum = LinearExpr.newBuilder();
                 for (int t = 0; t < numTeachers; t++) {
                     sum.addTerm(assignment[t][e], 1);
                 }
-                model.addEquality(sum, teachersPerExam);
+                model.addEquality(sum, exam.requiredSupervisors);
                 totalConstraintsAdded++;
             }
-            System.out.println("✓ Each exam needs " + teachersPerExam + " teachers");
+            System.out.println("✓ Each exam needs its required number of teachers (dynamic)");
 
             // 2. Non-participating teachers excluded
             int nonParticipatingConstraints = 0;
@@ -722,7 +744,94 @@
             totalConstraintsAdded += timeConflictConstraints;
             System.out.println("✓ No time conflicts");
 
-            // 7. PRIORITY STRATEGY: Optimize for better assignments
+            // 7. No gaps in daily schedule - assignments must form consecutive blocks
+            // Prevents: S1✓ S2✗ S3✓ (unfair - forces 3 slots when could be 2)
+            // Allows: S1✓ S2✓ or S3✓ S4✓ (balanced consecutive blocks)
+            int noGapsConstraints = 0;
+
+            for (int t = 0; t < numTeachers; t++) {
+                if (!teacherParticipateSurveillance[t]) continue;
+
+                // Group exams by day and seance
+                Map<Integer, Map<Integer, List<Integer>>> examsByDaySeance = new HashMap<>();
+
+                for (int e = 0; e < numExams; e++) {
+                    Exam exam = exams.get(e);
+                    examsByDaySeance
+                            .computeIfAbsent(exam.day, k -> new HashMap<>())
+                            .computeIfAbsent(exam.seance, k -> new ArrayList<>())
+                            .add(e);
+                }
+
+                // Process each day independently
+                for (Map.Entry<Integer, Map<Integer, List<Integer>>> dayEntry : examsByDaySeance.entrySet()) {
+                    int day = dayEntry.getKey();
+                    Map<Integer, List<Integer>> seanceToExams = dayEntry.getValue();
+
+                    // Get all seance numbers that exist on this day (sorted)
+                    List<Integer> availableSeances = new ArrayList<>(seanceToExams.keySet());
+                    Collections.sort(availableSeances);
+
+                    if (availableSeances.size() <= 1) continue;
+
+                    // Create work indicators for each seance
+                    Map<Integer, BoolVar> worksInSeance = new HashMap<>();
+
+                    for (int seance : availableSeances) {
+                        BoolVar works = model.newBoolVar("T" + t + "_Day" + day + "_Seance" + seance);
+                        worksInSeance.put(seance, works);
+
+                        // Link to actual assignments
+                        List<Integer> examsInSeance = seanceToExams.get(seance);
+                        LinearExprBuilder sum = LinearExpr.newBuilder();
+                        for (int examIdx : examsInSeance) {
+                            sum.addTerm(assignment[t][examIdx], 1);
+                        }
+
+                        // works = 1 iff sum >= 1
+                        model.addGreaterOrEqual(sum, works);
+                        model.addLessOrEqual(sum, LinearExpr.term(works, examsInSeance.size()));
+                    }
+
+                    // CORE CONSTRAINT: No gaps in consecutive seances
+                    // For each consecutive triple of available seances, enforce:
+                    // works[i] + works[k] <= 1 + works[j] for all i < j < k where all are consecutive
+
+                    for (int i = 0; i < availableSeances.size(); i++) {
+                        for (int k = i + 2; k < availableSeances.size(); k++) {
+                            int seanceStart = availableSeances.get(i);
+                            int seanceEnd = availableSeances.get(k);
+
+                            // Find all seances strictly between start and end
+                            List<Integer> middleSeances = new ArrayList<>();
+                            for (int j = i + 1; j < k; j++) {
+                                middleSeances.add(availableSeances.get(j));
+                            }
+
+                            // For each middle seance, add constraint:
+                            // "Cannot work at both ends unless working in the middle"
+                            // works[start] + works[end] <= 1 + works[middle]
+                            // Equivalently: works[start] + works[end] - works[middle] <= 1
+
+                            for (int middleSeance : middleSeances) {
+                                LinearExprBuilder noGap = LinearExpr.newBuilder();
+                                noGap.addTerm(worksInSeance.get(seanceStart), 1);
+                                noGap.addTerm(worksInSeance.get(seanceEnd), 1);
+                                noGap.addTerm(worksInSeance.get(middleSeance), -1);
+
+                                model.addLessOrEqual(noGap, 1);
+                                noGapsConstraints++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            totalConstraintsAdded += noGapsConstraints;
+            System.out.println("✓ No gaps in daily schedule - consecutive blocks only (" + noGapsConstraints + " constraints)");
+
+
+            // 8. PRIORITY STRATEGY: Optimize for better assignments
             System.out.println("\n--- Priority Assignment Strategy ---");
 
             // Build conflict map and optimization objective
@@ -837,6 +946,7 @@
                         .seance(exam.seance + 1)
                         .seanceLabel(getSeanceLabel(exam.seance))
                         .room(exam.salle)
+                        .requiredSupervisors(exam.requiredSupervisors)
                         .ownerTeacherId(exam.ownerTeacherId)
                         .ownerTeacherName(getTeacherName(exam.ownerTeacherId))
                         .assignedTeachers(assignedTeachers)
