@@ -164,6 +164,12 @@ public class AssignmentController {
         gradeService.clearAllGrades();
     }
 
+    @PostMapping("/clean-up")
+    public ResponseEntity<Void> cleanUpDB(){
+        cleanUp();
+        return ResponseEntity.noContent().build();
+    }
+
     @GetMapping("/status/{sessionId}")
     public ResponseEntity<Boolean> checkAssignmentStatus(@PathVariable Long sessionId) {
         boolean exists = persistenceService.hasAssignments(sessionId);
