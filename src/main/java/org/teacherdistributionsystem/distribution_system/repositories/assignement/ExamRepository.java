@@ -39,4 +39,9 @@ public interface ExamRepository extends JpaRepository<Exam, String> {
             String numRooms,
             Integer requiredSupervisors
     );
+    @Modifying
+    @Transactional
+    @Query("UPDATE Exam e SET e.requiredSupervisors = :supervisors WHERE e.examSession.id = :sessionId")
+    int updateRequiredSupervisorsBySession(@Param("supervisors") Integer supervisors,
+                                           @Param("sessionId") Long sessionId);
 }

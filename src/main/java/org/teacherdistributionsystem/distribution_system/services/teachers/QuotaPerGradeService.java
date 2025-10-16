@@ -1,7 +1,6 @@
 package org.teacherdistributionsystem.distribution_system.services.teachers;
 
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.BadRequestException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.QuotaPerGradeDto;
@@ -23,8 +22,8 @@ public class QuotaPerGradeService {
     public void saveAll(List<QuotaPerGrade> quotaPerGrades) {
         quotaPerGradeRepository.saveAll(quotaPerGrades);
     }
-    public QuotaPerGradeDto getQuotaByGrade(GradeType grade) throws BadRequestException {
-        Supplier<BadRequestException> exceptionSupplier = () -> new BadRequestException("Grade is not valid");
+    public QuotaPerGradeDto getQuotaByGrade(GradeType grade) throws IllegalArgumentException {
+        Supplier<IllegalArgumentException> exceptionSupplier = () -> new IllegalArgumentException("Grade is not valid");
         return QuotaPerGradeMapper.toDto(quotaPerGradeRepository.findByGrade(grade).orElseThrow(exceptionSupplier));
     }
     public Map<GradeType, Integer> getPrioritiesByGrade() {

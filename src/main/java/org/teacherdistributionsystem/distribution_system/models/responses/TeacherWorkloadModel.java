@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Data
@@ -19,6 +21,9 @@ public class TeacherWorkloadModel {
     private Integer assignedSupervisions;
     private Integer quotaSupervisions;
     private Integer unavailabilityCredit;
-    private Double utilizationPercentage; // (assigned/quota) * 100
+    private Double utilizationPercentage;
+    private LocalDate examDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private List<WorkloadDetailModel> assignments;
 }

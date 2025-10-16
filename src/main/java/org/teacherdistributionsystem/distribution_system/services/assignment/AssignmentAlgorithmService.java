@@ -2,7 +2,6 @@
 
     import com.google.ortools.Loader;
     import com.google.ortools.sat.*;
-    import org.apache.coyote.BadRequestException;
     import org.springframework.scheduling.annotation.Async;
     import org.springframework.stereotype.Service;
     import org.teacherdistributionsystem.distribution_system.dtos.assignment.*;
@@ -167,18 +166,18 @@
                 System.out.println("\n=== PHASE 3: PROGRESSIVE RELAXATION ===");
                 return CompletableFuture.completedFuture(attemptProgressiveRelaxation(totalSupervisionNeeded));
 
+            } catch (jakarta.persistence.EntityNotFoundException e) {
+                System.err.println("[ERROR] Entity not found: " + e.getMessage());
+                return CompletableFuture.failedFuture(e);
+
             } catch (Exception e) {
                 System.err.println("[ERROR] " + e.getMessage());
                 e.printStackTrace();
-                return CompletableFuture.completedFuture(AssignmentResponseModel.builder()
-                        .status(AssignmentStatus.ERROR)
-                        .message("Error: " + e.getMessage())
-                        .generatedAt(LocalDateTime.now())
-                        .build());
+                return CompletableFuture.failedFuture(e);
             }
         }
 
-        private void loadData(Long sessionId) throws BadRequestException {
+        private void loadData(Long sessionId)  {
             System.out.println("\n=== LOADING DATA ===");
 
             Map<Long, Boolean> map = teacherService.getTeacherParticipeSurveillance();
@@ -207,8 +206,9 @@
 
                 try {
                     GradeType gradeType = GradeType.valueOf(teacherGrades[i]);
-                    teacherPriorities[i] = priorityPerGradeMap.get(gradeType);
-                } catch (IllegalArgumentException e) {
+                    teacherPriorities[i] = priorityPerGradeMap.getOrDefault(gradeType, Integer.MAX_VALUE);
+                } catch (IllegalArgumentException | NullPointerException e) {
+                    System.err.println("Warning: Invalid or missing grade for teacher " + teacherIds[i] + ": " + teacherGrades[i]);
                     teacherPriorities[i] = Integer.MAX_VALUE;
                 }
             }

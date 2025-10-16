@@ -1,5 +1,6 @@
 package org.teacherdistributionsystem.distribution_system.controllers.assignment;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.http.HttpStatus;
@@ -62,22 +63,27 @@ public class AssignmentController {
 
         DeferredResult<ResponseEntity<Object>> deferredResult = new DeferredResult<>(15000L);
 
-
-        assignmentAlgorithmService.executeAssignment(sessionId)
-                .whenComplete((response, exception) -> {
-                    try {
-                        if (exception != null) {
-                            handleError(deferredResult, exception);
-                        } else {
-                            handleSuccess(deferredResult, response);
+        try {
+            assignmentAlgorithmService.executeAssignment(sessionId)
+                    .whenComplete((response, exception) -> {
+                        try {
+                            if (exception != null) {
+                                handleError(deferredResult, exception);
+                            } else {
+                                handleSuccess(deferredResult, response);
+                            }
+                        } catch (Exception e) {
+                            handleError(deferredResult, e);
+                        } finally {
+                            cleanUp();
                         }
-                    } finally {
+                    });
+        } catch (Exception e) {
+            // Catch any exception that occurs when setting up the async call
+            handleError(deferredResult, e);
+            cleanUp();
+        }
 
-                        cleanUp();
-                    }
-                });
-
-        // Handle timeout scenario
         deferredResult.onTimeout(() -> {
             AssignmentResponseModel timeoutResponse = AssignmentResponseModel.builder()
                     .status(AssignmentStatus.TIMEOUT)
@@ -90,6 +96,70 @@ public class AssignmentController {
         });
 
         return deferredResult;
+    }
+
+    private void handleSuccess(DeferredResult<ResponseEntity<Object>> deferredResult,
+                               AssignmentResponseModel response) {
+        try {
+            HttpStatus httpStatus = switch (response.getStatus()) {
+                case SUCCESS -> HttpStatus.OK;
+                case INFEASIBLE -> HttpStatus.OK;
+                case TIMEOUT -> HttpStatus.PARTIAL_CONTENT;
+                case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
+            };
+
+            if (response.getStatus() == AssignmentStatus.SUCCESS) {
+                persistenceService.saveAssignmentResults(response);
+                jsonFileWriter.writeDataToJsonFile(response.getTeacherWorkloads());
+
+                response.setExamAssignments(null);
+                response.setTeacherWorkloads(null);
+            }
+
+            deferredResult.setResult(ResponseEntity.status(httpStatus).body(response));
+
+        } catch (Exception e) {
+            handleError(deferredResult, e);
+        }
+    }
+
+    private void handleError(DeferredResult<ResponseEntity<Object>> deferredResult, Throwable exception) {
+        HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
+        String message = "Failed to execute assignment";
+
+        Throwable actualException = exception;
+        if (exception instanceof java.util.concurrent.CompletionException && exception.getCause() != null) {
+            actualException = exception.getCause();
+        }
+        if (actualException instanceof EntityNotFoundException) {
+            status = HttpStatus.NOT_FOUND;
+            message = actualException.getMessage();
+        } else if (actualException instanceof BadRequestException) {
+            status = HttpStatus.BAD_REQUEST;
+            message = actualException.getMessage();
+        } else if (actualException instanceof IllegalArgumentException) {
+            status = HttpStatus.BAD_REQUEST;
+            message = actualException.getMessage();
+        } else {
+            message = "Failed to execute assignment: " + actualException.getMessage();
+        }
+
+        AssignmentResponseModel errorResponse = AssignmentResponseModel.builder()
+                .status(AssignmentStatus.ERROR)
+                .message(message)
+                .build();
+
+        deferredResult.setResult(
+                ResponseEntity.status(status).body(errorResponse)
+        );
+    }
+
+
+    private void cleanUp(){
+        examService.clearAllExams();
+        teacherQuotaService.clearAllQuotas();
+        quotaPerGradeService.clearAllQuotasPerGrade();
+        gradeService.clearAllGrades();
     }
 
     @GetMapping("/status/{sessionId}")
@@ -127,50 +197,6 @@ public class AssignmentController {
     }
 
 
-    private void handleSuccess(DeferredResult<ResponseEntity<Object>> deferredResult,
-                               AssignmentResponseModel response) {
-        try {
-
-            HttpStatus httpStatus = switch (response.getStatus()) {
-                case SUCCESS -> HttpStatus.OK;
-                case INFEASIBLE -> HttpStatus.OK; // still ok but there is no solution
-                case TIMEOUT -> HttpStatus.PARTIAL_CONTENT;
-                case ERROR -> HttpStatus.INTERNAL_SERVER_ERROR;
-            };
 
 
-            persistenceService.saveAssignmentResults(response);
-            jsonFileWriter.writeDataToJsonFile(response.getTeacherWorkloads());
-
-            response.setExamAssignments(null);
-            response.setTeacherWorkloads(null);
-
-
-            deferredResult.setResult(ResponseEntity.status(httpStatus).body(response));
-
-        } catch (Exception e) {
-
-            handleError(deferredResult, e);
-        }
-    }
-
-
-    private void handleError(DeferredResult<ResponseEntity<Object>> deferredResult, Throwable exception) {
-        AssignmentResponseModel errorResponse = AssignmentResponseModel.builder()
-                .status(AssignmentStatus.ERROR)
-                .message("Failed to execute assignment: " + exception.getMessage())
-                .build();
-
-        deferredResult.setErrorResult(
-                ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse)
-        );
-    }
-
-
-    private void cleanUp(){
-        examService.clearAllExams();
-        teacherQuotaService.clearAllQuotas();
-        quotaPerGradeService.clearAllQuotasPerGrade();
-        gradeService.clearAllGrades();
-    }
 }

@@ -1,6 +1,7 @@
 package org.teacherdistributionsystem.distribution_system.exceptions;
 
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
+import jakarta.persistence.EntityNotFoundException;
 import org.hibernate.PropertyValueException;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -20,6 +21,23 @@ public class GeneralExceptionHandler {
         String message = e.getMessage();
         HttpStatus status = HttpStatus.BAD_REQUEST;
        ErrorDetails error= ErrorDetails.builder().message(message).details(message).build();
+        return ResponseEntity.status(status).body(error);
+    }
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorDetails> handleIllegalArgumentException(IllegalArgumentException e) {
+        String message = e.getMessage();
+        HttpStatus status = HttpStatus.BAD_REQUEST;
+        ErrorDetails error= ErrorDetails.builder().message(message).details(message).build();
+        return ResponseEntity.status(status).body(error);
+    }
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<ErrorDetails> handleEntityNotFoundException(EntityNotFoundException e) {
+        String message = e.getMessage();
+        HttpStatus status = HttpStatus.NOT_FOUND;
+        ErrorDetails error = ErrorDetails.builder()
+                .message(message)
+                .details(message)
+                .build();
         return ResponseEntity.status(status).body(error);
     }
     @ExceptionHandler(RuntimeException.class)
@@ -49,7 +67,11 @@ public class GeneralExceptionHandler {
             status = HttpStatus.BAD_REQUEST;
 
         }
+        else if (cause instanceof NullPointerException) {
+            message = "A null value been provided";
+            status = HttpStatus.BAD_REQUEST;
 
+        }
         ErrorDetails errorDetails = ErrorDetails.builder()
                 .message(message)
                 .details(ex.getMessage())

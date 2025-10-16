@@ -34,7 +34,7 @@ public class GradeService {
                GradeType grade=GradeType.fromCode(getCellAsString(row,3));
                try {
                    quotaPerGrade = quotaPerGradeService.getQuotaByGrade(grade);
-               } catch (BadRequestException e) {
+               } catch (IllegalArgumentException  e) {
                    throw new RuntimeException(e);
                }
                Grade gradeType= Grade.builder()
