@@ -26,10 +26,10 @@ public class MainController {
 
 
     @PostMapping("/upload")
-    public ResponseEntity<String> mainController(@RequestBody MainRequestBody request) {
+    public ResponseEntity<ExamSessionDto> mainController(@RequestBody MainRequestBody request) {
        try {
-           excelImportOrchestrator.importData(request.getExamDataFilePath(), request.getTeachersListFilePath(), request.getTeachersUnavailabilityFilePath());
-           return ResponseEntity.ok().body("Data imported successfully");
+           ExamSessionDto result= excelImportOrchestrator.importData(request.getExamDataFilePath(), request.getTeachersListFilePath(), request.getTeachersUnavailabilityFilePath());
+           return ResponseEntity.ok().body(result);
        }catch (IOException e){
           throw new RuntimeException(e);
        }
