@@ -72,6 +72,7 @@ public class AssignmentController {
                             handleSuccess(deferredResult, response);
                         }
                     } finally {
+
                         cleanUp();
                     }
                 });
