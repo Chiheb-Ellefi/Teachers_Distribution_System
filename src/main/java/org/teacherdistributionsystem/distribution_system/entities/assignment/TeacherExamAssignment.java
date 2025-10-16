@@ -6,7 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "teacher_exam_assignments")
@@ -40,4 +42,12 @@ public class TeacherExamAssignment {
 
     @Column(name = "is_active")
     private Boolean isActive;
+
+    @Column(name="exam_date")
+    private LocalDate examDate;
+    @Column(name="start_time")
+    private LocalTime startTime;
+
+    @Column(name="end_time")
+    private LocalTime endTime;
 }

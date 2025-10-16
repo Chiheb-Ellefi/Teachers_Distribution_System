@@ -110,7 +110,7 @@ public class AssignmentController {
 
             if (response.getStatus() == AssignmentStatus.SUCCESS) {
                 persistenceService.saveAssignmentResults(response);
-                jsonFileWriter.writeDataToJsonFile(response.getTeacherWorkloads());
+                jsonFileWriter.writeDataToJsonFile(response);
 
                 response.setExamAssignments(null);
                 response.setTeacherWorkloads(null);

@@ -3,6 +3,7 @@ package org.teacherdistributionsystem.distribution_system.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.models.responses.TeacherWorkloadModel;
 
 import java.io.File;
@@ -25,7 +26,7 @@ public class JsonFileWriter {
         this.objectMapper = objectMapper;
     }
 
-    public void writeDataToJsonFile(List<TeacherWorkloadModel> teachersWorkload) {
+    public void writeDataToJsonFile(AssignmentResponseModel teachersWorkload) {
         try {
             Files.createDirectories(Paths.get(outputDir));
             File file = new File(outputDir + "/" + outputFileName);

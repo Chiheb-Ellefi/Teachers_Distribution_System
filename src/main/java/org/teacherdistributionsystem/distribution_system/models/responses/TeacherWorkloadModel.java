@@ -22,8 +22,5 @@ public class TeacherWorkloadModel {
     private Integer quotaSupervisions;
     private Integer unavailabilityCredit;
     private Double utilizationPercentage;
-    private LocalDate examDate;
-    private LocalTime startTime;
-    private LocalTime endTime;
     private List<WorkloadDetailModel> assignments;
 }

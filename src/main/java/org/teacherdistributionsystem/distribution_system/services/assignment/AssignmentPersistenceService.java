@@ -47,6 +47,9 @@ public class AssignmentPersistenceService {
                         .examDay(examModel.getDay())
                         .seance(examModel.getSeance())
                         .assignedAt(now)
+                        .startTime(examModel.getStartTime())
+                        .endTime(examModel.getEndTime())
+                        .examDate(examModel.getExamDate())
                         .isActive(true)
                         .build();
 

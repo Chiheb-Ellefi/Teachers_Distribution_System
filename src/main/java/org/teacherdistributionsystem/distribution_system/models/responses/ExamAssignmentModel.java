@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 @Data
@@ -22,4 +24,7 @@ public class ExamAssignmentModel {
     private Long ownerTeacherId;
     private String ownerTeacherName;
     private List<AssignedTeacherModel> assignedTeachers;
+    private LocalDate examDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
 }
