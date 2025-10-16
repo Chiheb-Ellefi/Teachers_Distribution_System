@@ -1,7 +1,10 @@
 package org.teacherdistributionsystem.distribution_system.repositories.assignement;
 
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.Exam;
 import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
@@ -16,4 +19,8 @@ public interface ExamRepository extends JpaRepository<Exam, Long> {
     @Query("SELECT e.id AS id, e.seance AS seance, e.examDate AS examDate, e.numRooms AS numRooms, e.responsable.id AS responsableId, e.requiredSupervisors AS requiredSupervisors, e.responsable.nom AS nom, e.responsable.prenom AS prenom  FROM Exam e WHERE e.examSession.id = ?1 ")
     List<ExamProjection> getExamsBySessionId(Long sessionId);
 
+    @Modifying
+    @Transactional
+    @Query("UPDATE Exam e SET  e.requiredSupervisors = :requiredSupervisors WHERE e.id = :examId")
+    void setRequiredSupervisorsById(String examId, Integer requiredSupervisors);
 }
