@@ -112,9 +112,20 @@ public class ExamService {
         return examRepository.getExamsBySessionId(sessionId);
 
     }
-    public void updateRequiredSupervisors(String examId,Integer requiredSupervisors){
-        examRepository.setRequiredSupervisorsById(examId,requiredSupervisors);
+    public void updateRequiredSupervisors(String examId, Integer requiredSupervisors) {
+
+        Exam exam = examRepository.findById(examId)
+                .orElseThrow(() -> new RuntimeException("Exam not found"));
+
+        examRepository.updateRequiredSupervisorsForRelatedExams(
+                exam.getExamSession().getId(),
+                exam.getJourNumero(),
+                exam.getSeance(),
+                exam.getNumRooms(),
+                requiredSupervisors
+        );
     }
+
     @Transactional
     public void clearAllExams() {
         examRepository.deleteAllInBatch();
