@@ -1,6 +1,7 @@
 package org.teacherdistributionsystem.distribution_system.services;
 
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import org.teacherdistributionsystem.distribution_system.services.teachers.*;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Map;
-
+@RequiredArgsConstructor
 @Service
 public class ExcelImportOrchestrator {
 
@@ -26,16 +27,8 @@ public class ExcelImportOrchestrator {
     private final ExamService examService;
     private final TeacherUnavailabilityService teacherUnavailabilityService;
 
-    ExcelImportOrchestrator(TeacherService teacherService, TeacherQuotaService quotaService, GradeService gradeService,
-                             ExamSessionService examSessionService, ExamService examService, TeacherUnavailabilityService teacherUnavailabilityService) {
-        this.teacherService = teacherService;
-        this.quotaService = quotaService;
-        this.gradeService = gradeService;
 
-        this.examSessionService = examSessionService;
-        this.examService = examService;
-        this.teacherUnavailabilityService = teacherUnavailabilityService;
-    }
+
     @Transactional
     public ExamSessionDto importData(String examDataFilePath, String teachersListFilePath, String teachersUnavailabilityFilePath) throws IOException {
         ExamSession examSession;

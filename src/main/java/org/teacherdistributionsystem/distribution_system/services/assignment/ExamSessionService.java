@@ -81,7 +81,7 @@ public class ExamSessionService {
                 .endDate(endDate)
                 .sessionLibelle(sessionLibelle)
                 .academicYear(academicYear)
-                .semesterCode(SemesterType.fromLabel(semesterLibelle).getLabel())
+                .semesterCode(SemesterType.fromLabel(semesterLibelle).toString())
                 .numExamDays(jourNumero)
                 .seancesPerDay(SeanceType.values().length)
                 .semesterLibelle(semesterLibelle)
