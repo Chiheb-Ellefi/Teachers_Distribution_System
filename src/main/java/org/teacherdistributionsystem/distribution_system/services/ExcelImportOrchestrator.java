@@ -4,8 +4,10 @@ import jakarta.transaction.Transactional;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
+import org.teacherdistributionsystem.distribution_system.dtos.assignment.ExamSessionDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.mappers.assignment.ExamSessionMapper;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
 import org.teacherdistributionsystem.distribution_system.services.teachers.*;
@@ -35,7 +37,7 @@ public class ExcelImportOrchestrator {
         this.teacherUnavailabilityService = teacherUnavailabilityService;
     }
     @Transactional
-    public void importData(String examDataFilePath, String teachersListFilePath, String teachersUnavailabilityFilePath) throws IOException {
+    public ExamSessionDto importData(String examDataFilePath, String teachersListFilePath, String teachersUnavailabilityFilePath) throws IOException {
         ExamSession examSession;
         try (FileInputStream examDataFile = new FileInputStream(examDataFilePath);
              Workbook examWorkbook = new XSSFWorkbook(examDataFile)) {
@@ -59,5 +61,6 @@ public class ExcelImportOrchestrator {
 
             teacherUnavailabilityService.addTeachersUnavailability(unavailabilityWorkbook, examSession);
         }
+        return ExamSessionMapper.toExamSessionDto(examSession);
     }
 }
