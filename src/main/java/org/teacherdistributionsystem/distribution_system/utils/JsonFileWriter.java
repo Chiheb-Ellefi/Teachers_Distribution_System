@@ -2,6 +2,7 @@ package org.teacherdistributionsystem.distribution_system.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.models.responses.TeacherWorkloadModel;
@@ -26,6 +27,7 @@ public class JsonFileWriter {
         this.objectMapper = objectMapper;
     }
 
+    @Async
     public void writeDataToJsonFile(AssignmentResponseModel teachersWorkload) {
         try {
             Files.createDirectories(Paths.get(outputDir));
@@ -34,5 +36,10 @@ public class JsonFileWriter {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Async
+    public void writeDataToJsonFileAsync(AssignmentResponseModel response) {
+        writeDataToJsonFile(response);
     }
 }

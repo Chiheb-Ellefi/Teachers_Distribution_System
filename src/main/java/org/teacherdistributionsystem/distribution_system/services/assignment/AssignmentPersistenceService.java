@@ -1,6 +1,7 @@
 package org.teacherdistributionsystem.distribution_system.services.assignment;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
@@ -14,6 +15,7 @@ import org.teacherdistributionsystem.distribution_system.repositories.teacher.Te
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 @RequiredArgsConstructor
@@ -84,7 +86,12 @@ public class AssignmentPersistenceService {
 
         sessionRepository.save(session);
     }
-
+    @Async
+    @Transactional
+    public CompletableFuture<Void> saveAssignmentResultsAsync(AssignmentResponseModel response) {
+        saveAssignmentResults(response);
+        return CompletableFuture.completedFuture(null);
+    }
 
     @Transactional(readOnly = true)
     public List<TeacherExamAssignment> getAssignmentsForSession(Long sessionId) {

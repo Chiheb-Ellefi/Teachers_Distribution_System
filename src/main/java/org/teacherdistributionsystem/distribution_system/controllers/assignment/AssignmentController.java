@@ -109,15 +109,17 @@ public class AssignmentController {
             };
 
             if (response.getStatus() == AssignmentStatus.SUCCESS) {
-                persistenceService.saveAssignmentResults(response);
-                jsonFileWriter.writeDataToJsonFile(response);
+                persistenceService.saveAssignmentResultsAsync(response);
+                jsonFileWriter.writeDataToJsonFileAsync(response);
 
-                response.setExamAssignments(null);
-                response.setTeacherWorkloads(null);
+                deferredResult.setResult(ResponseEntity.status(httpStatus).body(AssignmentResponseModel.builder()
+                        .diagnosis(response.getDiagnosis())
+                                .status(response.getStatus())
+                        .message(response.getMessage())
+                                .metadata(response.getMetadata())
+                                .generatedAt(response.getGeneratedAt())
+                        .build()));
             }
-
-            deferredResult.setResult(ResponseEntity.status(httpStatus).body(response));
-
         } catch (Exception e) {
             handleError(deferredResult, e);
         }
