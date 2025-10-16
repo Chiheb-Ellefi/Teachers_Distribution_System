@@ -37,7 +37,7 @@ public class MainController {
           throw new RuntimeException(e);
        }
     }
-    @GetMapping("/exist")
+    @GetMapping("/exists")
     public ResponseEntity<Boolean> generatedPlanning(){
         return ResponseEntity.ok(!examService.dataExists());
     }
