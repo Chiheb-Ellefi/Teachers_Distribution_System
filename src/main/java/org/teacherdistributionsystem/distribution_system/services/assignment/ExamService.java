@@ -10,6 +10,7 @@ import org.teacherdistributionsystem.distribution_system.entities.teacher.Teache
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.models.keys.ExamKey;
 import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
+import org.teacherdistributionsystem.distribution_system.models.projections.ExamProjection;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 import java.time.LocalDate;
@@ -104,6 +105,10 @@ public class ExamService {
 
     public List<ExamForAssignmentProjection> getExamsForAssignment(Long sessionId) {
         return examRepository.getExamsBySessionIdForAssignment(sessionId);
+
+    }
+    public List<ExamProjection> getExam(Long sessionId) {
+        return examRepository.getExamsBySessionId(sessionId);
 
     }
     @Transactional

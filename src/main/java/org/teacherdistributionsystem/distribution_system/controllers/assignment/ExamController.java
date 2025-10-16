@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
 import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
+import org.teacherdistributionsystem.distribution_system.models.projections.ExamProjection;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 
 import java.util.List;
@@ -17,10 +18,10 @@ public class ExamController {
     private final ExamService examService;
 
     @GetMapping("/{sessionId}")
-    public ResponseEntity<List<ExamForAssignmentProjection>> getExamsBySessionId(@PathVariable Long sessionId) {
+    public ResponseEntity<List<ExamProjection>> getExamsBySessionId(@PathVariable Long sessionId) {
         if (sessionId == null) {
             throw new BadRequestException("Bad Request","SessionId cannot be null");
         }
-        return ResponseEntity.ok().body(examService.getExamsForAssignment(sessionId));
+        return ResponseEntity.ok().body(examService.getExam(sessionId));
     }
 }

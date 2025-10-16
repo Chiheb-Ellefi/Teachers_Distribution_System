@@ -1,15 +1,18 @@
 package org.teacherdistributionsystem.distribution_system.models.projections;
 
+
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 
 import java.time.LocalDate;
 
-public interface ExamForAssignmentProjection {
+public interface ExamProjection {
     String getId();
     SeanceType getSeance();
-    Integer getJourNumero();
+    LocalDate getExamDate();
     String getNumRooms();
     Long getResponsableId();
     Integer getRequiredSupervisors();
-    LocalDate getExamDate();
+    String getNom();
+    String getPrenom();
+
 }
