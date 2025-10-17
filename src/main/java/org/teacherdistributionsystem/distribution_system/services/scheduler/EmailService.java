@@ -14,7 +14,6 @@ import org.teacherdistributionsystem.distribution_system.dtos.assignment.Teacher
 import jakarta.mail.internet.MimeMessage;
 import java.io.ByteArrayOutputStream;
 import java.util.*;
-import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @Service
 public class EmailService {
@@ -22,7 +21,7 @@ public class EmailService {
     private static final Logger logger = LoggerFactory.getLogger(EmailService.class);
 
 
-    private  JavaMailSender mailSender;
+    private final JavaMailSender mailSender;
 
 
     private final  PDFScheduleService pdfScheduleService;

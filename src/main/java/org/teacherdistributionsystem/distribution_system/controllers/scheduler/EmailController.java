@@ -1,5 +1,6 @@
 package org.teacherdistributionsystem.distribution_system.controllers.scheduler;
 
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/emails")
 @CrossOrigin(origins = "*")
+@RequiredArgsConstructor
 public class EmailController {
 
     private static final Logger logger = LoggerFactory.getLogger(EmailController.class);
 
-    private EmailService emailService;
+    private final EmailService emailService;
 
     /**
      * Endpoint pour envoyer des emails avec planning
