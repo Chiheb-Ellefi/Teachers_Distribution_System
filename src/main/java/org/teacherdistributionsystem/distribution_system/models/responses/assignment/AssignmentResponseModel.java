@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.models.responses;
+package org.teacherdistributionsystem.distribution_system.models.responses.assignment;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -7,6 +7,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
+import org.teacherdistributionsystem.distribution_system.models.others.AssignmentMetadata;
+import org.teacherdistributionsystem.distribution_system.models.others.ExamAssignmentModel;
+import org.teacherdistributionsystem.distribution_system.models.others.InfeasibilityDiagnosisModel;
+import org.teacherdistributionsystem.distribution_system.models.others.TeacherWorkloadModel;
 
 import java.time.LocalDateTime;
 import java.util.List;

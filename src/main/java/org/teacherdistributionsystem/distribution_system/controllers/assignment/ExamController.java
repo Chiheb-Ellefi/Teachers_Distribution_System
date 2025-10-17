@@ -3,7 +3,7 @@ package org.teacherdistributionsystem.distribution_system.controllers.assignment
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
 import org.teacherdistributionsystem.distribution_system.models.projections.ExamProjection;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 

@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.models;
+package org.teacherdistributionsystem.distribution_system.models.responses;
 
 
 

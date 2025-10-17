@@ -11,7 +11,7 @@ import org.teacherdistributionsystem.distribution_system.entities.teacher.Teache
 import org.teacherdistributionsystem.distribution_system.mappers.assignment.ExamSessionMapper;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.*;
+import org.teacherdistributionsystem.distribution_system.services.teacher.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;

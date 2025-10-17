@@ -4,14 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
-import org.teacherdistributionsystem.distribution_system.models.responses.TeacherWorkloadModel;
+import org.teacherdistributionsystem.distribution_system.models.responses.assignment.AssignmentResponseModel;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 @Component
 public class JsonFileWriter {

@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.services.teachers;
+package org.teacherdistributionsystem.distribution_system.services.teacher;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

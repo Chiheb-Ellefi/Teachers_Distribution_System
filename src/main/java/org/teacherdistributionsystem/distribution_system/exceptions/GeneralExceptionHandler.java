@@ -7,10 +7,11 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.teacherdistributionsystem.distribution_system.models.ErrorDetails;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.InvalidSearchParameterException;
+import org.teacherdistributionsystem.distribution_system.models.responses.ErrorDetails;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 

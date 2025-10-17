@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.services.teachers;
+package org.teacherdistributionsystem.distribution_system.services.teacher;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,7 @@ import org.teacherdistributionsystem.distribution_system.mappers.teacher.Teacher
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 
 import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
-import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
-import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherQuotaRepository;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 
 

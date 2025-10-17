@@ -8,10 +8,9 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
-import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 
 
 import java.util.List;

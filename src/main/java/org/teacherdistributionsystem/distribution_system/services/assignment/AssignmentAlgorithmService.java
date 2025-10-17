@@ -8,13 +8,14 @@
         import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
         import org.teacherdistributionsystem.distribution_system.enums.GradeType;
         import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
+        import org.teacherdistributionsystem.distribution_system.models.others.*;
         import org.teacherdistributionsystem.distribution_system.models.projections.ExamForAssignmentProjection;
         import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
-        import org.teacherdistributionsystem.distribution_system.models.responses.*;
-        import org.teacherdistributionsystem.distribution_system.services.teachers.QuotaPerGradeService;
-        import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherQuotaService;
-        import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherService;
-        import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
+        import org.teacherdistributionsystem.distribution_system.models.responses.assignment.*;
+        import org.teacherdistributionsystem.distribution_system.services.teacher.QuotaPerGradeService;
+        import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherQuotaService;
+        import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
+        import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherUnavailabilityService;
 
         import java.time.LocalDate;
         import java.time.LocalDateTime;

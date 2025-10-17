@@ -8,8 +8,13 @@ import org.teacherdistributionsystem.distribution_system.dtos.assignment.Teacher
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
+import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.mappers.assignment.TeacherExamAssignmentMapper;
-import org.teacherdistributionsystem.distribution_system.models.responses.*;
+import org.teacherdistributionsystem.distribution_system.models.others.AssignedTeacherModel;
+import org.teacherdistributionsystem.distribution_system.models.others.AssignmentMetadata;
+import org.teacherdistributionsystem.distribution_system.models.others.ExamAssignmentModel;
+import org.teacherdistributionsystem.distribution_system.models.others.TeacherWorkloadModel;
+import org.teacherdistributionsystem.distribution_system.models.responses.assignment.*;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.AssignmentSessionRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
@@ -139,5 +144,9 @@ public class AssignmentPersistenceService {
 
     private void updateTeacherCredit(Long teacherId, Integer credit){
         teacherRepository.updateQuotaCreditById(teacherId,credit);
+    }
+
+    public void getAssignmentsByDate(Long sessionId, Integer day, Integer seance) {
+        assignmentRepository.getAllByDate(sessionId,day, SeanceType.values()[seance-1]);
     }
 }

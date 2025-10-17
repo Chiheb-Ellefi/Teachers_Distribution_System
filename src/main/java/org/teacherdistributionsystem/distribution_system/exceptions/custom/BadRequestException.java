@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.exceptions;
+package org.teacherdistributionsystem.distribution_system.exceptions.custom;
 
 import lombok.Getter;
 

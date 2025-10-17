@@ -1,4 +1,4 @@
-package org.teacherdistributionsystem.distribution_system.models.responses;
+package org.teacherdistributionsystem.distribution_system.models.others;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

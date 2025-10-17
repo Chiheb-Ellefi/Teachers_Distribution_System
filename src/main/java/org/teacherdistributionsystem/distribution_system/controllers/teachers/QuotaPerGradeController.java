@@ -5,9 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.QuotaPerGradeDto;
-import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
 import org.teacherdistributionsystem.distribution_system.mappers.teacher.QuotaPerGradeMapper;
-import org.teacherdistributionsystem.distribution_system.services.teachers.QuotaPerGradeService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.QuotaPerGradeService;
 
 import java.util.List;
 

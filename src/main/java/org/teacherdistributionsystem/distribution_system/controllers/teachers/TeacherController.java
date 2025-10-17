@@ -6,16 +6,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
-import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
-import org.teacherdistributionsystem.distribution_system.exceptions.InvalidSearchParameterException;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.InvalidSearchParameterException;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilitiesProjection;
 import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
-import org.teacherdistributionsystem.distribution_system.models.responses.TeacherAssignmentsResponse;
-import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
+import org.teacherdistributionsystem.distribution_system.models.responses.assignment.TeacherAssignmentsResponse;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherQuotaService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherQuotaService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherUnavailabilityService;
 
 import java.util.List;
 

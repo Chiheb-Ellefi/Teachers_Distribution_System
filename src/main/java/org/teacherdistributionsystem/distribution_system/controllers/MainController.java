@@ -6,17 +6,14 @@ import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.ExamSessionDto;
-import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
-import org.teacherdistributionsystem.distribution_system.models.MainRequestBody;
-import org.teacherdistributionsystem.distribution_system.models.projections.TeacherUnavailabilityProjection;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.models.requests.MainRequestBody;
 import org.teacherdistributionsystem.distribution_system.services.ExcelImportOrchestrator;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherUnavailabilityService;
 
 
 import java.io.IOException;
-import java.util.List;
 
 @RequestMapping("/api/v1/session")
 @RestController

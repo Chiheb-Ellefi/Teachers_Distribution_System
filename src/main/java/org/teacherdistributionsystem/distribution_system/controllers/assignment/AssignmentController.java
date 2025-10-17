@@ -10,16 +10,15 @@ import org.springframework.web.context.request.async.DeferredResult;
 
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
-import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
-import org.teacherdistributionsystem.distribution_system.exceptions.BadRequestException;
-import org.teacherdistributionsystem.distribution_system.models.responses.AssignmentResponseModel;
+import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
+import org.teacherdistributionsystem.distribution_system.models.responses.assignment.AssignmentResponseModel;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.GradeService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.QuotaPerGradeService;
-import org.teacherdistributionsystem.distribution_system.services.teachers.TeacherQuotaService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.GradeService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.QuotaPerGradeService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherQuotaService;
 import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
 
 import java.util.List;
@@ -205,7 +204,12 @@ public class AssignmentController {
         return ResponseEntity.accepted().body("Assignments deleted for session: " + sessionId);
     }
 
-
-
+    @GetMapping("/{sessionId}")
+    public ResponseEntity<List<TeacherExamAssignmentDto>> getAssignmentByDate(@PathVariable Long sessionId, @RequestParam Integer day,@RequestParam Integer seance){
+        if(sessionId == null) {
+            throw new BadRequestException("Bad Request", "Session id is required");
+        }
+        assignmentPersistenceService.getAssignmentsByDate(sessionId,day,seance);
+    }
 
 }
