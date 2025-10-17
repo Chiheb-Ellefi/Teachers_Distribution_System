@@ -80,7 +80,7 @@ public class AssignmentController {
                         }
                     });
         } catch (Exception e) {
-            // Catch any exception that occurs when setting up the async call
+
             handleError(deferredResult, e);
             cleanUp();
         }
