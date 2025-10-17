@@ -90,6 +90,7 @@ public class ExamSessionService {
                 .numExamDays(jourNumero)
                 .seancesPerDay(SeanceType.values().length)
                 .semesterLibelle(semesterLibelle)
+                .teachersPerExam(2)
                 .build();
       return   examSessionRepository.save(session);
     }

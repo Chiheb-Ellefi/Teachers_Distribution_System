@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+
 
 @RequestMapping("/api/v1/session")
 @RestController
@@ -47,7 +47,7 @@ public class MainController {
     }
 
     @PatchMapping("/{sessionId}/teachers-per-exam")
-    public ResponseEntity<ExamSessionDto> setNumberTeachersPerExam(@PathVariable Long sessionId, @RequestBody Integer teachersPerExam) throws org.apache.coyote.BadRequestException {
+    public ResponseEntity<ExamSessionDto> setNumberTeachersPerExam(@PathVariable Long sessionId, @RequestBody Integer teachersPerExam)  {
         if(sessionId == null || teachersPerExam == null) {
             throw new BadRequestException("Bad Request","Exam session id is null or teachersPerExam is null");
         }

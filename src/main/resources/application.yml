@@ -2,9 +2,8 @@ spring:
   application:
     name: distribution_system
     outputFileName: 'assignments.json'
-    scriptFilename: 'script.py'
     outputDir: './data'
-    scriptDir: 'script'
+
 
     #-----------mail server config -----------------------
   mail:
@@ -24,14 +23,14 @@ spring:
           timeout: 5000
           writetimeout: 5000
   datasource:
-    #url: jdbc:h2:mem:testdb #for memory
-    url: jdbc:h2:file:./data/testdb
+    url: jdbc:h2:mem:testdb #for memory
+    #url: jdbc:h2:file:./data/testdb
     driverClassName: org.h2.Driver
     username: sa
     password:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     database-platform: org.hibernate.dialect.H2Dialect
 
   h2:
