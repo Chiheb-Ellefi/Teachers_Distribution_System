@@ -3,10 +3,18 @@ package org.teacherdistributionsystem.distribution_system.services.teachers;
 import org.apache.poi.ss.usermodel.Workbook;
 
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
 
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
+
+import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
+import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
+import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherQuotaRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 
 
@@ -21,10 +29,13 @@ import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellU
 public class TeacherService {
 
     private final TeacherRepository teacherRepository;
+    private final TeacherQuotaRepository teacherQuotaRepository;
+    private final TeacherQuotaService teacherQuotaService;
 
-    public TeacherService(TeacherRepository teacherRepository) {
+    public TeacherService(TeacherRepository teacherRepository, TeacherQuotaRepository teacherQuotaRepository, TeacherQuotaService teacherQuotaService) {
         this.teacherRepository = teacherRepository;
-
+        this.teacherQuotaRepository = teacherQuotaRepository;
+        this.teacherQuotaService = teacherQuotaService;
     }
 
     public Map<String, Teacher> populateTeachersTable(Workbook workbook) {
@@ -72,9 +83,7 @@ public class TeacherService {
         }
     }
 
-    public List<Long> getTeachersId() {
-        return teacherRepository.getAllIds();
-    }
+
     public Map<Long, Boolean>getTeacherParticipeSurveillance(){
         return teacherRepository.getAllParticipants().stream()
                 .collect(Collectors.toMap(
@@ -103,6 +112,24 @@ public class TeacherService {
                         TeacherNameProjection::getId,
                         t -> t.getPrenom() + " " + t.getNom()
                 ));
+    }
+
+    public PageResponse<TeacherResponse> getAllTeachers(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        Page<TeacherResponse> teacherPage = teacherRepository.getAllTeachers(pageable);
+        Map<Long, Integer> quotaPerTeacher=teacherQuotaService.getAllQuotas();
+        teacherPage.getContent().forEach(teacher -> {
+            Integer quota=quotaPerTeacher.get(teacher.getId());
+            Integer credit=teacher.getCredit();
+           Integer total =teacher.getParticipeSurveillance()? (credit != null ? credit : 0) + (quota != null ? quota : 0):0;
+            teacher.setQuota(total);
+        });
+        return new PageResponse<>(
+                teacherPage.getContent(),
+                teacherPage.getNumber(),
+                teacherPage.getSize(),
+                teacherPage.getTotalElements()
+        );
     }
 
 }

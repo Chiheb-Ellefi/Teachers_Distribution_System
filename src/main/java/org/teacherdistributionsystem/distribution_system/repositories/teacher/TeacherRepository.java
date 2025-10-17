@@ -1,6 +1,8 @@
 package org.teacherdistributionsystem.distribution_system.repositories.teacher;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -8,17 +10,14 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
+import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
+
 
 import java.util.List;
-import java.util.Map;
+
 
 @Repository
 public interface TeacherRepository extends JpaRepository<Teacher, Long> {
-    Teacher findByNomAndPrenom(String nom, String prenom);
-
-    Teacher findByCodeSmartex(Integer codeSmartex);
-    @Query("SELECT t.id FROM Teacher t")
-    List<Long> getAllIds();
     @Query("SELECT t.id, t.participeSurveillance FROM Teacher t")
     List<Object[]> getAllParticipants();
     @Query("SELECT t.id, t.gradeCode FROM Teacher t")
@@ -36,4 +35,12 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
 
     @Query("SELECT t.codeSmartex FROM Teacher t ")
     List<Integer> findAllCodesSmartex();
+
+    @Query("SELECT new org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse(" +
+            "t.id, t.nom, t.prenom, t.email, t.codeSmartex, t.gradeCode, t.participeSurveillance,t.quotaCredit) " +
+            "FROM Teacher t")
+    Page<TeacherResponse> getAllTeachers(Pageable pageable);
+
+
+
 }
