@@ -3,6 +3,7 @@ package org.teacherdistributionsystem.distribution_system.controllers.assignment
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,10 @@ import org.teacherdistributionsystem.distribution_system.services.teacher.GradeS
 import org.teacherdistributionsystem.distribution_system.services.teacher.QuotaPerGradeService;
 import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherQuotaService;
 import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
+import org.teacherdistributionsystem.distribution_system.utils.PythonScriptExecutor;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/api/v1/assignments")
@@ -38,6 +41,11 @@ public class AssignmentController {
     private final QuotaPerGradeService quotaPerGradeService;
     private final TeacherQuotaService teacherQuotaService;
     private final ExamService examService;
+    private final PythonScriptExecutor pythonScriptExecutor;
+
+    @Value("${spring.application.outputFileName}")
+    private String outputFileName;
+
 
     @GetMapping("/{sessionId}")
     public ResponseEntity<List<TeacherExamAssignmentDto>> getAssignmentsForSession(@PathVariable Long sessionId) {
@@ -112,6 +120,7 @@ public class AssignmentController {
             if (response.getStatus() == AssignmentStatus.SUCCESS) {
                 persistenceService.saveAssignmentResultsAsync(response);
                 jsonFileWriter.writeDataToJsonFileAsync(response);
+               CompletableFuture<Boolean> done= pythonScriptExecutor.executePythonScript(outputFileName);
 
                 deferredResult.setResult(ResponseEntity.status(httpStatus).body(AssignmentResponseModel.builder()
                         .diagnosis(response.getDiagnosis())

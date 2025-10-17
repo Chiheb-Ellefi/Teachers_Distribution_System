@@ -2,7 +2,9 @@ spring:
   application:
     name: distribution_system
     outputFileName: 'assignments.json'
+    scriptFilename: 'script.py'
     outputDir: './data'
+    scriptDir: 'script'
   datasource:
     #url: jdbc:h2:mem:testdb #for memory
     url: jdbc:h2:file:./data/testdb
