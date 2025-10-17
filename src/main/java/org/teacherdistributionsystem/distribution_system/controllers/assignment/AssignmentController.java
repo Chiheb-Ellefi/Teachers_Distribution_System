@@ -13,6 +13,7 @@ import org.teacherdistributionsystem.distribution_system.entities.assignment.Ass
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import org.teacherdistributionsystem.distribution_system.exceptions.custom.BadRequestException;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.AssignmentResponseModel;
+import org.teacherdistributionsystem.distribution_system.models.responses.assignment.DaySeanceGroupAssignments;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
@@ -204,12 +205,16 @@ public class AssignmentController {
         return ResponseEntity.accepted().body("Assignments deleted for session: " + sessionId);
     }
 
-    @GetMapping("/{sessionId}")
-    public ResponseEntity<List<TeacherExamAssignmentDto>> getAssignmentByDate(@PathVariable Long sessionId, @RequestParam Integer day,@RequestParam Integer seance){
-        if(sessionId == null) {
-            throw new BadRequestException("Bad Request", "Session id is required");
+    @GetMapping("/{sessionId}/by-date")
+    public ResponseEntity<List<DaySeanceGroupAssignments> > getAssignmentByDate(@PathVariable Long sessionId, @RequestParam Integer day,@RequestParam Integer seance){
+        if (sessionId == null || day == null || seance == null) {
+            throw new IllegalArgumentException("sessionId, day, and seance are required");
         }
-        assignmentPersistenceService.getAssignmentsByDate(sessionId,day,seance);
+
+        List<DaySeanceGroupAssignments> result = assignmentPersistenceService.getAssignmentsByDate(sessionId, day, seance);
+
+        return ResponseEntity.ok(result);
     }
+
 
 }

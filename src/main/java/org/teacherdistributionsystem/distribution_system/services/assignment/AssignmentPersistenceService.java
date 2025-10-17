@@ -5,8 +5,10 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
+import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
+import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
 import org.teacherdistributionsystem.distribution_system.enums.SeanceType;
 import org.teacherdistributionsystem.distribution_system.mappers.assignment.TeacherExamAssignmentMapper;
@@ -14,14 +16,18 @@ import org.teacherdistributionsystem.distribution_system.models.others.AssignedT
 import org.teacherdistributionsystem.distribution_system.models.others.AssignmentMetadata;
 import org.teacherdistributionsystem.distribution_system.models.others.ExamAssignmentModel;
 import org.teacherdistributionsystem.distribution_system.models.others.TeacherWorkloadModel;
+import org.teacherdistributionsystem.distribution_system.models.projections.AssignmentDetailsProjection;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.*;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.AssignmentSessionRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -32,6 +38,7 @@ public class AssignmentPersistenceService {
     private final TeacherExamAssignmentRepository assignmentRepository;
     private final AssignmentSessionRepository sessionRepository;
     private final TeacherRepository teacherRepository;
+    private final TeacherService teacherService;
 
 
     @Transactional
@@ -145,8 +152,70 @@ public class AssignmentPersistenceService {
     private void updateTeacherCredit(Long teacherId, Integer credit){
         teacherRepository.updateQuotaCreditById(teacherId,credit);
     }
+    @Transactional(readOnly = true)
+    public List<DaySeanceGroupAssignments> getAssignmentsByDate(Long sessionId, Integer day, Integer seance) {
+        List<AssignmentDetailsProjection> assignments =
+                assignmentRepository.getAllByDate(sessionId, day, seance);
+        List<Long> teacherIds = assignments.stream()
+                .map(AssignmentDetailsProjection::getTeacherId)
+                .distinct()
+                .collect(Collectors.toList());
 
-    public void getAssignmentsByDate(Long sessionId, Integer day, Integer seance) {
-        assignmentRepository.getAllByDate(sessionId,day, SeanceType.values()[seance-1]);
+        Map<Long, Teacher> teacherMap = teacherRepository.findAllById(teacherIds)
+                .stream()
+                .collect(Collectors.toMap(Teacher::getId, teacher -> teacher));
+
+        Map<String, List<AssignmentDetailsProjection>> grouped = assignments.stream()
+                .collect(Collectors.groupingBy(
+                        a -> a.getExamDate() + "_" + a.getStartTime() + "_" + a.getEndTime()
+                ));
+
+        return grouped.entrySet().stream()
+                .map(entry -> {
+                    List<AssignmentDetailsProjection> groupAssignments = entry.getValue();
+                    AssignmentDetailsProjection first = groupAssignments.get(0);
+
+                    // Map teachers for this group
+                    List<TeacherResponse> supervisors = groupAssignments.stream()
+                            .map(assignment -> {
+                                Teacher teacher = teacherMap.get(assignment.getTeacherId());
+                                return teacherToResponse(teacher);
+                            })
+                            .collect(Collectors.toList());
+
+                    return DaySeanceGroupAssignments.builder()
+                            .examDay(first.getExamDay())
+                            .seance(first.getSeance())
+                            .examDate(first.getExamDate())
+                            .startTime(first.getStartTime())
+                            .endTime(first.getEndTime())
+                            .supervisors(supervisors)
+                            .build();
+                })
+                .sorted((a, b) -> {
+                    int dateCompare = a.getExamDate().compareTo(b.getExamDate());
+                    if (dateCompare != 0) return dateCompare;
+                    return a.getStartTime().compareTo(b.getStartTime());
+                })
+                .collect(Collectors.toList());
+    }
+
+    private TeacherResponse teacherToResponse(Teacher teacher) {
+        if (teacher == null) {
+            return null;
+        }
+
+        TeacherResponse response = new TeacherResponse();
+        response.setId(teacher.getId());
+        response.setNom(teacher.getNom());
+        response.setPrenom(teacher.getPrenom());
+        response.setEmail(teacher.getEmail());
+        response.setCodeSmartex(teacher.getCodeSmartex());
+        response.setGrade(teacher.getGradeCode());
+        response.setParticipeSurveillance(teacher.getParticipeSurveillance());
+        response.setQuota(teacher.getQuotaCredit());
+        response.setCredit(teacher.getQuotaCredit());
+
+        return response;
     }
 }
