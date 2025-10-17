@@ -36,8 +36,9 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
     @Query("SELECT t.codeSmartex FROM Teacher t ")
     List<Integer> findAllCodesSmartex();
 
-    @Query("SELECT new org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse(" +
-            "t.id, t.nom, t.prenom, t.email, t.codeSmartex, t.gradeCode, t.participeSurveillance,t.quotaCredit) " +
+    @Query("SELECT new org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse(" +
+            "t.id, t.nom, t.prenom, t.email, t.codeSmartex, t.gradeCode, " +
+            "t.participeSurveillance, t.quotaCredit) " +
             "FROM Teacher t")
     Page<TeacherResponse> getAllTeachers(Pageable pageable);
 

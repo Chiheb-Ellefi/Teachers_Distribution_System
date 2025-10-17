@@ -78,7 +78,7 @@ public class TeacherController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/search")
     public ResponseEntity<List<TeacherDto>> getTeacherByName(
             @RequestParam(required = false) String name) {
 

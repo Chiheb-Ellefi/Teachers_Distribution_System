@@ -11,26 +11,26 @@ public class TeacherResponse {
     private String nom;
     private String prenom;
     private String email;
-    private Integer codeSmartex;  // Changed to Integer
+    private Integer codeSmartex;
     private String grade;
     private Boolean participeSurveillance;
     private Integer quota;
     private Integer credit;
 
 
-
     public TeacherResponse(Long id, String nom, String prenom, String email,
-                           Integer codeSmartex, String grade, Boolean participeSurveillance,Integer credit) {
+                           Integer codeSmartex, String gradeCode, Boolean participeSurveillance,
+                           Integer quotaCredit) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.codeSmartex = codeSmartex;
-        this.grade = grade;
+        this.grade = gradeCode;
         this.participeSurveillance = participeSurveillance;
-        this.credit = credit;
+        this.quota = quotaCredit;
+        this.credit = 0;
     }
-
     // Default constructor
     public TeacherResponse() {}
 
