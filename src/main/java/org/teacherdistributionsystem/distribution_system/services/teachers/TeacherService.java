@@ -1,5 +1,7 @@
 package org.teacherdistributionsystem.distribution_system.services.teachers;
 
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Workbook;
 
 
@@ -9,7 +11,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 
+import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.mappers.teacher.TeacherMapper;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 
 import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
@@ -21,22 +25,18 @@ import org.teacherdistributionsystem.distribution_system.repositories.teacher.Te
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static org.teacherdistributionsystem.distribution_system.utils.ExcelCellUtils.*;
 
 @Service
+@RequiredArgsConstructor
 public class TeacherService {
 
     private final TeacherRepository teacherRepository;
-    private final TeacherQuotaRepository teacherQuotaRepository;
-    private final TeacherQuotaService teacherQuotaService;
 
-    public TeacherService(TeacherRepository teacherRepository, TeacherQuotaRepository teacherQuotaRepository, TeacherQuotaService teacherQuotaService) {
-        this.teacherRepository = teacherRepository;
-        this.teacherQuotaRepository = teacherQuotaRepository;
-        this.teacherQuotaService = teacherQuotaService;
-    }
+    private final TeacherQuotaService teacherQuotaService;
 
     public Map<String, Teacher> populateTeachersTable(Workbook workbook) {
         List<Teacher> teachers = new ArrayList<>();
@@ -132,4 +132,12 @@ public class TeacherService {
         );
     }
 
+    public TeacherDto getTeacherDetails(Long teacherId) {
+        Supplier<EntityNotFoundException> e=()->new EntityNotFoundException("Teacher with id " + teacherId + " not found");
+        return TeacherMapper.toTeacherDto(teacherRepository.findById(teacherId).orElseThrow(e));
+    }
+
+    public List<TeacherDto> containsName(String name) {
+        return teacherRepository.getAllContainsName(name).stream().map(TeacherMapper::toTeacherDto).collect(Collectors.toList());
+    }
 }

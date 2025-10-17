@@ -6,6 +6,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.QuotaPerGradeDto;
+import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherQuotaDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.ExamSession;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.QuotaPerGrade;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
@@ -69,12 +70,14 @@ public class TeacherQuotaService {
 
     }
     @Transactional
-    public void updateAllQuotas(Map<Long,Integer> quotaCreditPerTeacher) {
-        List<QuotaPerGrade> quotas=quotaPerGradeRepository.findAll();
-        quotaCreditPerTeacher.forEach((k,v)->{
-
-        });
-
+    public void updateTeacherQuota(Long teacherId, Integer quota) {
+        if(teacherId==null){
+            throw new IllegalArgumentException("teacherId cannot be null");
+        }
+        if(quota==null){
+            throw new IllegalArgumentException("quota cannot be null");
+        }
+        teacherQuotaRepository.updateTeacherQuotaById(teacherId,quota);
     }
     @Transactional
     public void clearAllQuotas() {

@@ -7,6 +7,7 @@ import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.teacherdistributionsystem.distribution_system.models.ErrorDetails;
@@ -40,6 +41,14 @@ public class GeneralExceptionHandler {
                 .build();
         return ResponseEntity.status(status).body(error);
     }
+
+    @ExceptionHandler(InvalidSearchParameterException.class)
+    public ResponseEntity<ErrorDetails> handleInvalidSearchParameter(
+            InvalidSearchParameterException ex) {
+        ErrorDetails error =ErrorDetails.builder().details(ex.getDetails()).message(ex.getMessage()).build();
+        return ResponseEntity.badRequest().body(error);
+    }
+
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorDetails> runtimeExceptionHandler(RuntimeException ex) {
 

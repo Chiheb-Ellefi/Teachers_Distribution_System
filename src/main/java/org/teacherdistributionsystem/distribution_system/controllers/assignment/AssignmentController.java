@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 
+import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
@@ -39,23 +40,23 @@ public class AssignmentController {
     private final ExamService examService;
 
     @GetMapping("/{sessionId}")
-    public ResponseEntity<List<TeacherExamAssignment>> getAssignmentsForSession(@PathVariable Long sessionId) {
+    public ResponseEntity<List<TeacherExamAssignmentDto>> getAssignmentsForSession(@PathVariable Long sessionId) {
         if(sessionId == null) {
             throw new BadRequestException("Bad Request", "Session id is required");
         }
-        List<TeacherExamAssignment> result = assignmentPersistenceService.getAssignmentsForSession(sessionId);
+        List<TeacherExamAssignmentDto> result = assignmentPersistenceService.getAssignmentsForSession(sessionId);
         return ResponseEntity.ok(result);
     }
 
     @GetMapping("/teacher/{sessionId}/{teacherId}")
-    public ResponseEntity<List<TeacherExamAssignment>> getTeacherAssignments(@PathVariable Long sessionId, @PathVariable Long teacherId){
+    public ResponseEntity<List<TeacherExamAssignmentDto>> getTeacherAssignments(@PathVariable Long sessionId, @PathVariable Long teacherId){
         if(sessionId == null) {
             throw new BadRequestException("Bad Request", "Session id is required");
         }
         if(teacherId == null) {
             throw new BadRequestException("Bad Request", "Teacher id is required");
         }
-        return ResponseEntity.ok().body(assignmentPersistenceService.getTeacherAssignments(teacherId, sessionId));
+        return ResponseEntity.ok().body(assignmentPersistenceService.getTeacherAssignments(teacherId, sessionId,false));
     }
 
     @PostMapping("/execute/{sessionId}")
@@ -177,7 +178,7 @@ public class AssignmentController {
     }
 
     @GetMapping("/exam/{sessionId}/{examId}")
-    public ResponseEntity<List<TeacherExamAssignment>> getExamAssignments(@PathVariable Long sessionId, @PathVariable String examId){
+    public ResponseEntity<List<TeacherExamAssignmentDto>> getExamAssignments(@PathVariable Long sessionId, @PathVariable String examId){
         if(sessionId == null) {
             throw new BadRequestException("Bad Request", "Session id is required");
         }

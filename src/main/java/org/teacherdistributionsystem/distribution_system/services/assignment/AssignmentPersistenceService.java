@@ -4,9 +4,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
+import org.teacherdistributionsystem.distribution_system.mappers.assignment.TeacherExamAssignmentMapper;
 import org.teacherdistributionsystem.distribution_system.models.responses.*;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.AssignmentSessionRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
@@ -16,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -54,6 +57,7 @@ public class AssignmentPersistenceService {
                         .examDate(examModel.getExamDate())
                         .isActive(true)
                         .build();
+
 
                 assignments.add(assignment);
 
@@ -94,19 +98,20 @@ public class AssignmentPersistenceService {
     }
 
     @Transactional(readOnly = true)
-    public List<TeacherExamAssignment> getAssignmentsForSession(Long sessionId) {
-        return assignmentRepository.findBySessionIdAndIsActiveTrue(sessionId);
+    public List<TeacherExamAssignmentDto> getAssignmentsForSession(Long sessionId) {
+        return assignmentRepository.findBySessionIdAndIsActiveTrue(sessionId).stream().map(TeacherExamAssignmentMapper::toDto).collect(Collectors.toList());
     }
 
 
     @Transactional(readOnly = true)
-    public List<TeacherExamAssignment> getTeacherAssignments(Long teacherId, Long sessionId) {
-        return assignmentRepository.findByTeacherIdAndSessionIdAndIsActiveTrue(teacherId, sessionId);
+    public List<TeacherExamAssignmentDto> getTeacherAssignments(Long teacherId, Long sessionId,boolean light) {
+        return light?assignmentRepository.findByTeacherIdAndSessionIdAndIsActiveTrue(teacherId, sessionId).stream().map(TeacherExamAssignmentMapper::toLightDto).collect(Collectors.toList()):
+                assignmentRepository.findByTeacherIdAndSessionIdAndIsActiveTrue(teacherId, sessionId).stream().map(TeacherExamAssignmentMapper::toDto).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public List<TeacherExamAssignment> getExamAssignments(String examId, Long sessionId) {
-        return assignmentRepository.findByExamIdAndSessionIdAndIsActiveTrue(examId, sessionId);
+    public List<TeacherExamAssignmentDto> getExamAssignments(String examId, Long sessionId) {
+        return assignmentRepository.findByExamIdAndSessionIdAndIsActiveTrue(examId, sessionId).stream().map(TeacherExamAssignmentMapper::toDto).collect(Collectors.toList());
     }
 
 

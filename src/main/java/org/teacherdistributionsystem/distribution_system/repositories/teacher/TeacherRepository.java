@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 import org.teacherdistributionsystem.distribution_system.models.responses.TeacherResponse;
@@ -42,5 +43,6 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
     Page<TeacherResponse> getAllTeachers(Pageable pageable);
 
 
-
+    @Query("SELECT t FROM Teacher t WHERE LOWER(t.prenom) LIKE LOWER(CONCAT('%', :name, '%')) OR LOWER(t.nom) LIKE LOWER(CONCAT('%', :name, '%'))")
+    List<Teacher> getAllContainsName(@Param("name") String name);
 }
