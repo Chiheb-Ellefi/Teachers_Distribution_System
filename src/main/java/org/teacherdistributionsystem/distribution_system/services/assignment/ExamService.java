@@ -135,4 +135,8 @@ public class ExamService {
        return  examRepository.count()!=0;
     }
 
+    public Long  getExamCount() {
+        return examRepository.count();
+    }
+
 }

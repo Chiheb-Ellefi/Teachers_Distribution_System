@@ -9,11 +9,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
+import org.teacherdistributionsystem.distribution_system.models.projections.GradeCountProjection;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.GradeCount;
 import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 
 
 import java.util.List;
+import java.util.Map;
 
 
 @Repository
@@ -45,4 +48,8 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
 
     @Query("SELECT t FROM Teacher t WHERE LOWER(t.prenom) LIKE LOWER(CONCAT('%', :name, '%')) OR LOWER(t.nom) LIKE LOWER(CONCAT('%', :name, '%'))")
     List<Teacher> getAllContainsName(@Param("name") String name);
+
+    @Query("SELECT NEW org.teacherdistributionsystem.distribution_system.models.responses.teacher.GradeCount(t.gradeCode, COUNT(t)) " +
+            "FROM Teacher t GROUP BY t.gradeCode")
+    List<GradeCount> countTeachersByGradeCode();
 }

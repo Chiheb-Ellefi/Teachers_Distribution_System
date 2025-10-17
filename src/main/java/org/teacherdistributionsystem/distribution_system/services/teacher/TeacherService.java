@@ -14,9 +14,11 @@ import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.mappers.teacher.TeacherMapper;
+import org.teacherdistributionsystem.distribution_system.models.projections.GradeCountProjection;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 
 import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
+import org.teacherdistributionsystem.distribution_system.models.responses.teacher.GradeCount;
 import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 
@@ -139,4 +141,13 @@ public class TeacherService {
     public List<TeacherDto> containsName(String name) {
         return teacherRepository.getAllContainsName(name).stream().map(TeacherMapper::toTeacherDto).collect(Collectors.toList());
     }
+
+    public Long getTeachersCount() {
+      return teacherRepository.count();
+    }
+
+    public List<GradeCount> teachersPerGrade() {
+        return teacherRepository.countTeachersByGradeCode();
+    }
+
 }
