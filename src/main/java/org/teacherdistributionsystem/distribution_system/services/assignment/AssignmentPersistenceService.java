@@ -136,10 +136,10 @@ public class AssignmentPersistenceService {
     public void deleteAssignments(Long sessionId) {
         assignmentRepository.deactivateAllForSession(sessionId);
 
-        AssignmentSession session = sessionRepository.findByExamSessionId(sessionId);
+       /* AssignmentSession session = sessionRepository.findByExamSessionId(sessionId);
         if (session != null) {
             sessionRepository.delete(session);
-        }
+        }*/
     }
 
     private void updateTeacherCredit(Long teacherId, Integer credit){

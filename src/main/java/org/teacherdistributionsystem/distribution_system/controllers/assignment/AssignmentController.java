@@ -66,6 +66,8 @@ public class AssignmentController {
 
     @PostMapping("/execute/{sessionId}")
     public DeferredResult<ResponseEntity<Object>> executeAssignment(@PathVariable Long sessionId) {
+            assignmentPersistenceService.deleteAssignments(sessionId);
+
 
         DeferredResult<ResponseEntity<Object>> deferredResult = new DeferredResult<>(15000L);
 
