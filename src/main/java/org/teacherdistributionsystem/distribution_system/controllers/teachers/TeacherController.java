@@ -21,7 +21,7 @@ import org.teacherdistributionsystem.distribution_system.services.teacher.Teache
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/api/v1/teachers")
@@ -65,7 +65,6 @@ public class TeacherController {
     }
 
 
-
     @GetMapping("/{teacherId}/workload/{sessionId}")
     public ResponseEntity<TeacherAssignmentsResponse> getTeacherWorkloadById(
             @PathVariable Long teacherId,
@@ -79,12 +78,13 @@ public class TeacherController {
         List<TeacherExamAssignmentDto> assignments =
                 assignmentPersistenceService.getTeacherAssignments(teacherId, sessionId, true);
 
-
         Map<String, String> roomsMap = examService.getRoomNumMap(sessionId);
-
-        assignments.forEach(assignment ->
-                assignment.setRoomNum(roomsMap.get(assignment.getExamId()))
-        );
+        assignments.forEach(assignment -> {
+            System.out.println("Looking for examId: " + assignment.getExamId() + " (type: " +
+                    (assignment.getExamId() != null ? assignment.getExamId().getClass() : "null") + ")");
+            String roomNum = roomsMap.get(assignment.getExamId());
+            assignment.setRoomNum(roomNum);
+        });
 
         TeacherAssignmentsResponse response = TeacherAssignmentsResponse.builder()
                 .teacherName(teacher.getNom() + " " + teacher.getPrenom())

@@ -38,6 +38,7 @@ public class TeacherExamAssignmentMapper {
     public static TeacherExamAssignmentDto toLightDto(TeacherExamAssignment entity) {
         return TeacherExamAssignmentDto.builder()
                 .id(entity.getId())
+                .examId(entity.getExamId())
                 .examDate(entity.getExamDate())
                 .examDay(entity.getExamDay())
                 .seance(entity.getSeance())

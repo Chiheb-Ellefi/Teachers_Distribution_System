@@ -44,9 +44,10 @@ public interface ExamRepository extends JpaRepository<Exam, String> {
     @Query("UPDATE Exam e SET e.requiredSupervisors = :supervisors WHERE e.examSession.id = :sessionId")
     int updateRequiredSupervisorsBySession(@Param("supervisors") Integer supervisors,
                                            @Param("sessionId") Long sessionId);
+    @Query("SELECT e.id, e.numRooms FROM Exam e WHERE e.examSession.id = :sessionId")
+    List<Object[]> getExamRoomById(Long sessionId);
 
     void deleteAllInBatchByExamSession_Id(Long examSessionId);
 
-    @Query("SELECT e.id, e.numRooms FROM Exam e WHERE e.examSession.id = :sessionId")
-    List<Object[]> getExamRoomById(Long sessionId);
+
 }
