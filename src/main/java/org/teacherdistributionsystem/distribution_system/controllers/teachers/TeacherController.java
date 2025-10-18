@@ -31,7 +31,7 @@ public class TeacherController {
     private final TeacherQuotaService teacherQuotaService;
     private final AssignmentPersistenceService assignmentPersistenceService;
 
-    @GetMapping("/{sessionId}/quotas")
+    @GetMapping("/{sessionId}")
     public ResponseEntity<PageResponse<TeacherResponse>> getAllTeachersQuotas( @PathVariable Long sessionId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
@@ -90,7 +90,7 @@ public class TeacherController {
         return ResponseEntity.ok(teachers);
     }
 
-    @GetMapping("/{sessionId}")
+   /* @GetMapping("/{sessionId}")
     public ResponseEntity<List<TeacherDto>> getAllTeachers(@PathVariable Long sessionId) {
       List<TeacherDto> result=  teacherService.findAllTeachers();
         Map<Long,Integer> quotaMap=teacherQuotaService.getAllQuotas(sessionId);
@@ -98,6 +98,6 @@ public class TeacherController {
             teacherDto.setQuota(quotaMap.get(teacherDto.getId()));
         });
       return ResponseEntity.ok(result);
-    }
+    }*/
 
 }
