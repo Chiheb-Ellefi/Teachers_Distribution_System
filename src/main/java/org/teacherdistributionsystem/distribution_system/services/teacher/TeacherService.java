@@ -157,7 +157,9 @@ public class TeacherService {
         return teacherRepository.countTeachersByGradeCode();
     }
 
-    public List<TeacherDto> findAllTeachers() {
-        return teacherRepository.findAll().stream().map(TeacherMapper::toTeacherDto).collect(Collectors.toList());
+
+
+    public void clearAllTeachers() {
+        teacherRepository.deleteAll();
     }
 }

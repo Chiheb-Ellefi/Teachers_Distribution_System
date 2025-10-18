@@ -21,6 +21,7 @@ import org.teacherdistributionsystem.distribution_system.services.assignment.Exa
 import org.teacherdistributionsystem.distribution_system.services.teacher.GradeService;
 import org.teacherdistributionsystem.distribution_system.services.teacher.QuotaPerGradeService;
 import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherQuotaService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
 
 import java.util.List;
@@ -41,7 +42,7 @@ public class AssignmentController {
     private final QuotaPerGradeService quotaPerGradeService;
     private final TeacherQuotaService teacherQuotaService;
     private final ExamService examService;
-
+    private final TeacherService teacherService;
 
 
     @GetMapping("/{sessionId}")
@@ -203,6 +204,7 @@ public class AssignmentController {
         teacherQuotaService.clearAllQuotas(sessionId);
         quotaPerGradeService.clearAllQuotasPerGrade();
         gradeService.clearAllGrades();
+        teacherService.clearAllTeachers();
     }
 
     @PostMapping("/{sessionId}/cleanup")

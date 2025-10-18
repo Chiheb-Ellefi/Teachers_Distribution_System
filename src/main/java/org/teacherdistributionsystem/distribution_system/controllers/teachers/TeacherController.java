@@ -107,14 +107,6 @@ public class TeacherController {
         return ResponseEntity.ok(teachers);
     }
 
-   /* @GetMapping("/{sessionId}")
-    public ResponseEntity<List<TeacherDto>> getAllTeachers(@PathVariable Long sessionId) {
-      List<TeacherDto> result=  teacherService.findAllTeachers();
-        Map<Long,Integer> quotaMap=teacherQuotaService.getAllQuotas(sessionId);
-        result.forEach(teacherDto -> {
-            teacherDto.setQuota(quotaMap.get(teacherDto.getId()));
-        });
-      return ResponseEntity.ok(result);
-    }*/
+
 
 }

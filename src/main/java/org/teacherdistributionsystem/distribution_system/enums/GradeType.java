@@ -12,7 +12,6 @@ public enum GradeType {
     EX("Expert"),
     AC("Assistant Contractuel"),
     AS("Assistant"),
-    VA("Vacataire Associé"),
     V("Vacataire");
 
     private final String label;
