@@ -83,6 +83,7 @@ public class AssignmentPersistenceService {
     private void saveSessionMetadata(AssignmentResponseModel response) {
         AssignmentMetadata metadata = response.getMetadata();
 
+
         AssignmentSession session = AssignmentSession.builder()
                 .examSessionId(metadata.getSessionId())
                 .status(response.getStatus())

@@ -9,5 +9,4 @@ public interface AssignmentSessionRepository extends JpaRepository<AssignmentSes
 
     AssignmentSession findByExamSessionId(Long examSessionId);
 
-    boolean existsByExamSessionId(Long examSessionId);
 }
