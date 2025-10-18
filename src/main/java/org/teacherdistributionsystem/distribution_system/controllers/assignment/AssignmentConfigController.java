@@ -4,10 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.teacherdistributionsystem.distribution_system.config.AssignmentConstraintConfig;
-import org.teacherdistributionsystem.distribution_system.models.responses.assignment.AssignmentResponseModel;
-import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentAlgorithmService;
 
-import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/api/assignment")
