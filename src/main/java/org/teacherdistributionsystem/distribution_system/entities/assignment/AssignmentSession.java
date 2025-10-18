@@ -21,7 +21,7 @@ public class AssignmentSession {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "exam_session_id", nullable = false, unique = true)
+    @Column(name = "exam_session_id", nullable = false)
     private Long examSessionId;
 
     @Column(name = "status", nullable = false)
