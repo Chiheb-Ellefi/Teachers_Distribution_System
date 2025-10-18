@@ -40,7 +40,7 @@ public class TeacherController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/{sessionId}")
+    @GetMapping("/{sessionId}/unavailabilities")
     public ResponseEntity<List<TeacherUnavailabilitiesProjection>> getTeachersUnavailabilityList(@PathVariable Long sessionId) {
         if (sessionId == null) {
             throw new BadRequestException("Bad Request", "sessionId cannot be null");
