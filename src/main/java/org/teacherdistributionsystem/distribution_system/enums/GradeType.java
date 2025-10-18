@@ -4,12 +4,12 @@ import lombok.Getter;
 
 @Getter
 public enum GradeType {
-    PES("Professeur de l'Enseignement Supérieur"),
+    PES("Professeur de l'Enseignement Secondaire"),
     PR("Professeur"),
     MC("Maître de Conférences"),
     MA("Maître Assistant"),
-    PTC("Professeur Technologue"),
-    EX("Examinateur Externe"),
+    PTC("Professeur Tronc Commun"),
+    EX("Expert"),
     AC("Assistant Contractuel"),
     AS("Assistant"),
     VA("Vacataire Associé"),

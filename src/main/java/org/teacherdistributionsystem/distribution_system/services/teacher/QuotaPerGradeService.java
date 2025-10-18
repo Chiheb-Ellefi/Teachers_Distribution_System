@@ -33,6 +33,9 @@ public class QuotaPerGradeService {
                         row -> (Integer) row[1]
                 ));
     }
+    public Long getCount(){
+        return quotaPerGradeRepository.count();
+    }
     @Transactional
     public void clearAllQuotasPerGrade() {
         quotaPerGradeRepository.deleteAllInBatch();

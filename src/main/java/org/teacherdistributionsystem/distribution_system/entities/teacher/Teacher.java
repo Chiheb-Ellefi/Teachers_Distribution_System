@@ -25,7 +25,7 @@ public class Teacher {
     @Column(length = 150, unique = true)
     private String email;
 
-    @Column(name = "code_smartex", unique = true, nullable = false)
+    @Column(name = "code_smartex", unique = true)
     private Integer codeSmartex;
 
 

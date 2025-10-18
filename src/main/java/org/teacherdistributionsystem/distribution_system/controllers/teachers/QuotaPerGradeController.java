@@ -23,6 +23,10 @@ public class QuotaPerGradeController {
         if(quotasPerGradeDtos == null || quotasPerGradeDtos.isEmpty()){
             throw new BadRequestException("Bad Request", "Quota per grades cannot be empty");
         }
+        if(quotaPerGradeService.getCount()!=0){
+            quotaPerGradeService.clearAllQuotasPerGrade();
+        }
+
         quotaPerGradeService.saveAll(
                 quotasPerGradeDtos.stream()
                         .map(QuotaPerGradeMapper::toEntity)
@@ -31,12 +35,4 @@ public class QuotaPerGradeController {
         return ResponseEntity.status(HttpStatus.CREATED).body("Data saved successfully");
     }
 
-  /*  @GetMapping
-    public ResponseEntity<List<QuotaPerGradeDto>> getAll() {
-        List<QuotaPerGradeDto> quotas = quotaPerGradeService.findAll()
-                .stream()
-                .map(QuotaPerGradeMapper::toDto)
-                .toList();
-        return ResponseEntity.ok(quotas);
-    }*/
 }
