@@ -46,7 +46,7 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Format JSON invalide: champ examAssignments manquant");
             }
 
-            // ✅ CHARGER TOUTES LES DONNÉES DES ENSEIGNANTS EN UNE FOIS
+            //  CHARGER TOUTES LES DONNÉES DES ENSEIGNANTS EN UNE FOIS
             Map<Long, String> allGrades = teacherService.getAllGrades();
             Map<Long, String> allEmails = teacherService.getAllEmails();
             Map<Long, String> allNames = teacherService.getAllNames();
@@ -70,7 +70,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * ✅ MÉTHODE MODIFIÉE - Convertit avec enrichissement
+     *  MÉTHODE MODIFIÉE - Convertit avec enrichissement
      */
     private List<TeacherAssignmentsDTO> convertToTeacherAssignments(
             List<Map<String, Object>> examAssignments,
@@ -104,7 +104,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * ✅ MÉTHODE MODIFIÉE - Enrichissement avec les maps
+     *  MÉTHODE MODIFIÉE - Enrichissement avec les maps
      */
     private void addExamToTeacher(Map<Long, TeacherAssignmentsDTO> teacherMap,
                                   Map<String, Object> exam,
@@ -124,22 +124,22 @@ public class JsonDataLoaderService {
             TeacherAssignmentsDTO newTeacher = new TeacherAssignmentsDTO();
             newTeacher.setTeacherId(teacherId);
 
-            // ✅ Nom complet depuis la DB ou depuis le JSON
+            // Nom complet depuis la DB ou depuis le JSON
             String fullName = allNames.getOrDefault(teacherId, teacherName);
             newTeacher.setTeacherName(fullName);
 
             newTeacher.setAssignments(new ArrayList<>());
             newTeacher.setAssignedSupervisions(0);
 
-            // ✅ GRADE depuis la DB
+            //  GRADE depuis la DB
             String grade = allGrades.get(teacherId);
             newTeacher.setGrade(grade != null ? grade : "N/A");
 
-            // ✅ EMAIL depuis la DB
+            //  EMAIL depuis la DB
             String email = allEmails.get(teacherId);
             newTeacher.setEmail(email != null ? email : "N/A");
 
-            // ✅ QUOTA selon le grade (à adapter selon votre logique)
+            // QUOTA selon le grade (à adapter selon votre logique)
             newTeacher.setQuotaSupervisions(getQuotaByGrade(grade));
 
             newTeacher.setUtilizationPercentage(0.0);
@@ -175,7 +175,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * ✅ NOUVELLE MÉTHODE - Détermine le quota selon le grade
+     *  NOUVELLE MÉTHODE - Détermine le quota selon le grade
      */
     private Integer getQuotaByGrade(String gradeCode) {
         if (gradeCode == null) return 10;
@@ -193,7 +193,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * ✅ MÉTHODE MODIFIÉE - Responsable avec enrichissement
+     *  MÉTHODE MODIFIÉE - Responsable avec enrichissement
      */
     public TeacherAssignmentsDTO getResponsibleTeacherDataByName(String teacherName) {
         try {
@@ -217,7 +217,7 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Enseignant responsable non trouvé: " + teacherName);
             }
 
-            // ✅ CHARGER LES DONNÉES
+            //  CHARGER LES DONNÉES
             Map<Long, String> allGrades = teacherService.getAllGrades();
             Map<Long, String> allEmails = teacherService.getAllEmails();
             Map<Long, String> allNames = teacherService.getAllNames();

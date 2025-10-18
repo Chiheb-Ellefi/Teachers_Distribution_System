@@ -7,7 +7,7 @@
     "totalExams" : 215,
     "totalTeachers" : 143,
     "participatingTeachers" : 126,
-    "solutionTimeSeconds" : 7.961,
+    "solutionTimeSeconds" : 8.864,
     "isOptimal" : true,
     "totalAssignmentsMade" : 430,
     "relaxedTeachersCount" : null,
@@ -15,7 +15,7 @@
     "relaxationAttempts" : 0
   },
   "examAssignments" : [ {
-    "examId" : "faa72a2e-0a30-4bde-9fe7-0edd9c7353b0",
+    "examId" : "472d3c4f-15cd-44d6-ba25-37d5a45e487f",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -37,7 +37,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f11f6276-9f30-4dab-86b8-236cdcea037b",
+    "examId" : "530a8b52-aa9b-4cdc-a3c5-7324be2bbb93",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -59,7 +59,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "15ab289c-effd-4f02-9ff1-27bbb9a8753c",
+    "examId" : "4d671afb-7a1b-493d-9e91-bc90c3300909",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -81,7 +81,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "e99f0412-096f-49a6-be6b-61d26458dbae",
+    "examId" : "7ce4449f-fa4c-48b6-bc7f-c18a10d81c8d",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -103,7 +103,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "0f194cfc-7573-4dd9-a5fa-4501b16e7808",
+    "examId" : "d2b0b223-9198-47da-9413-fc0da5fcccfd",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -125,7 +125,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "39a7b75f-b188-4936-bfc4-42371b523959",
+    "examId" : "54995eef-0f71-4651-8dc0-9b09b6b22ec5",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -147,7 +147,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ba801890-66d6-44c5-bcea-b5f5aa7d330a",
+    "examId" : "9e6d4918-d950-4604-ba19-4283ce8ff9a9",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -169,7 +169,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "838c1d7e-3e22-4fe1-9e60-bf1434e22ea4",
+    "examId" : "35cb829d-b36a-4a02-9fee-b1dd5bc3d7ec",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -191,7 +191,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "6139e0af-4ce0-40dd-a87e-2ea0fa3099eb",
+    "examId" : "df47ff6b-a0af-4465-b5f0-a1f5cff1be04",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -213,7 +213,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "e38e09ac-42fc-44a5-a72d-10a0d4ad5400",
+    "examId" : "7f02aa4f-ff0f-48a1-bc6d-a15ed8e295b4",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -235,7 +235,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "5b3e175a-872f-4266-89d1-10ab0abee1a3",
+    "examId" : "831482f5-b5b0-48be-94d4-1e26f10ae793",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -257,7 +257,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "29369ca3-63ff-4d56-ad6e-f20a97eddbd1",
+    "examId" : "a1f842ae-0141-47c5-8bcb-e7a5527dadfd",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -279,7 +279,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "50c202af-305f-4bca-8133-c0d8772199f0",
+    "examId" : "79c1c414-493c-4f28-8e7b-cfedbc5c80b2",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -301,7 +301,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "14343692-98e8-4756-b4c3-0b65c1552b99",
+    "examId" : "3afd553d-9040-4aa4-8ecd-3115a67e0c0d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -323,7 +323,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "f4b784d6-f8e1-43e9-8428-1e78824ec085",
+    "examId" : "9fba05df-376d-4001-825a-269d32e9596b",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
@@ -345,7 +345,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "e4340292-13a5-4a6a-90c8-d09d85eed558",
+    "examId" : "c2134fc9-da85-4afd-99f2-eb13cf605e50",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -367,7 +367,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "48e1cdfb-efd6-465e-80a1-585a400ca8a9",
+    "examId" : "0bbbfe16-1a59-4605-b664-db7c14c17d8f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -389,7 +389,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "cb87c0ae-1ce2-4b93-8ef6-0bc0107df1a4",
+    "examId" : "cb4aa1bf-b372-4fc4-989f-69b04f977b4c",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -411,7 +411,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "5688fac3-3cc3-4d9b-8abf-c43746352c85",
+    "examId" : "05b992d6-6f1c-4f84-8552-46bc0be9213a",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -433,7 +433,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "86abd0af-3b1e-4fc4-84b2-f57320e4671d",
+    "examId" : "e1e7b5b9-d34f-4ac1-929e-d0e323f805d8",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -455,7 +455,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "db43e190-6cc1-44ca-a55a-9e811de2d191",
+    "examId" : "cf3f89eb-cef5-45aa-afa6-80a408c608a3",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -477,7 +477,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f8a3e653-0ddb-4df7-a0d8-3c615d7f96b1",
+    "examId" : "518fbb06-7aa0-4099-986a-60937e6a5688",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -499,7 +499,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "5651bf8f-0211-4d66-a78a-be6ad2295b28",
+    "examId" : "196f1aa6-5eaf-4e91-b4ae-6989abf633c6",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
@@ -521,7 +521,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "545dee40-6275-41f0-8e34-3042f5a3fd7b",
+    "examId" : "a605052e-bebe-40de-a64a-4cb3e1f5fab2",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -543,7 +543,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "56e76c58-37d7-41ea-9db7-fe90b088115f",
+    "examId" : "5884d1a3-1146-4e5a-9812-8d716ac6c013",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -565,7 +565,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "3aa9cef1-b5e7-4419-a3cd-8642ac729958",
+    "examId" : "060bb35a-221e-49a5-b577-3b7d8f0de99d",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -587,7 +587,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "24cfa94b-44e2-448e-8c6b-2d8ad9c79a41",
+    "examId" : "08f5a39f-f11f-4032-a62a-9327b4494716",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -609,7 +609,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "7726e7b8-a173-49a5-965e-c984081450e9",
+    "examId" : "e26b240a-d300-4ea0-a521-716e3c5c4eaa",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -631,7 +631,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "8f9ee437-861f-4f25-95db-442bd15b83f7",
+    "examId" : "ce8fdaf5-286f-473e-97d3-ac7d5ad9d299",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -653,7 +653,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "8a4df137-d81d-4e13-8d4e-0646c4aa173c",
+    "examId" : "549d7077-aa76-4ec0-9e16-6df05c537ef0",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -675,7 +675,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "e598a59a-2f72-4379-a5b6-dc45dc90c9d1",
+    "examId" : "14647967-00e3-4d7f-9ecd-0b163a7e0884",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -697,7 +697,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "80e10680-79da-4682-afc5-b3a9f3d60153",
+    "examId" : "81bcc9de-50b8-4729-8219-3de0eb03107c",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -719,7 +719,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "744dbe67-a98e-4588-8e9d-af2783fee949",
+    "examId" : "4ff665b4-e4c7-4713-9af5-1b3423e581b3",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -741,7 +741,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "9abe9f73-70f4-4440-9e46-5d1ebb7590c9",
+    "examId" : "d607b386-98e6-4cf2-8ddd-d9042e01ec2c",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -763,7 +763,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "851aa56d-8322-41bd-a6ed-3962e7d0c79c",
+    "examId" : "cdada3ed-fd4b-4e32-a5b2-ff0d3ee55ab2",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -785,7 +785,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "d7e47248-7870-412a-b695-371f91902378",
+    "examId" : "fb262454-9311-4a24-a57e-a3dc4bfb0308",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
@@ -807,7 +807,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "fc0ff637-d9ea-4f50-8d48-8e11ccb1d130",
+    "examId" : "a26bced2-9ecb-401f-89b8-37fae8c39b6c",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -829,7 +829,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "fb51d218-9077-4c11-b375-b88a8b027563",
+    "examId" : "78e12cfb-96dd-42b5-9e7d-6d1f07d30381",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -851,7 +851,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "896b22ce-1b13-458c-a8c8-466f8959d98b",
+    "examId" : "a07bfe04-f996-4c06-8e9a-1b766bae1816",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -873,7 +873,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "8811a86d-7e9b-4b1e-9bf2-1c719e6e4e6e",
+    "examId" : "87bcd76f-3ee3-4b79-9282-044ead277755",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -895,7 +895,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "c326a6e8-5d70-4a15-8cf1-f573e22bd606",
+    "examId" : "45955bc6-b4ab-4aa1-a7e8-f2ee79dd760c",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -917,7 +917,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "035c44ee-b102-4c60-be69-22ace52e62ad",
+    "examId" : "86a6b7a6-2b83-4a61-bbc9-a3ec4b1a0187",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -939,7 +939,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "82921ae1-a43e-4cd3-8c1b-1fa166d2aabd",
+    "examId" : "285a6ccf-e8bc-4def-9e53-86448f1f8599",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -961,7 +961,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "54f15bf2-2ae0-4cf4-8dba-3b7c38381500",
+    "examId" : "a4656ef7-f815-4064-ad28-d4d33d453bf3",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -983,7 +983,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "6de0e708-83fe-4cab-abde-5f59d0773885",
+    "examId" : "daaa92ff-0c5f-41ef-a078-3859df499924",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -1005,7 +1005,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "5533cf51-e2e6-4deb-9e8d-d982301b01a5",
+    "examId" : "173e1428-0c07-441c-8a68-d8d3de12f71c",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -1027,7 +1027,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "e3fa6a01-3bd2-4331-85c9-8ac7b83a756f",
+    "examId" : "5a95ab04-bbc2-4208-b02b-5ef07fac07dd",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -1049,7 +1049,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f4a0256d-2b57-4f69-83e0-c42bb593d1fa",
+    "examId" : "80efe0af-d3c8-4db0-84cc-da75775f415a",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -1071,7 +1071,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "b5d85667-0061-496f-8e95-9f9a33983b81",
+    "examId" : "6d3e309d-5bbf-4db0-b6d0-a04d60aca30a",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -1093,7 +1093,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f92cbc85-725d-4018-9c48-849538be8992",
+    "examId" : "31cdb2d1-08b0-4e26-907a-53f8ccf51e50",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -1115,7 +1115,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "994c725a-21b0-4a19-8eae-7f27206e86e7",
+    "examId" : "942dac09-0538-4879-b247-85d4cc9fa6e8",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -1137,7 +1137,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "68c78fba-5554-4fec-b632-f86f6ec8e5b3",
+    "examId" : "5622f790-9553-4549-b942-d6f89953cd3b",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1159,7 +1159,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "963461a1-da87-44c1-9fca-d0a96b2464e1",
+    "examId" : "b72051d9-127f-4326-afea-7cb7f8e1891f",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -1181,7 +1181,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "d8487a48-5254-467e-b251-b2ea665913c0",
+    "examId" : "549c610f-951a-40b4-b14e-3d8c5d5f5dcb",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -1203,7 +1203,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "f5115231-2bea-4968-b918-6256e6aef7e1",
+    "examId" : "d7573bf7-8d22-4c3c-9b99-8128a10bb0f6",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -1225,7 +1225,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "7e7ed1b6-7c3e-40c5-8ec0-74fc8660a805",
+    "examId" : "de161e48-9050-4cfc-abaa-2c4bfd58a797",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1247,7 +1247,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "d6094c2e-396e-45a4-8699-63e9b38909fe",
+    "examId" : "3732c0b9-0503-4076-90c3-0dd1f0aef0ec",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1269,7 +1269,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "558a0de5-70bc-4b47-9ac9-fa19135d3861",
+    "examId" : "d81cd8fe-cae7-4e57-8fc4-3dce2f1cc28d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1291,7 +1291,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "d10e8c74-a8b5-446c-806a-184e58ec9fca",
+    "examId" : "0c0f6d30-e93a-4a09-b926-9dca18139bc7",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1313,7 +1313,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "810e51b5-1a8e-446a-bce2-b7658e144f73",
+    "examId" : "fee54224-fcf6-4952-8238-f6996599d5a1",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -1335,7 +1335,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "586b3642-04c2-4ce4-948a-6a00e08b3840",
+    "examId" : "fbac09ca-13b1-4ed2-87d3-8c0ff50a30ef",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -1357,7 +1357,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "6a05bd37-8b6a-491b-83ad-8ba027ee00d7",
+    "examId" : "d8a99af3-f28a-4efe-9072-fe0272cb1e4b",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1379,7 +1379,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "3f606d8e-112e-46e0-8cac-b751acbe2146",
+    "examId" : "35db37ff-d5ce-482a-a19a-6ae7829f6a0f",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -1401,7 +1401,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "276cec89-7079-44b2-9a7d-bbadf6c55564",
+    "examId" : "71cf5a71-944f-4378-be5c-f2515dc0a167",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1423,7 +1423,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "aa446a26-75f8-4084-ad74-d7105f199494",
+    "examId" : "aa749660-fc0c-41b6-8065-51ec7131eac8",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -1445,7 +1445,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "a828d12a-c72a-45df-ba61-6a9f88bfa73d",
+    "examId" : "974eb8e4-94ef-4cb6-94c5-b5ceaa8f1665",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -1467,7 +1467,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "df01b472-129d-4151-a916-99980bd2d41a",
+    "examId" : "4868917f-16d1-4af1-aefb-6f83d6261af2",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -1489,7 +1489,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "ff0a2624-1935-4941-8d8e-df08ce20e6dc",
+    "examId" : "f2973b58-4930-4e03-92b4-9961f6b36fbc",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -1511,7 +1511,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "41c3a5b0-943c-46c7-8b48-1f21bc17b873",
+    "examId" : "e5e06011-6a95-40ad-adb5-73df043df530",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -1533,7 +1533,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "cd3f7a6c-338f-454e-841e-2fa82c2cee41",
+    "examId" : "ffacd965-5436-4366-82f6-bbe31acdbf87",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1555,7 +1555,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "2207ad66-78d1-4b7c-989e-74cbe63afc47",
+    "examId" : "bf436755-5c07-4c6d-a3c9-d7312de4f680",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -1577,7 +1577,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "92bb1a51-7338-4046-bca0-95f3d3f97c0a",
+    "examId" : "2ae65f6c-db7a-4c97-bd57-c163b06c3b62",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1599,7 +1599,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "8113d3f0-20d9-4b77-81ac-835a0aa8d221",
+    "examId" : "c150b8ee-c4ce-43da-9905-dee0199ce968",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1621,7 +1621,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "b388c936-40e3-4449-9091-54c078662e27",
+    "examId" : "d60fa845-b5ee-476b-a8d5-6218868f81d0",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1643,7 +1643,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "474fbc18-a65e-4bcb-aa15-72dd832fb362",
+    "examId" : "ef855cc7-cc7e-49e2-949f-925609f29699",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -1665,7 +1665,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "6e7c2dd5-03d1-4529-8a59-0f564d2205a0",
+    "examId" : "ce04776a-bb2f-4876-9cce-4518871c53ea",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1687,7 +1687,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ca76a77d-35c6-42b5-8c38-e2549a0162df",
+    "examId" : "fb944ca7-7f8f-4498-937e-974f96fe428f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1709,7 +1709,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "e184ae39-28b9-4c9f-ada7-8b1152d87f3f",
+    "examId" : "619d3b28-4be9-4993-9fc0-e381f97f5895",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1731,7 +1731,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "f44ab841-68c9-43e1-a827-270343ed2249",
+    "examId" : "b6a8a1da-506a-4a06-8bd7-943415436c9c",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -1753,7 +1753,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "db8f8077-4287-452a-b065-7d880864a10b",
+    "examId" : "f9f6eff6-f289-4d74-9f37-be185530bbcf",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1775,7 +1775,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "70153552-e6be-486b-8899-d54960789969",
+    "examId" : "b079f34d-fe41-4d13-b9b5-9b09d20d2ca6",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -1797,7 +1797,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "b8cbe2ec-7cf1-45f7-bf5b-26c0c783d690",
+    "examId" : "a60dd0c9-52a3-4d40-94ea-2b6bd6617597",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1819,7 +1819,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "3bfff8f6-eb07-43a0-b6eb-928cc7942419",
+    "examId" : "e4112260-50d4-488f-bf59-9a757587da55",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -1841,7 +1841,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "6d3ef995-c1ff-4c1b-92a5-ba21e2e90282",
+    "examId" : "99a18471-b333-4992-84b4-1d3c63ae1c04",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -1863,7 +1863,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "ff690ab4-b97d-4da9-8138-d0e40b2f4dc2",
+    "examId" : "68bd72e7-76a8-45a5-90aa-52c02772711d",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1885,7 +1885,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ba28ab36-a1b2-478e-8d68-e9c02fe66549",
+    "examId" : "4f5b86e1-7174-4828-9373-c72d57256ed9",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -1907,7 +1907,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "be376602-308f-4cd3-9f5a-e75dd9f593a5",
+    "examId" : "9c1e3ca8-cbed-4e11-856c-6f4ce9efbe82",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -1929,7 +1929,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "aaa63eb3-3992-4e3e-b330-70f47f54c57c",
+    "examId" : "95d667c7-aa97-46c3-bdb2-f7185ceef4cd",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -1951,7 +1951,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "fb700171-e232-4e8f-9951-b821b7ca6d57",
+    "examId" : "ffdc4def-a79e-4cfe-a2b0-71a06354cc4c",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -1973,7 +1973,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "2f1354b2-e018-4be5-a41d-66a7cb57739e",
+    "examId" : "51751b47-2dda-4281-841b-d0024ba8f9c5",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -1995,7 +1995,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "a09cf4a9-dde9-4f99-9577-c0c294c982a2",
+    "examId" : "ee2bb66e-2f13-4eeb-aa17-5dd66e49ba21",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -2017,7 +2017,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "70b2f6b3-a337-45f8-8f13-b243b803ad0a",
+    "examId" : "7ad7774c-da73-427b-9d62-b3ccfd1d67d9",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2039,7 +2039,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f608daa4-8fdf-4926-a20d-9a637c005306",
+    "examId" : "0dfb5541-626b-4c8a-ad60-1ab1cb35ea49",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2061,7 +2061,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "a096538a-b3cf-4b68-8b19-51aa9eb12641",
+    "examId" : "cbd0bd57-201d-40ff-b260-7194ae129274",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2083,7 +2083,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "36fe3775-6cbe-41e9-99c3-b5e3e75a1054",
+    "examId" : "edeffc53-65a5-41d4-b3b3-6aa42c98688d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2105,7 +2105,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "2ebce5b2-1d85-4b74-972a-4c61ec6517af",
+    "examId" : "374d2b03-7c0c-439c-91b6-f0913cf18b8d",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -2127,7 +2127,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "18fa19c1-5289-433e-ab94-3bc0c981cdb1",
+    "examId" : "f0ac0ef2-4437-492a-bd96-44f9ee5d4ce7",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 3,
@@ -2149,7 +2149,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "6f387c1e-aaa1-4ccb-81ef-f2a59e7d32f4",
+    "examId" : "f286f9be-1edb-4736-9441-a7d2655e8a6a",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -2171,7 +2171,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "c1f361b8-0614-4d15-9ff6-df521ac92294",
+    "examId" : "fd8b17b3-9672-4fa0-affa-0ca17ba51a6f",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -2193,7 +2193,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "e1e37c4f-876b-4457-89ea-5e57ebc04d48",
+    "examId" : "ce91845f-495e-4b42-bf5e-a7ebc0753c1f",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -2215,7 +2215,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "37ab0bbf-33d2-4e2b-9034-a29c64ef28f4",
+    "examId" : "95d7ea4c-0c9a-4d63-a85d-2ee0fb614481",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -2237,7 +2237,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "01985640-86a2-416b-a002-1d9be67e4831",
+    "examId" : "dbea3a76-eca2-419c-932e-2f18debde556",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -2259,7 +2259,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "f82595af-e6cf-45f4-8dff-1af4da4bba28",
+    "examId" : "5b88edd4-57ab-4f06-8934-fdec80593010",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -2281,7 +2281,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "895bd502-0726-47fa-862d-4785535f5fb0",
+    "examId" : "106cfee4-d43c-4a83-86a2-79b39d691425",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -2303,7 +2303,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "86040d90-6e06-4c9a-8ea0-5f6825122150",
+    "examId" : "4754e9c6-440c-45af-8208-4b1580f65ad3",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2325,7 +2325,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "7d198d32-823c-4c82-a954-1a4137514782",
+    "examId" : "a09f3567-b2a5-4f35-ba20-334db8f8c04e",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2347,7 +2347,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "db5d4457-5889-47fd-9e19-f7056727080d",
+    "examId" : "33b44414-ff3d-4f02-b87c-73d18643d070",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2369,7 +2369,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "c81433eb-4440-40cd-a859-435e6962f8a3",
+    "examId" : "641b2992-2a63-4742-8cfa-f99f0d7056a8",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2391,7 +2391,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "6da474f8-325f-486a-b915-a3e3c8a689d0",
+    "examId" : "b7d22f25-f869-4960-9e62-46e807ef972f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2413,7 +2413,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "70dfe3d3-29ae-4524-a512-92093255bf58",
+    "examId" : "2a14fdf9-b519-4f14-8961-4e7656847b03",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2435,7 +2435,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "6811ac4f-b010-43db-b3ef-f4f9f11aa163",
+    "examId" : "613d6b92-ed9b-4710-a409-a47aa8f15b62",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2457,7 +2457,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "99584f4f-390d-4be2-b443-6075ceaf1d71",
+    "examId" : "0f210a6f-4f1a-42d9-afe4-1b48f43260cc",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2479,7 +2479,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "197752a3-26cc-4a16-88ff-4b0033de0f6f",
+    "examId" : "fce6f507-8fc3-489d-b2f4-e22850be5877",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2501,7 +2501,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "9f79478d-857c-432e-bc2e-ed4ecbc98d01",
+    "examId" : "7020dce3-0e92-4737-b0f3-b8ad29b369bf",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -2523,7 +2523,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "7839c5d7-5d77-491d-bfa5-70b0c6e55cfc",
+    "examId" : "6d3a3d41-d6b5-4ce6-a919-934ad5f8466a",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -2545,7 +2545,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "d6278914-bc17-47b1-ba95-ebe53ebcebbd",
+    "examId" : "68674ffe-9e91-4d1e-9340-2eb9e0976967",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -2567,7 +2567,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "f6f06d85-a753-4d78-a93d-97aaba7b0e95",
+    "examId" : "0522519c-f421-46d4-a18a-ce1b481fa32b",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2589,7 +2589,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "b746d882-b74f-4a47-b7aa-fff7d7980d34",
+    "examId" : "df3fc70d-6f2b-4ee2-8989-5f26b366a844",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2611,7 +2611,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "1614cddb-b9ba-47fd-98b7-6a5acd6dd8b0",
+    "examId" : "fc66f757-ed3f-44f5-8a50-3ddeda6ece92",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2633,7 +2633,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "57baefe4-523f-4e6c-8014-6cccca43188c",
+    "examId" : "c21f7710-0f5f-4ef1-995a-6f3c353867fc",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2655,7 +2655,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "3a6d1bf1-1ef8-498a-8e4d-6267d8299a88",
+    "examId" : "68f93f30-2a14-4490-a993-b28a272e301d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -2677,7 +2677,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "14896460-3015-4e6e-9c2f-c6846ec092ac",
+    "examId" : "0bb35099-7125-4750-9354-2e9ccd681ae2",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2699,7 +2699,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "40fa9149-0318-42c5-a5fe-dd5f681fbf2b",
+    "examId" : "81739244-7526-4280-93d7-fe4f2e736b35",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -2721,7 +2721,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "fd7ce5df-8fc0-40df-8a30-6c7524205500",
+    "examId" : "71274d3c-27d7-4297-b869-f5fdb133d683",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -2743,7 +2743,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "d93542dd-fb57-4d59-9c8e-0ebcd41eedd5",
+    "examId" : "7fee2cbe-d032-48e7-92fd-8bcaf465eb72",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -2765,7 +2765,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "093fd84c-f49c-4922-b7af-41f15255823a",
+    "examId" : "ce78922f-7004-4b46-8cb7-b9142af01fc6",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -2787,7 +2787,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "6001b922-57dc-4ca7-b8ea-ab9835aad13c",
+    "examId" : "0162bf44-cbe5-4604-b1a5-af3a9bc14cd7",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -2809,7 +2809,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "24b529ff-255e-413f-83d2-175277d48f9d",
+    "examId" : "89144818-ad22-45b8-bed5-6685f723fef2",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -2831,7 +2831,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "dc2f21ef-6e47-4ee5-82ef-c9062da1aa32",
+    "examId" : "01369b91-3423-4922-9e6c-3cb27cae5fc5",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -2853,7 +2853,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "a31610c6-f2f1-4cf7-9d12-46a1bffa1d7d",
+    "examId" : "357999ec-8c3d-45ce-abde-02d0940268ec",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -2875,7 +2875,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "e37d14ae-0c1e-4089-8004-57fab22f8088",
+    "examId" : "62e248e0-2793-4871-819d-167bdd72fb3f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -2897,7 +2897,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "14c7ce5a-08b0-4892-a7cf-89aa752a92e4",
+    "examId" : "dd3999e8-a173-4fca-9674-e51d60eefe90",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 3,
@@ -2919,7 +2919,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "4b5b9c12-d5fb-469f-8ee6-a9cb844413fc",
+    "examId" : "6f9332e6-1f26-49a0-83dd-8a5dd4ec1ccd",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -2941,7 +2941,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "031689d1-8f34-482b-8131-8638dc60cbc9",
+    "examId" : "b883666b-914b-44d7-bbbe-b3ec0d802468",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 3,
@@ -2963,7 +2963,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "a7861947-5221-46e0-a029-ca7bd4474c1e",
+    "examId" : "6a226807-1fac-4b22-8f29-c5edf0bbf809",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -2985,7 +2985,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "418f8da3-2e9b-4329-9baf-08fda30ea0be",
+    "examId" : "5688c4b6-7772-47f2-9a40-ee41ff0727ce",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -3007,7 +3007,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ae867360-3a40-46a0-b19c-110f01303aee",
+    "examId" : "7e39b237-888e-4923-b88f-4922c9e2bd42",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 4,
@@ -3029,7 +3029,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "e9843805-d00b-4f42-b77b-6bcf98f60924",
+    "examId" : "7dc5275e-a742-4b12-8010-a841e9779026",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -3051,7 +3051,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "15220e65-80b4-4071-9a25-ccc846b6b1d0",
+    "examId" : "04298615-7716-4189-81c9-7952efa2f1d3",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -3073,7 +3073,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "5ed8075c-f748-4c35-ba23-1ab8a204a8cb",
+    "examId" : "d6563c83-48f7-4853-987e-c13c8062abe3",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -3095,7 +3095,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "aea0463d-5eb1-454c-96db-dbbaadeccf61",
+    "examId" : "dac0f4b6-693f-482f-bdb9-5934285368f7",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -3117,7 +3117,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "c318fab4-164d-4d0b-951d-3cf767844b9f",
+    "examId" : "7558b964-e328-4b11-827c-b2217371c7bd",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -3139,7 +3139,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "90293c3d-9da2-4b95-a1ac-11e5d98ae234",
+    "examId" : "6409b697-4feb-47f6-8fe1-51dd60b5ead9",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3161,7 +3161,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "f3c48b9c-7fcc-425c-aa5a-0a32caf9c81a",
+    "examId" : "0b848f73-cbd7-4f56-bf7a-37fc8a245867",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3183,7 +3183,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "eb08fab8-6e61-4ab4-9f62-e32e779307e7",
+    "examId" : "e82daf9c-e0c4-4642-b1ec-5239029ca247",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3205,7 +3205,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "eafef184-a9e4-48f5-93c7-7f04d236a3fa",
+    "examId" : "3606fc12-d577-470b-b223-b76e449d28c3",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3227,7 +3227,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "e3d57a1c-3c74-4434-b4d6-9ce341208570",
+    "examId" : "476001f8-5b0a-4727-bd85-31f33a48ca2b",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3249,7 +3249,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ba3f7c42-d52c-46bf-aba3-2f72e0c8a0ba",
+    "examId" : "8cb1c006-698b-4da9-89b2-13b09a88b860",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3271,7 +3271,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "066e4a4f-87c5-408b-bb10-09227df48dd9",
+    "examId" : "0d0aea84-50c2-49f2-a88e-d18d692c6696",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3293,7 +3293,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "8eb566b0-46e9-4110-89b8-d7c1ab3787dc",
+    "examId" : "102adc94-dbf3-417d-951d-29ceff6f373b",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -3315,7 +3315,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "ec95d356-2ba4-4322-b49a-a845e357543f",
+    "examId" : "7a197ed3-a3a4-4aa9-835d-71e590972dd9",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -3337,7 +3337,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "5730f485-5fc3-42f7-98a2-ed2e574ea6b4",
+    "examId" : "b6b9a5c3-d754-4fe1-ad0b-a137f1252ebb",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 2,
@@ -3359,7 +3359,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "ec016ac5-dc0f-4581-aeab-99714d5210bc",
+    "examId" : "2ff6c2c0-44b0-4a3a-9937-160a8e36bd35",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3381,7 +3381,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "27ea3ca9-dbd9-47d0-b12f-18f94d8a3dfd",
+    "examId" : "7a71a9af-d8c5-462f-9cd6-0698250ea601",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3403,7 +3403,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "4f35a015-73d0-4459-a6cd-a82ddbb15221",
+    "examId" : "4143660d-36f5-4c05-9228-01121a746277",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3425,7 +3425,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "62d30e57-fb27-43d0-8a2e-c422a2d3b302",
+    "examId" : "05b05483-197f-4bbe-bfb1-d61b740e454d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -3447,7 +3447,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "34b1ddd4-9263-484c-adf2-576af7b84cfe",
+    "examId" : "9cad746c-27f0-430e-bbae-6b46b1260123",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3469,7 +3469,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "68fc0eb7-b585-4ac5-b2ac-ae2be0aacee5",
+    "examId" : "07f17d83-2f37-45be-a162-186640705a01",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -3491,7 +3491,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "2697c4c3-3505-4a8c-8ab2-ed2115cf8f29",
+    "examId" : "0edd668c-3790-45d7-80ba-6e69ecf6d1e7",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 1,
@@ -3513,7 +3513,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "c4298eeb-a5e3-473f-882d-848a7fcae76f",
+    "examId" : "dc4778ee-edf6-4fa6-8258-2de65d928faf",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -3535,7 +3535,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "60a40912-2aa3-4ab8-9235-c5a5a93b55f7",
+    "examId" : "274d03c7-5ddf-4649-90d6-91cc802ab35d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -3557,7 +3557,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "3e62394a-30b9-4247-96a0-fcb212aefbbf",
+    "examId" : "c9862174-44a4-4bf1-bf69-4e6891c1bef1",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -3579,7 +3579,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "b4b3a4a5-0e4e-49ff-8d5a-08b2f8f979a5",
+    "examId" : "b6933e4b-525e-4e1c-ac25-81ade5d6f660",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 2,
@@ -3601,7 +3601,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "fa922caa-ac15-4787-a9a5-c6d180776a4e",
+    "examId" : "d80e9a79-fb89-440f-972f-cec02d84b436",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 3,
@@ -3623,7 +3623,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "fc3fa19a-face-4e5a-bc15-25d1ddca1663",
+    "examId" : "a6cac1eb-2398-4c2b-9ebc-4c8dde772a5a",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3645,7 +3645,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "160a50f1-7cf1-440c-9ea2-daa00679b7cd",
+    "examId" : "4cc94249-419b-41c3-bae4-927d3118b3fa",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3667,7 +3667,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "b550aea8-8ffd-4f1a-b5e5-d247d137cd48",
+    "examId" : "6bbad352-bac4-42a4-ad08-80b72b897b27",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 3,
@@ -3689,7 +3689,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "a74e8d73-c66a-4cf4-b5e0-fb4ad74f2eab",
+    "examId" : "672923be-caf4-4dfc-94ae-5b72d90201df",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -3711,7 +3711,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "cb5f9a15-af56-499c-a190-5dea53713afa",
+    "examId" : "a2da9b09-3606-4978-b0a4-c594bfc6496f",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -3733,7 +3733,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "d7d2ee15-962d-4713-9b12-294e9fe094e0",
+    "examId" : "c6fa08b8-493f-4c1d-9d11-df9486ca032b",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -3755,7 +3755,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "33c1bb6f-b194-4775-a584-da691a4cb576",
+    "examId" : "6085a21c-3cf4-4f03-881f-ac4d9b3abfe7",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3777,7 +3777,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "9a46cd4a-4b02-4c66-b0ff-b7d54470b179",
+    "examId" : "71364df6-cc1a-46ab-ba1e-b2011c9b6271",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -3799,7 +3799,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "60d29401-7bb2-4268-9957-035c7cdbada2",
+    "examId" : "b4a19659-14ca-4f75-a924-79cfcc4fa186",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -3821,7 +3821,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "b62632a2-9aba-40c6-995c-e4f13fe89593",
+    "examId" : "ba89b04e-4ad0-4f13-a266-68cdf894348f",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -3843,7 +3843,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "a0035c59-dec7-408d-865a-81b8635b154c",
+    "examId" : "82832475-c3af-497a-b17c-4f02c884821d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3865,7 +3865,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "1d821ee7-83ad-4f92-b939-80eea36ec718",
+    "examId" : "d293a52f-d60f-4597-8bde-8be7b052bac8",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3887,7 +3887,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "2849307e-8343-4128-a5ca-f3bee3ea785f",
+    "examId" : "68739c05-4c97-4dd7-a717-0f31b6991f36",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3909,7 +3909,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "15c6e55f-446d-4b81-9ca3-e2bd5bbb57e4",
+    "examId" : "74f48f93-8eaa-456b-b890-17907196b686",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3931,7 +3931,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "dadde898-357e-45f7-b7b9-5f81b0b19b44",
+    "examId" : "71724ae3-c719-49be-8538-322a41ca741d",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3953,7 +3953,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "328b3e7b-4e43-443c-a57c-375cf05e547e",
+    "examId" : "294f002a-d488-4a6d-9151-16d15d57d9c5",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -3975,7 +3975,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "59b78291-5205-4054-bfb0-efb0322a39ee",
+    "examId" : "45cb623c-3c0b-453f-9330-a5b067f12941",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -3997,7 +3997,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "91c4f121-008b-4fcf-b25a-63076474e237",
+    "examId" : "2820ff92-b64a-474c-8f2e-2a0492e0f315",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -4019,7 +4019,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "b5977415-8930-4fdd-87ba-a78fbb573ed9",
+    "examId" : "273dece0-1b7b-42b7-b1fb-36d9862a73c8",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
@@ -4041,7 +4041,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "5dba0c47-c606-4813-85a1-723fcf81d10e",
+    "examId" : "2a67c1ff-733a-4803-9fb8-51fe4d7ae8f7",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
@@ -4063,7 +4063,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "3be0f13f-d83b-495f-9aad-b7c2d6307336",
+    "examId" : "ec40cb04-164a-4e49-b0a4-d75232a67d99",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
@@ -4085,7 +4085,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "605eb3fa-00bd-4037-8b70-11bd57a70135",
+    "examId" : "de661d73-0c7a-4114-b761-8bc7d5fc96f8",
     "day" : 4,
     "dayLabel" : "Day 4",
     "seance" : 4,
@@ -4107,7 +4107,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "aa81c61d-7727-4282-931a-085946a2f0fa",
+    "examId" : "f31d6cf3-87f3-445e-8620-02b6350c5920",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
@@ -4129,7 +4129,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "0dad09ab-2485-459a-8654-aab1292de4c1",
+    "examId" : "9a161f85-a3ef-4eb9-95bc-c85366228bb7",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -4151,7 +4151,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "a1da3351-2d03-4f4b-ab07-bcd31aae7b44",
+    "examId" : "5aaba16e-fd9e-4220-a7ca-276aa1cabf21",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -4173,7 +4173,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "baff093d-71be-45dd-95ad-70f348a307c5",
+    "examId" : "d4aaeedb-cbc1-448e-8f08-52072e73fd08",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -4195,7 +4195,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "e057f0e7-f1f6-450c-989a-2d3703a1500b",
+    "examId" : "be7cc301-cf01-4e04-bb5e-882471e3d20d",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 3,
@@ -4217,7 +4217,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "8b14674e-1868-4608-932c-154a663d9022",
+    "examId" : "24534be0-4b9a-4085-a82e-baf484927b8a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -4239,7 +4239,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "95d7fad8-7d52-4234-8464-b74e407ca79e",
+    "examId" : "1921a95a-36a2-4447-a123-122c840795e7",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -4261,7 +4261,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "37eccca7-0ae7-4366-b870-148394e51e1e",
+    "examId" : "d5d30863-8ea9-4c90-9653-5b184dd3afd9",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -4283,7 +4283,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "4712605c-9759-4ecf-95dd-bb9d92971fc9",
+    "examId" : "a0b0abd2-bcdb-4757-ac9b-49a7a5281c1b",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -4305,7 +4305,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "7ec99b1f-baa6-43b4-a237-dfe2d1f7aa1b",
+    "examId" : "300d9dbf-47a7-4cb3-85af-3ab6cd9ccf63",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 1,
@@ -4327,7 +4327,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "a8366d2c-7b9b-4103-a626-c4ae50512036",
+    "examId" : "0674f526-754a-4408-9657-2824b8ac3c38",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -4349,7 +4349,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "0b15a729-f0c1-4fe3-8008-2ce1ae1e31d7",
+    "examId" : "d3a13261-a604-4051-895c-fac71fc0c49b",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -4371,7 +4371,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "46eab4cd-a6d8-4986-a412-a56dec9e1478",
+    "examId" : "328eeaaa-543c-4d3d-a3c1-0a86fecb6567",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -4393,7 +4393,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "1f0a0b9e-beca-4ba2-861d-6851058ff03a",
+    "examId" : "089fad47-06b2-4ddc-b23d-181bc4fe2c8c",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 1,
@@ -4415,7 +4415,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "73d897e6-1cbb-4d9f-a846-6a353a22a26a",
+    "examId" : "117e4b4d-ff1a-4272-a084-e2cdbb177db6",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -4437,7 +4437,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "7f9c3a4c-9dda-4b24-86b3-3ab2da8b9e1a",
+    "examId" : "9ccdc85e-0202-442f-b813-4aa0ac94c0ff",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -4459,7 +4459,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "281e1325-2ba3-4f84-b8c5-25e99976a232",
+    "examId" : "92371992-8544-458c-af25-b164fdbe9676",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -4481,7 +4481,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "f196e295-b256-446a-aae4-c4dc6ce1fa41",
+    "examId" : "ebdf4d3f-0b6f-4b68-b40a-57f3f81483af",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -4503,7 +4503,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "6eabdbad-c8d8-41af-ab79-4542dddb5b58",
+    "examId" : "2d3685ff-428b-47a7-9d47-0be3f74e562c",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 2,
@@ -4525,7 +4525,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "189f2021-8501-4bd5-bfaf-12c60214711d",
+    "examId" : "b70cb948-d8ed-4e02-9b79-9c6e82f33f5a",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 2,
@@ -4547,7 +4547,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "d09b68a3-921f-4d7c-b4dc-f7f5927c4d91",
+    "examId" : "2583248c-2839-4115-9bdc-28ac911fa258",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 2,
@@ -4569,7 +4569,7 @@
     "startTime" : "10:30:00",
     "endTime" : "12:00:00"
   }, {
-    "examId" : "da6a6a84-1f06-4e25-9e43-88a3cf4e2486",
+    "examId" : "e25e7f54-cafb-4959-83ec-a0d661a2bbaf",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
@@ -4591,7 +4591,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "d2cb6e3e-496c-4495-a9a7-172609e7a556",
+    "examId" : "fbfd4a12-e6f7-4959-b1d4-dac2cd22ab69",
     "day" : 1,
     "dayLabel" : "Day 1",
     "seance" : 4,
@@ -4613,7 +4613,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "3671e0fb-30d4-4194-9c8a-33e111066491",
+    "examId" : "00d6e537-6613-47f0-89c3-f1e271f67f14",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -4635,7 +4635,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "58fe19cd-969c-4276-9175-f63a677e2e9d",
+    "examId" : "a2da9d9d-142a-47c0-a356-901077aae3d8",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -4657,7 +4657,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "883d87e7-5456-485a-aba6-7c6825b4f22d",
+    "examId" : "29fbb81a-5d3b-41ca-808e-7fc0631330b5",
     "day" : 5,
     "dayLabel" : "Day 5",
     "seance" : 1,
@@ -4679,7 +4679,7 @@
     "startTime" : "08:30:00",
     "endTime" : "10:00:00"
   }, {
-    "examId" : "568c261d-0e12-41a6-b72e-15d9f53d59fc",
+    "examId" : "5e4ea513-eef5-476b-840c-36ffa19917ec",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 4,
@@ -4701,7 +4701,7 @@
     "startTime" : "14:30:00",
     "endTime" : "16:00:00"
   }, {
-    "examId" : "bf946efb-be49-4ea9-8be0-f3d4897cc1db",
+    "examId" : "966e1df6-3d6c-4f81-9d7a-0307f25fed45",
     "day" : 2,
     "dayLabel" : "Day 2",
     "seance" : 3,
@@ -4723,7 +4723,7 @@
     "startTime" : "12:30:00",
     "endTime" : "14:00:00"
   }, {
-    "examId" : "c55954a9-8c58-4d5b-bb1e-9f465aa857c4",
+    "examId" : "db485843-5168-4d8a-8ae4-eddd43a00990",
     "day" : 3,
     "dayLabel" : "Day 3",
     "seance" : 1,
@@ -4765,7 +4765,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "f4b784d6-f8e1-43e9-8428-1e78824ec085",
+      "examId" : "9fba05df-376d-4001-825a-269d32e9596b",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -4775,7 +4775,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "3aa9cef1-b5e7-4419-a3cd-8642ac729958",
+      "examId" : "060bb35a-221e-49a5-b577-3b7d8f0de99d",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -4785,7 +4785,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "24cfa94b-44e2-448e-8c6b-2d8ad9c79a41",
+      "examId" : "08f5a39f-f11f-4032-a62a-9327b4494716",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -4795,7 +4795,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d6094c2e-396e-45a4-8699-63e9b38909fe",
+      "examId" : "3732c0b9-0503-4076-90c3-0dd1f0aef0ec",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -4805,7 +4805,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ff0a2624-1935-4941-8d8e-df08ce20e6dc",
+      "examId" : "f2973b58-4930-4e03-92b4-9961f6b36fbc",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -4815,7 +4815,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "2f1354b2-e018-4be5-a41d-66a7cb57739e",
+      "examId" : "51751b47-2dda-4281-841b-d0024ba8f9c5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -4825,7 +4825,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "60d29401-7bb2-4268-9957-035c7cdbada2",
+      "examId" : "b4a19659-14ca-4f75-a924-79cfcc4fa186",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -4835,7 +4835,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "58fe19cd-969c-4276-9175-f63a677e2e9d",
+      "examId" : "a2da9d9d-142a-47c0-a356-901077aae3d8",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -4855,7 +4855,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "ba801890-66d6-44c5-bcea-b5f5aa7d330a",
+      "examId" : "9e6d4918-d950-4604-ba19-4283ce8ff9a9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -4865,7 +4865,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e4340292-13a5-4a6a-90c8-d09d85eed558",
+      "examId" : "c2134fc9-da85-4afd-99f2-eb13cf605e50",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -4875,7 +4875,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "80e10680-79da-4682-afc5-b3a9f3d60153",
+      "examId" : "81bcc9de-50b8-4729-8219-3de0eb03107c",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -4885,7 +4885,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "df01b472-129d-4151-a916-99980bd2d41a",
+      "examId" : "4868917f-16d1-4af1-aefb-6f83d6261af2",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -4895,7 +4895,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "ba28ab36-a1b2-478e-8d68-e9c02fe66549",
+      "examId" : "4f5b86e1-7174-4828-9373-c72d57256ed9",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -4905,7 +4905,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "14c7ce5a-08b0-4892-a7cf-89aa752a92e4",
+      "examId" : "dd3999e8-a173-4fca-9674-e51d60eefe90",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -4915,7 +4915,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "b62632a2-9aba-40c6-995c-e4f13fe89593",
+      "examId" : "ba89b04e-4ad0-4f13-a266-68cdf894348f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -4935,7 +4935,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "24cfa94b-44e2-448e-8c6b-2d8ad9c79a41",
+      "examId" : "08f5a39f-f11f-4032-a62a-9327b4494716",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -4945,7 +4945,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "8f9ee437-861f-4f25-95db-442bd15b83f7",
+      "examId" : "ce8fdaf5-286f-473e-97d3-ac7d5ad9d299",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -4955,7 +4955,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "80e10680-79da-4682-afc5-b3a9f3d60153",
+      "examId" : "81bcc9de-50b8-4729-8219-3de0eb03107c",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -4965,7 +4965,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "197752a3-26cc-4a16-88ff-4b0033de0f6f",
+      "examId" : "fce6f507-8fc3-489d-b2f4-e22850be5877",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -4985,7 +4985,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "db43e190-6cc1-44ca-a55a-9e811de2d191",
+      "examId" : "cf3f89eb-cef5-45aa-afa6-80a408c608a3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -4995,7 +4995,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b746d882-b74f-4a47-b7aa-fff7d7980d34",
+      "examId" : "df3fc70d-6f2b-4ee2-8989-5f26b366a844",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5005,7 +5005,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ec016ac5-dc0f-4581-aeab-99714d5210bc",
+      "examId" : "2ff6c2c0-44b0-4a3a-9937-160a8e36bd35",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5015,7 +5015,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "34b1ddd4-9263-484c-adf2-576af7b84cfe",
+      "examId" : "9cad746c-27f0-430e-bbae-6b46b1260123",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5055,7 +5055,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "e38e09ac-42fc-44a5-a72d-10a0d4ad5400",
+      "examId" : "7f02aa4f-ff0f-48a1-bc6d-a15ed8e295b4",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5065,7 +5065,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "f4b784d6-f8e1-43e9-8428-1e78824ec085",
+      "examId" : "9fba05df-376d-4001-825a-269d32e9596b",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -5075,7 +5075,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "d8487a48-5254-467e-b251-b2ea665913c0",
+      "examId" : "549c610f-951a-40b4-b14e-3d8c5d5f5dcb",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5085,7 +5085,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "a31610c6-f2f1-4cf7-9d12-46a1bffa1d7d",
+      "examId" : "357999ec-8c3d-45ce-abde-02d0940268ec",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5105,7 +5105,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "29369ca3-63ff-4d56-ad6e-f20a97eddbd1",
+      "examId" : "a1f842ae-0141-47c5-8bcb-e7a5527dadfd",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5115,7 +5115,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "9abe9f73-70f4-4440-9e46-5d1ebb7590c9",
+      "examId" : "d607b386-98e6-4cf2-8ddd-d9042e01ec2c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -5125,7 +5125,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "c326a6e8-5d70-4a15-8cf1-f573e22bd606",
+      "examId" : "45955bc6-b4ab-4aa1-a7e8-f2ee79dd760c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5135,7 +5135,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "92bb1a51-7338-4046-bca0-95f3d3f97c0a",
+      "examId" : "2ae65f6c-db7a-4c97-bd57-c163b06c3b62",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5145,7 +5145,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "70dfe3d3-29ae-4524-a512-92093255bf58",
+      "examId" : "2a14fdf9-b519-4f14-8961-4e7656847b03",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -5155,7 +5155,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a0035c59-dec7-408d-865a-81b8635b154c",
+      "examId" : "82832475-c3af-497a-b17c-4f02c884821d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5165,7 +5165,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "189f2021-8501-4bd5-bfaf-12c60214711d",
+      "examId" : "b70cb948-d8ed-4e02-9b79-9c6e82f33f5a",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5185,7 +5185,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "15ab289c-effd-4f02-9ff1-27bbb9a8753c",
+      "examId" : "4d671afb-7a1b-493d-9e91-bc90c3300909",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -5195,7 +5195,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "14343692-98e8-4756-b4c3-0b65c1552b99",
+      "examId" : "3afd553d-9040-4aa4-8ecd-3115a67e0c0d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5205,7 +5205,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6d3ef995-c1ff-4c1b-92a5-ba21e2e90282",
+      "examId" : "99a18471-b333-4992-84b4-1d3c63ae1c04",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -5215,7 +5215,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "aaa63eb3-3992-4e3e-b330-70f47f54c57c",
+      "examId" : "95d667c7-aa97-46c3-bdb2-f7185ceef4cd",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5225,7 +5225,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "c81433eb-4440-40cd-a859-435e6962f8a3",
+      "examId" : "641b2992-2a63-4742-8cfa-f99f0d7056a8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5235,7 +5235,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f196e295-b256-446a-aae4-c4dc6ce1fa41",
+      "examId" : "ebdf4d3f-0b6f-4b68-b40a-57f3f81483af",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -5245,7 +5245,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "c55954a9-8c58-4d5b-bb1e-9f465aa857c4",
+      "examId" : "db485843-5168-4d8a-8ae4-eddd43a00990",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5265,7 +5265,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "fc0ff637-d9ea-4f50-8d48-8e11ccb1d130",
+      "examId" : "a26bced2-9ecb-401f-89b8-37fae8c39b6c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -5275,7 +5275,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "68c78fba-5554-4fec-b632-f86f6ec8e5b3",
+      "examId" : "5622f790-9553-4549-b942-d6f89953cd3b",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5285,7 +5285,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "f6f06d85-a753-4d78-a93d-97aaba7b0e95",
+      "examId" : "0522519c-f421-46d4-a18a-ce1b481fa32b",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5295,7 +5295,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ae867360-3a40-46a0-b19c-110f01303aee",
+      "examId" : "7e39b237-888e-4923-b88f-4922c9e2bd42",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5305,7 +5305,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "e9843805-d00b-4f42-b77b-6bcf98f60924",
+      "examId" : "7dc5275e-a742-4b12-8010-a841e9779026",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -5315,7 +5315,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "7f9c3a4c-9dda-4b24-86b3-3ab2da8b9e1a",
+      "examId" : "9ccdc85e-0202-442f-b813-4aa0ac94c0ff",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -5325,7 +5325,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "58fe19cd-969c-4276-9175-f63a677e2e9d",
+      "examId" : "a2da9d9d-142a-47c0-a356-901077aae3d8",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5355,7 +5355,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "474fbc18-a65e-4bcb-aa15-72dd832fb362",
+      "examId" : "ef855cc7-cc7e-49e2-949f-925609f29699",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -5365,7 +5365,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "01985640-86a2-416b-a002-1d9be67e4831",
+      "examId" : "dbea3a76-eca2-419c-932e-2f18debde556",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5375,7 +5375,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "f82595af-e6cf-45f4-8dff-1af4da4bba28",
+      "examId" : "5b88edd4-57ab-4f06-8934-fdec80593010",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5385,7 +5385,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "6001b922-57dc-4ca7-b8ea-ab9835aad13c",
+      "examId" : "0162bf44-cbe5-4604-b1a5-af3a9bc14cd7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5395,7 +5395,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "a31610c6-f2f1-4cf7-9d12-46a1bffa1d7d",
+      "examId" : "357999ec-8c3d-45ce-abde-02d0940268ec",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5405,7 +5405,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "60d29401-7bb2-4268-9957-035c7cdbada2",
+      "examId" : "b4a19659-14ca-4f75-a924-79cfcc4fa186",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -5415,7 +5415,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b5977415-8930-4fdd-87ba-a78fbb573ed9",
+      "examId" : "273dece0-1b7b-42b7-b1fb-36d9862a73c8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -5435,7 +5435,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "82921ae1-a43e-4cd3-8c1b-1fa166d2aabd",
+      "examId" : "285a6ccf-e8bc-4def-9e53-86448f1f8599",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5445,7 +5445,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a828d12a-c72a-45df-ba61-6a9f88bfa73d",
+      "examId" : "974eb8e4-94ef-4cb6-94c5-b5ceaa8f1665",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -5455,7 +5455,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "b8cbe2ec-7cf1-45f7-bf5b-26c0c783d690",
+      "examId" : "a60dd0c9-52a3-4d40-94ea-2b6bd6617597",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5465,7 +5465,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "37ab0bbf-33d2-4e2b-9034-a29c64ef28f4",
+      "examId" : "95d7ea4c-0c9a-4d63-a85d-2ee0fb614481",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -5475,7 +5475,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "e3d57a1c-3c74-4434-b4d6-9ce341208570",
+      "examId" : "476001f8-5b0a-4727-bd85-31f33a48ca2b",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5485,7 +5485,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "62d30e57-fb27-43d0-8a2e-c422a2d3b302",
+      "examId" : "05b05483-197f-4bbe-bfb1-d61b740e454d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -5495,7 +5495,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "1d821ee7-83ad-4f92-b939-80eea36ec718",
+      "examId" : "d293a52f-d60f-4597-8bde-8be7b052bac8",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5515,7 +5515,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "ba801890-66d6-44c5-bcea-b5f5aa7d330a",
+      "examId" : "9e6d4918-d950-4604-ba19-4283ce8ff9a9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5525,7 +5525,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e3fa6a01-3bd2-4331-85c9-8ac7b83a756f",
+      "examId" : "5a95ab04-bbc2-4208-b02b-5ef07fac07dd",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -5535,7 +5535,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "994c725a-21b0-4a19-8eae-7f27206e86e7",
+      "examId" : "942dac09-0538-4879-b247-85d4cc9fa6e8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5545,7 +5545,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f5115231-2bea-4968-b918-6256e6aef7e1",
+      "examId" : "d7573bf7-8d22-4c3c-9b99-8128a10bb0f6",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -5555,7 +5555,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "d6094c2e-396e-45a4-8699-63e9b38909fe",
+      "examId" : "3732c0b9-0503-4076-90c3-0dd1f0aef0ec",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5565,7 +5565,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "cd3f7a6c-338f-454e-841e-2fa82c2cee41",
+      "examId" : "ffacd965-5436-4366-82f6-bbe31acdbf87",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5575,7 +5575,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6001b922-57dc-4ca7-b8ea-ab9835aad13c",
+      "examId" : "0162bf44-cbe5-4604-b1a5-af3a9bc14cd7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5585,7 +5585,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "14c7ce5a-08b0-4892-a7cf-89aa752a92e4",
+      "examId" : "dd3999e8-a173-4fca-9674-e51d60eefe90",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -5595,7 +5595,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "e3d57a1c-3c74-4434-b4d6-9ce341208570",
+      "examId" : "476001f8-5b0a-4727-bd85-31f33a48ca2b",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5615,7 +5615,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "18fa19c1-5289-433e-ab94-3bc0c981cdb1",
+      "examId" : "f0ac0ef2-4437-492a-bd96-44f9ee5d4ce7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -5625,7 +5625,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "4b5b9c12-d5fb-469f-8ee6-a9cb844413fc",
+      "examId" : "6f9332e6-1f26-49a0-83dd-8a5dd4ec1ccd",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5635,7 +5635,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "eafef184-a9e4-48f5-93c7-7f04d236a3fa",
+      "examId" : "3606fc12-d577-470b-b223-b76e449d28c3",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5645,7 +5645,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "1f0a0b9e-beca-4ba2-861d-6851058ff03a",
+      "examId" : "089fad47-06b2-4ddc-b23d-181bc4fe2c8c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5665,7 +5665,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "faa72a2e-0a30-4bde-9fe7-0edd9c7353b0",
+      "examId" : "472d3c4f-15cd-44d6-ba25-37d5a45e487f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5675,7 +5675,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "56e76c58-37d7-41ea-9db7-fe90b088115f",
+      "examId" : "5884d1a3-1146-4e5a-9812-8d716ac6c013",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5685,7 +5685,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "8811a86d-7e9b-4b1e-9bf2-1c719e6e4e6e",
+      "examId" : "87bcd76f-3ee3-4b79-9282-044ead277755",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -5695,7 +5695,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "e184ae39-28b9-4c9f-ada7-8b1152d87f3f",
+      "examId" : "619d3b28-4be9-4993-9fc0-e381f97f5895",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5705,7 +5705,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "7d198d32-823c-4c82-a954-1a4137514782",
+      "examId" : "a09f3567-b2a5-4f35-ba20-334db8f8c04e",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5715,7 +5715,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3a6d1bf1-1ef8-498a-8e4d-6267d8299a88",
+      "examId" : "68f93f30-2a14-4490-a993-b28a272e301d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5725,7 +5725,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "68fc0eb7-b585-4ac5-b2ac-ae2be0aacee5",
+      "examId" : "07f17d83-2f37-45be-a162-186640705a01",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -5745,7 +5745,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "faa72a2e-0a30-4bde-9fe7-0edd9c7353b0",
+      "examId" : "472d3c4f-15cd-44d6-ba25-37d5a45e487f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5755,7 +5755,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "5688fac3-3cc3-4d9b-8abf-c43746352c85",
+      "examId" : "05b992d6-6f1c-4f84-8552-46bc0be9213a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5765,7 +5765,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "545dee40-6275-41f0-8e34-3042f5a3fd7b",
+      "examId" : "a605052e-bebe-40de-a64a-4cb3e1f5fab2",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -5775,7 +5775,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "be376602-308f-4cd3-9f5a-e75dd9f593a5",
+      "examId" : "9c1e3ca8-cbed-4e11-856c-6f4ce9efbe82",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -5785,7 +5785,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "8eb566b0-46e9-4110-89b8-d7c1ab3787dc",
+      "examId" : "102adc94-dbf3-417d-951d-29ceff6f373b",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -5795,7 +5795,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "60a40912-2aa3-4ab8-9235-c5a5a93b55f7",
+      "examId" : "274d03c7-5ddf-4649-90d6-91cc802ab35d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -5805,7 +5805,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "73d897e6-1cbb-4d9f-a846-6a353a22a26a",
+      "examId" : "117e4b4d-ff1a-4272-a084-e2cdbb177db6",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -5825,7 +5825,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "39a7b75f-b188-4936-bfc4-42371b523959",
+      "examId" : "54995eef-0f71-4651-8dc0-9b09b6b22ec5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -5835,7 +5835,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "3bfff8f6-eb07-43a0-b6eb-928cc7942419",
+      "examId" : "e4112260-50d4-488f-bf59-9a757587da55",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5845,7 +5845,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "01985640-86a2-416b-a002-1d9be67e4831",
+      "examId" : "dbea3a76-eca2-419c-932e-2f18debde556",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -5855,7 +5855,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "db5d4457-5889-47fd-9e19-f7056727080d",
+      "examId" : "33b44414-ff3d-4f02-b87c-73d18643d070",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5865,7 +5865,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "9a46cd4a-4b02-4c66-b0ff-b7d54470b179",
+      "examId" : "71364df6-cc1a-46ab-ba1e-b2011c9b6271",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5875,7 +5875,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a8366d2c-7b9b-4103-a626-c4ae50512036",
+      "examId" : "0674f526-754a-4408-9657-2824b8ac3c38",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5885,7 +5885,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6eabdbad-c8d8-41af-ab79-4542dddb5b58",
+      "examId" : "2d3685ff-428b-47a7-9d47-0be3f74e562c",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -5905,7 +5905,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "e3fa6a01-3bd2-4331-85c9-8ac7b83a756f",
+      "examId" : "5a95ab04-bbc2-4208-b02b-5ef07fac07dd",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -5915,7 +5915,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "db8f8077-4287-452a-b065-7d880864a10b",
+      "examId" : "f9f6eff6-f289-4d74-9f37-be185530bbcf",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -5925,7 +5925,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "ba28ab36-a1b2-478e-8d68-e9c02fe66549",
+      "examId" : "4f5b86e1-7174-4828-9373-c72d57256ed9",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -5935,7 +5935,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "86040d90-6e06-4c9a-8ea0-5f6825122150",
+      "examId" : "4754e9c6-440c-45af-8208-4b1580f65ad3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -5945,7 +5945,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "db5d4457-5889-47fd-9e19-f7056727080d",
+      "examId" : "33b44414-ff3d-4f02-b87c-73d18643d070",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -5955,7 +5955,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "031689d1-8f34-482b-8131-8638dc60cbc9",
+      "examId" : "b883666b-914b-44d7-bbbe-b3ec0d802468",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -5965,7 +5965,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "f3c48b9c-7fcc-425c-aa5a-0a32caf9c81a",
+      "examId" : "0b848f73-cbd7-4f56-bf7a-37fc8a245867",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -5975,7 +5975,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ec95d356-2ba4-4322-b49a-a845e357543f",
+      "examId" : "7a197ed3-a3a4-4aa9-835d-71e590972dd9",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -5985,7 +5985,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "7f9c3a4c-9dda-4b24-86b3-3ab2da8b9e1a",
+      "examId" : "9ccdc85e-0202-442f-b813-4aa0ac94c0ff",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6015,7 +6015,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "f11f6276-9f30-4dab-86b8-236cdcea037b",
+      "examId" : "530a8b52-aa9b-4cdc-a3c5-7324be2bbb93",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -6025,7 +6025,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "86abd0af-3b1e-4fc4-84b2-f57320e4671d",
+      "examId" : "e1e7b5b9-d34f-4ac1-929e-d0e323f805d8",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6035,7 +6035,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "744dbe67-a98e-4588-8e9d-af2783fee949",
+      "examId" : "4ff665b4-e4c7-4713-9af5-1b3423e581b3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -6045,7 +6045,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "34b1ddd4-9263-484c-adf2-576af7b84cfe",
+      "examId" : "9cad746c-27f0-430e-bbae-6b46b1260123",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -6065,7 +6065,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 55.55555555555556,
     "assignments" : [ {
-      "examId" : "963461a1-da87-44c1-9fca-d0a96b2464e1",
+      "examId" : "b72051d9-127f-4326-afea-7cb7f8e1891f",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -6075,7 +6075,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "f82595af-e6cf-45f4-8dff-1af4da4bba28",
+      "examId" : "5b88edd4-57ab-4f06-8934-fdec80593010",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -6085,7 +6085,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "c81433eb-4440-40cd-a859-435e6962f8a3",
+      "examId" : "641b2992-2a63-4742-8cfa-f99f0d7056a8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6095,7 +6095,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "7839c5d7-5d77-491d-bfa5-70b0c6e55cfc",
+      "examId" : "6d3a3d41-d6b5-4ce6-a919-934ad5f8466a",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6105,7 +6105,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "a1da3351-2d03-4f4b-ab07-bcd31aae7b44",
+      "examId" : "5aaba16e-fd9e-4220-a7ca-276aa1cabf21",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6125,7 +6125,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 66.66666666666667,
     "assignments" : [ {
-      "examId" : "39a7b75f-b188-4936-bfc4-42371b523959",
+      "examId" : "54995eef-0f71-4651-8dc0-9b09b6b22ec5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6135,7 +6135,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "8f9ee437-861f-4f25-95db-442bd15b83f7",
+      "examId" : "ce8fdaf5-286f-473e-97d3-ac7d5ad9d299",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -6145,7 +6145,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "b388c936-40e3-4449-9091-54c078662e27",
+      "examId" : "d60fa845-b5ee-476b-a8d5-6218868f81d0",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6155,7 +6155,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "70b2f6b3-a337-45f8-8f13-b243b803ad0a",
+      "examId" : "7ad7774c-da73-427b-9d62-b3ccfd1d67d9",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6165,7 +6165,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "cb5f9a15-af56-499c-a190-5dea53713afa",
+      "examId" : "a2da9b09-3606-4978-b0a4-c594bfc6496f",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -6175,7 +6175,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a1da3351-2d03-4f4b-ab07-bcd31aae7b44",
+      "examId" : "5aaba16e-fd9e-4220-a7ca-276aa1cabf21",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6205,7 +6205,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "6a05bd37-8b6a-491b-83ad-8ba027ee00d7",
+      "examId" : "d8a99af3-f28a-4efe-9072-fe0272cb1e4b",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -6215,7 +6215,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "ca76a77d-35c6-42b5-8c38-e2549a0162df",
+      "examId" : "fb944ca7-7f8f-4498-937e-974f96fe428f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6225,7 +6225,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "aa81c61d-7727-4282-931a-085946a2f0fa",
+      "examId" : "f31d6cf3-87f3-445e-8620-02b6350c5920",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -6245,7 +6245,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "851aa56d-8322-41bd-a6ed-3962e7d0c79c",
+      "examId" : "cdada3ed-fd4b-4e32-a5b2-ff0d3ee55ab2",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6255,7 +6255,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "36fe3775-6cbe-41e9-99c3-b5e3e75a1054",
+      "examId" : "edeffc53-65a5-41d4-b3b3-6aa42c98688d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -6275,7 +6275,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "ff690ab4-b97d-4da9-8138-d0e40b2f4dc2",
+      "examId" : "68bd72e7-76a8-45a5-90aa-52c02772711d",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6285,7 +6285,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "c318fab4-164d-4d0b-951d-3cf767844b9f",
+      "examId" : "7558b964-e328-4b11-827c-b2217371c7bd",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6295,7 +6295,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "328b3e7b-4e43-443c-a57c-375cf05e547e",
+      "examId" : "294f002a-d488-4a6d-9151-16d15d57d9c5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6315,7 +6315,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 44.44444444444444,
     "assignments" : [ {
-      "examId" : "e598a59a-2f72-4379-a5b6-dc45dc90c9d1",
+      "examId" : "14647967-00e3-4d7f-9ecd-0b163a7e0884",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6325,7 +6325,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "994c725a-21b0-4a19-8eae-7f27206e86e7",
+      "examId" : "942dac09-0538-4879-b247-85d4cc9fa6e8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6335,7 +6335,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "9f79478d-857c-432e-bc2e-ed4ecbc98d01",
+      "examId" : "7020dce3-0e92-4737-b0f3-b8ad29b369bf",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -6345,7 +6345,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "7839c5d7-5d77-491d-bfa5-70b0c6e55cfc",
+      "examId" : "6d3a3d41-d6b5-4ce6-a919-934ad5f8466a",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6365,7 +6365,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "5b3e175a-872f-4266-89d1-10ab0abee1a3",
+      "examId" : "831482f5-b5b0-48be-94d4-1e26f10ae793",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6375,7 +6375,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e184ae39-28b9-4c9f-ada7-8b1152d87f3f",
+      "examId" : "619d3b28-4be9-4993-9fc0-e381f97f5895",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -6385,7 +6385,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "a09cf4a9-dde9-4f99-9577-c0c294c982a2",
+      "examId" : "ee2bb66e-2f13-4eeb-aa17-5dd66e49ba21",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6395,7 +6395,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d93542dd-fb57-4d59-9c8e-0ebcd41eedd5",
+      "examId" : "7fee2cbe-d032-48e7-92fd-8bcaf465eb72",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6415,7 +6415,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 11.11111111111111,
     "assignments" : [ {
-      "examId" : "d7d2ee15-962d-4713-9b12-294e9fe094e0",
+      "examId" : "c6fa08b8-493f-4c1d-9d11-df9486ca032b",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -6435,7 +6435,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 25.0,
     "assignments" : [ {
-      "examId" : "0f194cfc-7573-4dd9-a5fa-4501b16e7808",
+      "examId" : "d2b0b223-9198-47da-9413-fc0da5fcccfd",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6465,7 +6465,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "810e51b5-1a8e-446a-bce2-b7658e144f73",
+      "examId" : "fee54224-fcf6-4952-8238-f6996599d5a1",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6475,7 +6475,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b5977415-8930-4fdd-87ba-a78fbb573ed9",
+      "examId" : "273dece0-1b7b-42b7-b1fb-36d9862a73c8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -6485,7 +6485,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "189f2021-8501-4bd5-bfaf-12c60214711d",
+      "examId" : "b70cb948-d8ed-4e02-9b79-9c6e82f33f5a",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -6495,7 +6495,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "d09b68a3-921f-4d7c-b4dc-f7f5927c4d91",
+      "examId" : "2583248c-2839-4115-9bdc-28ac911fa258",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6515,7 +6515,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "c1f361b8-0614-4d15-9ff6-df521ac92294",
+      "examId" : "fd8b17b3-9672-4fa0-affa-0ca17ba51a6f",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6525,7 +6525,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "eafef184-a9e4-48f5-93c7-7f04d236a3fa",
+      "examId" : "3606fc12-d577-470b-b223-b76e449d28c3",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -6535,7 +6535,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3be0f13f-d83b-495f-9aad-b7c2d6307336",
+      "examId" : "ec40cb04-164a-4e49-b0a4-d75232a67d99",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -6555,7 +6555,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "50c202af-305f-4bca-8133-c0d8772199f0",
+      "examId" : "79c1c414-493c-4f28-8e7b-cfedbc5c80b2",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6565,7 +6565,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "70153552-e6be-486b-8899-d54960789969",
+      "examId" : "b079f34d-fe41-4d13-b9b5-9b09d20d2ca6",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -6585,7 +6585,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "15ab289c-effd-4f02-9ff1-27bbb9a8753c",
+      "examId" : "4d671afb-7a1b-493d-9e91-bc90c3300909",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -6595,7 +6595,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f44ab841-68c9-43e1-a827-270343ed2249",
+      "examId" : "b6a8a1da-506a-4a06-8bd7-943415436c9c",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6605,7 +6605,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d6278914-bc17-47b1-ba95-ebe53ebcebbd",
+      "examId" : "68674ffe-9e91-4d1e-9340-2eb9e0976967",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6615,7 +6615,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "fd7ce5df-8fc0-40df-8a30-6c7524205500",
+      "examId" : "71274d3c-27d7-4297-b869-f5fdb133d683",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6625,7 +6625,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "60a40912-2aa3-4ab8-9235-c5a5a93b55f7",
+      "examId" : "274d03c7-5ddf-4649-90d6-91cc802ab35d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -6635,7 +6635,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "2849307e-8343-4128-a5ca-f3bee3ea785f",
+      "examId" : "68739c05-4c97-4dd7-a717-0f31b6991f36",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -6645,7 +6645,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "568c261d-0e12-41a6-b72e-15d9f53d59fc",
+      "examId" : "5e4ea513-eef5-476b-840c-36ffa19917ec",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -6665,7 +6665,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "f44ab841-68c9-43e1-a827-270343ed2249",
+      "examId" : "b6a8a1da-506a-4a06-8bd7-943415436c9c",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6675,7 +6675,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "70b2f6b3-a337-45f8-8f13-b243b803ad0a",
+      "examId" : "7ad7774c-da73-427b-9d62-b3ccfd1d67d9",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6695,7 +6695,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "cb87c0ae-1ce2-4b93-8ef6-0bc0107df1a4",
+      "examId" : "cb4aa1bf-b372-4fc4-989f-69b04f977b4c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6705,7 +6705,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "f4a0256d-2b57-4f69-83e0-c42bb593d1fa",
+      "examId" : "80efe0af-d3c8-4db0-84cc-da75775f415a",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6715,7 +6715,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f6f06d85-a753-4d78-a93d-97aaba7b0e95",
+      "examId" : "0522519c-f421-46d4-a18a-ce1b481fa32b",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -6735,7 +6735,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "e99f0412-096f-49a6-be6b-61d26458dbae",
+      "examId" : "7ce4449f-fa4c-48b6-bc7f-c18a10d81c8d",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -6745,7 +6745,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "d93542dd-fb57-4d59-9c8e-0ebcd41eedd5",
+      "examId" : "7fee2cbe-d032-48e7-92fd-8bcaf465eb72",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6755,7 +6755,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "c318fab4-164d-4d0b-951d-3cf767844b9f",
+      "examId" : "7558b964-e328-4b11-827c-b2217371c7bd",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -6775,7 +6775,7 @@
     "unavailabilityCredit" : 15,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "f8a3e653-0ddb-4df7-a0d8-3c615d7f96b1",
+      "examId" : "518fbb06-7aa0-4099-986a-60937e6a5688",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -6785,7 +6785,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "54f15bf2-2ae0-4cf4-8dba-3b7c38381500",
+      "examId" : "a4656ef7-f815-4064-ad28-d4d33d453bf3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -6805,7 +6805,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 57.142857142857146,
     "assignments" : [ {
-      "examId" : "2ebce5b2-1d85-4b74-972a-4c61ec6517af",
+      "examId" : "374d2b03-7c0c-439c-91b6-f0913cf18b8d",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -6815,7 +6815,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "d6278914-bc17-47b1-ba95-ebe53ebcebbd",
+      "examId" : "68674ffe-9e91-4d1e-9340-2eb9e0976967",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6825,7 +6825,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "f3c48b9c-7fcc-425c-aa5a-0a32caf9c81a",
+      "examId" : "0b848f73-cbd7-4f56-bf7a-37fc8a245867",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -6835,7 +6835,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "15c6e55f-446d-4b81-9ca3-e2bd5bbb57e4",
+      "examId" : "74f48f93-8eaa-456b-b890-17907196b686",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -6855,7 +6855,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 75.0,
     "assignments" : [ {
-      "examId" : "963461a1-da87-44c1-9fca-d0a96b2464e1",
+      "examId" : "b72051d9-127f-4326-afea-7cb7f8e1891f",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -6865,7 +6865,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "e1e37c4f-876b-4457-89ea-5e57ebc04d48",
+      "examId" : "ce91845f-495e-4b42-bf5e-a7ebc0753c1f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -6875,7 +6875,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "160a50f1-7cf1-440c-9ea2-daa00679b7cd",
+      "examId" : "4cc94249-419b-41c3-bae4-927d3118b3fa",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -6895,7 +6895,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 66.66666666666667,
     "assignments" : [ {
-      "examId" : "cb5f9a15-af56-499c-a190-5dea53713afa",
+      "examId" : "a2da9b09-3606-4978-b0a4-c594bfc6496f",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -6905,7 +6905,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f196e295-b256-446a-aae4-c4dc6ce1fa41",
+      "examId" : "ebdf4d3f-0b6f-4b68-b40a-57f3f81483af",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -6925,7 +6925,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 14.285714285714286,
     "assignments" : [ {
-      "examId" : "9f79478d-857c-432e-bc2e-ed4ecbc98d01",
+      "examId" : "7020dce3-0e92-4737-b0f3-b8ad29b369bf",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -6945,7 +6945,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 62.5,
     "assignments" : [ {
-      "examId" : "68c78fba-5554-4fec-b632-f86f6ec8e5b3",
+      "examId" : "5622f790-9553-4549-b942-d6f89953cd3b",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -6955,7 +6955,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6a05bd37-8b6a-491b-83ad-8ba027ee00d7",
+      "examId" : "d8a99af3-f28a-4efe-9072-fe0272cb1e4b",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -6965,7 +6965,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "418f8da3-2e9b-4329-9baf-08fda30ea0be",
+      "examId" : "5688c4b6-7772-47f2-9a40-ee41ff0727ce",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -6975,7 +6975,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "605eb3fa-00bd-4037-8b70-11bd57a70135",
+      "examId" : "de661d73-0c7a-4114-b761-8bc7d5fc96f8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -6985,7 +6985,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "da6a6a84-1f06-4e25-9e43-88a3cf4e2486",
+      "examId" : "e25e7f54-cafb-4959-83ec-a0d661a2bbaf",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -7005,7 +7005,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 75.0,
     "assignments" : [ {
-      "examId" : "fc0ff637-d9ea-4f50-8d48-8e11ccb1d130",
+      "examId" : "a26bced2-9ecb-401f-89b8-37fae8c39b6c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -7015,7 +7015,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "fb51d218-9077-4c11-b375-b88a8b027563",
+      "examId" : "78e12cfb-96dd-42b5-9e7d-6d1f07d30381",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7025,7 +7025,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "70dfe3d3-29ae-4524-a512-92093255bf58",
+      "examId" : "2a14fdf9-b519-4f14-8961-4e7656847b03",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7045,7 +7045,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "8a4df137-d81d-4e13-8d4e-0646c4aa173c",
+      "examId" : "549d7077-aa76-4ec0-9e16-6df05c537ef0",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7055,7 +7055,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "5730f485-5fc3-42f7-98a2-ed2e574ea6b4",
+      "examId" : "b6b9a5c3-d754-4fe1-ad0b-a137f1252ebb",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -7065,7 +7065,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "1f0a0b9e-beca-4ba2-861d-6851058ff03a",
+      "examId" : "089fad47-06b2-4ddc-b23d-181bc4fe2c8c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -7085,7 +7085,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "fc3fa19a-face-4e5a-bc15-25d1ddca1663",
+      "examId" : "a6cac1eb-2398-4c2b-9ebc-4c8dde772a5a",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7095,7 +7095,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "95d7fad8-7d52-4234-8464-b74e407ca79e",
+      "examId" : "1921a95a-36a2-4447-a123-122c840795e7",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7115,7 +7115,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "fb51d218-9077-4c11-b375-b88a8b027563",
+      "examId" : "78e12cfb-96dd-42b5-9e7d-6d1f07d30381",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7125,7 +7125,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b8cbe2ec-7cf1-45f7-bf5b-26c0c783d690",
+      "examId" : "a60dd0c9-52a3-4d40-94ea-2b6bd6617597",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7145,7 +7145,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 11.11111111111111,
     "assignments" : [ {
-      "examId" : "df01b472-129d-4151-a916-99980bd2d41a",
+      "examId" : "4868917f-16d1-4af1-aefb-6f83d6261af2",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -7165,7 +7165,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "b388c936-40e3-4449-9091-54c078662e27",
+      "examId" : "d60fa845-b5ee-476b-a8d5-6218868f81d0",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -7175,7 +7175,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6da474f8-325f-486a-b915-a3e3c8a689d0",
+      "examId" : "b7d22f25-f869-4960-9e62-46e807ef972f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7185,7 +7185,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ec016ac5-dc0f-4581-aeab-99714d5210bc",
+      "examId" : "2ff6c2c0-44b0-4a3a-9937-160a8e36bd35",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7195,7 +7195,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "62d30e57-fb27-43d0-8a2e-c422a2d3b302",
+      "examId" : "05b05483-197f-4bbe-bfb1-d61b740e454d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -7205,7 +7205,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "2697c4c3-3505-4a8c-8ab2-ed2115cf8f29",
+      "examId" : "0edd668c-3790-45d7-80ba-6e69ecf6d1e7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -7215,7 +7215,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "1d821ee7-83ad-4f92-b939-80eea36ec718",
+      "examId" : "d293a52f-d60f-4597-8bde-8be7b052bac8",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -7225,7 +7225,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e057f0e7-f1f6-450c-989a-2d3703a1500b",
+      "examId" : "be7cc301-cf01-4e04-bb5e-882471e3d20d",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -7245,7 +7245,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "db43e190-6cc1-44ca-a55a-9e811de2d191",
+      "examId" : "cf3f89eb-cef5-45aa-afa6-80a408c608a3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7255,7 +7255,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "fb700171-e232-4e8f-9951-b821b7ca6d57",
+      "examId" : "ffdc4def-a79e-4cfe-a2b0-71a06354cc4c",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -7265,7 +7265,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "3671e0fb-30d4-4194-9c8a-33e111066491",
+      "examId" : "00d6e537-6613-47f0-89c3-f1e271f67f14",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7285,7 +7285,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 14.285714285714286,
     "assignments" : [ {
-      "examId" : "aea0463d-5eb1-454c-96db-dbbaadeccf61",
+      "examId" : "dac0f4b6-693f-482f-bdb9-5934285368f7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7305,7 +7305,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "0f194cfc-7573-4dd9-a5fa-4501b16e7808",
+      "examId" : "d2b0b223-9198-47da-9413-fc0da5fcccfd",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7315,7 +7315,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5b3e175a-872f-4266-89d1-10ab0abee1a3",
+      "examId" : "831482f5-b5b0-48be-94d4-1e26f10ae793",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7325,7 +7325,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "7d198d32-823c-4c82-a954-1a4137514782",
+      "examId" : "a09f3567-b2a5-4f35-ba20-334db8f8c04e",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -7345,7 +7345,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "6139e0af-4ce0-40dd-a87e-2ea0fa3099eb",
+      "examId" : "df47ff6b-a0af-4465-b5f0-a1f5cff1be04",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7355,7 +7355,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "14343692-98e8-4756-b4c3-0b65c1552b99",
+      "examId" : "3afd553d-9040-4aa4-8ecd-3115a67e0c0d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7365,7 +7365,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "9abe9f73-70f4-4440-9e46-5d1ebb7590c9",
+      "examId" : "d607b386-98e6-4cf2-8ddd-d9042e01ec2c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -7375,7 +7375,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "896b22ce-1b13-458c-a8c8-466f8959d98b",
+      "examId" : "a07bfe04-f996-4c06-8e9a-1b766bae1816",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7385,7 +7385,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "7e7ed1b6-7c3e-40c5-8ec0-74fc8660a805",
+      "examId" : "de161e48-9050-4cfc-abaa-2c4bfd58a797",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7395,7 +7395,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "066e4a4f-87c5-408b-bb10-09227df48dd9",
+      "examId" : "0d0aea84-50c2-49f2-a88e-d18d692c6696",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -7405,7 +7405,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "a8366d2c-7b9b-4103-a626-c4ae50512036",
+      "examId" : "0674f526-754a-4408-9657-2824b8ac3c38",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -7425,7 +7425,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 75.0,
     "assignments" : [ {
-      "examId" : "54f15bf2-2ae0-4cf4-8dba-3b7c38381500",
+      "examId" : "a4656ef7-f815-4064-ad28-d4d33d453bf3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -7435,7 +7435,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "8113d3f0-20d9-4b77-81ac-835a0aa8d221",
+      "examId" : "c150b8ee-c4ce-43da-9905-dee0199ce968",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -7445,7 +7445,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "328b3e7b-4e43-443c-a57c-375cf05e547e",
+      "examId" : "294f002a-d488-4a6d-9151-16d15d57d9c5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7465,7 +7465,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "be376602-308f-4cd3-9f5a-e75dd9f593a5",
+      "examId" : "9c1e3ca8-cbed-4e11-856c-6f4ce9efbe82",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -7475,7 +7475,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "a09cf4a9-dde9-4f99-9577-c0c294c982a2",
+      "examId" : "ee2bb66e-2f13-4eeb-aa17-5dd66e49ba21",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7485,7 +7485,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "b4b3a4a5-0e4e-49ff-8d5a-08b2f8f979a5",
+      "examId" : "b6933e4b-525e-4e1c-ac25-81ade5d6f660",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7505,7 +7505,7 @@
     "unavailabilityCredit" : 15,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "d7d2ee15-962d-4713-9b12-294e9fe094e0",
+      "examId" : "c6fa08b8-493f-4c1d-9d11-df9486ca032b",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -7525,7 +7525,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "90293c3d-9da2-4b95-a1ac-11e5d98ae234",
+      "examId" : "6409b697-4feb-47f6-8fe1-51dd60b5ead9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7535,7 +7535,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3e62394a-30b9-4247-96a0-fcb212aefbbf",
+      "examId" : "c9862174-44a4-4bf1-bf69-4e6891c1bef1",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -7545,7 +7545,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "160a50f1-7cf1-440c-9ea2-daa00679b7cd",
+      "examId" : "4cc94249-419b-41c3-bae4-927d3118b3fa",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7565,7 +7565,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "50c202af-305f-4bca-8133-c0d8772199f0",
+      "examId" : "79c1c414-493c-4f28-8e7b-cfedbc5c80b2",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7575,7 +7575,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5651bf8f-0211-4d66-a78a-be6ad2295b28",
+      "examId" : "196f1aa6-5eaf-4e91-b4ae-6989abf633c6",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -7585,7 +7585,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "6de0e708-83fe-4cab-abde-5f59d0773885",
+      "examId" : "daaa92ff-0c5f-41ef-a078-3859df499924",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -7595,7 +7595,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f92cbc85-725d-4018-9c48-849538be8992",
+      "examId" : "31cdb2d1-08b0-4e26-907a-53f8ccf51e50",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7605,7 +7605,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "f5115231-2bea-4968-b918-6256e6aef7e1",
+      "examId" : "d7573bf7-8d22-4c3c-9b99-8128a10bb0f6",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -7615,7 +7615,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "895bd502-0726-47fa-862d-4785535f5fb0",
+      "examId" : "106cfee4-d43c-4a83-86a2-79b39d691425",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7625,7 +7625,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a0035c59-dec7-408d-865a-81b8635b154c",
+      "examId" : "82832475-c3af-497a-b17c-4f02c884821d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7635,7 +7635,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "aa81c61d-7727-4282-931a-085946a2f0fa",
+      "examId" : "f31d6cf3-87f3-445e-8620-02b6350c5920",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -7655,7 +7655,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "f11f6276-9f30-4dab-86b8-236cdcea037b",
+      "examId" : "530a8b52-aa9b-4cdc-a3c5-7324be2bbb93",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7665,7 +7665,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "d10e8c74-a8b5-446c-806a-184e58ec9fca",
+      "examId" : "0c0f6d30-e93a-4a09-b926-9dca18139bc7",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7675,7 +7675,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "db8f8077-4287-452a-b065-7d880864a10b",
+      "examId" : "f9f6eff6-f289-4d74-9f37-be185530bbcf",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -7685,7 +7685,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "fa922caa-ac15-4787-a9a5-c6d180776a4e",
+      "examId" : "d80e9a79-fb89-440f-972f-cec02d84b436",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -7715,7 +7715,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 57.142857142857146,
     "assignments" : [ {
-      "examId" : "3aa9cef1-b5e7-4419-a3cd-8642ac729958",
+      "examId" : "060bb35a-221e-49a5-b577-3b7d8f0de99d",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -7725,7 +7725,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "b5d85667-0061-496f-8e95-9f9a33983b81",
+      "examId" : "6d3e309d-5bbf-4db0-b6d0-a04d60aca30a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -7735,7 +7735,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "dadde898-357e-45f7-b7b9-5f81b0b19b44",
+      "examId" : "71724ae3-c719-49be-8538-322a41ca741d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7745,7 +7745,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5dba0c47-c606-4813-85a1-723fcf81d10e",
+      "examId" : "2a67c1ff-733a-4803-9fb8-51fe4d7ae8f7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -7765,7 +7765,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "f8a3e653-0ddb-4df7-a0d8-3c615d7f96b1",
+      "examId" : "518fbb06-7aa0-4099-986a-60937e6a5688",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7775,7 +7775,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "70153552-e6be-486b-8899-d54960789969",
+      "examId" : "b079f34d-fe41-4d13-b9b5-9b09d20d2ca6",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -7785,7 +7785,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "99584f4f-390d-4be2-b443-6075ceaf1d71",
+      "examId" : "0f210a6f-4f1a-42d9-afe4-1b48f43260cc",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7795,7 +7795,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "46eab4cd-a6d8-4986-a412-a56dec9e1478",
+      "examId" : "328eeaaa-543c-4d3d-a3c1-0a86fecb6567",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -7825,7 +7825,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "dadde898-357e-45f7-b7b9-5f81b0b19b44",
+      "examId" : "71724ae3-c719-49be-8538-322a41ca741d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7835,7 +7835,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "95d7fad8-7d52-4234-8464-b74e407ca79e",
+      "examId" : "1921a95a-36a2-4447-a123-122c840795e7",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7855,7 +7855,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "9a46cd4a-4b02-4c66-b0ff-b7d54470b179",
+      "examId" : "71364df6-cc1a-46ab-ba1e-b2011c9b6271",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -7865,7 +7865,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "281e1325-2ba3-4f84-b8c5-25e99976a232",
+      "examId" : "92371992-8544-458c-af25-b164fdbe9676",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7885,7 +7885,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "86040d90-6e06-4c9a-8ea0-5f6825122150",
+      "examId" : "4754e9c6-440c-45af-8208-4b1580f65ad3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7895,7 +7895,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "24b529ff-255e-413f-83d2-175277d48f9d",
+      "examId" : "89144818-ad22-45b8-bed5-6685f723fef2",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -7905,7 +7905,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "27ea3ca9-dbd9-47d0-b12f-18f94d8a3dfd",
+      "examId" : "7a71a9af-d8c5-462f-9cd6-0698250ea601",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -7925,7 +7925,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 71.42857142857143,
     "assignments" : [ {
-      "examId" : "ca76a77d-35c6-42b5-8c38-e2549a0162df",
+      "examId" : "fb944ca7-7f8f-4498-937e-974f96fe428f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -7935,7 +7935,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "197752a3-26cc-4a16-88ff-4b0033de0f6f",
+      "examId" : "fce6f507-8fc3-489d-b2f4-e22850be5877",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -7945,7 +7945,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "1614cddb-b9ba-47fd-98b7-6a5acd6dd8b0",
+      "examId" : "fc66f757-ed3f-44f5-8a50-3ddeda6ece92",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -7955,7 +7955,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "15c6e55f-446d-4b81-9ca3-e2bd5bbb57e4",
+      "examId" : "74f48f93-8eaa-456b-b890-17907196b686",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -7965,7 +7965,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "883d87e7-5456-485a-aba6-7c6825b4f22d",
+      "examId" : "29fbb81a-5d3b-41ca-808e-7fc0631330b5",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -7985,7 +7985,7 @@
     "unavailabilityCredit" : 15,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "aaa63eb3-3992-4e3e-b330-70f47f54c57c",
+      "examId" : "95d667c7-aa97-46c3-bdb2-f7185ceef4cd",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -7995,7 +7995,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "7ec99b1f-baa6-43b4-a237-dfe2d1f7aa1b",
+      "examId" : "300d9dbf-47a7-4cb3-85af-3ab6cd9ccf63",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -8015,7 +8015,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "a828d12a-c72a-45df-ba61-6a9f88bfa73d",
+      "examId" : "974eb8e4-94ef-4cb6-94c5-b5ceaa8f1665",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -8025,7 +8025,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "2f1354b2-e018-4be5-a41d-66a7cb57739e",
+      "examId" : "51751b47-2dda-4281-841b-d0024ba8f9c5",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -8035,7 +8035,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "ec95d356-2ba4-4322-b49a-a845e357543f",
+      "examId" : "7a197ed3-a3a4-4aa9-835d-71e590972dd9",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -8055,7 +8055,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "851aa56d-8322-41bd-a6ed-3962e7d0c79c",
+      "examId" : "cdada3ed-fd4b-4e32-a5b2-ff0d3ee55ab2",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -8065,7 +8065,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "1614cddb-b9ba-47fd-98b7-6a5acd6dd8b0",
+      "examId" : "fc66f757-ed3f-44f5-8a50-3ddeda6ece92",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8075,7 +8075,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "aea0463d-5eb1-454c-96db-dbbaadeccf61",
+      "examId" : "dac0f4b6-693f-482f-bdb9-5934285368f7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -8085,7 +8085,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "066e4a4f-87c5-408b-bb10-09227df48dd9",
+      "examId" : "0d0aea84-50c2-49f2-a88e-d18d692c6696",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -8095,7 +8095,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "4f35a015-73d0-4459-a6cd-a82ddbb15221",
+      "examId" : "4143660d-36f5-4c05-9228-01121a746277",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -8105,7 +8105,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "c4298eeb-a5e3-473f-882d-848a7fcae76f",
+      "examId" : "dc4778ee-edf6-4fa6-8258-2de65d928faf",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8115,7 +8115,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "4712605c-9759-4ecf-95dd-bb9d92971fc9",
+      "examId" : "a0b0abd2-bcdb-4757-ac9b-49a7a5281c1b",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8135,7 +8135,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 85.71428571428571,
     "assignments" : [ {
-      "examId" : "56e76c58-37d7-41ea-9db7-fe90b088115f",
+      "examId" : "5884d1a3-1146-4e5a-9812-8d716ac6c013",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -8145,7 +8145,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "41c3a5b0-943c-46c7-8b48-1f21bc17b873",
+      "examId" : "e5e06011-6a95-40ad-adb5-73df043df530",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -8155,7 +8155,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "2207ad66-78d1-4b7c-989e-74cbe63afc47",
+      "examId" : "bf436755-5c07-4c6d-a3c9-d7312de4f680",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8165,7 +8165,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "b4b3a4a5-0e4e-49ff-8d5a-08b2f8f979a5",
+      "examId" : "b6933e4b-525e-4e1c-ac25-81ade5d6f660",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8175,7 +8175,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "0b15a729-f0c1-4fe3-8008-2ce1ae1e31d7",
+      "examId" : "d3a13261-a604-4051-895c-fac71fc0c49b",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -8185,7 +8185,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d2cb6e3e-496c-4495-a9a7-172609e7a556",
+      "examId" : "fbfd4a12-e6f7-4959-b1d4-dac2cd22ab69",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -8205,7 +8205,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "fb700171-e232-4e8f-9951-b821b7ca6d57",
+      "examId" : "ffdc4def-a79e-4cfe-a2b0-71a06354cc4c",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -8215,7 +8215,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "f608daa4-8fdf-4926-a20d-9a637c005306",
+      "examId" : "0dfb5541-626b-4c8a-ad60-1ab1cb35ea49",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8235,7 +8235,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 11.11111111111111,
     "assignments" : [ {
-      "examId" : "e37d14ae-0c1e-4089-8004-57fab22f8088",
+      "examId" : "62e248e0-2793-4871-819d-167bdd72fb3f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -8265,7 +8265,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "6139e0af-4ce0-40dd-a87e-2ea0fa3099eb",
+      "examId" : "df47ff6b-a0af-4465-b5f0-a1f5cff1be04",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8275,7 +8275,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e38e09ac-42fc-44a5-a72d-10a0d4ad5400",
+      "examId" : "7f02aa4f-ff0f-48a1-bc6d-a15ed8e295b4",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -8285,7 +8285,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "b746d882-b74f-4a47-b7aa-fff7d7980d34",
+      "examId" : "df3fc70d-6f2b-4ee2-8989-5f26b366a844",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -8295,7 +8295,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "14896460-3015-4e6e-9c2f-c6846ec092ac",
+      "examId" : "0bb35099-7125-4750-9354-2e9ccd681ae2",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -8305,7 +8305,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "eb08fab8-6e61-4ab4-9f62-e32e779307e7",
+      "examId" : "e82daf9c-e0c4-4642-b1ec-5239029ca247",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8315,7 +8315,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "4f35a015-73d0-4459-a6cd-a82ddbb15221",
+      "examId" : "4143660d-36f5-4c05-9228-01121a746277",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -8325,7 +8325,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "bf946efb-be49-4ea9-8be0-f3d4897cc1db",
+      "examId" : "966e1df6-3d6c-4f81-9d7a-0307f25fed45",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -8345,7 +8345,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "aa446a26-75f8-4084-ad74-d7105f199494",
+      "examId" : "aa749660-fc0c-41b6-8065-51ec7131eac8",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8355,7 +8355,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "90293c3d-9da2-4b95-a1ac-11e5d98ae234",
+      "examId" : "6409b697-4feb-47f6-8fe1-51dd60b5ead9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8385,7 +8385,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 11.11111111111111,
     "assignments" : [ {
-      "examId" : "24b529ff-255e-413f-83d2-175277d48f9d",
+      "examId" : "89144818-ad22-45b8-bed5-6685f723fef2",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -8405,7 +8405,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "e99f0412-096f-49a6-be6b-61d26458dbae",
+      "examId" : "7ce4449f-fa4c-48b6-bc7f-c18a10d81c8d",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -8415,7 +8415,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "e1e37c4f-876b-4457-89ea-5e57ebc04d48",
+      "examId" : "ce91845f-495e-4b42-bf5e-a7ebc0753c1f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -8425,7 +8425,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "2697c4c3-3505-4a8c-8ab2-ed2115cf8f29",
+      "examId" : "0edd668c-3790-45d7-80ba-6e69ecf6d1e7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -8435,7 +8435,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "8b14674e-1868-4608-932c-154a663d9022",
+      "examId" : "24534be0-4b9a-4085-a82e-baf484927b8a",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8455,7 +8455,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "18fa19c1-5289-433e-ab94-3bc0c981cdb1",
+      "examId" : "f0ac0ef2-4437-492a-bd96-44f9ee5d4ce7",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -8465,7 +8465,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "3a6d1bf1-1ef8-498a-8e4d-6267d8299a88",
+      "examId" : "68f93f30-2a14-4490-a993-b28a272e301d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8475,7 +8475,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "c4298eeb-a5e3-473f-882d-848a7fcae76f",
+      "examId" : "dc4778ee-edf6-4fa6-8258-2de65d928faf",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8485,7 +8485,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "a74e8d73-c66a-4cf4-b5e0-fb4ad74f2eab",
+      "examId" : "672923be-caf4-4dfc-94ae-5b72d90201df",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -8515,7 +8515,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 75.0,
     "assignments" : [ {
-      "examId" : "aa446a26-75f8-4084-ad74-d7105f199494",
+      "examId" : "aa749660-fc0c-41b6-8065-51ec7131eac8",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8525,7 +8525,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "2849307e-8343-4128-a5ca-f3bee3ea785f",
+      "examId" : "68739c05-4c97-4dd7-a717-0f31b6991f36",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -8535,7 +8535,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "0dad09ab-2485-459a-8654-aab1292de4c1",
+      "examId" : "9a161f85-a3ef-4eb9-95bc-c85366228bb7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -8555,7 +8555,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "baff093d-71be-45dd-95ad-70f348a307c5",
+      "examId" : "d4aaeedb-cbc1-448e-8f08-52072e73fd08",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -8565,7 +8565,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "6eabdbad-c8d8-41af-ab79-4542dddb5b58",
+      "examId" : "2d3685ff-428b-47a7-9d47-0be3f74e562c",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -8585,7 +8585,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 57.142857142857146,
     "assignments" : [ {
-      "examId" : "2207ad66-78d1-4b7c-989e-74cbe63afc47",
+      "examId" : "bf436755-5c07-4c6d-a3c9-d7312de4f680",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8595,7 +8595,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e37d14ae-0c1e-4089-8004-57fab22f8088",
+      "examId" : "62e248e0-2793-4871-819d-167bdd72fb3f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -8605,7 +8605,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5ed8075c-f748-4c35-ba23-1ab8a204a8cb",
+      "examId" : "d6563c83-48f7-4853-987e-c13c8062abe3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -8615,7 +8615,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "8b14674e-1868-4608-932c-154a663d9022",
+      "examId" : "24534be0-4b9a-4085-a82e-baf484927b8a",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8655,7 +8655,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 11.11111111111111,
     "assignments" : [ {
-      "examId" : "a096538a-b3cf-4b68-8b19-51aa9eb12641",
+      "examId" : "cbd0bd57-201d-40ff-b260-7194ae129274",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8675,7 +8675,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 25.0,
     "assignments" : [ {
-      "examId" : "810e51b5-1a8e-446a-bce2-b7658e144f73",
+      "examId" : "fee54224-fcf6-4952-8238-f6996599d5a1",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -8705,7 +8705,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "838c1d7e-3e22-4fe1-9e60-bf1434e22ea4",
+      "examId" : "35cb829d-b36a-4a02-9fee-b1dd5bc3d7ec",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -8715,7 +8715,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "48e1cdfb-efd6-465e-80a1-585a400ca8a9",
+      "examId" : "0bbbfe16-1a59-4605-b664-db7c14c17d8f",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -8725,7 +8725,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d7e47248-7870-412a-b695-371f91902378",
+      "examId" : "fb262454-9311-4a24-a57e-a3dc4bfb0308",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -8735,7 +8735,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "2ebce5b2-1d85-4b74-972a-4c61ec6517af",
+      "examId" : "374d2b03-7c0c-439c-91b6-f0913cf18b8d",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -8745,7 +8745,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "895bd502-0726-47fa-862d-4785535f5fb0",
+      "examId" : "106cfee4-d43c-4a83-86a2-79b39d691425",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -8755,7 +8755,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a74e8d73-c66a-4cf4-b5e0-fb4ad74f2eab",
+      "examId" : "672923be-caf4-4dfc-94ae-5b72d90201df",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -8765,7 +8765,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "b62632a2-9aba-40c6-995c-e4f13fe89593",
+      "examId" : "ba89b04e-4ad0-4f13-a266-68cdf894348f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -8775,7 +8775,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3671e0fb-30d4-4194-9c8a-33e111066491",
+      "examId" : "00d6e537-6613-47f0-89c3-f1e271f67f14",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -8825,7 +8825,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 25.0,
     "assignments" : [ {
-      "examId" : "15220e65-80b4-4071-9a25-ccc846b6b1d0",
+      "examId" : "04298615-7716-4189-81c9-7952efa2f1d3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -8845,7 +8845,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "6811ac4f-b010-43db-b3ef-f4f9f11aa163",
+      "examId" : "613d6b92-ed9b-4710-a409-a47aa8f15b62",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -8855,7 +8855,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ae867360-3a40-46a0-b19c-110f01303aee",
+      "examId" : "7e39b237-888e-4923-b88f-4922c9e2bd42",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -8875,7 +8875,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "558a0de5-70bc-4b47-9ac9-fa19135d3861",
+      "examId" : "d81cd8fe-cae7-4e57-8fc4-3dce2f1cc28d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8885,7 +8885,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "e9843805-d00b-4f42-b77b-6bcf98f60924",
+      "examId" : "7dc5275e-a742-4b12-8010-a841e9779026",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -8905,7 +8905,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "c326a6e8-5d70-4a15-8cf1-f573e22bd606",
+      "examId" : "45955bc6-b4ab-4aa1-a7e8-f2ee79dd760c",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -8915,7 +8915,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "57baefe4-523f-4e6c-8014-6cccca43188c",
+      "examId" : "c21f7710-0f5f-4ef1-995a-6f3c353867fc",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8925,7 +8925,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "7ec99b1f-baa6-43b4-a237-dfe2d1f7aa1b",
+      "examId" : "300d9dbf-47a7-4cb3-85af-3ab6cd9ccf63",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -8945,7 +8945,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "558a0de5-70bc-4b47-9ac9-fa19135d3861",
+      "examId" : "d81cd8fe-cae7-4e57-8fc4-3dce2f1cc28d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -8955,7 +8955,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ff690ab4-b97d-4da9-8138-d0e40b2f4dc2",
+      "examId" : "68bd72e7-76a8-45a5-90aa-52c02772711d",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -8965,7 +8965,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6f387c1e-aaa1-4ccb-81ef-f2a59e7d32f4",
+      "examId" : "f286f9be-1edb-4736-9441-a7d2655e8a6a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -8975,7 +8975,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "59b78291-5205-4054-bfb0-efb0322a39ee",
+      "examId" : "45cb623c-3c0b-453f-9330-a5b067f12941",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9005,7 +9005,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "91c4f121-008b-4fcf-b25a-63076474e237",
+      "examId" : "2820ff92-b64a-474c-8f2e-2a0492e0f315",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9015,7 +9015,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "da6a6a84-1f06-4e25-9e43-88a3cf4e2486",
+      "examId" : "e25e7f54-cafb-4959-83ec-a0d661a2bbaf",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -9055,7 +9055,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "6e7c2dd5-03d1-4529-8a59-0f564d2205a0",
+      "examId" : "ce04776a-bb2f-4876-9cce-4518871c53ea",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9065,7 +9065,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "91c4f121-008b-4fcf-b25a-63076474e237",
+      "examId" : "2820ff92-b64a-474c-8f2e-2a0492e0f315",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9075,7 +9075,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "4712605c-9759-4ecf-95dd-bb9d92971fc9",
+      "examId" : "a0b0abd2-bcdb-4757-ac9b-49a7a5281c1b",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9095,7 +9095,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "eb08fab8-6e61-4ab4-9f62-e32e779307e7",
+      "examId" : "e82daf9c-e0c4-4642-b1ec-5239029ca247",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9105,7 +9105,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "d09b68a3-921f-4d7c-b4dc-f7f5927c4d91",
+      "examId" : "2583248c-2839-4115-9bdc-28ac911fa258",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9125,7 +9125,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 75.0,
     "assignments" : [ {
-      "examId" : "276cec89-7079-44b2-9a7d-bbadf6c55564",
+      "examId" : "71cf5a71-944f-4378-be5c-f2515dc0a167",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9135,7 +9135,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "99584f4f-390d-4be2-b443-6075ceaf1d71",
+      "examId" : "0f210a6f-4f1a-42d9-afe4-1b48f43260cc",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9145,7 +9145,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ba3f7c42-d52c-46bf-aba3-2f72e0c8a0ba",
+      "examId" : "8cb1c006-698b-4da9-89b2-13b09a88b860",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9165,7 +9165,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 57.142857142857146,
     "assignments" : [ {
-      "examId" : "29369ca3-63ff-4d56-ad6e-f20a97eddbd1",
+      "examId" : "a1f842ae-0141-47c5-8bcb-e7a5527dadfd",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9175,7 +9175,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "14896460-3015-4e6e-9c2f-c6846ec092ac",
+      "examId" : "0bb35099-7125-4750-9354-2e9ccd681ae2",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9185,7 +9185,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "093fd84c-f49c-4922-b7af-41f15255823a",
+      "examId" : "ce78922f-7004-4b46-8cb7-b9142af01fc6",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9195,7 +9195,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "fc3fa19a-face-4e5a-bc15-25d1ddca1663",
+      "examId" : "a6cac1eb-2398-4c2b-9ebc-4c8dde772a5a",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9215,7 +9215,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 25.0,
     "assignments" : [ {
-      "examId" : "48e1cdfb-efd6-465e-80a1-585a400ca8a9",
+      "examId" : "0bbbfe16-1a59-4605-b664-db7c14c17d8f",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9235,7 +9235,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 66.66666666666667,
     "assignments" : [ {
-      "examId" : "838c1d7e-3e22-4fe1-9e60-bf1434e22ea4",
+      "examId" : "35cb829d-b36a-4a02-9fee-b1dd5bc3d7ec",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9245,7 +9245,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "586b3642-04c2-4ce4-948a-6a00e08b3840",
+      "examId" : "fbac09ca-13b1-4ed2-87d3-8c0ff50a30ef",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9265,7 +9265,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "276cec89-7079-44b2-9a7d-bbadf6c55564",
+      "examId" : "71cf5a71-944f-4378-be5c-f2515dc0a167",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9275,7 +9275,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "f608daa4-8fdf-4926-a20d-9a637c005306",
+      "examId" : "0dfb5541-626b-4c8a-ad60-1ab1cb35ea49",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9305,7 +9305,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "5688fac3-3cc3-4d9b-8abf-c43746352c85",
+      "examId" : "05b992d6-6f1c-4f84-8552-46bc0be9213a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9315,7 +9315,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "86abd0af-3b1e-4fc4-84b2-f57320e4671d",
+      "examId" : "e1e7b5b9-d34f-4ac1-929e-d0e323f805d8",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -9335,7 +9335,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "b5d85667-0061-496f-8e95-9f9a33983b81",
+      "examId" : "6d3e309d-5bbf-4db0-b6d0-a04d60aca30a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9345,7 +9345,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "7e7ed1b6-7c3e-40c5-8ec0-74fc8660a805",
+      "examId" : "de161e48-9050-4cfc-abaa-2c4bfd58a797",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9355,7 +9355,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ff0a2624-1935-4941-8d8e-df08ce20e6dc",
+      "examId" : "f2973b58-4930-4e03-92b4-9961f6b36fbc",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -9365,7 +9365,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "c1f361b8-0614-4d15-9ff6-df521ac92294",
+      "examId" : "fd8b17b3-9672-4fa0-affa-0ca17ba51a6f",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9375,7 +9375,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6da474f8-325f-486a-b915-a3e3c8a689d0",
+      "examId" : "b7d22f25-f869-4960-9e62-46e807ef972f",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9385,7 +9385,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a7861947-5221-46e0-a029-ca7bd4474c1e",
+      "examId" : "6a226807-1fac-4b22-8f29-c5edf0bbf809",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -9395,7 +9395,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "37eccca7-0ae7-4366-b870-148394e51e1e",
+      "examId" : "d5d30863-8ea9-4c90-9653-5b184dd3afd9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9415,7 +9415,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "cb87c0ae-1ce2-4b93-8ef6-0bc0107df1a4",
+      "examId" : "cb4aa1bf-b372-4fc4-989f-69b04f977b4c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -9425,7 +9425,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "d7e47248-7870-412a-b695-371f91902378",
+      "examId" : "fb262454-9311-4a24-a57e-a3dc4bfb0308",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -9445,7 +9445,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 14.285714285714286,
     "assignments" : [ {
-      "examId" : "5730f485-5fc3-42f7-98a2-ed2e574ea6b4",
+      "examId" : "b6b9a5c3-d754-4fe1-ad0b-a137f1252ebb",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9465,7 +9465,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "82921ae1-a43e-4cd3-8c1b-1fa166d2aabd",
+      "examId" : "285a6ccf-e8bc-4def-9e53-86448f1f8599",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9475,7 +9475,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "36fe3775-6cbe-41e9-99c3-b5e3e75a1054",
+      "examId" : "edeffc53-65a5-41d4-b3b3-6aa42c98688d",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9485,7 +9485,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3be0f13f-d83b-495f-9aad-b7c2d6307336",
+      "examId" : "ec40cb04-164a-4e49-b0a4-d75232a67d99",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -9505,7 +9505,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 71.42857142857143,
     "assignments" : [ {
-      "examId" : "f92cbc85-725d-4018-9c48-849538be8992",
+      "examId" : "31cdb2d1-08b0-4e26-907a-53f8ccf51e50",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9515,7 +9515,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "586b3642-04c2-4ce4-948a-6a00e08b3840",
+      "examId" : "fbac09ca-13b1-4ed2-87d3-8c0ff50a30ef",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9525,7 +9525,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "ba3f7c42-d52c-46bf-aba3-2f72e0c8a0ba",
+      "examId" : "8cb1c006-698b-4da9-89b2-13b09a88b860",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9535,7 +9535,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "3e62394a-30b9-4247-96a0-fcb212aefbbf",
+      "examId" : "c9862174-44a4-4bf1-bf69-4e6891c1bef1",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -9545,7 +9545,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "33c1bb6f-b194-4775-a584-da691a4cb576",
+      "examId" : "6085a21c-3cf4-4f03-881f-ac4d9b3abfe7",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9565,7 +9565,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "035c44ee-b102-4c60-be69-22ace52e62ad",
+      "examId" : "86a6b7a6-2b83-4a61-bbc9-a3ec4b1a0187",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -9575,7 +9575,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "6d3ef995-c1ff-4c1b-92a5-ba21e2e90282",
+      "examId" : "99a18471-b333-4992-84b4-1d3c63ae1c04",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -9585,7 +9585,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "57baefe4-523f-4e6c-8014-6cccca43188c",
+      "examId" : "c21f7710-0f5f-4ef1-995a-6f3c353867fc",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9595,7 +9595,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "a7861947-5221-46e0-a029-ca7bd4474c1e",
+      "examId" : "6a226807-1fac-4b22-8f29-c5edf0bbf809",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -9605,7 +9605,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "33c1bb6f-b194-4775-a584-da691a4cb576",
+      "examId" : "6085a21c-3cf4-4f03-881f-ac4d9b3abfe7",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9615,7 +9615,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "e057f0e7-f1f6-450c-989a-2d3703a1500b",
+      "examId" : "be7cc301-cf01-4e04-bb5e-882471e3d20d",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -9625,7 +9625,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "0b15a729-f0c1-4fe3-8008-2ce1ae1e31d7",
+      "examId" : "d3a13261-a604-4051-895c-fac71fc0c49b",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9645,7 +9645,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "474fbc18-a65e-4bcb-aa15-72dd832fb362",
+      "examId" : "ef855cc7-cc7e-49e2-949f-925609f29699",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -9655,7 +9655,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "15220e65-80b4-4071-9a25-ccc846b6b1d0",
+      "examId" : "04298615-7716-4189-81c9-7952efa2f1d3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9675,7 +9675,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "5533cf51-e2e6-4deb-9e8d-d982301b01a5",
+      "examId" : "173e1428-0c07-441c-8a68-d8d3de12f71c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9685,7 +9685,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "418f8da3-2e9b-4329-9baf-08fda30ea0be",
+      "examId" : "5688c4b6-7772-47f2-9a40-ee41ff0727ce",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -9695,7 +9695,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "59b78291-5205-4054-bfb0-efb0322a39ee",
+      "examId" : "45cb623c-3c0b-453f-9330-a5b067f12941",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -9735,7 +9735,7 @@
     "unavailabilityCredit" : 4,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "3bfff8f6-eb07-43a0-b6eb-928cc7942419",
+      "examId" : "e4112260-50d4-488f-bf59-9a757587da55",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9745,7 +9745,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "fd7ce5df-8fc0-40df-8a30-6c7524205500",
+      "examId" : "71274d3c-27d7-4297-b869-f5fdb133d683",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9765,7 +9765,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "e4340292-13a5-4a6a-90c8-d09d85eed558",
+      "examId" : "c2134fc9-da85-4afd-99f2-eb13cf605e50",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9775,7 +9775,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "dc2f21ef-6e47-4ee5-82ef-c9062da1aa32",
+      "examId" : "01369b91-3423-4922-9e6c-3cb27cae5fc5",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9795,7 +9795,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "a096538a-b3cf-4b68-8b19-51aa9eb12641",
+      "examId" : "cbd0bd57-201d-40ff-b260-7194ae129274",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -9805,7 +9805,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "dc2f21ef-6e47-4ee5-82ef-c9062da1aa32",
+      "examId" : "01369b91-3423-4922-9e6c-3cb27cae5fc5",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9815,7 +9815,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "27ea3ca9-dbd9-47d0-b12f-18f94d8a3dfd",
+      "examId" : "7a71a9af-d8c5-462f-9cd6-0698250ea601",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 1,
@@ -9825,7 +9825,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "68fc0eb7-b585-4ac5-b2ac-ae2be0aacee5",
+      "examId" : "07f17d83-2f37-45be-a162-186640705a01",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -9845,7 +9845,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 66.66666666666667,
     "assignments" : [ {
-      "examId" : "4b5b9c12-d5fb-469f-8ee6-a9cb844413fc",
+      "examId" : "6f9332e6-1f26-49a0-83dd-8a5dd4ec1ccd",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9855,7 +9855,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "281e1325-2ba3-4f84-b8c5-25e99976a232",
+      "examId" : "92371992-8544-458c-af25-b164fdbe9676",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -9875,7 +9875,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 85.71428571428571,
     "assignments" : [ {
-      "examId" : "8811a86d-7e9b-4b1e-9bf2-1c719e6e4e6e",
+      "examId" : "87bcd76f-3ee3-4b79-9282-044ead277755",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -9885,7 +9885,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3f606d8e-112e-46e0-8cac-b751acbe2146",
+      "examId" : "35db37ff-d5ce-482a-a19a-6ae7829f6a0f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -9895,7 +9895,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "40fa9149-0318-42c5-a5fe-dd5f681fbf2b",
+      "examId" : "81739244-7526-4280-93d7-fe4f2e736b35",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -9905,7 +9905,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "8eb566b0-46e9-4110-89b8-d7c1ab3787dc",
+      "examId" : "102adc94-dbf3-417d-951d-29ceff6f373b",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -9915,7 +9915,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5dba0c47-c606-4813-85a1-723fcf81d10e",
+      "examId" : "2a67c1ff-733a-4803-9fb8-51fe4d7ae8f7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -9925,7 +9925,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "0dad09ab-2485-459a-8654-aab1292de4c1",
+      "examId" : "9a161f85-a3ef-4eb9-95bc-c85366228bb7",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -9945,7 +9945,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 22.22222222222222,
     "assignments" : [ {
-      "examId" : "896b22ce-1b13-458c-a8c8-466f8959d98b",
+      "examId" : "a07bfe04-f996-4c06-8e9a-1b766bae1816",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -9955,7 +9955,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "6f387c1e-aaa1-4ccb-81ef-f2a59e7d32f4",
+      "examId" : "f286f9be-1edb-4736-9441-a7d2655e8a6a",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9975,7 +9975,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "093fd84c-f49c-4922-b7af-41f15255823a",
+      "examId" : "ce78922f-7004-4b46-8cb7-b9142af01fc6",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -9985,7 +9985,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "883d87e7-5456-485a-aba6-7c6825b4f22d",
+      "examId" : "29fbb81a-5d3b-41ca-808e-7fc0631330b5",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 1,
@@ -10005,7 +10005,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "d8487a48-5254-467e-b251-b2ea665913c0",
+      "examId" : "549c610f-951a-40b4-b14e-3d8c5d5f5dcb",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 4,
@@ -10015,7 +10015,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "cd3f7a6c-338f-454e-841e-2fa82c2cee41",
+      "examId" : "ffacd965-5436-4366-82f6-bbe31acdbf87",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -10025,7 +10025,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "6811ac4f-b010-43db-b3ef-f4f9f11aa163",
+      "examId" : "613d6b92-ed9b-4710-a409-a47aa8f15b62",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -10045,7 +10045,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 57.142857142857146,
     "assignments" : [ {
-      "examId" : "f4a0256d-2b57-4f69-83e0-c42bb593d1fa",
+      "examId" : "80efe0af-d3c8-4db0-84cc-da75775f415a",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -10055,7 +10055,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b550aea8-8ffd-4f1a-b5e5-d247d137cd48",
+      "examId" : "6bbad352-bac4-42a4-ad08-80b72b897b27",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -10065,7 +10065,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "605eb3fa-00bd-4037-8b70-11bd57a70135",
+      "examId" : "de661d73-0c7a-4114-b761-8bc7d5fc96f8",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 4,
@@ -10075,7 +10075,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "46eab4cd-a6d8-4986-a412-a56dec9e1478",
+      "examId" : "328eeaaa-543c-4d3d-a3c1-0a86fecb6567",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -10105,7 +10105,7 @@
     "unavailabilityCredit" : 0,
     "utilizationPercentage" : 25.0,
     "assignments" : [ {
-      "examId" : "8113d3f0-20d9-4b77-81ac-835a0aa8d221",
+      "examId" : "c150b8ee-c4ce-43da-9905-dee0199ce968",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -10115,7 +10115,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "5ed8075c-f748-4c35-ba23-1ab8a204a8cb",
+      "examId" : "d6563c83-48f7-4853-987e-c13c8062abe3",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -10135,7 +10135,7 @@
     "unavailabilityCredit" : 3,
     "utilizationPercentage" : 100.0,
     "assignments" : [ {
-      "examId" : "744dbe67-a98e-4588-8e9d-af2783fee949",
+      "examId" : "4ff665b4-e4c7-4713-9af5-1b3423e581b3",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -10145,7 +10145,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "035c44ee-b102-4c60-be69-22ace52e62ad",
+      "examId" : "86a6b7a6-2b83-4a61-bbc9-a3ec4b1a0187",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 2,
@@ -10155,7 +10155,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "b550aea8-8ffd-4f1a-b5e5-d247d137cd48",
+      "examId" : "6bbad352-bac4-42a4-ad08-80b72b897b27",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -10165,7 +10165,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "baff093d-71be-45dd-95ad-70f348a307c5",
+      "examId" : "d4aaeedb-cbc1-448e-8f08-52072e73fd08",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -10175,7 +10175,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "37eccca7-0ae7-4366-b870-148394e51e1e",
+      "examId" : "d5d30863-8ea9-4c90-9653-5b184dd3afd9",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -10185,7 +10185,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "568c261d-0e12-41a6-b72e-15d9f53d59fc",
+      "examId" : "5e4ea513-eef5-476b-840c-36ffa19917ec",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 4,
@@ -10195,7 +10195,7 @@
       "startTime" : "14:30:00",
       "endTime" : "16:00:00"
     }, {
-      "examId" : "bf946efb-be49-4ea9-8be0-f3d4897cc1db",
+      "examId" : "966e1df6-3d6c-4f81-9d7a-0307f25fed45",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -10215,7 +10215,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 42.857142857142854,
     "assignments" : [ {
-      "examId" : "6de0e708-83fe-4cab-abde-5f59d0773885",
+      "examId" : "daaa92ff-0c5f-41ef-a078-3859df499924",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -10225,7 +10225,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "3f606d8e-112e-46e0-8cac-b751acbe2146",
+      "examId" : "35db37ff-d5ce-482a-a19a-6ae7829f6a0f",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -10235,7 +10235,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "c55954a9-8c58-4d5b-bb1e-9f465aa857c4",
+      "examId" : "db485843-5168-4d8a-8ae4-eddd43a00990",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -10265,7 +10265,7 @@
     "unavailabilityCredit" : 16,
     "utilizationPercentage" : 28.571428571428573,
     "assignments" : [ {
-      "examId" : "545dee40-6275-41f0-8e34-3042f5a3fd7b",
+      "examId" : "a605052e-bebe-40de-a64a-4cb3e1f5fab2",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 3,
@@ -10275,7 +10275,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "d2cb6e3e-496c-4495-a9a7-172609e7a556",
+      "examId" : "fbfd4a12-e6f7-4959-b1d4-dac2cd22ab69",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 4,
@@ -10295,7 +10295,7 @@
     "unavailabilityCredit" : 19,
     "utilizationPercentage" : 33.333333333333336,
     "assignments" : [ {
-      "examId" : "5651bf8f-0211-4d66-a78a-be6ad2295b28",
+      "examId" : "196f1aa6-5eaf-4e91-b4ae-6989abf633c6",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 3,
@@ -10305,7 +10305,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "d10e8c74-a8b5-446c-806a-184e58ec9fca",
+      "examId" : "0c0f6d30-e93a-4a09-b926-9dca18139bc7",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 2,
@@ -10315,7 +10315,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "6e7c2dd5-03d1-4529-8a59-0f564d2205a0",
+      "examId" : "ce04776a-bb2f-4876-9cce-4518871c53ea",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 1,
@@ -10335,7 +10335,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 50.0,
     "assignments" : [ {
-      "examId" : "92bb1a51-7338-4046-bca0-95f3d3f97c0a",
+      "examId" : "2ae65f6c-db7a-4c97-bd57-c163b06c3b62",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -10345,7 +10345,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "fa922caa-ac15-4787-a9a5-c6d180776a4e",
+      "examId" : "d80e9a79-fb89-440f-972f-cec02d84b436",
       "day" : 5,
       "dayLabel" : "Day 5",
       "seance" : 3,
@@ -10365,7 +10365,7 @@
     "unavailabilityCredit" : 7,
     "utilizationPercentage" : 85.71428571428571,
     "assignments" : [ {
-      "examId" : "7726e7b8-a173-49a5-965e-c984081450e9",
+      "examId" : "e26b240a-d300-4ea0-a521-716e3c5c4eaa",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -10375,7 +10375,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "e598a59a-2f72-4379-a5b6-dc45dc90c9d1",
+      "examId" : "14647967-00e3-4d7f-9ecd-0b163a7e0884",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -10385,7 +10385,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "37ab0bbf-33d2-4e2b-9034-a29c64ef28f4",
+      "examId" : "95d7ea4c-0c9a-4d63-a85d-2ee0fb614481",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -10395,7 +10395,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "40fa9149-0318-42c5-a5fe-dd5f681fbf2b",
+      "examId" : "81739244-7526-4280-93d7-fe4f2e736b35",
       "day" : 4,
       "dayLabel" : "Day 4",
       "seance" : 2,
@@ -10405,7 +10405,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "031689d1-8f34-482b-8131-8638dc60cbc9",
+      "examId" : "b883666b-914b-44d7-bbbe-b3ec0d802468",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 3,
@@ -10415,7 +10415,7 @@
       "startTime" : "12:30:00",
       "endTime" : "14:00:00"
     }, {
-      "examId" : "73d897e6-1cbb-4d9f-a846-6a353a22a26a",
+      "examId" : "117e4b4d-ff1a-4272-a084-e2cdbb177db6",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 1,
@@ -10435,7 +10435,7 @@
     "unavailabilityCredit" : 17,
     "utilizationPercentage" : 44.44444444444444,
     "assignments" : [ {
-      "examId" : "7726e7b8-a173-49a5-965e-c984081450e9",
+      "examId" : "e26b240a-d300-4ea0-a521-716e3c5c4eaa",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 1,
@@ -10445,7 +10445,7 @@
       "startTime" : "08:30:00",
       "endTime" : "10:00:00"
     }, {
-      "examId" : "8a4df137-d81d-4e13-8d4e-0646c4aa173c",
+      "examId" : "549d7077-aa76-4ec0-9e16-6df05c537ef0",
       "day" : 3,
       "dayLabel" : "Day 3",
       "seance" : 2,
@@ -10455,7 +10455,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "5533cf51-e2e6-4deb-9e8d-d982301b01a5",
+      "examId" : "173e1428-0c07-441c-8a68-d8d3de12f71c",
       "day" : 2,
       "dayLabel" : "Day 2",
       "seance" : 2,
@@ -10465,7 +10465,7 @@
       "startTime" : "10:30:00",
       "endTime" : "12:00:00"
     }, {
-      "examId" : "41c3a5b0-943c-46c7-8b48-1f21bc17b873",
+      "examId" : "e5e06011-6a95-40ad-adb5-73df043df530",
       "day" : 1,
       "dayLabel" : "Day 1",
       "seance" : 3,
@@ -10476,5 +10476,5 @@
       "endTime" : "14:00:00"
     } ]
   } ],
-  "generatedAt" : "2025-10-19T00:24:15.9409919"
+  "generatedAt" : "2025-10-19T00:39:17.0107079"
 }
