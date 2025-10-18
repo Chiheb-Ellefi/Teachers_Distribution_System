@@ -46,4 +46,7 @@ public interface ExamRepository extends JpaRepository<Exam, String> {
                                            @Param("sessionId") Long sessionId);
 
     void deleteAllInBatchByExamSession_Id(Long examSessionId);
+
+    @Query("SELECT e.id, e.numRooms FROM Exam e WHERE e.examSession.id = :sessionId")
+    List<Object[]> getExamRoomById(Long sessionId);
 }

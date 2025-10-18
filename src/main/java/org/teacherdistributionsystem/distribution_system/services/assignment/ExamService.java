@@ -146,4 +146,13 @@ public class ExamService {
         return examRepository.count();
     }
 
+    public Map<String, String> getRoomNumMap(Long sessionId) {
+        List<Object[]> results = examRepository.getExamRoomById(sessionId);
+        return results.stream()
+                .collect(Collectors.toMap(
+                        obj -> obj[0].toString(), // examId
+                        obj -> obj[1] != null ? obj[1].toString() : "" // room/local
+                ));
+    }
+
 }

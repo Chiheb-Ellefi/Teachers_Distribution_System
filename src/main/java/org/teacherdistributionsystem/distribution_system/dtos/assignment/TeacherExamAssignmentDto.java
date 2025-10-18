@@ -27,4 +27,5 @@ public class TeacherExamAssignmentDto {
     private LocalDate examDate;
     private LocalTime startTime;
     private LocalTime endTime;
+    private String roomNum;
 }
