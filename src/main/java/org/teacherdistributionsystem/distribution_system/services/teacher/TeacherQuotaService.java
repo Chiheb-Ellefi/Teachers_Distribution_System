@@ -60,15 +60,12 @@ public class TeacherQuotaService {
 
     }
    public Map<Long, Integer> getAllQuotas(Long sessionId) {
-       Map<Long, Integer> quotas=teacherQuotaRepository.getTeacherQuotaAndId(sessionId).stream()
+       return teacherQuotaRepository.getTeacherQuotaAndId(sessionId).stream()
                 .collect(Collectors.toMap(
                         row -> (Long) row[0],
                         row -> (Integer) row[1]
                 ));
-       quotas.forEach( (id, quota) -> {
-           System.out.println(id + " " + quota);
-       });
-return quotas;
+
     }
     @Transactional
     public void updateTeacherQuota(Long teacherId, Integer quota) {
