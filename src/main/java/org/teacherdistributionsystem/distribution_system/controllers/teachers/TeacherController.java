@@ -18,6 +18,7 @@ import org.teacherdistributionsystem.distribution_system.services.teacher.Teache
 import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherUnavailabilityService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/teachers")
@@ -89,9 +90,13 @@ public class TeacherController {
         return ResponseEntity.ok(teachers);
     }
 
-    @GetMapping
-    public ResponseEntity<List<TeacherDto>> getAllTeachers(){
+    @GetMapping("/{sessionId}")
+    public ResponseEntity<List<TeacherDto>> getAllTeachers(@PathVariable Long sessionId) {
       List<TeacherDto> result=  teacherService.findAllTeachers();
+        Map<Long,Integer> quotaMap=teacherQuotaService.getAllQuotas(sessionId);
+        result.forEach(teacherDto -> {
+            teacherDto.setQuota(quotaMap.get(teacherDto.getId()));
+        });
       return ResponseEntity.ok(result);
     }
 

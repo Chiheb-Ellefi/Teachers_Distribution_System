@@ -14,6 +14,7 @@ public class TeacherMapper {
                 .codeSmartex(dto.getCodeSmartex())
                 .gradeCode(dto.getGradeCode())
                 .participeSurveillance(dto.getParticipeSurveillance())
+                .quotaCredit(dto.getQuotaCredit())
                 .build();
     }
 
@@ -26,6 +27,7 @@ public class TeacherMapper {
                 .codeSmartex(teacher.getCodeSmartex())
                 .gradeCode(teacher.getGradeCode())
                 .participeSurveillance(teacher.getParticipeSurveillance())
+                .quotaCredit(teacher.getQuotaCredit())
                 .build();
     }
 }

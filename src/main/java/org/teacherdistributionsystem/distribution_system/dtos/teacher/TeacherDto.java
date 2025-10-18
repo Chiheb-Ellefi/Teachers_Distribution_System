@@ -17,4 +17,6 @@ public class TeacherDto {
     private Integer codeSmartex;
     private String gradeCode;
     private Boolean participeSurveillance;
+    private Integer quotaCredit;
+    private Integer quota;
 }
