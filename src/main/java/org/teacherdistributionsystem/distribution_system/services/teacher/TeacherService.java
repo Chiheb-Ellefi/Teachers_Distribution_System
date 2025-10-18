@@ -45,6 +45,7 @@ public class TeacherService {
             sheet.forEach(row -> {
                 if (row.getRowNum() == 0) return;
 
+
                 Teacher teacher = Teacher.builder()
                         .nom(getCellAsString(row, 0))
                         .prenom(getCellAsString(row, 1))
@@ -61,25 +62,32 @@ public class TeacherService {
         boolean isEmpty = teacherRepository.count() == 0;
 
         if (isEmpty) {
-            // Table is empty - populate with all teachers from Excel
+
             List<Teacher> savedTeachers = teacherRepository.saveAll(teachers);
             return savedTeachers.stream()
                     .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
         } else {
-            // Table has data - add only new teachers
-            List<Integer> existingCodes = teacherRepository.findAllCodesSmartex();
+
+            List<String> existingEmails = teacherRepository.findAll().stream()
+                    .map(Teacher::getEmail)
+                    .toList();
+
             List<Teacher> newTeachers = teachers.stream()
-                    .filter(t -> !existingCodes.contains(t.getCodeSmartex()))
+                    .filter(t -> t.getEmail() != null && !existingEmails.contains(t.getEmail()))
                     .toList();
 
             if (!newTeachers.isEmpty()) {
                 teacherRepository.saveAll(newTeachers);
             }
 
-            // Return ALL teachers (existing + newly added)
+
             List<Teacher> allTeachers = teacherRepository.findAll();
             return allTeachers.stream()
-                    .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
+                    .collect(Collectors.toMap(
+                            Teacher::getEmail,
+                            teacher -> teacher,
+                            (existing, replacement) -> existing
+                    ));
         }
     }
 
@@ -149,4 +157,7 @@ public class TeacherService {
         return teacherRepository.countTeachersByGradeCode();
     }
 
+    public List<TeacherDto> findAllTeachers() {
+        return teacherRepository.findAll().stream().map(TeacherMapper::toTeacherDto).collect(Collectors.toList());
+    }
 }

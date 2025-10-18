@@ -38,9 +38,17 @@ public class ExamService {
     public void addExams(Workbook workbook, ExamSession examSession) {
         List<Exam> examList = new ArrayList<>();
         Set<ExamKey> seenExams = new HashSet<>();
+
+        // Filter out teachers with null codeSmartex before creating the map
         Map<Integer, Teacher> teacherMap = teacherRepository.findAll()
                 .stream()
-                .collect(Collectors.toMap(Teacher::getCodeSmartex, Function.identity()));
+                .filter(teacher -> teacher.getCodeSmartex() != null)
+                .collect(Collectors.toMap(
+                        Teacher::getCodeSmartex,
+                        Function.identity(),
+                        (existing, replacement) -> existing // Handle duplicates by keeping existing
+                ));
+
         workbook.forEach(sheet -> {
             sheet.forEach(row -> {
                 if (row.getRowNum() == 0) return;
@@ -76,7 +84,6 @@ public class ExamService {
                         teacher.getId(),
                         getCellAsString(row, 7)
                 );
-
 
                 if (seenExams.contains(examKey)) {
                     return;

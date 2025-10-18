@@ -31,7 +31,7 @@ public class TeacherController {
     private final AssignmentPersistenceService assignmentPersistenceService;
 
     @GetMapping("/{sessionId}/quotas")
-    public ResponseEntity<PageResponse<TeacherResponse>> getAllTeachers( @PathVariable Long sessionId,
+    public ResponseEntity<PageResponse<TeacherResponse>> getAllTeachersQuotas( @PathVariable Long sessionId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
 
@@ -87,6 +87,12 @@ public class TeacherController {
         }
         List<TeacherDto> teachers = teacherService.containsName(name.trim());
         return ResponseEntity.ok(teachers);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<TeacherDto>> getAllTeachers(){
+      List<TeacherDto> result=  teacherService.findAllTeachers();
+      return ResponseEntity.ok(result);
     }
 
 }

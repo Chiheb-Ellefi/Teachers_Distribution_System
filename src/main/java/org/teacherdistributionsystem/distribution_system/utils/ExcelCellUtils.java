@@ -20,11 +20,11 @@ public class ExcelCellUtils {
 
     public static Integer getCellAsInteger(Row row, int columnIndex) {
         Cell cell = row.getCell(columnIndex);
-        if (cell == null) return 0;
+        if (cell == null) return null;
 
         return cell.getCellType() == CellType.NUMERIC
                 ? (int) cell.getNumericCellValue()
-                : 0;
+                : null;
     }
 
 
@@ -32,10 +32,8 @@ public class ExcelCellUtils {
         Cell cell = row.getCell(columnIndex);
         if (cell == null) return false;
 
-        return cell.getCellType() == CellType.BOOLEAN
-                && cell.getBooleanCellValue();
+        return row.getCell(columnIndex).getBooleanCellValue();
     }
-
 
     public static Double getCellAsDouble(Row row, int columnIndex) {
         Cell cell = row.getCell(columnIndex);

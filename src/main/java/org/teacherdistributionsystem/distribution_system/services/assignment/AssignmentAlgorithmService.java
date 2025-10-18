@@ -215,6 +215,7 @@
                     teacherEmails[i] = emailMap.getOrDefault(teacherIds[i], "Unknown");
                     baseQuotas[i] = quotaMap.getOrDefault(teacherIds[i], 0);
 
+
                     try {
                         GradeType gradeType = GradeType.valueOf(teacherGrades[i]);
                         teacherPriorities[i] = priorityPerGradeMap.getOrDefault(gradeType, Integer.MAX_VALUE);
@@ -223,6 +224,7 @@
                         teacherPriorities[i] = Integer.MAX_VALUE;
                     }
                 }
+
 
                 teacherIdToIndex = new HashMap<>();
                 for (int i = 0; i < numTeachers; i++) {
