@@ -78,14 +78,12 @@ public class AssignmentController {
                             }
                         } catch (Exception e) {
                             handleError(deferredResult, e);
-                        } finally {
-                            cleanUp();
                         }
                     });
         } catch (Exception e) {
 
             handleError(deferredResult, e);
-            cleanUp();
+            cleanUp(sessionId);
         }
 
         deferredResult.onTimeout(() -> {
@@ -96,7 +94,6 @@ public class AssignmentController {
             deferredResult.setResult(
                     ResponseEntity.status(HttpStatus.REQUEST_TIMEOUT).body(timeoutResponse)
             );
-            cleanUp();
         });
 
         return deferredResult;
@@ -162,16 +159,16 @@ public class AssignmentController {
     }
 
 
-    private void cleanUp(){
-        examService.clearAllExams();
-        teacherQuotaService.clearAllQuotas();
+    private void cleanUp(Long sessionId) {
+        examService.clearAllExams(sessionId);
+        teacherQuotaService.clearAllQuotas(sessionId);
         quotaPerGradeService.clearAllQuotasPerGrade();
         gradeService.clearAllGrades();
     }
 
-    @PostMapping("/clean-up")
-    public ResponseEntity<Void> cleanUpDB(){
-        cleanUp();
+    @PostMapping("/{sessionId}/cleanup")
+    public ResponseEntity<Void> cleanUpDB(@PathVariable Long sessionId) {
+        cleanUp(sessionId);
         return ResponseEntity.noContent().build();
     }
 

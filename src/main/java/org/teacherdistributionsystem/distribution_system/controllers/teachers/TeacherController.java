@@ -30,12 +30,12 @@ public class TeacherController {
     private final TeacherQuotaService teacherQuotaService;
     private final AssignmentPersistenceService assignmentPersistenceService;
 
-    @GetMapping
-    public ResponseEntity<PageResponse<TeacherResponse>> getAllTeachers(
+    @GetMapping("/{sessionId}/quotas")
+    public ResponseEntity<PageResponse<TeacherResponse>> getAllTeachers( @PathVariable Long sessionId,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
 
-        PageResponse<TeacherResponse> response = teacherService.getAllTeachers(page, size);
+        PageResponse<TeacherResponse> response = teacherService.getAllTeachers(page, size,sessionId);
         return ResponseEntity.ok(response);
     }
 

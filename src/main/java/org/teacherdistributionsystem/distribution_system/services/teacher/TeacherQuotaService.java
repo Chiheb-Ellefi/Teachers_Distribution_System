@@ -59,13 +59,16 @@ public class TeacherQuotaService {
         teacherQuotaRepository.saveAll(teacherQuotas);
 
     }
-   public Map<Long, Integer> getAllQuotas() {
-       return teacherQuotaRepository.getTeacherQuotaAndId().stream()
+   public Map<Long, Integer> getAllQuotas(Long sessionId) {
+       Map<Long, Integer> quotas=teacherQuotaRepository.getTeacherQuotaAndId(sessionId).stream()
                 .collect(Collectors.toMap(
                         row -> (Long) row[0],
                         row -> (Integer) row[1]
                 ));
-
+       quotas.forEach( (id, quota) -> {
+           System.out.println(id + " " + quota);
+       });
+return quotas;
     }
     @Transactional
     public void updateTeacherQuota(Long teacherId, Integer quota) {
@@ -78,7 +81,7 @@ public class TeacherQuotaService {
         teacherQuotaRepository.updateTeacherQuotaById(teacherId,quota);
     }
     @Transactional
-    public void clearAllQuotas() {
-        teacherQuotaRepository.deleteAllInBatch();
+    public void clearAllQuotas(Long sessionId) {
+        teacherQuotaRepository.deleteAllInBatchByExamSession_Id(sessionId);
     }
 }

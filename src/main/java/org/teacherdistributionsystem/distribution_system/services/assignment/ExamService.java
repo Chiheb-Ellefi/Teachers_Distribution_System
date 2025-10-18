@@ -127,8 +127,8 @@ public class ExamService {
     }
 
     @Transactional
-    public void clearAllExams() {
-        examRepository.deleteAllInBatch();
+    public void clearAllExams(Long sessionId) {
+        examRepository.deleteAllInBatchByExamSession_Id(sessionId);
     }
 
     public Boolean dataExists(){

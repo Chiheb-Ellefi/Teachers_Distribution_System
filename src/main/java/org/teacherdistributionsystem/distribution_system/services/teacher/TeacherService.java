@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.dtos.teacher.TeacherDto;
 import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.mappers.teacher.TeacherMapper;
-import org.teacherdistributionsystem.distribution_system.models.projections.GradeCountProjection;
 import org.teacherdistributionsystem.distribution_system.models.projections.TeacherNameProjection;
 
 import org.teacherdistributionsystem.distribution_system.models.responses.PageResponse;
@@ -115,10 +114,10 @@ public class TeacherService {
                 ));
     }
 
-    public PageResponse<TeacherResponse> getAllTeachers(int page, int size) {
+    public PageResponse<TeacherResponse> getAllTeachers(int page, int size,Long sessionId) {
         Pageable pageable = PageRequest.of(page, size);
         Page<TeacherResponse> teacherPage = teacherRepository.getAllTeachers(pageable);
-        Map<Long, Integer> quotaPerTeacher=teacherQuotaService.getAllQuotas();
+        Map<Long, Integer> quotaPerTeacher=teacherQuotaService.getAllQuotas(sessionId);
         teacherPage.getContent().forEach(teacher -> {
             Integer quota=quotaPerTeacher.get(teacher.getId());
             Integer credit=teacher.getCredit();

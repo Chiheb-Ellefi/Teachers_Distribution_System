@@ -205,7 +205,7 @@
 
                 Map<Long, String> gradeMap = teacherService.getAllGrades();
                 Map<Long, String> nameMap = teacherService.getAllNames();
-                Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas();
+                Map<Long, Integer> quotaMap = teacherQuotaService.getAllQuotas(sessionId);
                 Map<Long, String> emailMap = teacherService.getAllEmails();
                 Map<GradeType, Integer> priorityPerGradeMap = quotaPerGradeService.getPrioritiesByGrade();
 

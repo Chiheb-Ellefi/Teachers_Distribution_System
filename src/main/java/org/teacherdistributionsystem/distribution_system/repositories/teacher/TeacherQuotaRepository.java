@@ -13,11 +13,13 @@ import java.util.Map;
 
 @Repository
 public interface TeacherQuotaRepository extends JpaRepository<TeacherQuota, Long> {
-    @Query(value = "SELECT q.id, q.assignedQuota FROM TeacherQuota q")
-    List<Object[]> getTeacherQuotaAndId();
+    @Query(value = "SELECT q.teacher.id, q.assignedQuota FROM TeacherQuota q WHERE q.examSession.id=?1")
+    List<Object[]> getTeacherQuotaAndId(Long sessionId);
 
     @Modifying
     @Transactional
     @Query("UPDATE TeacherQuota t SET t.assignedQuota = :quota WHERE t.id = :teacherId")
     void updateTeacherQuotaById(@Param("teacherId") Long teacherId,@Param("quota") Integer quota);
+
+    void deleteAllInBatchByExamSession_Id(Long examSessionId);
 }
