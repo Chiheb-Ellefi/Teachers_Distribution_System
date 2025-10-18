@@ -11,14 +11,16 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Data
-@Builder
+@Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class DaySeanceGroupAssignments {
     private Integer examDay;
     private Integer seance;
     private LocalDate examDate;
+    private String dayOfWeek;
     private LocalTime startTime;
     private LocalTime endTime;
+    private String numRooms;
     private List<TeacherResponse> supervisors;
 }

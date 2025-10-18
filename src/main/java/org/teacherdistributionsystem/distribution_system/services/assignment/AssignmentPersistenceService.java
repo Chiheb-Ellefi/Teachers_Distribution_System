@@ -23,9 +23,7 @@ import org.teacherdistributionsystem.distribution_system.repositories.teacher.Te
 import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -151,9 +149,14 @@ public class AssignmentPersistenceService {
         teacherRepository.updateQuotaCreditById(teacherId,credit);
     }
     @Transactional(readOnly = true)
-    public List<DaySeanceGroupAssignments> getAssignmentsByDate(Long sessionId, Integer day, Integer seance) {
-        List<AssignmentDetailsProjection> assignments =
-                assignmentRepository.getAllByDate(sessionId, day, seance);
+    public Map<Integer, Map<Integer, Map<String, DaySeanceGroupAssignments>>> getAssignmentsBySession(Long sessionId) {
+        List<AssignmentDetailsProjection> assignments = assignmentRepository.getAllBySession(sessionId);
+
+        if (assignments.isEmpty()) {
+            return new HashMap<>();
+        }
+
+        // Get all teachers at once
         List<Long> teacherIds = assignments.stream()
                 .map(AssignmentDetailsProjection::getTeacherId)
                 .distinct()
@@ -163,39 +166,59 @@ public class AssignmentPersistenceService {
                 .stream()
                 .collect(Collectors.toMap(Teacher::getId, teacher -> teacher));
 
-        Map<String, List<AssignmentDetailsProjection>> grouped = assignments.stream()
-                .collect(Collectors.groupingBy(
-                        a -> a.getExamDate() + "_" + a.getStartTime() + "_" + a.getEndTime()
-                ));
+        // Group by day, seance, and then by room (numRooms)
+        Map<Integer, Map<Integer, Map<String, List<AssignmentDetailsProjection>>>> groupedByDaySeanceRoom =
+                assignments.stream()
+                        .collect(Collectors.groupingBy(
+                                AssignmentDetailsProjection::getExamDay,
+                                Collectors.groupingBy(
+                                        AssignmentDetailsProjection::getSeance,
+                                        Collectors.groupingBy(
+                                                AssignmentDetailsProjection::getNumRooms
+                                        )
+                                )
+                        ));
 
-        return grouped.entrySet().stream()
-                .map(entry -> {
-                    List<AssignmentDetailsProjection> groupAssignments = entry.getValue();
-                    AssignmentDetailsProjection first = groupAssignments.get(0);
+        // Convert to final structure
+        Map<Integer, Map<Integer, Map<String, DaySeanceGroupAssignments>>> result = new TreeMap<>();
 
-                    // Map teachers for this group
-                    List<TeacherResponse> supervisors = groupAssignments.stream()
+        groupedByDaySeanceRoom.forEach((day, seanceMap) -> {
+            Map<Integer, Map<String, DaySeanceGroupAssignments>> seanceAssignments = new TreeMap<>();
+
+            seanceMap.forEach((seance, roomMap) -> {
+                Map<String, DaySeanceGroupAssignments> roomAssignments = new TreeMap<>();
+
+                roomMap.forEach((room, roomAssignmentsList) -> {
+                    AssignmentDetailsProjection first = roomAssignmentsList.get(0);
+
+                    List<TeacherResponse> supervisors = roomAssignmentsList.stream()
                             .map(assignment -> {
                                 Teacher teacher = teacherMap.get(assignment.getTeacherId());
                                 return teacherToResponse(teacher);
                             })
                             .collect(Collectors.toList());
 
-                    return DaySeanceGroupAssignments.builder()
+                    DaySeanceGroupAssignments daySeanceGroup = DaySeanceGroupAssignments.builder()
                             .examDay(first.getExamDay())
                             .seance(first.getSeance())
                             .examDate(first.getExamDate())
+                            .dayOfWeek(first.getExamDate().getDayOfWeek().toString())
                             .startTime(first.getStartTime())
                             .endTime(first.getEndTime())
+                            .numRooms(first.getNumRooms())
                             .supervisors(supervisors)
                             .build();
-                })
-                .sorted((a, b) -> {
-                    int dateCompare = a.getExamDate().compareTo(b.getExamDate());
-                    if (dateCompare != 0) return dateCompare;
-                    return a.getStartTime().compareTo(b.getStartTime());
-                })
-                .collect(Collectors.toList());
+
+                    roomAssignments.put(room, daySeanceGroup);
+                });
+
+                seanceAssignments.put(seance, roomAssignments);
+            });
+
+            result.put(day, seanceAssignments);
+        });
+
+        return result;
     }
 
     private TeacherResponse teacherToResponse(Teacher teacher) {

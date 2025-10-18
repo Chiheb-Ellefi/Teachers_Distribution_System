@@ -27,18 +27,17 @@ public interface TeacherExamAssignmentRepository extends JpaRepository<TeacherEx
     void deactivateAllForSession(Long sessionId);
 
     boolean existsBySessionIdAndIsActiveTrue(Long sessionId);
-
     @Query(value = "SELECT a.exam_date AS examDate, a.start_time AS startTime, a.end_time AS endTime, " +
             "a.exam_day AS examDay, a.seance AS seance, a.teacher_id AS teacherId, " +
+            "e.num_rooms AS numRooms, " + // Add this line
             "t.nom AS nom, t.prenom AS prenom, t.email AS email, t.code_smartex AS codeSmartex, " +
             "t.grade_code AS gradeCode, t.participe_surveillance AS participeSurveillance, " +
             "t.quota_credit AS quotaCredit " +
             "FROM teacher_exam_assignments a " +
             "INNER JOIN teachers t ON a.teacher_id = t.id " +
+            "INNER JOIN exams e ON a.exam_id = e.id " + // Add this join
             "WHERE a.session_id = :sessionId AND a.is_active = true " +
-            "AND a.seance = :seance AND a.exam_day = :examDay",
+            "ORDER BY a.exam_day, a.seance, a.exam_date, a.start_time",
             nativeQuery = true)
-    List<AssignmentDetailsProjection> getAllByDate(@Param("sessionId") Long sessionId,
-                                                   @Param("examDay") Integer examDay,
-                                                   @Param("seance") Integer seance);
+    List<AssignmentDetailsProjection> getAllBySession(@Param("sessionId") Long sessionId);
 }

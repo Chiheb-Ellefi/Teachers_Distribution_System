@@ -23,6 +23,7 @@ import org.teacherdistributionsystem.distribution_system.services.teacher.Teache
 import org.teacherdistributionsystem.distribution_system.utils.JsonFileWriter;
 
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -81,9 +82,7 @@ public class AssignmentController {
                         }
                     });
         } catch (Exception e) {
-
             handleError(deferredResult, e);
-            cleanUp(sessionId);
         }
 
         deferredResult.onTimeout(() -> {
@@ -205,14 +204,15 @@ public class AssignmentController {
         assignmentPersistenceService.deleteAssignments(sessionId);
         return ResponseEntity.accepted().body("Assignments deleted for session: " + sessionId);
     }
-
     @GetMapping("/{sessionId}/by-date")
-    public ResponseEntity<List<DaySeanceGroupAssignments> > getAssignmentByDate(@PathVariable Long sessionId, @RequestParam Integer day,@RequestParam Integer seance){
-        if (sessionId == null || day == null || seance == null) {
-            throw new IllegalArgumentException("sessionId, day, and seance are required");
+    public ResponseEntity<Map<Integer, Map<Integer, Map<String, DaySeanceGroupAssignments>>>>
+    getAssignmentsGrouped(@PathVariable Long sessionId) {
+        if (sessionId == null) {
+            throw new IllegalArgumentException("sessionId is required");
         }
 
-        List<DaySeanceGroupAssignments> result = assignmentPersistenceService.getAssignmentsByDate(sessionId, day, seance);
+        Map<Integer, Map<Integer, Map<String, DaySeanceGroupAssignments>>> result =
+                assignmentPersistenceService.getAssignmentsBySession(sessionId);
 
         return ResponseEntity.ok(result);
     }
