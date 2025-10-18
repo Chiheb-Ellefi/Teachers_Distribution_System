@@ -13,36 +13,7 @@ import java.util.concurrent.CompletableFuture;
 @RequestMapping("/api/assignment")
 public class AssignmentConfigController {
 
-    private final AssignmentAlgorithmService assignmentService;
 
-    public AssignmentConfigController(AssignmentAlgorithmService assignmentService) {
-        this.assignmentService = assignmentService;
-    }
-
-    /**
-     * Execute assignment with default configuration
-     */
-    @PostMapping("/execute/{sessionId}")
-    public CompletableFuture<ResponseEntity<AssignmentResponseModel>> executeAssignment(
-            @PathVariable Long sessionId) {
-
-        return assignmentService.executeAssignment(sessionId)
-                .thenApply(ResponseEntity::ok)
-                .exceptionally(ex -> ResponseEntity.badRequest().build());
-    }
-
-    /**
-     * Execute assignment with custom configuration
-     */
-    @PostMapping("/execute/{sessionId}/custom")
-    public CompletableFuture<ResponseEntity<AssignmentResponseModel>> executeAssignmentWithConfig(
-            @PathVariable Long sessionId,
-            @RequestBody AssignmentConstraintConfig config) {
-
-        return assignmentService.executeAssignmentWithConfig(sessionId, config)
-                .thenApply(ResponseEntity::ok)
-                .exceptionally(ex -> ResponseEntity.badRequest().build());
-    }
 
     /**
      * Get default configuration

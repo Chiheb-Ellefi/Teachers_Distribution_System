@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.async.DeferredResult;
 
+import org.teacherdistributionsystem.distribution_system.config.AssignmentConstraintConfig;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherExamAssignmentDto;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.AssignmentSession;
 import org.teacherdistributionsystem.distribution_system.enums.AssignmentStatus;
@@ -97,6 +98,43 @@ public class AssignmentController {
 
         return deferredResult;
     }
+    @PostMapping("/execute/{sessionId}/custom")
+    public DeferredResult<ResponseEntity<Object>> executeAssignmentWithConfig(
+            @PathVariable Long sessionId,
+            @RequestBody AssignmentConstraintConfig config) {
+
+        DeferredResult<ResponseEntity<Object>> deferredResult = new DeferredResult<>(15000L);
+
+        try {
+            assignmentAlgorithmService.executeAssignmentWithConfig(sessionId, config)
+                    .whenComplete((response, exception) -> {
+                        try {
+                            if (exception != null) {
+                                handleError(deferredResult, exception);
+                            } else {
+                                handleSuccess(deferredResult, response);
+                            }
+                        } catch (Exception e) {
+                            handleError(deferredResult, e);
+                        }
+                    });
+        } catch (Exception e) {
+            handleError(deferredResult, e);
+        }
+
+        deferredResult.onTimeout(() -> {
+            AssignmentResponseModel timeoutResponse = AssignmentResponseModel.builder()
+                    .status(AssignmentStatus.TIMEOUT)
+                    .message("Request timed out after 15 seconds")
+                    .build();
+            deferredResult.setResult(
+                    ResponseEntity.status(HttpStatus.REQUEST_TIMEOUT).body(timeoutResponse)
+            );
+        });
+
+        return deferredResult;
+    }
+
 
     private void handleSuccess(DeferredResult<ResponseEntity<Object>> deferredResult,
                                AssignmentResponseModel response) {
