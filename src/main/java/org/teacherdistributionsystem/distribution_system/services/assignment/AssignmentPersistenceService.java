@@ -82,10 +82,6 @@ public class AssignmentPersistenceService {
 
     private void saveSessionMetadata(AssignmentResponseModel response) {
         AssignmentMetadata metadata = response.getMetadata();
-        AssignmentSession existing = sessionRepository.findByExamSessionId(metadata.getSessionId());
-        if (existing != null) {
-            sessionRepository.delete(existing);
-        }
 
         AssignmentSession session = AssignmentSession.builder()
                 .examSessionId(metadata.getSessionId())
