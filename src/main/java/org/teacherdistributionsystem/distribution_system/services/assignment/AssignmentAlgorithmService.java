@@ -165,7 +165,9 @@ public class AssignmentAlgorithmService {
             System.out.println("  Quota capacity sufficient: " + (sufficientCapacity ? "✓" : "✗"));
             System.out.println("  Available slots sufficient: " + (sufficientAvailableSlots ? "✓" : "✗"));
 
-            // PHASE 1: Try solving with strict unavailability + priority assignments
+
+
+        // PHASE 1: Try solving with strict unavailability + priority assignments
             System.out.println("\n=== PHASE 2: TRY WITH STRICT UNAVAILABILITY ===");
             System.out.println("Strategy: Use optimization to prefer available teachers for conflict slots");
 
@@ -180,10 +182,40 @@ public class AssignmentAlgorithmService {
                 return CompletableFuture.completedFuture(result);
             }
 
-            // PHASE 2: If infeasible, try progressive relaxation
-            System.out.println("[INFEASIBLE] Could not solve with strict unavailability.");
+// Check if it's a timeout vs true infeasibility
+            if (result.getStatus() == AssignmentStatus.TIMEOUT) {
+                System.out.println("[TIMEOUT] Solver couldn't complete within time limit.");
+                System.out.println("Increasing time limit and retrying...");
 
-            // Check if relaxation can help
+                // Retry with longer timeout
+                CpSolver solver = new CpSolver();
+                solver.getParameters().setMaxTimeInSeconds(30.0);
+                long startTime = System.currentTimeMillis();
+                CpSolverStatus status = solver.solve(model);
+                double solutionTime = (System.currentTimeMillis() - startTime) / 1000.0;
+
+                System.out.println("Extended solve status: " + status + " (Time: " + String.format("%.3f", solutionTime) + "s)");
+
+                if (status == CpSolverStatus.OPTIMAL || status == CpSolverStatus.FEASIBLE) {
+                    result = buildSuccessResponse(solver, status, solutionTime);
+                    System.out.println("[SUCCESS] Solution found with extended timeout!");
+                    System.out.println("========================================\n");
+                    return CompletableFuture.completedFuture(result);
+                } else if (status == CpSolverStatus.UNKNOWN) {
+                    System.out.println("[STILL TIMEOUT] Even with 30s, couldn't solve.");
+                    System.out.println("This suggests the problem may be very constrained.");
+                    System.out.println("Proceeding to relaxation...");
+                }
+            }
+
+// PHASE 2: If truly infeasible (not just timeout), try progressive relaxation
+            if (result.getStatus() == AssignmentStatus.INFEASIBLE) {
+                System.out.println("[INFEASIBLE] Could not solve with strict unavailability.");
+            } else {
+                System.out.println("[UNABLE TO SOLVE] Status: " + result.getStatus());
+            }
+
+// Check if relaxation can help
             if (!sufficientCapacity) {
                 System.out.println("\n[ANALYSIS] Insufficient total capacity.");
                 System.out.println("  Need to relax unavailability to reach capacity.");
@@ -193,8 +225,10 @@ public class AssignmentAlgorithmService {
                 System.out.println("  - Time slot distribution (too many exams at certain times)");
                 System.out.println("  - Ownership conflicts (owners can't cover their own slots)");
                 System.out.println("  - Unavailability clustering");
+                System.out.println("  - Equal assignment constraints for same-grade teachers");
                 System.out.println("  Attempting progressive relaxation...");
             }
+
 
             // Always attempt relaxation if strict mode failed
             System.out.println("\n=== PHASE 3: PROGRESSIVE RELAXATION ===");
