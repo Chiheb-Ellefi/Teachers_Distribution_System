@@ -3,11 +3,14 @@ package org.teacherdistributionsystem.distribution_system.controllers.assignment
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.models.requests.SwapRequest;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResponse;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResult;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.ValidationResponse;
+import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentPersistenceService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.AssignmentSwapService;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 
 @RestController
 @RequestMapping("/api/assignments")
@@ -15,9 +18,13 @@ import org.teacherdistributionsystem.distribution_system.services.assignment.Ass
 public class AssignmentSwapController {
 
     private final AssignmentSwapService swapService;
+    private final AssignmentPersistenceService assignmentPersistenceService;
+    private final TeacherService teacherService;
 
-    public AssignmentSwapController(AssignmentSwapService swapService) {
+    public AssignmentSwapController(AssignmentSwapService swapService, AssignmentPersistenceService assignmentPersistenceService, TeacherService teacherService) {
         this.swapService = swapService;
+        this.assignmentPersistenceService = assignmentPersistenceService;
+        this.teacherService = teacherService;
     }
 
     @PostMapping("/swap")
@@ -41,6 +48,17 @@ public class AssignmentSwapController {
             );
 
             if (result.isSuccess()) {
+
+
+                //----------------------------------------------------------------------------sendEmail---------------------------------
+                TeacherExamAssignment newAssignment1 = assignmentPersistenceService.getAssignmentById(request.getAssignmentId1());
+                TeacherExamAssignment newAssignment2 = assignmentPersistenceService.getAssignmentById(request.getAssignmentId2());
+                String email1=teacherService.getTeacherById(request.getAssignmentId1()).getEmail();
+                String email2=teacherService.getTeacherById(request.getAssignmentId2()).getEmail();
+                //sendEmail(newAssignment,1email1,,newAssignment2,email2)
+
+
+
                 return ResponseEntity.ok(SwapResponse.success(result));
             } else {
                 return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)

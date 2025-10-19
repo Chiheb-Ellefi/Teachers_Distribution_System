@@ -1,5 +1,6 @@
 package org.teacherdistributionsystem.distribution_system.services.assignment;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -235,5 +236,9 @@ public class AssignmentPersistenceService {
         response.setCredit(teacher.getQuotaCredit());
 
         return response;
+    }
+
+    public TeacherExamAssignment getAssignmentById(Long id) {
+        return assignmentRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 }
