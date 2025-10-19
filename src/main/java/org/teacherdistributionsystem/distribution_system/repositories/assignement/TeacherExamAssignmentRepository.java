@@ -40,4 +40,5 @@ public interface TeacherExamAssignmentRepository extends JpaRepository<TeacherEx
             "ORDER BY a.exam_day, a.seance, a.exam_date, a.start_time",
             nativeQuery = true)
     List<AssignmentDetailsProjection> getAllBySession(@Param("sessionId") Long sessionId);
+
 }

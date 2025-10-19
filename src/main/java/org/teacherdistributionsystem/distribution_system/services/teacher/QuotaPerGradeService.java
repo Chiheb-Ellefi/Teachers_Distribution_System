@@ -9,6 +9,7 @@ import org.teacherdistributionsystem.distribution_system.enums.GradeType;
 import org.teacherdistributionsystem.distribution_system.mappers.teacher.QuotaPerGradeMapper;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.QuotaPerGradeRepository;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -40,4 +41,22 @@ public class QuotaPerGradeService {
     public void clearAllQuotasPerGrade() {
         quotaPerGradeRepository.deleteAllInBatch();
     }
+    public Map<GradeType, Integer> getDefaultQuotasByGrade() {
+        List<QuotaPerGrade> quotaPerGrades = quotaPerGradeRepository.findAll();
+
+        Map<GradeType, Integer> defaultQuotas = new HashMap<>();
+        for (QuotaPerGrade qpg : quotaPerGrades) {
+            defaultQuotas.put(qpg.getGrade(), qpg.getDefaultQuota());
+        }
+
+        return defaultQuotas;
+    }
+
+    public void updateQuotaPerGrade(String grade,Integer quota){
+        quotaPerGradeRepository.updateQuotaPerGrade(grade,quota);
+    }
+
+
+
+
 }

@@ -50,4 +50,18 @@ public interface ExamRepository extends JpaRepository<Exam, String> {
     void deleteAllInBatchByExamSession_Id(Long examSessionId);
 
 
+    @Query(value = """
+        SELECT CASE WHEN COUNT(*) > 0 THEN TRUE ELSE FALSE END
+        FROM exams e
+        WHERE e.teacher_id = :teacherId
+          AND e.session_id = :sessionId
+          AND e.jour_numero = :jourNumero
+          AND e.seance = :seance
+    """, nativeQuery = true)
+    boolean existsExamForTeacherInSessionAndDayAndSeance(
+            @Param("teacherId") Long teacherId,
+            @Param("sessionId") Long sessionId,
+            @Param("jourNumero") Integer jourNumero,
+            @Param("seance") String seance
+    );
 }

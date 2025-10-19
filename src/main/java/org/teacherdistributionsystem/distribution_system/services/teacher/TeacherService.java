@@ -162,4 +162,8 @@ public class TeacherService {
     public void clearAllTeachers() {
         teacherRepository.deleteAll();
     }
+
+  public   TeacherDto getTeacherById(Long teacherId) {
+        return TeacherMapper.toTeacherDto(teacherRepository.findById(teacherId).orElseThrow(EntityNotFoundException::new));
+    }
 }

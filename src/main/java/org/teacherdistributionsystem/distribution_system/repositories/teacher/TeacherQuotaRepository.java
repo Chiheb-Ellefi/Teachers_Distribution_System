@@ -22,4 +22,17 @@ public interface TeacherQuotaRepository extends JpaRepository<TeacherQuota, Long
     void updateTeacherQuotaById(@Param("teacherId") Long teacherId,@Param("quota") Integer quota);
 
     void deleteAllInBatchByExamSession_Id(Long examSessionId);
+
+    @Modifying
+    @Transactional
+    @Query("""
+    UPDATE TeacherQuota tq
+    SET tq.assignedQuota = :quota
+    WHERE tq.teacher.id IN (
+        SELECT t.id FROM Teacher t
+        WHERE t.gradeCode = :grade
+    )
+""")
+    void updateQuotaPerGrade(@Param("grade") String grade, @Param("quota") Integer quota);
+
 }

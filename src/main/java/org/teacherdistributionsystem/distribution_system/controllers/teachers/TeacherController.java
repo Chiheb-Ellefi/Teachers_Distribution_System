@@ -80,8 +80,6 @@ public class TeacherController {
 
         Map<String, String> roomsMap = examService.getRoomNumMap(sessionId);
         assignments.forEach(assignment -> {
-            System.out.println("Looking for examId: " + assignment.getExamId() + " (type: " +
-                    (assignment.getExamId() != null ? assignment.getExamId().getClass() : "null") + ")");
             String roomNum = roomsMap.get(assignment.getExamId());
             assignment.setRoomNum(roomNum);
         });

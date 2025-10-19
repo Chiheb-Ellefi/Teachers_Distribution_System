@@ -12,6 +12,7 @@ import org.teacherdistributionsystem.distribution_system.models.responses.teache
 import org.teacherdistributionsystem.distribution_system.services.ExcelImportOrchestrator;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
+import org.teacherdistributionsystem.distribution_system.services.assignment.QuotaRecommendationService;
 import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 
 
@@ -30,6 +31,7 @@ public class MainController {
     private final ExamSessionService examSessionService;
     private final ExamService examService;
     private final TeacherService teacherService;
+    private final QuotaRecommendationService quotaRecommendationService;
 
 
     @PostMapping("/upload")
@@ -72,6 +74,13 @@ public class MainController {
         response.put("teachersPerGrade", teachersPerGrade);
 
         return ResponseEntity.ok(response);
+    }
+    @GetMapping("/recommendation/{sessionId}")
+    public ResponseEntity<QuotaRecommendationService.QuotaRecommendationResponse> recommendation(@PathVariable Long sessionId) {
+
+        QuotaRecommendationService.QuotaRecommendationResponse res= quotaRecommendationService.analyzeAndRecommendQuotas(sessionId);
+        return ResponseEntity.ok(res);
+
     }
 
 

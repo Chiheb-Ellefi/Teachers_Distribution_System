@@ -28,4 +28,18 @@ public interface TeacherUnavailabilityRepository extends JpaRepository<TeacherUn
             "FROM TeacherUnavailability tu " +
             "WHERE tu.examSession.id = :examSessionId")
     List<TeacherUnavailabilitiesProjection> findAllByExamSessionId(@Param("examSessionId") Long examSessionId);
+    @Query(value = """
+        SELECT CASE WHEN COUNT(*) > 0 THEN TRUE ELSE FALSE END
+        FROM teacher_unavailability tu
+        WHERE tu.teacher_id = :teacherId
+          AND tu.session_id = :sessionId
+          AND tu.numero_jour = :examDay
+          AND tu.seance = :seance
+    """, nativeQuery = true)
+    boolean existsByTeacherAndSessionAndExamDayAndSeance(
+            @Param("teacherId") Long teacherId,
+            @Param("sessionId") Long sessionId,
+            @Param("examDay") Integer examDay,
+            @Param("seance") String seance
+    );
 }
