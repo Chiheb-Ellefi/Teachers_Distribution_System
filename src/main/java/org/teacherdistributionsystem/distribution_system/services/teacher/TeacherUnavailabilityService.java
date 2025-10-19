@@ -87,4 +87,7 @@ public class TeacherUnavailabilityService {
     public List<TeacherUnavailabilitiesProjection> getTeacherUnavailabilityListBySessionId(Long sessionId) {
         return teacherUnavailabilitRepository.findAllByExamSessionId(sessionId);
     }
+    public void cleanUp(){
+        teacherUnavailabilitRepository.deleteAll();
+    }
 }

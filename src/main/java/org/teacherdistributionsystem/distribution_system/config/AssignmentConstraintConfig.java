@@ -240,6 +240,7 @@ public class AssignmentConstraintConfig {
         config.setOwnerPresenceMode(ConstraintMode.HARD);
         config.setNoGapsMode(ConstraintMode.HARD);
         config.setNoGapsSkipUnavailableTeachers(true);
+        config.setFairnessWeight(1000);
         return config;
     }
 
