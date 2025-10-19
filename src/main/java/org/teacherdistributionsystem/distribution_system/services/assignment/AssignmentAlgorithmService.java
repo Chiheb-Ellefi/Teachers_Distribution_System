@@ -88,7 +88,8 @@
             private int[] baseQuotas;
             private int[] effectiveQuotas;
             private Set<Integer> teachersWithRelaxedUnavailability;
-
+            private IntVar[] teacherAssignmentCounts;
+            private IntVar fairnessDeviation;
             private List<Exam> exams;
             private Map<Long, Integer> teacherIdToIndex;
             private ExamSessionDto currentSession;
@@ -596,14 +597,6 @@
                 return buildInfeasibleResponse(0.0);
             }
 
-            private void createVariables() {
-                assignment = new BoolVar[numTeachers][numExams];
-                for (int t = 0; t < numTeachers; t++) {
-                    for (int e = 0; e < numExams; e++) {
-                        assignment[t][e] = model.newBoolVar("T" + teacherIds[t] + "_E" + exams.get(e).examId);
-                    }
-                }
-            }
 
             private void addConstraintsWithPriority() {
                 System.out.println("\n--- Adding Constraints with Configuration ---");
@@ -968,19 +961,21 @@
                 LinearExprBuilder objectiveBuilder = LinearExpr.newBuilder();
                 int totalPenaltyTerms = 0;
 
-                // 8a. Build conflict map
-                int[] examConflictScore = new int[numExams];
+                // 8. PRIORITY STRATEGY: Build optimization objective
+                System.out.println("\n--- Building Optimization Objective ---");
 
+
+
+                // 8a. Build conflict map (EXISTING CODE - KEEP THIS)
+                int[] examConflictScore = new int[numExams];
                 if (config.isOptimizeConflictAvoidance()) {
                     for (int e = 0; e < numExams; e++) {
                         Exam exam = exams.get(e);
                         int conflictCount = 0;
-
                         for (int t = 0; t < numTeachers; t++) {
                             if (!teacherParticipateSurveillance[t] || teachersWithRelaxedUnavailability.contains(t)) {
                                 continue;
                             }
-
                             if (exam.day < teacherUnavailable[t].length &&
                                     exam.seance < teacherUnavailable[t][exam.day].length &&
                                     teacherUnavailable[t][exam.day][exam.seance]) {
@@ -991,11 +986,10 @@
                     }
                 }
 
-                // 8b. Penalty for unavailability violations (relaxed teachers)
+                // 8b. Penalty for unavailability violations (EXISTING CODE - KEEP THIS)
                 int unavailabilityViolationTerms = 0;
                 for (int e = 0; e < numExams; e++) {
                     Exam exam = exams.get(e);
-
                     for (int t = 0; t < numTeachers; t++) {
                         if (!teacherParticipateSurveillance[t]) continue;
 
@@ -1008,7 +1002,6 @@
                             }
                         }
 
-                        // Conflict avoidance penalty
                         if (config.isOptimizeConflictAvoidance() && examConflictScore[e] > 0) {
                             objectiveBuilder.addTerm(assignment[t][e], examConflictScore[e] * config.getConflictAvoidancePenalty());
                         }
@@ -1027,7 +1020,6 @@
                             " terms (weight: " + config.getConflictAvoidancePenalty() + ")");
                     totalPenaltyTerms += conflictTerms;
                 }
-
                 // 8c. SOFT Owner presence preference
                 int ownerPresenceBonuses = 0;
 
@@ -1090,6 +1082,11 @@
                     totalPenaltyTerms += gapVariables.size();
                 }
 
+
+                // 8e. NEW: Add fairness optimization
+                addFairnessConstraintsAndObjective(objectiveBuilder);
+
+                System.out.println("  - Fairness deviation weight: " + config.getFairnessWeight());
                 // Set objective to minimize
                 if (totalPenaltyTerms > 0) {
                     model.minimize(objectiveBuilder);
@@ -1103,6 +1100,145 @@
                 System.out.println("----------------------------------------------\n");
             }
 
+            private void createVariables() {
+                assignment = new BoolVar[numTeachers][numExams];
+                for (int t = 0; t < numTeachers; t++) {
+                    for (int e = 0; e < numExams; e++) {
+                        assignment[t][e] = model.newBoolVar("T" + teacherIds[t] + "_E" + exams.get(e).examId);
+                    }
+                }
+
+                // NEW: Track assignment counts for fairness
+                teacherAssignmentCounts = new IntVar[numTeachers];
+                for (int t = 0; t < numTeachers; t++) {
+                    teacherAssignmentCounts[t] = model.newIntVar(0, effectiveQuotas[t],
+                            "count_T" + teacherIds[t]);
+
+                    // Link count to actual assignments
+                    LinearExprBuilder sum = LinearExpr.newBuilder();
+                    for (int e = 0; e < numExams; e++) {
+                        sum.addTerm(assignment[t][e], 1);
+                    }
+                    model.addEquality(teacherAssignmentCounts[t], sum.build());
+                }
+            }
+
+
+            private void addFairnessConstraintsAndObjective(LinearExprBuilder objectiveBuilder) {
+                System.out.println("\n--- Adding Fairness Optimization ---");
+
+                // Calculate utilization targets for participating teachers
+                List<Integer> participatingTeachers = new ArrayList<>();
+                int totalCapacity = 0;
+                int totalNeeded = 0;
+
+                for (int t = 0; t < numTeachers; t++) {
+                    if (teacherParticipateSurveillance[t] && effectiveQuotas[t] > 0) {
+                        participatingTeachers.add(t);
+                        totalCapacity += effectiveQuotas[t];
+                    }
+                }
+
+                for (Exam exam : exams) {
+                    totalNeeded += exam.requiredSupervisors;
+                }
+
+                if (participatingTeachers.isEmpty()) {
+                    System.out.println("  No active teachers for fairness optimization");
+                    return;
+                }
+
+                // Calculate target utilization percentage (scaled by 100 for integer math)
+                // target = (totalNeeded / totalCapacity) * 100
+                int targetUtilizationPercent = totalCapacity > 0 ?
+                        (totalNeeded * 100) / totalCapacity : 0;
+
+                System.out.println("  Target utilization: " + targetUtilizationPercent + "%");
+                System.out.println("  Total needed: " + totalNeeded + ", Total capacity: " + totalCapacity);
+
+                // For each teacher, calculate expected assignments based on their quota share
+                for (int t : participatingTeachers) {
+                    // Expected assignments = (teacher quota / total capacity) * total needed
+                    // We'll approximate this and penalize deviations
+
+                    int expectedAssignments = (effectiveQuotas[t] * totalNeeded) / totalCapacity;
+
+                    // Allow some flexibility (±20% of expected)
+                    int minExpected = Math.max(0, (expectedAssignments * 80) / 100);
+                    int maxExpected = Math.min(effectiveQuotas[t], (expectedAssignments * 120) / 100);
+
+                    // Create slack variables for under/over assignment
+                    IntVar underAssignment = model.newIntVar(0, effectiveQuotas[t],
+                            "under_T" + teacherIds[t]);
+                    IntVar overAssignment = model.newIntVar(0, effectiveQuotas[t],
+                            "over_T" + teacherIds[t]);
+
+                    // teacherAssignmentCounts[t] + underAssignment >= minExpected
+                    model.addGreaterOrEqual(
+                            LinearExpr.newBuilder()
+                                    .add(teacherAssignmentCounts[t])
+                                    .add(underAssignment)
+                                    .build(),
+                            minExpected
+                    );
+
+                    // teacherAssignmentCounts[t] - overAssignment <= maxExpected
+                    model.addLessOrEqual(
+                            LinearExpr.newBuilder()
+                                    .add(teacherAssignmentCounts[t])
+                                    .add(LinearExpr.term(overAssignment, -1))
+                                    .build(),
+                            maxExpected
+                    );
+
+                    // Heavily penalize deviations from expected range
+                    objectiveBuilder.addTerm(underAssignment, config.getFairnessWeight());
+                    objectiveBuilder.addTerm(overAssignment, config.getFairnessWeight());
+                }
+
+                // Additional fairness: Minimize variance using pairwise differences
+                // Compare each pair of teachers with similar quotas
+                for (int i = 0; i < participatingTeachers.size(); i++) {
+                    for (int j = i + 1; j < participatingTeachers.size(); j++) {
+                        int t1 = participatingTeachers.get(i);
+                        int t2 = participatingTeachers.get(j);
+
+                        // Only compare teachers with similar quotas (±20%)
+                        int quotaDiff = Math.abs(effectiveQuotas[t1] - effectiveQuotas[t2]);
+                        int avgQuota = (effectiveQuotas[t1] + effectiveQuotas[t2]) / 2;
+
+                        if (avgQuota > 0 && quotaDiff * 100 / avgQuota <= 20) {
+                            // These teachers should have similar utilization
+                            // Create a variable for the absolute difference
+                            IntVar diff = model.newIntVar(0, Math.max(effectiveQuotas[t1], effectiveQuotas[t2]),
+                                    "diff_T" + teacherIds[t1] + "_T" + teacherIds[t2]);
+
+                            // diff >= count[t1] - count[t2]
+                            model.addGreaterOrEqual(
+                                    diff,
+                                    LinearExpr.newBuilder()
+                                            .add(teacherAssignmentCounts[t1])
+                                            .add(LinearExpr.term(teacherAssignmentCounts[t2], -1))
+                                            .build()
+                            );
+
+                            // diff >= count[t2] - count[t1]
+                            model.addGreaterOrEqual(
+                                    diff,
+                                    LinearExpr.newBuilder()
+                                            .add(teacherAssignmentCounts[t2])
+                                            .add(LinearExpr.term(teacherAssignmentCounts[t1], -1))
+                                            .build()
+                            );
+
+                            // Penalize differences (but with lower weight than other deviations)
+                            objectiveBuilder.addTerm(diff, config.getFairnessWeight() / 10);
+                        }
+                    }
+                }
+
+                System.out.println("  ✓ Fairness constraints added for " + participatingTeachers.size() + " teachers");
+            }
 
             private AssignmentResponseModel solve() {
                 long startTime = System.currentTimeMillis();

@@ -97,7 +97,15 @@ public class AssignmentConstraintConfig {
      * Heavy penalty for assigning relaxed teachers to originally unavailable slots
      */
     private int unavailabilityViolationPenalty = 1000;
+    private int fairnessWeight = 1000;
 
+    public int getFairnessWeight() {
+        return fairnessWeight;
+    }
+
+    public void setFairnessWeight(int fairnessWeight) {
+        this.fairnessWeight = fairnessWeight;
+    }
     // ===== GETTERS AND SETTERS =====
 
     public ConstraintMode getExamCoverageMode() {
@@ -218,7 +226,9 @@ public class AssignmentConstraintConfig {
      * Default configuration - balanced between feasibility and fairness
      */
     public static AssignmentConstraintConfig defaultConfig() {
-        return new AssignmentConstraintConfig();
+        AssignmentConstraintConfig config = new AssignmentConstraintConfig();
+        config.setFairnessWeight(1000); // Fairness is HIGH priority
+        return config;
     }
 
     /**
