@@ -682,7 +682,7 @@ public class QuotaRecommendationService {
             this.currentPriority = currentPriority;
         }
 
-        // Getters...
+
         public GradeType getGrade() { return grade; }
         public int getTeacherCount() { return teacherCount; }
         public double getCurrentAvgQuota() { return currentAvgQuota; }
