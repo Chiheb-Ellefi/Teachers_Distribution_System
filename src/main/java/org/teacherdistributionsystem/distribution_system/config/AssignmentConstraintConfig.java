@@ -59,6 +59,8 @@ public class AssignmentConstraintConfig {
      */
     private ConstraintMode ownerPresenceMode = ConstraintMode.SOFT;
 
+    private ConstraintMode equalAssignmentMode = ConstraintMode.HARD;
+
     /**
      * Penalty weight for owner presence violations (only used if SOFT)
      */
@@ -211,6 +213,13 @@ public class AssignmentConstraintConfig {
     public void setUnavailabilityViolationPenalty(int unavailabilityViolationPenalty) {
         this.unavailabilityViolationPenalty = unavailabilityViolationPenalty;
     }
+    public ConstraintMode getEqualAssignmentMode() {
+        return equalAssignmentMode;
+    }
+
+    public void setEqualAssignmentMode(ConstraintMode equalAssignmentMode) {
+        this.equalAssignmentMode = equalAssignmentMode;
+    }
 
     // ===== PRESET CONFIGURATIONS =====
 
@@ -218,7 +227,9 @@ public class AssignmentConstraintConfig {
      * Default configuration - balanced between feasibility and fairness
      */
     public static AssignmentConstraintConfig defaultConfig() {
-        return new AssignmentConstraintConfig();
+        AssignmentConstraintConfig config = new AssignmentConstraintConfig();
+
+        return config;
     }
 
     /**
@@ -230,6 +241,7 @@ public class AssignmentConstraintConfig {
         config.setOwnerPresenceMode(ConstraintMode.HARD);
         config.setNoGapsMode(ConstraintMode.HARD);
         config.setNoGapsSkipUnavailableTeachers(true);
+
         return config;
     }
 

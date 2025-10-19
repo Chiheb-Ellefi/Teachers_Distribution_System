@@ -81,4 +81,8 @@ public class TeacherQuotaService {
     public void clearAllQuotas(Long sessionId) {
         teacherQuotaRepository.deleteAllInBatchByExamSession_Id(sessionId);
     }
+
+    public void updateQuotaPerGrade(String grade,Integer quota){
+        teacherQuotaRepository.updateQuotaPerGrade(grade,quota);
+    }
 }

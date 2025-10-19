@@ -149,14 +149,10 @@ public class ExamService {
     public Map<String, String> getRoomNumMap(Long sessionId) {
         List<Object[]> results = examRepository.getExamRoomById(sessionId);
 
-        // Debug: Print what we got from database
-        System.out.println("Database results count: " + results.size());
-        results.forEach(obj -> System.out.println("Exam ID: " + obj[0] + ", Room: " + obj[1]));
-
         return results.stream()
                 .collect(Collectors.toMap(
-                        obj -> String.valueOf(obj[0]), // Convert to String explicitly
-                        obj -> obj[1] != null ? obj[1].toString() : "" // room/local
+                        obj -> String.valueOf(obj[0]),
+                        obj -> obj[1] != null ? obj[1].toString() : ""
                 ));
     }
 
