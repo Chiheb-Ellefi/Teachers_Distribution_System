@@ -52,5 +52,11 @@ public class QuotaPerGradeService {
         return defaultQuotas;
     }
 
+    public void updateQuotaPerGrade(String grade,Integer quota){
+        quotaPerGradeRepository.updateQuotaPerGrade(grade,quota);
+    }
+
+
+
 
 }
