@@ -69,7 +69,7 @@ public class AssignmentSwapService {
 
         String teacher1ToExam2 = validateSwap(
                 assignment1.getTeacherId(),
-                exam2,
+                exam2,exam1,
                 "Teacher 1 → Exam 2"
         );
         if (teacher1ToExam2 != null) {
@@ -78,7 +78,7 @@ public class AssignmentSwapService {
 
         String teacher2ToExam1 = validateSwap(
                 assignment2.getTeacherId(),
-                exam1,
+                exam1,exam2,
                 "Teacher 2 → Exam 1"
         );
         if (teacher2ToExam1 != null) {
@@ -110,7 +110,7 @@ public class AssignmentSwapService {
     }
 
 
-    private String validateSwap(Long teacherId, Exam exam, String context) {
+    private String validateSwap(Long teacherId, Exam exam,Exam ownExam, String context) {
         // Check 1: Teacher is not the exam owner
         if (exam.getResponsable().getId().equals(teacherId)) {
             return context + ": Teacher cannot supervise their own exam (Exam " +
@@ -133,9 +133,9 @@ public class AssignmentSwapService {
         // Check 3: Teacher doesn't have another exam at the same time
         boolean hasConflict = examRepository.existsExamForTeacherInSessionAndDayAndSeance(
                 teacherId,
-                exam.getExamSession().getId(),
-                exam.getJourNumero(),
-                exam.getSeance().name()
+                ownExam.getExamSession().getId(),
+                ownExam.getJourNumero(),
+                ownExam.getSeance().name()
         );
 
         if (hasConflict) {
