@@ -10,7 +10,6 @@ import org.teacherdistributionsystem.distribution_system.repositories.assignemen
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherUnavailabilityRepository;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
