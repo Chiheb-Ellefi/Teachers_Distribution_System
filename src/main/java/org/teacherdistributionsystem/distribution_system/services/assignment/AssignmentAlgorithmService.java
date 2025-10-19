@@ -24,6 +24,7 @@ import java.time.LocalTime;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 
+
 @Service
 public class AssignmentAlgorithmService {
     private AssignmentConstraintConfig config;
@@ -87,15 +88,13 @@ public class AssignmentAlgorithmService {
     private int[] baseQuotas;
     private int[] effectiveQuotas;
     private Set<Integer> teachersWithRelaxedUnavailability;
-    private IntVar[] teacherAssignmentCounts;
-    private IntVar fairnessDeviation;
+
     private List<Exam> exams;
     private Map<Long, Integer> teacherIdToIndex;
     private ExamSessionDto currentSession;
     private int totalConstraintsAdded = 0;
     private int relaxationAttemptNumber = 0;
     private Map<String, Set<Long>> examOwnersByKey;
-
     public AssignmentAlgorithmService(TeacherService teacherService,
                                       TeacherQuotaService teacherQuotaService,
                                       TeacherUnavailabilityService teacherUnavailabilityService,
@@ -110,12 +109,13 @@ public class AssignmentAlgorithmService {
         this.examService = examService;
         this.quotaPerGradeService = quotaPerGradeService;
 
+
         this.config = AssignmentConstraintConfig.defaultConfig();
     }
-
     public void setConfig(AssignmentConstraintConfig config) {
         this.config = config;
     }
+
 
     @Async
     public CompletableFuture<AssignmentResponseModel> executeAssignmentWithConfig(
@@ -128,10 +128,10 @@ public class AssignmentAlgorithmService {
         try {
             return executeAssignment(sessionId);
         } finally {
+
             this.config = originalConfig;
         }
     }
-
     @Async
     public CompletableFuture<AssignmentResponseModel> executeAssignment(Long sessionId) {
         try {
@@ -238,6 +238,7 @@ public class AssignmentAlgorithmService {
             teacherEmails[i] = emailMap.getOrDefault(teacherIds[i], "Unknown");
             baseQuotas[i] = quotaMap.getOrDefault(teacherIds[i], 0);
 
+
             try {
                 GradeType gradeType = GradeType.valueOf(teacherGrades[i]);
                 teacherPriorities[i] = priorityPerGradeMap.getOrDefault(gradeType, Integer.MAX_VALUE);
@@ -247,12 +248,15 @@ public class AssignmentAlgorithmService {
             }
         }
 
+
         teacherIdToIndex = new HashMap<>();
         for (int i = 0; i < numTeachers; i++) {
             teacherIdToIndex.put(teacherIds[i], i);
         }
 
         currentSession = examSessionService.getExamSessionDto(sessionId);
+
+
 
         int numDays = currentSession.getNumExamDays();
         int numSeances = SeanceType.values().length;
@@ -369,6 +373,8 @@ public class AssignmentAlgorithmService {
 
         System.out.println("===================\n");
     }
+
+
 
     private void calculateEffectiveQuotas() {
         // IMPORTANT: Quota is a limit on total assignments, NOT reduced by unavailability
@@ -559,6 +565,7 @@ public class AssignmentAlgorithmService {
                                 "Found after " + relaxationAttemptNumber + " relaxation attempts."
                 );
 
+
                 return result;
             }
 
@@ -587,6 +594,15 @@ public class AssignmentAlgorithmService {
         System.out.println("Total attempts: " + relaxationAttemptNumber);
 
         return buildInfeasibleResponse(0.0);
+    }
+
+    private void createVariables() {
+        assignment = new BoolVar[numTeachers][numExams];
+        for (int t = 0; t < numTeachers; t++) {
+            for (int e = 0; e < numExams; e++) {
+                assignment[t][e] = model.newBoolVar("T" + teacherIds[t] + "_E" + exams.get(e).examId);
+            }
+        }
     }
 
     private void addConstraintsWithPriority() {
@@ -946,7 +962,92 @@ public class AssignmentAlgorithmService {
             System.out.println("✓ No gaps: DISABLED");
         }
 
-        // 8. PRIORITY STRATEGY: Build optimization objective
+// 8. Equal assignments for same grade with quota adjustment (fairness constraint)
+        if (config.getEqualAssignmentMode() == AssignmentConstraintConfig.ConstraintMode.HARD) {
+            int equalAssignmentConstraints = 0;
+
+            // Group teachers by grade
+            Map<String, List<Integer>> teachersByGrade = new HashMap<>();
+            for (int t = 0; t < numTeachers; t++) {
+                if (teacherParticipateSurveillance[t] && effectiveQuotas[t] > 0) {
+                    String grade = teacherGrades[t];
+                    if (grade != null && !grade.isEmpty()) {
+                        teachersByGrade.computeIfAbsent(grade, k -> new ArrayList<>()).add(t);
+                    }
+                }
+            }
+
+            // For each grade group with 2+ teachers, enforce proportional assignments
+            for (Map.Entry<String, List<Integer>> entry : teachersByGrade.entrySet()) {
+                String grade = entry.getKey();
+                List<Integer> teachers = entry.getValue();
+
+                if (teachers.size() < 2) continue; // Skip if only one teacher has this grade
+
+                // Find the most common quota in this grade (baseline)
+                Map<Integer, Integer> quotaFrequency = new HashMap<>();
+                for (int t : teachers) {
+                    quotaFrequency.put(effectiveQuotas[t],
+                            quotaFrequency.getOrDefault(effectiveQuotas[t], 0) + 1);
+                }
+
+                int baselineQuota = quotaFrequency.entrySet().stream()
+                        .max(Map.Entry.comparingByValue())
+                        .map(Map.Entry::getKey)
+                        .orElse(effectiveQuotas[teachers.get(0)]);
+
+                // Find a reference teacher with baseline quota
+                int referenceTeacher = teachers.stream()
+                        .filter(t -> effectiveQuotas[t] == baselineQuota)
+                        .findFirst()
+                        .orElse(teachers.get(0));
+
+                // Enforce: assignments[teacher] = assignments[reference] + (quota[teacher] - baseline)
+                for (int teacher : teachers) {
+                    if (teacher == referenceTeacher) continue;
+
+                    int quotaDifference = effectiveQuotas[teacher] - baselineQuota;
+
+                    LinearExprBuilder sumTeacher = LinearExpr.newBuilder();
+                    LinearExprBuilder sumReference = LinearExpr.newBuilder();
+
+                    for (int e = 0; e < numExams; e++) {
+                        sumTeacher.addTerm(assignment[teacher][e], 1);
+                        sumReference.addTerm(assignment[referenceTeacher][e], 1);
+                    }
+
+                    // sumTeacher = sumReference + quotaDifference
+                    model.addEquality(sumTeacher, LinearExpr.affine(sumReference, 1, quotaDifference));
+                    equalAssignmentConstraints++;
+                }
+            }
+
+            totalConstraintsAdded += equalAssignmentConstraints;
+            System.out.println("✓ Equal assignments for same grade (quota-adjusted): HARD (" +
+                    equalAssignmentConstraints + " constraints across " +
+                    teachersByGrade.size() + " grade groups)");
+
+            // Log grade group details
+            for (Map.Entry<String, List<Integer>> entry : teachersByGrade.entrySet()) {
+                if (entry.getValue().size() > 1) {
+                    String grade = entry.getKey();
+                    List<Integer> teachers = entry.getValue();
+
+                    Map<Integer, Long> quotaDistribution = teachers.stream()
+                            .collect(java.util.stream.Collectors.groupingBy(
+                                    t -> effectiveQuotas[t],
+                                    java.util.stream.Collectors.counting()
+                            ));
+
+                    System.out.println("  Grade " + grade + ": " + teachers.size() +
+                            " teachers, quotas: " + quotaDistribution);
+                }
+            }
+        }
+
+
+
+        // 9. PRIORITY STRATEGY: Build optimization objective
         System.out.println("\n--- Building Optimization Objective ---");
 
         LinearExprBuilder objectiveBuilder = LinearExpr.newBuilder();
@@ -954,14 +1055,17 @@ public class AssignmentAlgorithmService {
 
         // 8a. Build conflict map
         int[] examConflictScore = new int[numExams];
+
         if (config.isOptimizeConflictAvoidance()) {
             for (int e = 0; e < numExams; e++) {
                 Exam exam = exams.get(e);
                 int conflictCount = 0;
+
                 for (int t = 0; t < numTeachers; t++) {
                     if (!teacherParticipateSurveillance[t] || teachersWithRelaxedUnavailability.contains(t)) {
                         continue;
                     }
+
                     if (exam.day < teacherUnavailable[t].length &&
                             exam.seance < teacherUnavailable[t][exam.day].length &&
                             teacherUnavailable[t][exam.day][exam.seance]) {
@@ -972,10 +1076,11 @@ public class AssignmentAlgorithmService {
             }
         }
 
-        // 8b. Penalty for unavailability violations
+        // 8b. Penalty for unavailability violations (relaxed teachers)
         int unavailabilityViolationTerms = 0;
         for (int e = 0; e < numExams; e++) {
             Exam exam = exams.get(e);
+
             for (int t = 0; t < numTeachers; t++) {
                 if (!teacherParticipateSurveillance[t]) continue;
 
@@ -988,6 +1093,7 @@ public class AssignmentAlgorithmService {
                     }
                 }
 
+                // Conflict avoidance penalty
                 if (config.isOptimizeConflictAvoidance() && examConflictScore[e] > 0) {
                     objectiveBuilder.addTerm(assignment[t][e], examConflictScore[e] * config.getConflictAvoidancePenalty());
                 }
@@ -1069,10 +1175,6 @@ public class AssignmentAlgorithmService {
             totalPenaltyTerms += gapVariables.size();
         }
 
-        // 8e. NEW: Add fairness optimization
-        addFairnessConstraintsAndObjective_Variance(objectiveBuilder);
-
-        System.out.println("  - Fairness deviation weight: " + config.getFairnessWeight());
 
         // Set objective to minimize
         if (totalPenaltyTerms > 0) {
@@ -1087,96 +1189,6 @@ public class AssignmentAlgorithmService {
         System.out.println("----------------------------------------------\n");
     }
 
-    private void createVariables() {
-        assignment = new BoolVar[numTeachers][numExams];
-        for (int t = 0; t < numTeachers; t++) {
-            for (int e = 0; e < numExams; e++) {
-                assignment[t][e] = model.newBoolVar("T" + teacherIds[t] + "_E" + exams.get(e).examId);
-            }
-        }
-
-        // Track assignment counts for fairness
-        teacherAssignmentCounts = new IntVar[numTeachers];
-        for (int t = 0; t < numTeachers; t++) {
-            teacherAssignmentCounts[t] = model.newIntVar(0, effectiveQuotas[t],
-                    "count_T" + teacherIds[t]);
-
-            // Link count to actual assignments
-            LinearExprBuilder sum = LinearExpr.newBuilder();
-            for (int e = 0; e < numExams; e++) {
-                sum.addTerm(assignment[t][e], 1);
-            }
-            model.addEquality(teacherAssignmentCounts[t], sum.build());
-        }
-    }
-
-    private void addFairnessConstraintsAndObjective_Variance(LinearExprBuilder objectiveBuilder) {
-        System.out.println("\n--- Adding Fairness Optimization (Grade-Based Equality) ---");
-
-        // Group teachers by grade and quota
-        Map<String, Map<Integer, List<Integer>>> gradeQuotaGroups = new HashMap<>();
-
-        for (int t = 0; t < numTeachers; t++) {
-            if (teacherParticipateSurveillance[t] && effectiveQuotas[t] > 0) {
-                String grade = teacherGrades[t];
-                int quota = effectiveQuotas[t];
-
-                gradeQuotaGroups
-                        .computeIfAbsent(grade, k -> new HashMap<>())
-                        .computeIfAbsent(quota, k -> new ArrayList<>())
-                        .add(t);
-            }
-        }
-
-        int totalGroups = 0;
-        int totalEqualityConstraints = 0;
-
-        for (Map.Entry<String, Map<Integer, List<Integer>>> gradeEntry : gradeQuotaGroups.entrySet()) {
-            String grade = gradeEntry.getKey();
-            Map<Integer, List<Integer>> quotaGroups = gradeEntry.getValue();
-
-            for (Map.Entry<Integer, List<Integer>> quotaEntry : quotaGroups.entrySet()) {
-                int quota = quotaEntry.getKey();
-                List<Integer> teachers = quotaEntry.getValue();
-
-                if (teachers.size() <= 1) continue; // No fairness needed for single teacher
-
-                totalGroups++;
-
-                System.out.println("  Grade: " + grade + ", Quota: " + quota +
-                        " → " + teachers.size() + " teachers must get equal assignments");
-
-                // HARD CONSTRAINT: All teachers in this group get the SAME number of assignments
-                // This ensures perfect fairness within grade-quota groups
-                int firstTeacher = teachers.get(0);
-
-                for (int i = 1; i < teachers.size(); i++) {
-                    int otherTeacher = teachers.get(i);
-
-                    // Force equality: count[t1] == count[t2]
-                    model.addEquality(
-                            teacherAssignmentCounts[firstTeacher],
-                            teacherAssignmentCounts[otherTeacher]
-                    );
-                    totalEqualityConstraints++;
-                }
-
-                // OPTIONAL: Add soft constraint to maximize utilization within quota
-                // This encourages using full capacity when possible
-                if (config.getFairnessWeight() > 0) {
-                    for (int t : teachers) {
-                        // Reward assignments (negative penalty = bonus when minimizing)
-                        objectiveBuilder.addTerm(teacherAssignmentCounts[t],
-                                -config.getFairnessWeight());
-                    }
-                }
-            }
-        }
-
-        System.out.println("  ✓ Grade-based fairness: " + totalGroups + " groups, " +
-                totalEqualityConstraints + " equality constraints");
-        System.out.println("  → Teachers with same grade+quota will get EXACTLY the same assignments");
-    }
 
     private AssignmentResponseModel solve() {
         long startTime = System.currentTimeMillis();
@@ -1342,7 +1354,6 @@ public class AssignmentAlgorithmService {
 
         return workloads;
     }
-
     private AssignmentResponseModel buildInfeasibleResponse(double solutionTime) {
         return AssignmentResponseModel.builder()
                 .status(AssignmentStatus.INFEASIBLE)

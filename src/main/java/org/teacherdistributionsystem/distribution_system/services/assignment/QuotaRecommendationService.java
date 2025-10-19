@@ -136,8 +136,10 @@ public class QuotaRecommendationService {
     }
     /**
      * Calculate priority multipliers for each grade
-     * Lower priority number (1) = higher priority = LOWER multiplier (less work)
-     * Higher priority number (9) = lower priority = HIGHER multiplier (more work)
+     * STRONGER VERSION: More differentiation between priorities
+     * Priority 1 (highest) = 0.5x multiplier (half the work)
+     * Priority 5 (middle) = 1.0x multiplier (baseline)
+     * Priority 9 (lowest) = 1.5x multiplier (50% more work)
      */
     private Map<GradeType, Double> calculatePriorityMultipliers(
             Map<GradeType, GradeAnalysis> gradeAnalysis,
@@ -164,19 +166,19 @@ public class QuotaRecommendationService {
             return multipliers;
         }
 
-        // Calculate multipliers for each grade
-        // Formula: multiplier = 0.7 + (0.6 * normalizedPriority)
-        // This gives range from 0.7 (high priority/less work) to 1.3 (low priority/more work)
+        // IMPROVED: Stronger multiplier range for more differentiation
+        // Formula: multiplier = 0.5 + (1.0 * normalizedPriority)
+        // This gives range from 0.5 (high priority) to 1.5 (low priority)
+        // That's a 3x difference between highest and lowest priority!
         for (Map.Entry<GradeType, GradeAnalysis> entry : gradeAnalysis.entrySet()) {
             GradeType grade = entry.getKey();
             int priority = currentPriorities.getOrDefault(grade, 5);
 
             // Normalize priority to 0-1 range
-            // Lower priority number gets lower normalized value
             double normalizedPriority = (double) (priority - minPriority) / priorityRange;
 
-            // Calculate multiplier: high priority (low number) gets low multiplier
-            double multiplier = 0.7 + (0.6 * normalizedPriority);
+            // Calculate multiplier with STRONGER differentiation
+            double multiplier = 0.5 + (1.0 * normalizedPriority);
 
             multipliers.put(grade, multiplier);
         }
@@ -184,14 +186,10 @@ public class QuotaRecommendationService {
         return multipliers;
     }
 
-// Add this line in the calculateRecommendedQuotas method, inside the for loop
-// right before the "// STRATEGY 1: Priority-based distribution" comment:
-// double equalShareQuota = baselineQuota;
-
 
     /**
      * Calculate recommended quotas using multiple fairness strategies
-     * Respects priority system: priority 1 = highest priority = LOWER quota
+     * FIXED VERSION: Priorities now have much stronger weight
      */
     private QuotaRecommendations calculateRecommendedQuotas(
             Map<GradeType, GradeAnalysis> gradeAnalysis,
@@ -214,8 +212,7 @@ public class QuotaRecommendationService {
         Map<GradeType, Integer> currentPriorities = quotaPerGradeService.getPrioritiesByGrade();
         Map<GradeType, Integer> defaultQuotas = quotaPerGradeService.getDefaultQuotasByGrade();
 
-        // Calculate priority-based weights
-        // Lower priority number = higher priority = lower quota multiplier
+        // Calculate priority-based weights (STRONGER VERSION)
         Map<GradeType, Double> priorityMultipliers = calculatePriorityMultipliers(
                 gradeAnalysis, currentPriorities);
 
@@ -224,7 +221,24 @@ public class QuotaRecommendationService {
 
         System.out.println("🎯 Priority System Analysis:");
         System.out.println("   Baseline quota (if all equal): " + String.format("%.1f", baselineQuota));
-        System.out.println("   Priority scale: 1 (highest/less work) → 9 (lowest/more work)\n");
+        System.out.println("   Priority scale: 1 (highest/less work) → 9 (lowest/more work)");
+        System.out.println("   Multiplier range: 0.5x (priority 1) to 1.5x (priority 9)\n");
+
+        // IMPORTANT: Calculate total weighted capacity to ensure we meet supervision needs
+        double totalWeightedCapacity = gradeAnalysis.entrySet().stream()
+                .mapToDouble(e -> {
+                    GradeType grade = e.getKey();
+                    GradeAnalysis analysis = e.getValue();
+                    double multiplier = priorityMultipliers.get(grade);
+                    return baselineQuota * multiplier * analysis.teacherCount;
+                })
+                .sum();
+
+        // Adjustment factor to ensure total capacity meets needs
+        double adjustmentFactor = totalSupervisionNeeded / totalWeightedCapacity;
+
+        System.out.println("   Total weighted capacity: " + String.format("%.1f", totalWeightedCapacity));
+        System.out.println("   Adjustment factor: " + String.format("%.3f", adjustmentFactor) + "\n");
 
         for (Map.Entry<GradeType, GradeAnalysis> entry : gradeAnalysis.entrySet()) {
             GradeType grade = entry.getKey();
@@ -238,39 +252,37 @@ public class QuotaRecommendationService {
             int defaultQuota = defaultQuotas.getOrDefault(grade, (int) baselineQuota);
             double priorityMultiplier = priorityMultipliers.get(grade);
             double equalShareQuota = baselineQuota;
-            // STRATEGY 1: Priority-based distribution
-            // Apply priority multiplier to baseline
-            double priorityBasedQuota = baselineQuota * priorityMultiplier;
+
+            // STRATEGY 1: Priority-based distribution (ADJUSTED TO MEET TOTAL NEEDS)
+            double priorityBasedQuota = baselineQuota * priorityMultiplier * adjustmentFactor;
 
             // STRATEGY 2: Availability-adjusted with priority
-            // Adjust for availability while respecting priority hierarchy
+            // Apply MINOR adjustment for availability (only ±10%)
             double availabilityWeight = avgAvailability / 100.0;
-            double availabilityAdjustedQuota = priorityBasedQuota * (0.9 + 0.2 * availabilityWeight);
+            double availabilityAdjustedQuota = priorityBasedQuota * (0.95 + 0.10 * availabilityWeight);
 
             // STRATEGY 3: Capacity-based (considering unavailability)
-            // Reduce quota for grades with high unavailability
             double capacityAdjustedQuota = priorityBasedQuota;
             if (avgAvailability < 70) {
-                capacityAdjustedQuota *= 0.85; // 15% reduction for low availability
+                capacityAdjustedQuota *= 0.90; // 10% reduction for very low availability
             } else if (avgAvailability < 85) {
-                capacityAdjustedQuota *= 0.92; // 8% reduction for medium availability
+                capacityAdjustedQuota *= 0.95; // 5% reduction for low availability
             }
 
-            // STRATEGY 4: Default quota adjusted for capacity
-            // Use institutional default but adjust for actual needs
+            // STRATEGY 4: Default quota adjusted for capacity (minor weight)
             double scaleFactor = (double) totalSupervisionNeeded /
                     (gradeAnalysis.values().stream()
                             .mapToDouble(g -> defaultQuotas.getOrDefault(g.grade, 10) * g.teacherCount)
                             .sum());
             double scaledDefaultQuota = defaultQuota * scaleFactor;
 
-            // STRATEGY 5: BALANCED (RECOMMENDED)
-            // Combines priority-based (50%), availability (20%), capacity (20%), default (10%)
+            // STRATEGY 5: PRIORITY-FOCUSED (RECOMMENDED)
+            // NEW WEIGHTS: Priority dominates (70%), availability (15%), capacity (10%), default (5%)
             double recommendedQuota = Math.round(
-                    priorityBasedQuota * 0.50 +
-                            availabilityAdjustedQuota * 0.20 +
-                            capacityAdjustedQuota * 0.20 +
-                            scaledDefaultQuota * 0.10
+                    priorityBasedQuota * 0.70 +           // INCREASED from 50% to 70%
+                            availabilityAdjustedQuota * 0.15 +  // DECREASED from 20% to 15%
+                            capacityAdjustedQuota * 0.10 +      // DECREASED from 20% to 10%
+                            scaledDefaultQuota * 0.05           // DECREASED from 10% to 5%
             );
 
             // Ensure minimum quota of 1 for participating teachers
@@ -291,36 +303,50 @@ public class QuotaRecommendationService {
                     (int) Math.round(recommendedQuota * analysis.teacherCount),
                     quotaChange,
                     changePercentage,
-                    currentPriorities.getOrDefault(grade, 999)
+                    priority
             );
 
             recommendations.addGradeRecommendation(rec);
 
-            // Print analysis
+            // Print analysis with clearer priority impact
             System.out.println("┌─ " + grade + " ─────────────────────");
             System.out.println("│  Teachers: " + analysis.teacherCount);
+            System.out.println("│  Priority: " + priority + " → Multiplier: " + String.format("%.2fx", priorityMultiplier));
             System.out.println("│  Current avg quota: " + String.format("%.1f", currentAvgQuota) +
                     " (total: " + currentTotalQuota + ")");
             System.out.println("│  Availability: " + String.format("%.1f%%", avgAvailability));
-            System.out.println("│  Priority: " + rec.currentPriority);
             System.out.println("│");
-            System.out.println("│  📊 Recommendations:");
-            System.out.println("│    • Equal share: " + String.format("%.1f", equalShareQuota));
+            System.out.println("│  📊 Strategy Breakdown:");
+            System.out.println("│    • Equal share (no priority): " + String.format("%.1f", equalShareQuota));
+            System.out.println("│    • Priority-based: " + String.format("%.1f", priorityBasedQuota) +
+                    " (" + String.format("%+.1f", priorityBasedQuota - equalShareQuota) + ")");
             System.out.println("│    • Availability-adjusted: " + String.format("%.1f", availabilityAdjustedQuota));
             System.out.println("│    • Capacity-adjusted: " + String.format("%.1f", capacityAdjustedQuota));
-            System.out.println("│    • RECOMMENDED: " + String.format("%.1f", recommendedQuota) +
-                    " (" + (quotaChange >= 0 ? "+" : "") + String.format("%.1f", quotaChange) +
-                    ", " + (changePercentage >= 0 ? "+" : "") + String.format("%.1f%%", changePercentage) + ")");
-            System.out.println("│    • Total for grade: " + rec.recommendedTotalQuota);
+            System.out.println("│");
+            System.out.println("│  🎯 RECOMMENDED: " + String.format("%.1f", recommendedQuota) +
+                    " per teacher");
+            System.out.println("│     Change: " + (quotaChange >= 0 ? "+" : "") +
+                    String.format("%.1f", quotaChange) +
+                    " (" + (changePercentage >= 0 ? "+" : "") +
+                    String.format("%.1f%%", changePercentage) + ")");
+            System.out.println("│     Total for grade: " + rec.recommendedTotalQuota +
+                    " (vs current: " + currentTotalQuota + ")");
             System.out.println("└──────────────────────────────────\n");
         }
 
         // Calculate fairness metrics
         recommendations.calculateFairnessMetrics();
 
+        // Verify total capacity
+        int totalRecommended = recommendations.getTotalRecommendedCapacity();
+        System.out.println("🔍 Verification:");
+        System.out.println("   Total recommended capacity: " + totalRecommended);
+        System.out.println("   Total needed: " + totalSupervisionNeeded);
+        System.out.println("   Difference: " + (totalRecommended - totalSupervisionNeeded));
+        System.out.println();
+
         return recommendations;
     }
-
     /**
      * Build complete recommendation response
      */

@@ -59,6 +59,8 @@ public class AssignmentConstraintConfig {
      */
     private ConstraintMode ownerPresenceMode = ConstraintMode.SOFT;
 
+    private ConstraintMode equalAssignmentMode = ConstraintMode.HARD;
+
     /**
      * Penalty weight for owner presence violations (only used if SOFT)
      */
@@ -97,15 +99,7 @@ public class AssignmentConstraintConfig {
      * Heavy penalty for assigning relaxed teachers to originally unavailable slots
      */
     private int unavailabilityViolationPenalty = 1000;
-    private int fairnessWeight = 1000;
 
-    public int getFairnessWeight() {
-        return fairnessWeight;
-    }
-
-    public void setFairnessWeight(int fairnessWeight) {
-        this.fairnessWeight = fairnessWeight;
-    }
     // ===== GETTERS AND SETTERS =====
 
     public ConstraintMode getExamCoverageMode() {
@@ -219,6 +213,13 @@ public class AssignmentConstraintConfig {
     public void setUnavailabilityViolationPenalty(int unavailabilityViolationPenalty) {
         this.unavailabilityViolationPenalty = unavailabilityViolationPenalty;
     }
+    public ConstraintMode getEqualAssignmentMode() {
+        return equalAssignmentMode;
+    }
+
+    public void setEqualAssignmentMode(ConstraintMode equalAssignmentMode) {
+        this.equalAssignmentMode = equalAssignmentMode;
+    }
 
     // ===== PRESET CONFIGURATIONS =====
 
@@ -227,7 +228,7 @@ public class AssignmentConstraintConfig {
      */
     public static AssignmentConstraintConfig defaultConfig() {
         AssignmentConstraintConfig config = new AssignmentConstraintConfig();
-        config.setFairnessWeight(1000); // Fairness is HIGH priority
+
         return config;
     }
 
@@ -240,7 +241,7 @@ public class AssignmentConstraintConfig {
         config.setOwnerPresenceMode(ConstraintMode.HARD);
         config.setNoGapsMode(ConstraintMode.HARD);
         config.setNoGapsSkipUnavailableTeachers(true);
-        config.setFairnessWeight(1000);
+
         return config;
     }
 
