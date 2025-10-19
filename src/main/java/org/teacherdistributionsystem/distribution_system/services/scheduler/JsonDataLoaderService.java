@@ -3,6 +3,7 @@ package org.teacherdistributionsystem.distribution_system.services.scheduler;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherAssignmentsDTO;
+import org.teacherdistributionsystem.distribution_system.services.teacher.TeacherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -17,9 +18,11 @@ public class JsonDataLoaderService {
 
     private static final Logger logger = LoggerFactory.getLogger(JsonDataLoaderService.class);
     private final ObjectMapper objectMapper;
+    private final TeacherService teacherService;
 
-    public JsonDataLoaderService(ObjectMapper objectMapper) {
+    public JsonDataLoaderService(ObjectMapper objectMapper, TeacherService teacherService) {
         this.objectMapper = objectMapper;
+        this.teacherService = teacherService;
     }
 
     /**
@@ -35,18 +38,26 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Fichier de données non trouvé: data/assignments.json");
             }
 
-            // Lire le JSON comme Map pour extraire examAssignments
+            // Lire le JSON
             Map<String, Object> jsonMap = objectMapper.readValue(file, new TypeReference<Map<String, Object>>() {});
-
-            // Extraire la liste des examAssignments
             List<Map<String, Object>> examAssignments = (List<Map<String, Object>>) jsonMap.get("examAssignments");
 
             if (examAssignments == null) {
                 throw new RuntimeException("Format JSON invalide: champ examAssignments manquant");
             }
 
-            // Convertir en ancien format
-            List<TeacherAssignmentsDTO> teachers = convertToTeacherAssignments(examAssignments);
+            //  CHARGER TOUTES LES DONNÉES DES ENSEIGNANTS EN UNE FOIS
+            Map<Long, String> allGrades = teacherService.getAllGrades();
+            Map<Long, String> allEmails = teacherService.getAllEmails();
+            Map<Long, String> allNames = teacherService.getAllNames();
+
+            // Convertir en ancien format avec enrichissement
+            List<TeacherAssignmentsDTO> teachers = convertToTeacherAssignments(
+                    examAssignments,
+                    allGrades,
+                    allEmails,
+                    allNames
+            );
 
             logger.info("Données converties avec succès: {} enseignants, {} examens",
                     teachers.size(), examAssignments.size());
@@ -59,18 +70,23 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * Convertit le nouveau format en ancien format TeacherAssignmentsDTO
+     *  MÉTHODE MODIFIÉE - Convertit avec enrichissement
      */
-    private List<TeacherAssignmentsDTO> convertToTeacherAssignments(List<Map<String, Object>> examAssignments) {
+    private List<TeacherAssignmentsDTO> convertToTeacherAssignments(
+            List<Map<String, Object>> examAssignments,
+            Map<Long, String> allGrades,
+            Map<Long, String> allEmails,
+            Map<Long, String> allNames) {
+
         Map<Long, TeacherAssignmentsDTO> teacherMap = new HashMap<>();
 
         for (Map<String, Object> exam : examAssignments) {
-            // Extraire les données de l'examen
             Long ownerTeacherId = getLongValue(exam.get("ownerTeacherId"));
             String ownerTeacherName = (String) exam.get("ownerTeacherName");
 
             // Pour l'enseignant PROPRIÉTAIRE (responsable)
-            addExamToTeacher(teacherMap, exam, ownerTeacherId, ownerTeacherName, "owner");
+            addExamToTeacher(teacherMap, exam, ownerTeacherId, ownerTeacherName, "owner",
+                    allGrades, allEmails, allNames);
 
             // Pour les enseignants SURVEILLANTS
             List<Map<String, Object>> assignedTeachers = (List<Map<String, Object>>) exam.get("assignedTeachers");
@@ -78,7 +94,8 @@ public class JsonDataLoaderService {
                 for (Map<String, Object> assignedTeacher : assignedTeachers) {
                     Long teacherId = getLongValue(assignedTeacher.get("teacherId"));
                     String teacherName = (String) assignedTeacher.get("teacherName");
-                    addExamToTeacher(teacherMap, exam, teacherId, teacherName, "supervisor");
+                    addExamToTeacher(teacherMap, exam, teacherId, teacherName, "supervisor",
+                            allGrades, allEmails, allNames);
                 }
             }
         }
@@ -86,13 +103,18 @@ public class JsonDataLoaderService {
         return new ArrayList<>(teacherMap.values());
     }
 
+    /**
+     *  MÉTHODE MODIFIÉE - Enrichissement avec les maps
+     */
     private void addExamToTeacher(Map<Long, TeacherAssignmentsDTO> teacherMap,
                                   Map<String, Object> exam,
                                   Long teacherId,
                                   String teacherName,
-                                  String role) {
+                                  String role,
+                                  Map<Long, String> allGrades,
+                                  Map<Long, String> allEmails,
+                                  Map<Long, String> allNames) {
 
-        // Vérifier que teacherId n'est pas null
         if (teacherId == null) {
             logger.warn("TeacherId null pour: {}", teacherName);
             return;
@@ -101,15 +123,34 @@ public class JsonDataLoaderService {
         TeacherAssignmentsDTO teacher = teacherMap.computeIfAbsent(teacherId, id -> {
             TeacherAssignmentsDTO newTeacher = new TeacherAssignmentsDTO();
             newTeacher.setTeacherId(teacherId);
-            newTeacher.setTeacherName(teacherName);
+
+            // Nom complet depuis la DB ou depuis le JSON
+            String fullName = allNames.getOrDefault(teacherId, teacherName);
+            newTeacher.setTeacherName(fullName);
+
             newTeacher.setAssignments(new ArrayList<>());
             newTeacher.setAssignedSupervisions(0);
-            newTeacher.setQuotaSupervisions(10); // Valeur par défaut
+
+            //  GRADE depuis la DB
+            String grade = allGrades.get(teacherId);
+            newTeacher.setGrade(grade != null ? grade : "N/A");
+
+            //  EMAIL depuis la DB
+            String email = allEmails.get(teacherId);
+            newTeacher.setEmail(email != null ? email : "N/A");
+
+            // QUOTA selon le grade (à adapter selon votre logique)
+            newTeacher.setQuotaSupervisions(getQuotaByGrade(grade));
+
             newTeacher.setUtilizationPercentage(0.0);
+
+            logger.debug("Enseignant créé: {} - Grade: {}, Email: {}, Quota: {}",
+                    fullName, newTeacher.getGrade(), newTeacher.getEmail(), newTeacher.getQuotaSupervisions());
+
             return newTeacher;
         });
 
-        // Créer l'affectation avec TOUTES les données
+        // Créer l'affectation
         TeacherAssignmentsDTO.TeacherAssignment assignment = new TeacherAssignmentsDTO.TeacherAssignment();
         assignment.setExamId((String) exam.get("examId"));
         assignment.setDay(getIntegerValue(exam.get("day")));
@@ -117,15 +158,13 @@ public class JsonDataLoaderService {
         assignment.setSeance(getIntegerValue(exam.get("seance")));
         assignment.setSeanceLabel((String) exam.get("seanceLabel"));
         assignment.setRoom((String) exam.get("room"));
-
-        // AJOUT DES NOUVELLES DONNÉES - dates réelles
         assignment.setExamDate((String) exam.get("examDate"));
         assignment.setStartTime((String) exam.get("startTime"));
         assignment.setEndTime((String) exam.get("endTime"));
 
         teacher.getAssignments().add(assignment);
 
-        // Mettre à jour les statistiques (seulement pour les surveillants)
+        // Mettre à jour les statistiques
         if ("supervisor".equals(role)) {
             teacher.setAssignedSupervisions(teacher.getAssignedSupervisions() + 1);
             if (teacher.getQuotaSupervisions() > 0) {
@@ -136,7 +175,25 @@ public class JsonDataLoaderService {
     }
 
     /**
-     * Récupère les données d'un enseignant RESPONSABLE (owner) par nom
+     *  NOUVELLE MÉTHODE - Détermine le quota selon le grade
+     */
+    private Integer getQuotaByGrade(String gradeCode) {
+        if (gradeCode == null) return 10;
+
+        // Adapter selon vos règles métier
+        switch (gradeCode.toUpperCase()) {
+            case "PR":  return 15;  // Professeur
+            case "MA":  return 12;  // Maître Assistant
+            case "MC":  return 10;  // Maître de Conférences
+            case "AC":  return 8;   // Assistant Contractuel
+            case "AS":  return 6;   // Assistant
+            case "V":   return 5;   // Vacataire
+            default:    return 10;  // Par défaut
+        }
+    }
+
+    /**
+     *  MÉTHODE MODIFIÉE - Responsable avec enrichissement
      */
     public TeacherAssignmentsDTO getResponsibleTeacherDataByName(String teacherName) {
         try {
@@ -148,7 +205,7 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Format JSON invalide: champ examAssignments manquant");
             }
 
-            // Filtrer uniquement les examens où l'enseignant est propriétaire
+            // Filtrer les examens où l'enseignant est propriétaire
             List<Map<String, Object>> responsibleExams = examAssignments.stream()
                     .filter(exam -> {
                         String ownerName = (String) exam.get("ownerTeacherName");
@@ -157,25 +214,30 @@ public class JsonDataLoaderService {
                     .collect(Collectors.toList());
 
             if (responsibleExams.isEmpty()) {
-                throw new RuntimeException("Enseignant responsable non trouvé ou aucun examen en responsabilité: " + teacherName);
+                throw new RuntimeException("Enseignant responsable non trouvé: " + teacherName);
             }
 
-            // Convertir en TeacherAssignmentsDTO
-            Map<Long, TeacherAssignmentsDTO> teacherMap = new HashMap<>();
+            //  CHARGER LES DONNÉES
+            Map<Long, String> allGrades = teacherService.getAllGrades();
+            Map<Long, String> allEmails = teacherService.getAllEmails();
+            Map<Long, String> allNames = teacherService.getAllNames();
 
+            // Convertir
+            Map<Long, TeacherAssignmentsDTO> teacherMap = new HashMap<>();
             for (Map<String, Object> exam : responsibleExams) {
                 Long ownerTeacherId = getLongValue(exam.get("ownerTeacherId"));
                 String ownerTeacherName = (String) exam.get("ownerTeacherName");
-                addExamToTeacher(teacherMap, exam, ownerTeacherId, ownerTeacherName, "responsible");
+                addExamToTeacher(teacherMap, exam, ownerTeacherId, ownerTeacherName, "responsible",
+                        allGrades, allEmails, allNames);
             }
 
             TeacherAssignmentsDTO responsibleTeacher = teacherMap.values().iterator().next();
-            logger.info("Données responsable chargées: {} examens en responsabilité", responsibleTeacher.getAssignments().size());
+            logger.info("Données responsable chargées: {} examens", responsibleTeacher.getAssignments().size());
             return responsibleTeacher;
 
         } catch (IOException e) {
             logger.error("Erreur lors du chargement des données responsable", e);
-            throw new RuntimeException("Erreur lors du chargement des données responsable: " + e.getMessage(), e);
+            throw new RuntimeException("Erreur: " + e.getMessage(), e);
         }
     }
 
@@ -243,7 +305,7 @@ public class JsonDataLoaderService {
         }
     }
 
-    // MÉTHODES EXISTANTES (gardez-les telles quelles)
+    // MÉTHODES EXISTANTES
     public TeacherAssignmentsDTO getTeacherDataByName(String teacherName) {
         List<TeacherAssignmentsDTO> teachers = loadTeacherAssignments();
         return teachers.stream()

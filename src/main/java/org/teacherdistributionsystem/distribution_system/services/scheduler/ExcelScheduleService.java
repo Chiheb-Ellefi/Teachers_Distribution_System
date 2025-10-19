@@ -408,10 +408,10 @@ public class ExcelScheduleService {
         Row statsRow = sheet.createRow(rowNum++);
         Cell statsCell = statsRow.createCell(0);
         long totalAssignments = allTeachers.stream()
-                .mapToLong(teacher -> teacher.getAssignments().size())
+                .mapToLong(teacher -> teacher.getAssignments() != null ? teacher.getAssignments().size() : 0)
                 .sum();
         long teachersWithAssignments = allTeachers.stream()
-                .filter(teacher -> !teacher.getAssignments().isEmpty())
+                .filter(teacher -> teacher.getAssignments() != null && !teacher.getAssignments().isEmpty())
                 .count();
 
         statsCell.setCellValue(String.format("Total: %d enseignants, %d avec affectations, %d surveillances totales",
@@ -437,45 +437,54 @@ public class ExcelScheduleService {
 
             // Enseignant
             Cell nameCell = dataRow.createCell(0);
-            nameCell.setCellValue(teacher.getTeacherName());
+            nameCell.setCellValue(teacher.getTeacherName() != null ? teacher.getTeacherName() : "N/A");
             nameCell.setCellStyle(dataStyle);
 
-            // Grade
+            // Grade ✅ CORRECTION
             Cell gradeCell = dataRow.createCell(1);
-            gradeCell.setCellValue(teacher.getGrade());
+            gradeCell.setCellValue(teacher.getGrade() != null ? teacher.getGrade() : "N/A");
             gradeCell.setCellStyle(dataStyle);
 
-            // Email
+            // Email ✅ CORRECTION
             Cell emailCell = dataRow.createCell(2);
-            emailCell.setCellValue(teacher.getEmail());
+            emailCell.setCellValue(teacher.getEmail() != null ? teacher.getEmail() : "N/A");
             emailCell.setCellStyle(dataStyle);
 
             // Affectations
             Cell assignedCell = dataRow.createCell(3);
-            assignedCell.setCellValue(teacher.getAssignedSupervisions());
+            assignedCell.setCellValue(teacher.getAssignedSupervisions() != null ? teacher.getAssignedSupervisions() : 0);
             assignedCell.setCellStyle(dataStyle);
 
-            // Quota
+            // Quota ✅ CORRECTION - Utiliser le quota réel
             Cell quotaCell = dataRow.createCell(4);
-            quotaCell.setCellValue(teacher.getQuotaSupervisions());
+            quotaCell.setCellValue(teacher.getQuotaSupervisions() != null ? teacher.getQuotaSupervisions() : 0);
             quotaCell.setCellStyle(dataStyle);
 
             // Taux utilisation
             Cell usageCell = dataRow.createCell(5);
-            usageCell.setCellValue(teacher.getUtilizationPercentage() + "%");
+            Double utilization = teacher.getUtilizationPercentage();
+            String utilizationText = utilization != null ? String.format("%.1f%%", utilization) : "0%";
+            usageCell.setCellValue(utilizationText);
             usageCell.setCellStyle(dataStyle);
 
             // Détail des affectations avec dates RÉELLES
             Cell detailCell = dataRow.createCell(6);
             StringBuilder details = new StringBuilder();
-            for (TeacherAssignmentsDTO.TeacherAssignment assignment : teacher.getAssignments()) {
-                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
-                details.append(date)
-                        .append(" - ")
-                        .append(assignment.getSeanceLabel())
-                        .append(" (")
-                        .append(assignment.getRoom())
-                        .append("); ");
+            if (teacher.getAssignments() != null && !teacher.getAssignments().isEmpty()) {
+                for (TeacherAssignmentsDTO.TeacherAssignment assignment : teacher.getAssignments()) {
+                    String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
+                    String seanceLabel = assignment.getSeanceLabel() != null ? assignment.getSeanceLabel() : "S" + assignment.getSeance();
+                    String room = assignment.getRoom() != null ? assignment.getRoom() : "N/A";
+
+                    details.append(date)
+                            .append(" - ")
+                            .append(seanceLabel)
+                            .append(" (")
+                            .append(room)
+                            .append("); ");
+                }
+            } else {
+                details.append("Aucune affectation");
             }
             detailCell.setCellValue(details.toString());
             detailCell.setCellStyle(dataStyle);
