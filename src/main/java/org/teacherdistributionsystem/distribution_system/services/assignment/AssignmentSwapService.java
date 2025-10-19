@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResult.success;
+
 @Service
 public class AssignmentSwapService {
 
@@ -29,13 +31,7 @@ public class AssignmentSwapService {
         this.unavailabilityRepository = unavailabilityRepository;
     }
 
-    /**
-     * Swap assignments between two teachers
-     *
-     * @param assignmentId1 First teacher's assignment ID
-     * @param assignmentId2 Second teacher's assignment ID
-     * @return SwapResult with success status and details
-     */
+
     @Transactional
     public SwapResult swapAssignments(Long assignmentId1, Long assignmentId2) {
 
@@ -106,7 +102,7 @@ public class AssignmentSwapService {
         assignmentRepository.save(assignment2);
 
 
-        return SwapResult.success(assignment1, assignment2);
+        return success(assignment1, assignment2);
     }
 
 
