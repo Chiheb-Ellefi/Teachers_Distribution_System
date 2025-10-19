@@ -997,6 +997,10 @@ public class AssignmentAlgorithmService {
         }
 
 // 8. Equal assignments for same grade with quota adjustment (fairness constraint)
+// NOTE: SOFT mode variables will be added to objective later
+        Map<Integer, IntVar> equalityDeviationVars = new HashMap<>();
+        int equalityDeviationCount = 0;
+
         if (config.getEqualAssignmentMode() == AssignmentConstraintConfig.ConstraintMode.HARD) {
             int equalAssignmentConstraints = 0;
 
@@ -1016,9 +1020,8 @@ public class AssignmentAlgorithmService {
                 String grade = entry.getKey();
                 List<Integer> teachers = entry.getValue();
 
-                if (teachers.size() < 2) continue; // Skip if only one teacher has this grade
+                if (teachers.size() < 2) continue;
 
-                // Find the most common quota in this grade (baseline)
                 Map<Integer, Integer> quotaFrequency = new HashMap<>();
                 for (int t : teachers) {
                     quotaFrequency.put(effectiveQuotas[t],
@@ -1030,13 +1033,11 @@ public class AssignmentAlgorithmService {
                         .map(Map.Entry::getKey)
                         .orElse(effectiveQuotas[teachers.get(0)]);
 
-                // Find a reference teacher with baseline quota
                 int referenceTeacher = teachers.stream()
                         .filter(t -> effectiveQuotas[t] == baselineQuota)
                         .findFirst()
                         .orElse(teachers.get(0));
 
-                // Enforce: assignments[teacher] = assignments[reference] + (quota[teacher] - baseline)
                 for (int teacher : teachers) {
                     if (teacher == referenceTeacher) continue;
 
@@ -1050,7 +1051,6 @@ public class AssignmentAlgorithmService {
                         sumReference.addTerm(assignment[referenceTeacher][e], 1);
                     }
 
-                    // sumTeacher = sumReference + quotaDifference
                     model.addEquality(sumTeacher, LinearExpr.affine(sumReference, 1, quotaDifference));
                     equalAssignmentConstraints++;
                 }
@@ -1061,7 +1061,6 @@ public class AssignmentAlgorithmService {
                     equalAssignmentConstraints + " constraints across " +
                     teachersByGrade.size() + " grade groups)");
 
-            // Log grade group details
             for (Map.Entry<String, List<Integer>> entry : teachersByGrade.entrySet()) {
                 if (entry.getValue().size() > 1) {
                     String grade = entry.getKey();
@@ -1077,7 +1076,93 @@ public class AssignmentAlgorithmService {
                             " teachers, quotas: " + quotaDistribution);
                 }
             }
+
+        } else if (config.getEqualAssignmentMode() == AssignmentConstraintConfig.ConstraintMode.SOFT) {
+            // SOFT mode: Penalize deviations from equal assignments
+            System.out.println("✓ Equal assignments for same grade: SOFT (penalizing unfairness)");
+
+            // Group teachers by grade
+            Map<String, List<Integer>> teachersByGrade = new HashMap<>();
+            for (int t = 0; t < numTeachers; t++) {
+                if (teacherParticipateSurveillance[t] && effectiveQuotas[t] > 0) {
+                    String grade = teacherGrades[t];
+                    if (grade != null && !grade.isEmpty()) {
+                        teachersByGrade.computeIfAbsent(grade, k -> new ArrayList<>()).add(t);
+                    }
+                }
+            }
+
+            int fairnessVariables = 0;
+
+            for (Map.Entry<String, List<Integer>> entry : teachersByGrade.entrySet()) {
+                String grade = entry.getKey();
+                List<Integer> teachers = entry.getValue();
+
+                if (teachers.size() < 2) continue;
+
+                // Find baseline quota for this grade
+                Map<Integer, Integer> quotaFrequency = new HashMap<>();
+                for (int t : teachers) {
+                    quotaFrequency.put(effectiveQuotas[t],
+                            quotaFrequency.getOrDefault(effectiveQuotas[t], 0) + 1);
+                }
+
+                int baselineQuota = quotaFrequency.entrySet().stream()
+                        .max(Map.Entry.comparingByValue())
+                        .map(Map.Entry::getKey)
+                        .orElse(effectiveQuotas[teachers.get(0)]);
+
+                int referenceTeacher = teachers.stream()
+                        .filter(t -> effectiveQuotas[t] == baselineQuota)
+                        .findFirst()
+                        .orElse(teachers.get(0));
+
+                // For each teacher pair in same grade, create deviation variables
+                for (int teacher : teachers) {
+                    if (teacher == referenceTeacher) continue;
+
+                    int quotaDifference = effectiveQuotas[teacher] - baselineQuota;
+
+                    LinearExprBuilder sumTeacher = LinearExpr.newBuilder();
+                    LinearExprBuilder sumReference = LinearExpr.newBuilder();
+
+                    for (int e = 0; e < numExams; e++) {
+                        sumTeacher.addTerm(assignment[teacher][e], 1);
+                        sumReference.addTerm(assignment[referenceTeacher][e], 1);
+                    }
+
+                    // Create deviation variable: |assignments[teacher] - assignments[reference] - quotaDiff|
+                    // We model this as: deviation >= diff and deviation >= -diff
+                    IntVar deviation = model.newIntVar(0, numExams,
+                            "fairness_dev_" + grade + "_T" + teacher);
+
+                    // diff = sumTeacher - sumReference - quotaDifference
+                    LinearExprBuilder diff = LinearExpr.newBuilder();
+                    diff.add(sumTeacher);
+                    diff.add(LinearExpr.term(sumReference, -1));
+                    diff.add(LinearExpr.constant(-quotaDifference));
+
+                    IntVar diffVar = model.newIntVar(-numExams, numExams,
+                            "diff_" + grade + "_T" + teacher);
+                    model.addEquality(diffVar, diff.build());
+
+                    // deviation >= diff
+                    model.addGreaterOrEqual(deviation, diffVar);
+                    // deviation >= -diff
+                    model.addGreaterOrEqual(deviation, LinearExpr.term(diffVar, -1));
+
+                    // Store for objective function (will be added later)
+                    equalityDeviationVars.put(equalityDeviationCount++, deviation);
+                }
+            }
+
+            System.out.println("  → " + equalityDeviationCount + " fairness deviation variables created (weight: "
+                    + config.getEqualAssignmentPenalty() + ")");
+
+        } else {
+            System.out.println("✓ Equal assignments for same grade: DISABLED");
         }
+
 
 
 
@@ -1207,6 +1292,16 @@ public class AssignmentAlgorithmService {
             System.out.println("  - Gap penalties: " + gapVariables.size() +
                     " gaps (weight: " + config.getNoGapsPenalty() + ")");
             totalPenaltyTerms += gapVariables.size();
+        }
+
+        // Add equal assignment penalties (if SOFT mode)
+        if (config.getEqualAssignmentMode() == AssignmentConstraintConfig.ConstraintMode.SOFT) {
+            for (IntVar deviationVar : equalityDeviationVars.values()) {
+                objectiveBuilder.addTerm(deviationVar, config.getEqualAssignmentPenalty());
+            }
+            System.out.println("  - Equal assignment deviations: " + equalityDeviationVars.size() +
+                    " variables (weight: " + config.getEqualAssignmentPenalty() + ")");
+            totalPenaltyTerms += equalityDeviationVars.size();
         }
 
 
