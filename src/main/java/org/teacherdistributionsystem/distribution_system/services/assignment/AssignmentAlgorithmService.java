@@ -1176,8 +1176,8 @@
                     // teacherAssignmentCounts[t] + underAssignment >= minExpected
                     model.addGreaterOrEqual(
                             LinearExpr.newBuilder()
-                                    .add(teacherAssignmentCounts[t])
                                     .add(underAssignment)
+                                    .add(teacherAssignmentCounts[t])
                                     .build(),
                             minExpected
                     );
