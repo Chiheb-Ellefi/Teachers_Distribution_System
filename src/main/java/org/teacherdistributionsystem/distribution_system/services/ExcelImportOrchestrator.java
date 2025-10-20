@@ -12,6 +12,7 @@ import org.teacherdistributionsystem.distribution_system.mappers.assignment.Exam
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamService;
 import org.teacherdistributionsystem.distribution_system.services.assignment.ExamSessionService;
 import org.teacherdistributionsystem.distribution_system.services.teacher.*;
+import org.teacherdistributionsystem.distribution_system.utils.TeacherMaps;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -29,21 +30,36 @@ public class ExcelImportOrchestrator {
 
 
 
+
+
+
     @Transactional
-    public ExamSessionDto importData(String examDataFilePath, String teachersListFilePath, String teachersUnavailabilityFilePath) throws IOException {
+    public ExamSessionDto importData(
+            String examDataFilePath,
+            String teachersListFilePath,
+            String teachersUnavailabilityFilePath) throws IOException {
+
         ExamSession examSession;
         try (FileInputStream examDataFile = new FileInputStream(examDataFilePath);
              Workbook examWorkbook = new XSSFWorkbook(examDataFile)) {
-
             examSession = examSessionService.addSession(examWorkbook);
         }
-        Map<String, Teacher> teacherMap;
+
+        TeacherMaps teacherMaps;
         try (FileInputStream teachersListFile = new FileInputStream(teachersListFilePath);
              Workbook teachersWorkbook = new XSSFWorkbook(teachersListFile)) {
-            teacherMap = teacherService.populateTeachersTable(teachersWorkbook);
+
+            // Get both maps from the updated populateTeachersTable
+            teacherMaps = teacherService.populateTeachersTable(teachersWorkbook);
+
             gradeService.addGrades(teachersWorkbook);
-            quotaService.addTeachersQuota(teachersWorkbook, teacherMap, examSession);
+            quotaService.addTeachersQuota(
+                    teachersWorkbook,
+                    teacherMaps.getEmailToTeacherMap(),
+                    examSession
+            );
         }
+
         try (FileInputStream examDataFile = new FileInputStream(examDataFilePath);
              Workbook examWorkbook = new XSSFWorkbook(examDataFile)) {
             examService.addExams(examWorkbook, examSession);
@@ -52,8 +68,13 @@ public class ExcelImportOrchestrator {
         try (FileInputStream teachersUnavailabilityFile = new FileInputStream(teachersUnavailabilityFilePath);
              Workbook unavailabilityWorkbook = new XSSFWorkbook(teachersUnavailabilityFile)) {
 
-            teacherUnavailabilityService.addTeachersUnavailability(unavailabilityWorkbook, examSession);
+            teacherUnavailabilityService.addTeachersUnavailability(
+                    unavailabilityWorkbook,
+                    examSession,
+                    teacherMaps.getAbrvToEmailMap()
+            );
         }
+
         return ExamSessionMapper.toExamSessionDto(examSession);
     }
 }

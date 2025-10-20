@@ -30,9 +30,19 @@ public class ExcelCellUtils {
 
     public static Boolean getCellAsBoolean(Row row, int columnIndex) {
         Cell cell = row.getCell(columnIndex);
-        if (cell == null) return false;
+        if (cell == null) return null;
 
-        return row.getCell(columnIndex).getBooleanCellValue();
+        try {
+            if (cell.getCellType() == CellType.BOOLEAN) {
+                return cell.getBooleanCellValue();
+            } else if (cell.getCellType() == CellType.STRING) {
+                String value = cell.getStringCellValue().trim().toUpperCase();
+                return "TRUE".equals(value) || "YES".equals(value) || "1".equals(value);
+            }
+        } catch (Exception e) {
+            System.err.println("Error parsing boolean from cell: " + e.getMessage());
+        }
+        return null;
     }
 
     public static Double getCellAsDouble(Row row, int columnIndex) {

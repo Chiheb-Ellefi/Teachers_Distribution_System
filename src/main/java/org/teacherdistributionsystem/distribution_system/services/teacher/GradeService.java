@@ -24,30 +24,47 @@ public class GradeService {
 
 
     public void addGrades(Workbook workbook) {
-        List<Grade> grades=new ArrayList<>();
-        Map<GradeType,Integer> priorityPerGradeMap=quotaPerGradeService.getPrioritiesByGrade();
-       workbook.forEach(sheet -> {
-           sheet.forEach(row -> {
-               if (row.getRowNum() == 0) return;
-               QuotaPerGradeDto quotaPerGrade;
-               GradeType grade=GradeType.fromCode(getCellAsString(row,3));
-               try {
-                   quotaPerGrade = quotaPerGradeService.getQuotaByGrade(grade);
-               } catch (IllegalArgumentException  e) {
-                   throw new RuntimeException(e);
-               }
-               Grade gradeType= Grade.builder()
-                       .gradeCode(getCellAsString(row,3))
-                       .gradeLibelle(grade.getLabel())
-                       .defaultQuotaPerSession(quotaPerGrade.getDefaultQuota())
-                       .priorityLevel(priorityPerGradeMap.get(grade))
-                       .build();
-               grades.add(gradeType);
-               gradeTypeRepository.saveAll(grades);
+        List<Grade> grades = new ArrayList<>();
+        Map<GradeType, Integer> priorityPerGradeMap = quotaPerGradeService.getPrioritiesByGrade();
 
-           });
-       });
+        workbook.forEach(sheet -> {
+            sheet.forEach(row -> {
+                if (row.getRowNum() == 0) return;
 
+                // FIXED: Read from column 4 instead of column 3
+                String gradeCodeStr = getCellAsString(row, 4);
+
+                if (gradeCodeStr == null || gradeCodeStr.trim().isEmpty()) {
+                    System.err.println("Empty grade code at row " + row.getRowNum());
+                    return;
+                }
+
+                QuotaPerGradeDto quotaPerGrade;
+                GradeType grade;
+
+                try {
+                    grade = GradeType.fromCode(gradeCodeStr);
+                    quotaPerGrade = quotaPerGradeService.getQuotaByGrade(grade);
+                } catch (IllegalArgumentException e) {
+                    System.err.println("Invalid grade code: " + gradeCodeStr + " at row " + row.getRowNum());
+                    throw new RuntimeException("Invalid grade code: " + gradeCodeStr, e);
+                }
+
+                Grade gradeType = Grade.builder()
+                        .gradeCode(gradeCodeStr)
+                        .gradeLibelle(grade.getLabel())
+                        .defaultQuotaPerSession(quotaPerGrade.getDefaultQuota())
+                        .priorityLevel(priorityPerGradeMap.get(grade))
+                        .build();
+
+                grades.add(gradeType);
+            });
+        });
+
+        // Save all grades at once (moved outside the loop for better performance)
+        if (!grades.isEmpty()) {
+            gradeTypeRepository.saveAll(grades);
+        }
     }
 
     @Transactional

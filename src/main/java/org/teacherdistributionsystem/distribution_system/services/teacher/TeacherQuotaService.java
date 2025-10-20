@@ -29,35 +29,72 @@ public class TeacherQuotaService {
     private final QuotaPerGradeService quotaPerGradeService;
     private final QuotaPerGradeRepository quotaPerGradeRepository;
 
-    public void addTeachersQuota( Workbook workbook, Map<String,Teacher> teacherMap,ExamSession session) {
-        List<TeacherQuota> teacherQuotas=new ArrayList<>();
+    public void addTeachersQuota(Workbook workbook, Map<String, Teacher> teacherMap, ExamSession session) {
+        List<TeacherQuota> teacherQuotas = new ArrayList<>();
 
-      workbook.forEach(sheet -> {
-          sheet.forEach(row -> {
-              if (row.getRowNum() == 0) return ;
-              QuotaPerGradeDto quotaPerGrade;
-              try {
-                  quotaPerGrade = quotaPerGradeService.getQuotaByGrade(GradeType.fromCode(getCellAsString(row,3)));
-              } catch (IllegalArgumentException e) {
-                  throw new RuntimeException(e);
-              }
-              Teacher teacher=teacherMap.get(getCellAsString(row,2));
-              Integer teacherQuota=teacher.getQuotaCredit()+quotaPerGrade.getDefaultQuota();
-              QuotaType quotaType=teacher.getQuotaCredit()==0?QuotaType.STANDARD:QuotaType.INCREASED;
-              String message=teacher.getQuotaCredit()==0?"Standard pour le grade : " + getCellAsString(row,3):"Incrementer a cause d'un credit d'une session précédente";
-              TeacherQuota quota=TeacherQuota.builder()
-                      .assignedQuota(teacherQuota)
-                      .teacher(teacher)
-                      .examSession(session)
-                      .quotaType(quotaType)
-                      .reason(message)
-                      .build();
-              teacherQuotas.add(quota);
-          });
-      });
+        workbook.forEach(sheet -> {
+            System.out.println("QuotaService - Processing sheet: " + sheet.getSheetName());
+            sheet.forEach(row -> {
+                if (row.getRowNum() == 0) {
+                    System.out.println("QuotaService - Skipping header row");
+                    return;
+                }
 
-        teacherQuotaRepository.saveAll(teacherQuotas);
+                // FIXED: Read email from column 3 (was column 2)
+                String email = getCellAsString(row, 3);
 
+                // FIXED: Read grade from column 4 (was column 3)
+                String gradeCodeStr = getCellAsString(row, 4);
+
+                System.out.println("QuotaService - Row " + row.getRowNum() +
+                        ": email=" + email + ", gradeCode=" + gradeCodeStr);
+
+                if (email == null || email.trim().isEmpty()) {
+                    System.err.println("QuotaService - Empty email at row " + row.getRowNum());
+                    return;
+                }
+
+                if (gradeCodeStr == null || gradeCodeStr.trim().isEmpty()) {
+                    System.err.println("QuotaService - Empty grade code at row " + row.getRowNum());
+                    return;
+                }
+
+                QuotaPerGradeDto quotaPerGrade;
+                try {
+                    quotaPerGrade = quotaPerGradeService.getQuotaByGrade(GradeType.fromCode(gradeCodeStr));
+                } catch (IllegalArgumentException e) {
+                    System.err.println("QuotaService - Invalid grade code: " + gradeCodeStr + " at row " + row.getRowNum());
+                    throw new RuntimeException("Invalid grade code: " + gradeCodeStr, e);
+                }
+
+                Teacher teacher = teacherMap.get(email);
+                if (teacher == null) {
+                    System.err.println("QuotaService - Teacher not found for email: " + email + " at row " + row.getRowNum());
+                    return;
+                }
+
+                Integer teacherQuota =quotaPerGrade.getDefaultQuota();
+                QuotaType quotaType =QuotaType.STANDARD ;
+                String message = teacher.getQuotaCredit() == 0
+                        ? "Standard pour le grade : " + gradeCodeStr
+                        : "Vous avez un crédit restant de la dernière session d'examens";
+
+                TeacherQuota quota = TeacherQuota.builder()
+                        .assignedQuota(teacherQuota)
+                        .teacher(teacher)
+                        .examSession(session)
+                        .quotaType(quotaType)
+                        .reason(message)
+                        .build();
+
+                teacherQuotas.add(quota);
+            });
+        });
+
+        if (!teacherQuotas.isEmpty()) {
+            teacherQuotaRepository.saveAll(teacherQuotas);
+            System.out.println("QuotaService - Saved " + teacherQuotas.size() + " teacher quotas");
+        }
     }
    public Map<Long, Integer> getAllQuotas(Long sessionId) {
        return teacherQuotaRepository.getTeacherQuotaAndId(sessionId).stream()

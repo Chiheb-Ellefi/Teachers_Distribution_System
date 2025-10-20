@@ -20,9 +20,11 @@ import org.teacherdistributionsystem.distribution_system.models.responses.PageRe
 import org.teacherdistributionsystem.distribution_system.models.responses.teacher.GradeCount;
 import org.teacherdistributionsystem.distribution_system.models.responses.teacher.TeacherResponse;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
+import org.teacherdistributionsystem.distribution_system.utils.TeacherMaps;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -38,58 +40,73 @@ public class TeacherService {
 
     private final TeacherQuotaService teacherQuotaService;
 
-    public Map<String, Teacher> populateTeachersTable(Workbook workbook) {
-        List<Teacher> teachers = new ArrayList<>();
+        public TeacherMaps populateTeachersTable(Workbook workbook) {
+            List<Teacher> teachers = new ArrayList<>();
+            Map<String, String> abrvToEmailMap = new HashMap<>();
 
-        workbook.forEach(sheet -> {
-            sheet.forEach(row -> {
-                if (row.getRowNum() == 0) return;
+            workbook.forEach(sheet -> {
+                sheet.forEach(row -> {
+                    if (row.getRowNum() == 0) return;
 
+                    String nom = getCellAsString(row, 0);
+                    String prenom = getCellAsString(row, 1);
+                    String abrv = getCellAsString(row, 2);
+                    String email = getCellAsString(row, 3);
+                    String gradeCode = getCellAsString(row, 4);
+                    Integer codeSmartex = getCellAsInteger(row, 5);
+                    Boolean participeSurveillance = getCellAsBoolean(row, 6);
+                    System.out.println("Row " + row.getRowNum() + ": nom=" + nom + ", email=" + email + ", gradeCode=" + gradeCode);
+                    Teacher teacher = Teacher.builder()
+                            .nom(nom)
+                            .prenom(prenom)
+                            .email(email)
+                            .gradeCode(gradeCode)
+                            .codeSmartex(codeSmartex)
+                            .participeSurveillance(participeSurveillance)
+                            .quotaCredit(0)
+                            .build();
 
-                Teacher teacher = Teacher.builder()
-                        .nom(getCellAsString(row, 0))
-                        .prenom(getCellAsString(row, 1))
-                        .email(getCellAsString(row, 2))
-                        .gradeCode(getCellAsString(row, 3))
-                        .codeSmartex(getCellAsInteger(row, 4))
-                        .participeSurveillance(getCellAsBoolean(row, 5))
-                        .quotaCredit(0)
-                        .build();
-                teachers.add(teacher);
+                    teachers.add(teacher);
+
+                    // Store abbreviation to email mapping for later lookup
+                    if (abrv != null && !abrv.trim().isEmpty() && email != null) {
+                        abrvToEmailMap.put(abrv.trim(), email);
+                    }
+                });
             });
-        });
 
-        boolean isEmpty = teacherRepository.count() == 0;
+            boolean isEmpty = teacherRepository.count() == 0;
 
-        if (isEmpty) {
+            if (isEmpty) {
+                List<Teacher> savedTeachers = teacherRepository.saveAll(teachers);
+                Map<String, Teacher> emailMap = savedTeachers.stream()
+                        .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
 
-            List<Teacher> savedTeachers = teacherRepository.saveAll(teachers);
-            return savedTeachers.stream()
-                    .collect(Collectors.toMap(Teacher::getEmail, teacher -> teacher));
-        } else {
+                return new TeacherMaps(emailMap, abrvToEmailMap);
+            } else {
+                List<String> existingEmails = teacherRepository.findAll().stream()
+                        .map(Teacher::getEmail)
+                        .toList();
 
-            List<String> existingEmails = teacherRepository.findAll().stream()
-                    .map(Teacher::getEmail)
-                    .toList();
+                List<Teacher> newTeachers = teachers.stream()
+                        .filter(t -> t.getEmail() != null && !existingEmails.contains(t.getEmail()))
+                        .toList();
 
-            List<Teacher> newTeachers = teachers.stream()
-                    .filter(t -> t.getEmail() != null && !existingEmails.contains(t.getEmail()))
-                    .toList();
+                if (!newTeachers.isEmpty()) {
+                    teacherRepository.saveAll(newTeachers);
+                }
 
-            if (!newTeachers.isEmpty()) {
-                teacherRepository.saveAll(newTeachers);
+                List<Teacher> allTeachers = teacherRepository.findAll();
+                Map<String, Teacher> emailMap = allTeachers.stream()
+                        .collect(Collectors.toMap(
+                                Teacher::getEmail,
+                                teacher -> teacher,
+                                (existing, replacement) -> existing
+                        ));
+
+                return new TeacherMaps(emailMap, abrvToEmailMap);
             }
-
-
-            List<Teacher> allTeachers = teacherRepository.findAll();
-            return allTeachers.stream()
-                    .collect(Collectors.toMap(
-                            Teacher::getEmail,
-                            teacher -> teacher,
-                            (existing, replacement) -> existing
-                    ));
         }
-    }
 
 
     public Map<Long, Boolean>getTeacherParticipeSurveillance(){
