@@ -1,5 +1,7 @@
 package org.teacherdistributionsystem.distribution_system.config;
 
+import java.nio.file.attribute.FileAttribute;
+
 /**
  * Configuration for assignment algorithm constraints
  * Allows fine-tuning of constraint behavior: HARD (must follow) vs SOFT (prefer but allow)
@@ -247,8 +249,7 @@ public class AssignmentConstraintConfig {
 
         // YOUR TOP PRIORITIES - HARD
         config.setEqualAssignmentMode(ConstraintMode.HARD);        // ✓ Perfect equality for same grade
-        config.setNoGapsMode(ConstraintMode.HARD);                 // ✓ No gaps in schedule
-        config.setNoGapsSkipUnavailableTeachers(true);             // Skip teachers with unavailability
+
 
         // CAN BE BREACHED - Will be relaxed if needed
         config.setUnavailabilityMode(ConstraintMode.HARD);         // ✓ Respect unavailability (relaxable)
@@ -256,7 +257,8 @@ public class AssignmentConstraintConfig {
         // NICE TO HAVE - SOFT
         config.setOwnerPresenceMode(ConstraintMode.SOFT);          // Prefer owner presence
         config.setOwnerPresencePenalty(5);
-
+        config.setNoGapsMode(ConstraintMode.DISABLED);                 // ✓ No gaps in schedule
+        config.setNoGapsSkipUnavailableTeachers(false);             // Skip teachers with unavailability
         // Optimization preferences
         config.setOptimizeConflictAvoidance(true);
         config.setConflictAvoidancePenalty(1);
