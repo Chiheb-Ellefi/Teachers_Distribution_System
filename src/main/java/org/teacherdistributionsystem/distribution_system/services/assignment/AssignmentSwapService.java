@@ -190,7 +190,7 @@ public class AssignmentSwapService {
 
             helper.setTo(teacher.getEmail());
             helper.setSubject("🔄 Modification de votre affectation de surveillance d'examen");
-            helper.setText(buildSwapEmailContent(teacher, oldExam, newExam, newAssignment,"Administrateur"), true);
+            helper.setText(buildSwapEmailContent(teacher, oldExam, newExam, newAssignment), true);
 
             mailSender.send(message);
             log.info("📧 Email envoyé à: {}", teacher.getEmail());
@@ -201,14 +201,14 @@ public class AssignmentSwapService {
         }
     }
 
-    public String buildSwapEmailContent(Teacher teacher, Exam oldExam, Exam newExam,
-                                             TeacherExamAssignment newAssignment, String role) {
+    private String buildSwapEmailContent(Teacher teacher, Exam oldExam, Exam newExam,
+                                         TeacherExamAssignment newAssignment) {
         DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
 
         String teacherName = teacher.getPrenom() + " " + teacher.getNom();
 
-        // Informations ancien examen
+        // Informations ancien examen (depuis l'entité Exam)
         String oldExamDate = oldExam.getExamDate() != null ?
                 oldExam.getExamDate().format(dateFormatter) : "N/A";
         String oldSeance = oldExam.getSeance() != null ? oldExam.getSeance().name() : "N/A";
@@ -218,7 +218,7 @@ public class AssignmentSwapService {
                 oldExam.getEndTime().format(timeFormatter) : "N/A";
         String oldRoom = oldExam.getNumRooms() != null ? oldExam.getNumRooms() : "N/A";
 
-        // Informations nouvel examen
+        // Informations nouvel examen (depuis l'entité Exam)
         String newExamDate = newExam.getExamDate() != null ?
                 newExam.getExamDate().format(dateFormatter) : "N/A";
         String newSeance = newExam.getSeance() != null ? newExam.getSeance().name() : "N/A";
@@ -229,173 +229,159 @@ public class AssignmentSwapService {
         String newRoom = newExam.getNumRooms() != null ? newExam.getNumRooms() : "N/A";
 
         return String.format("""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="UTF-8">
-            <style>
-                body { 
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-                    line-height: 1.6; 
-                    color: #333; 
-                    background-color: #f4f4f4; 
-                    margin: 0;
-                    padding: 20px;
-                }
-                .container { 
-                    max-width: 600px; 
-                    margin: 0 auto; 
-                    background-color: white;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                    overflow: hidden;
-                }
-                .test-banner {
-                    background: #ffeb3b; 
-                    color: #333; 
-                    padding: 15px; 
-                    border: 2px dashed #ff9800; 
-                    text-align: center;
-                    font-weight: bold;
-                }
-                .header { 
-                    background: linear-gradient(135deg, #667eea 0%%, #764ba2 100%%);
-                    color: white; 
-                    padding: 30px 20px; 
-                    text-align: center; 
-                }
-                .header h2 { margin: 0; font-size: 24px; }
-                .content { padding: 30px; }
-                .greeting { font-size: 16px; margin-bottom: 20px; }
-                .alert-box { 
-                    background-color: #fff3cd; 
-                    border-left: 4px solid #ffc107;
-                    padding: 15px; 
-                    margin: 20px 0;
-                    border-radius: 4px;
-                }
-                .exam-section { margin: 25px 0; }
-                .exam-section h3 { 
-                    margin-bottom: 15px; 
-                    font-size: 18px;
-                }
-                .exam-box { 
-                    background-color: #f8f9fa; 
-                    padding: 20px; 
-                    border-radius: 6px;
-                    border-left: 4px solid #ddd;
-                }
-                .exam-box.old { 
-                    border-left-color: #dc3545; 
-                    background-color: #fff5f5;
-                }
-                .exam-box.new { 
-                    border-left-color: #28a745; 
-                    background-color: #f0fff4;
-                }
-                .exam-row { 
-                    display: flex; 
-                    padding: 8px 0; 
-                    border-bottom: 1px solid #e9ecef;
-                }
-                .exam-row:last-child { border-bottom: none; }
-                .exam-label { 
-                    font-weight: 600; 
-                    color: #495057; 
-                    min-width: 120px;
-                }
-                .exam-value { color: #212529; }
-                .footer { 
-                    background-color: #f8f9fa; 
-                    padding: 20px; 
-                    text-align: center; 
-                    font-size: 12px; 
-                    color: #6c757d; 
-                    border-top: 1px solid #dee2e6;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <div class="test-banner">
-                    🧪 EMAIL DE TEST - Rôle: %s<br>
-                    Cet email simule une notification d'échange d'affectation
-                </div>
-                
-                <div class="header">
-                    <h2>🔄 Échange d'Affectation</h2>
-                </div>
-                
-                <div class="content">
-                    <div class="greeting">
-                        <strong>Bonjour %s,</strong>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <style>
+                    body { 
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+                        line-height: 1.6; 
+                        color: #333; 
+                        background-color: #f4f4f4; 
+                        margin: 0;
+                        padding: 20px;
+                    }
+                    .container { 
+                        max-width: 600px; 
+                        margin: 0 auto; 
+                        background-color: white;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                        overflow: hidden;
+                    }
+                    .header { 
+                        background: linear-gradient(135deg, #667eea 0%%, #764ba2 100%%);
+                        color: white; 
+                        padding: 30px 20px; 
+                        text-align: center; 
+                    }
+                    .header h2 { margin: 0; font-size: 24px; }
+                    .content { padding: 30px; }
+                    .greeting { font-size: 16px; margin-bottom: 20px; }
+                    .alert-box { 
+                        background-color: #fff3cd; 
+                        border-left: 4px solid #ffc107;
+                        padding: 15px; 
+                        margin: 20px 0;
+                        border-radius: 4px;
+                    }
+                    .exam-section { margin: 25px 0; }
+                    .exam-section h3 { 
+                        margin-bottom: 15px; 
+                        font-size: 18px;
+                    }
+                    .exam-box { 
+                        background-color: #f8f9fa; 
+                        padding: 20px; 
+                        border-radius: 6px;
+                        border-left: 4px solid #ddd;
+                    }
+                    .exam-box.old { 
+                        border-left-color: #dc3545; 
+                        background-color: #fff5f5;
+                    }
+                    .exam-box.new { 
+                        border-left-color: #28a745; 
+                        background-color: #f0fff4;
+                    }
+                    .exam-row { 
+                        display: flex; 
+                        padding: 8px 0; 
+                        border-bottom: 1px solid #e9ecef;
+                    }
+                    .exam-row:last-child { border-bottom: none; }
+                    .exam-label { 
+                        font-weight: 600; 
+                        color: #495057; 
+                        min-width: 120px;
+                    }
+                    .exam-value { color: #212529; }
+                    .footer { 
+                        background-color: #f8f9fa; 
+                        padding: 20px; 
+                        text-align: center; 
+                        font-size: 12px; 
+                        color: #6c757d; 
+                        border-top: 1px solid #dee2e6;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h2>🔄 Échange d'Affectation</h2>
                     </div>
                     
-                    <p>Votre affectation de surveillance d'examen a été modifiée suite à un échange entre enseignants.</p>
-                    
-                    <div class="alert-box">
-                        <strong>⚠️ Action requise :</strong> Veuillez mettre à jour votre emploi du temps personnel.
-                    </div>
+                    <div class="content">
+                        <div class="greeting">
+                            <strong>Bonjour %s,</strong>
+                        </div>
+                        
+                        <p>Votre affectation de surveillance d'examen a été modifiée suite à un échange entre enseignants.</p>
+                        
+                        <div class="alert-box">
+                            <strong>⚠️ Action requise :</strong> Veuillez mettre à jour votre emploi du temps personnel.
+                        </div>
 
-                    <div class="exam-section">
-                        <h3 style="color: #dc3545;">❌ Ancienne Affectation</h3>
-                        <div class="exam-box old">
-                            <div class="exam-row">
-                                <div class="exam-label">Date :</div>
-                                <div class="exam-value">%s (Jour %%d)</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Séance :</div>
-                                <div class="exam-value">%s</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Horaire :</div>
-                                <div class="exam-value">%s - %s</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Salle :</div>
-                                <div class="exam-value">%s</div>
+                        <div class="exam-section">
+                            <h3 style="color: #dc3545;">❌ Ancienne Affectation</h3>
+                            <div class="exam-box old">
+                                <div class="exam-row">
+                                    <div class="exam-label">Date :</div>
+                                    <div class="exam-value">%s (Jour %d)</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Séance :</div>
+                                    <div class="exam-value">%s</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Horaire :</div>
+                                    <div class="exam-value">%s - %s</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Salle :</div>
+                                    <div class="exam-value">%s</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="exam-section">
-                        <h3 style="color: #28a745;">✅ Nouvelle Affectation</h3>
-                        <div class="exam-box new">
-                            <div class="exam-row">
-                                <div class="exam-label">Date :</div>
-                                <div class="exam-value">%s (Jour %%d)</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Séance :</div>
-                                <div class="exam-value">%s</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Horaire :</div>
-                                <div class="exam-value">%s - %s</div>
-                            </div>
-                            <div class="exam-row">
-                                <div class="exam-label">Salle :</div>
-                                <div class="exam-value">%s</div>
+                        <div class="exam-section">
+                            <h3 style="color: #28a745;">✅ Nouvelle Affectation</h3>
+                            <div class="exam-box new">
+                                <div class="exam-row">
+                                    <div class="exam-label">Date :</div>
+                                    <div class="exam-value">%s (Jour %d)</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Séance :</div>
+                                    <div class="exam-value">%s</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Horaire :</div>
+                                    <div class="exam-value">%s - %s</div>
+                                </div>
+                                <div class="exam-row">
+                                    <div class="exam-label">Salle :</div>
+                                    <div class="exam-value">%s</div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <p style="margin-top: 25px; color: #6c757d;">
+                            Pour toute question, contactez l'administration académique.
+                        </p>
                     </div>
                     
-                    <p style="margin-top: 25px; color: #6c757d;">
-                        Pour toute question, contactez l'administration académique.
-                    </p>
+                    <div class="footer">
+                        <p><strong>Système de Distribution des Enseignants</strong></p>
+                        <p>Email automatique - Ne pas répondre</p>
+                    </div>
                 </div>
-                
-                <div class="footer">
-                    <p><strong>Système de Distribution des Enseignants</strong></p>
-                    <p>Email automatique - Ne pas répondre</p>
-                </div>
-            </div>
-        </body>
-        </html>
-        """,
-                role, // %s pour le banner de test
-                teacherName, // %s pour le greeting
+            </body>
+            </html>
+            """,
+                teacherName,
                 // Ancien examen
                 oldExamDate, oldExam.getJourNumero(),
                 oldSeance,
