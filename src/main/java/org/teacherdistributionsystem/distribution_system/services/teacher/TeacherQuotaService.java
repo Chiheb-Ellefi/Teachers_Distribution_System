@@ -78,7 +78,6 @@ public class TeacherQuotaService {
                 String message = teacher.getQuotaCredit() == 0
                         ? "Standard pour le grade : " + gradeCodeStr
                         : "Vous avez un crédit restant de la dernière session d'examens";
-
                 TeacherQuota quota = TeacherQuota.builder()
                         .assignedQuota(teacherQuota)
                         .teacher(teacher)

@@ -49,7 +49,6 @@ public class ExcelImportOrchestrator {
         try (FileInputStream teachersListFile = new FileInputStream(teachersListFilePath);
              Workbook teachersWorkbook = new XSSFWorkbook(teachersListFile)) {
 
-            // Get both maps from the updated populateTeachersTable
             teacherMaps = teacherService.populateTeachersTable(teachersWorkbook);
 
             gradeService.addGrades(teachersWorkbook);
