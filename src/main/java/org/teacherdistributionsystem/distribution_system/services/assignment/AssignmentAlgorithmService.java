@@ -189,7 +189,7 @@ public class AssignmentAlgorithmService {
 
                 // Retry with longer timeout
                 CpSolver solver = new CpSolver();
-                solver.getParameters().setMaxTimeInSeconds(30.0);
+                solver.getParameters().setMaxTimeInSeconds(500.0);
                 long startTime = System.currentTimeMillis();
                 CpSolverStatus status = solver.solve(model);
                 double solutionTime = (System.currentTimeMillis() - startTime) / 1000.0;
@@ -551,7 +551,7 @@ public class AssignmentAlgorithmService {
 
         // Try relaxing in small batches
         relaxationAttemptNumber = 0;
-        int maxAttempts = 15; // Increased to allow more attempts
+        int maxAttempts = 30; // Increased to allow more attempts
 
         // Start with smaller batches for more gradual relaxation
         int batchSize = Math.max(1, contributions.size() / 20); // 5% at a time
@@ -1322,7 +1322,7 @@ public class AssignmentAlgorithmService {
     private AssignmentResponseModel solve() {
         long startTime = System.currentTimeMillis();
         CpSolver solver = new CpSolver();
-        solver.getParameters().setMaxTimeInSeconds(10.0);
+        solver.getParameters().setMaxTimeInSeconds(300.0);
 
         CpSolverStatus status = solver.solve(model);
         double solutionTime = (System.currentTimeMillis() - startTime) / 1000.0;
