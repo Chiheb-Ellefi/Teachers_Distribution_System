@@ -52,4 +52,6 @@ public interface TeacherRepository extends JpaRepository<Teacher, Long> {
     @Query("SELECT NEW org.teacherdistributionsystem.distribution_system.models.responses.teacher.GradeCount(t.gradeCode, COUNT(t)) " +
             "FROM Teacher t GROUP BY t.gradeCode")
     List<GradeCount> countTeachersByGradeCode();
+
+    Teacher getTeacherByEmail(String email);
 }

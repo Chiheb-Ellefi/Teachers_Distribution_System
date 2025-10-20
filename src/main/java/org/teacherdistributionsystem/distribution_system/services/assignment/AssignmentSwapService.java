@@ -1,13 +1,23 @@
 package org.teacherdistributionsystem.distribution_system.services.assignment;
 
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.Exam;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 
+
+
+import org.teacherdistributionsystem.distribution_system.entities.teacher.Teacher;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResult;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.ExamRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.assignement.TeacherExamAssignmentRepository;
+import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherRepository;
 import org.teacherdistributionsystem.distribution_system.repositories.teacher.TeacherUnavailabilityRepository;
 
 import java.util.ArrayList;
@@ -16,19 +26,16 @@ import java.util.List;
 import static org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResult.success;
 
 @Service
+@RequiredArgsConstructor
+@Log4j2
 public class AssignmentSwapService {
 
     private final TeacherExamAssignmentRepository assignmentRepository;
     private final ExamRepository examRepository;
     private final TeacherUnavailabilityRepository unavailabilityRepository;
+    private final JavaMailSender mailSender;
+    private final TeacherRepository teacherRepository;
 
-    public AssignmentSwapService(TeacherExamAssignmentRepository assignmentRepository,
-                                 ExamRepository examRepository,
-                                 TeacherUnavailabilityRepository unavailabilityRepository) {
-        this.assignmentRepository = assignmentRepository;
-        this.examRepository = examRepository;
-        this.unavailabilityRepository = unavailabilityRepository;
-    }
 
 
     @Transactional
@@ -138,6 +145,59 @@ public class AssignmentSwapService {
         }
 
         return null; // No violations
+    }
+
+    /**
+     * Envoie les notifications de swap aux deux enseignants concernés
+     */
+    private void sendSwapNotifications(Long teacher1Id, Long teacher2Id,
+                                       Exam exam1, Exam exam2,
+                                       TeacherExamAssignment assignment1,
+                                       TeacherExamAssignment assignment2) {
+        try {
+            // Récupérer les enseignants
+            Teacher teacher1 = teacherRepository.findById(teacher1Id)
+                    .orElseThrow(() -> new IllegalArgumentException("Teacher 1 not found"));
+            Teacher teacher2 = teacherRepository.findById(teacher2Id)
+                    .orElseThrow(() -> new IllegalArgumentException("Teacher 2 not found"));
+
+            // Récupérer les nouveaux examens après swap
+            Exam newExamForTeacher1 = exam2; // Teacher1 prend l'exam de Teacher2
+            Exam newExamForTeacher2 = exam1; // Teacher2 prend l'exam de Teacher1
+
+            // Envoyer les emails
+            sendSwapEmail(teacher1, exam1, newExamForTeacher1, assignment2);
+            sendSwapEmail(teacher2, exam2, newExamForTeacher2, assignment1);
+
+            log.info("📧 Notifications envoyées à {} et {}",
+                    teacher1.getEmail(), teacher2.getEmail());
+
+        } catch (Exception e) {
+            log.error("Erreur lors de l'envoi des notifications: {}", e.getMessage(), e);
+            throw new RuntimeException("Failed to send swap notifications", e);
+        }
+    }
+
+    /**
+     * Envoie un email de notification de swap à un enseignant
+     */
+    private void sendSwapEmail(Teacher teacher, Exam oldExam, Exam newExam,
+                               TeacherExamAssignment newAssignment) throws MessagingException {
+        try {
+            MimeMessage message = mailSender.createMimeMessage();
+            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
+
+            helper.setTo(teacher.getEmail());
+            helper.setSubject("🔄 Modification de votre affectation de surveillance d'examen");
+            //helper.setText(buildSwapEmailContent(teacher, oldExam, newExam, newAssignment), true);
+
+            mailSender.send(message);
+            log.info("📧 Email envoyé à: {}", teacher.getEmail());
+
+        } catch (Exception e) {
+            log.error("❌ Échec de l'envoi de l'email à {}: {}", teacher.getEmail(), e.getMessage());
+            throw e;
+        }
     }
 
 

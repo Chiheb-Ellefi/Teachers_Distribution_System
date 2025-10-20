@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.nio.file.Files;
@@ -25,12 +24,12 @@ public class PDFScheduleService {
     }
 
     /**
-     * Génère le PDF du planning pour un enseignant
+     * Génère le PDF du planning pour un enseignant (par EMAIL)
      */
-    public ByteArrayOutputStream generateTeacherSchedulePDF(String teacherName) {
-        logger.info("Génération PDF planning enseignant: {}", teacherName);
+    public ByteArrayOutputStream generateTeacherSchedulePDF(String teacherEmail) {
+        logger.info("Génération PDF planning enseignant par email: {}", teacherEmail);
 
-        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getTeacherDataByName(teacherName);
+        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getTeacherDataByEmail(teacherEmail);
         String html = generateTeacherScheduleHTML(teacherData);
         return convertHTMLToPDF(html);
     }
@@ -296,6 +295,7 @@ public class PDFScheduleService {
 
         return html.toString();
     }
+
     /**
      * Organise les affectations par jour puis par séance
      * Retourne une Map: Jour -> Séance -> Liste d'enseignants
@@ -323,13 +323,14 @@ public class PDFScheduleService {
 
         return organized;
     }
-    /**
-     * Génère le PDF du planning pour un enseignant RESPONSABLE
-     */
-    public ByteArrayOutputStream generateResponsibleTeacherSchedulePDF(String teacherName) {
-        logger.info("Génération PDF planning enseignant RESPONSABLE: {}", teacherName);
 
-        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getResponsibleTeacherDataByName(teacherName);
+    /**
+     * Génère le PDF du planning pour un enseignant RESPONSABLE (par EMAIL)
+     */
+    public ByteArrayOutputStream generateResponsibleTeacherSchedulePDF(String teacherEmail) {
+        logger.info("Génération PDF planning enseignant RESPONSABLE par email: {}", teacherEmail);
+
+        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getResponsibleTeacherDataByEmail(teacherEmail);
         String html = generateResponsibleTeacherScheduleHTML(teacherData);
         return convertHTMLToPDF(html);
     }
@@ -362,10 +363,10 @@ public class PDFScheduleService {
         html.append("</div>");
         html.append("</div>");
 
-        // Message
+        // Message CORRIGÉ
         html.append("<div class='message'>");
         html.append("Cher (e) Collègue,<br/>");
-        html.append("Vous êtes prié (e) d'assurer la surveillance et (ou) la responsabilité des examens selon le calendrier ci joint.");
+        html.append("Vous êtes prié (e) d'assurer la surveillance des examens selon le calendrier ci joint.");
         html.append("</div>");
 
         // Tableau SANS colonne signature
@@ -381,8 +382,25 @@ public class PDFScheduleService {
 
         // Vérifier si la liste d'assignments n'est pas null
         if (teacher.getAssignments() != null && !teacher.getAssignments().isEmpty()) {
-            // Trier les affectations par date puis par séance
-            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacher.getAssignments().stream()
+            // Utiliser un Set pour éliminer les doublons basés sur date, heure et durée
+            Set<String> uniqueAssignments = new HashSet<>();
+            List<TeacherAssignmentsDTO.TeacherAssignment> uniqueSortedAssignments = new ArrayList<>();
+
+            for (TeacherAssignmentsDTO.TeacherAssignment assignment : teacher.getAssignments()) {
+                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
+                String timeSlot = getRealTimeSlot(assignment);
+                String duration = getDuration(assignment);
+
+                String assignmentKey = date + "|" + timeSlot + "|" + duration;
+
+                if (!uniqueAssignments.contains(assignmentKey)) {
+                    uniqueAssignments.add(assignmentKey);
+                    uniqueSortedAssignments.add(assignment);
+                }
+            }
+
+            // Trier les affectations uniques par date puis par séance
+            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = uniqueSortedAssignments.stream()
                     .sorted((a1, a2) -> {
                         int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
                         if (dateCompare != 0) return dateCompare;
@@ -558,8 +576,25 @@ public class PDFScheduleService {
 
         // Vérifier si la liste d'assignments n'est pas null
         if (teacher.getAssignments() != null && !teacher.getAssignments().isEmpty()) {
-            // Trier les affectations par date puis par séance
-            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacher.getAssignments().stream()
+            // Utiliser un Set pour éliminer les doublons basés sur date, heure et durée
+            Set<String> uniqueAssignments = new HashSet<>();
+            List<TeacherAssignmentsDTO.TeacherAssignment> uniqueSortedAssignments = new ArrayList<>();
+
+            for (TeacherAssignmentsDTO.TeacherAssignment assignment : teacher.getAssignments()) {
+                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
+                String timeSlot = getRealTimeSlot(assignment);
+                String duration = getDuration(assignment);
+
+                String assignmentKey = date + "|" + timeSlot + "|" + duration;
+
+                if (!uniqueAssignments.contains(assignmentKey)) {
+                    uniqueAssignments.add(assignmentKey);
+                    uniqueSortedAssignments.add(assignment);
+                }
+            }
+
+            // Trier les affectations uniques par date puis par séance
+            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = uniqueSortedAssignments.stream()
                     .sorted((a1, a2) -> {
                         int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
                         if (dateCompare != 0) return dateCompare;
@@ -597,6 +632,7 @@ public class PDFScheduleService {
 
         return html.toString();
     }
+
     /**
      * Retourne le créneau horaire réel depuis startTime/endTime
      */
@@ -650,8 +686,6 @@ public class PDFScheduleService {
         }
         return "1.5 H"; // Valeur par défaut
     }
-
-    // MÉTHODES EXISTANTES (gardez-les telles quelles)
 
     private String getTimeSlot(Integer seance) {
         switch (seance) {

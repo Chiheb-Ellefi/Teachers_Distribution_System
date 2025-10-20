@@ -48,7 +48,7 @@ public class ScheduleExportController {
     }
 
     /**
-     * GET - Données d'un enseignant
+     * GET - Données d'un enseignant PAR NOM
      */
     @GetMapping("/teachers/{teacherName}")
     public ResponseEntity<TeacherAssignmentsDTO> getTeacherData(@PathVariable String teacherName) {
@@ -62,18 +62,36 @@ public class ScheduleExportController {
     }
 
     /**
-     * GET - Export PDF planning enseignant (surveillances)
-     * Exemple: /api/schedule/export/teacher/Nihel%20Ben%20youssef/pdf
+     * GET - Données d'un enseignant PAR EMAIL (NOUVEAU)
+     * Exemple: /api/schedule/teachers/email/john.doe@example.com
      */
-    @GetMapping("/export/teacher/{teacherName}/pdf")
-    public ResponseEntity<ByteArrayResource> exportTeacherSchedulePDF(@PathVariable String teacherName) {
+    @GetMapping("/teachers/email/{teacherEmail}")
+    public ResponseEntity<TeacherAssignmentsDTO> getTeacherDataByEmail(@PathVariable String teacherEmail) {
         try {
-            logger.info("Export PDF planning enseignant: {}", teacherName);
+            TeacherAssignmentsDTO teacher = jsonDataLoaderService.getTeacherDataByEmail(teacherEmail);
+            return ResponseEntity.ok(teacher);
+        } catch (Exception e) {
+            logger.error("Enseignant non trouvé avec l'email: {}", teacherEmail, e);
+            return ResponseEntity.notFound().build();
+        }
+    }
 
-            ByteArrayOutputStream outputStream = pdfService.generateTeacherSchedulePDF(teacherName);
+    /**
+     * GET - Export PDF planning enseignant (surveillances) PAR EMAIL (MODIFIÉ)
+     * Exemple: /api/schedule/export/teacher/email/john.doe@example.com/pdf
+     */
+    @GetMapping("/export/teacher/email/{teacherEmail}/pdf")
+    public ResponseEntity<ByteArrayResource> exportTeacherSchedulePDF(@PathVariable String teacherEmail) {
+        try {
+            logger.info("Export PDF planning enseignant par email: {}", teacherEmail);
+
+            ByteArrayOutputStream outputStream = pdfService.generateTeacherSchedulePDF(teacherEmail);
             ByteArrayResource resource = new ByteArrayResource(outputStream.toByteArray());
 
-            String filename = "Planning_Surveillance_" + teacherName.replace(" ", "_") + ".pdf";
+            // Récupérer le nom pour le filename
+            TeacherAssignmentsDTO teacher = jsonDataLoaderService.getTeacherDataByEmail(teacherEmail);
+            String teacherName = teacher.getTeacherName().replace(" ", "_");
+            String filename = "Planning_Surveillance_" + teacherName + ".pdf";
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
@@ -269,18 +287,21 @@ public class ScheduleExportController {
     }
 
     /**
-     * GET - Export PDF planning ENSEIGNANT RESPONSABLE
-     * Exemple: /api/schedule/export/responsible/Nihel%20Ben%20youssef/pdf
+     * GET - Export PDF planning ENSEIGNANT RESPONSABLE PAR EMAIL (MODIFIÉ)
+     * Exemple: /api/schedule/export/responsible/email/john.doe@example.com/pdf
      */
-    @GetMapping("/export/responsible/{teacherName}/pdf")
-    public ResponseEntity<ByteArrayResource> exportResponsibleTeacherPDF(@PathVariable String teacherName) {
+    @GetMapping("/export/responsible/email/{teacherEmail}/pdf")
+    public ResponseEntity<ByteArrayResource> exportResponsibleTeacherPDF(@PathVariable String teacherEmail) {
         try {
-            logger.info("Export PDF planning enseignant RESPONSABLE: {}", teacherName);
+            logger.info("Export PDF planning enseignant RESPONSABLE par email: {}", teacherEmail);
 
-            ByteArrayOutputStream outputStream = pdfService.generateResponsibleTeacherSchedulePDF(teacherName);
+            ByteArrayOutputStream outputStream = pdfService.generateResponsibleTeacherSchedulePDF(teacherEmail);
             ByteArrayResource resource = new ByteArrayResource(outputStream.toByteArray());
 
-            String filename = "Planning_Responsable_" + teacherName.replace(" ", "_") + ".pdf";
+            // Récupérer le nom pour le filename
+            TeacherAssignmentsDTO teacher = jsonDataLoaderService.getResponsibleTeacherDataByEmail(teacherEmail);
+            String teacherName = teacher.getTeacherName().replace(" ", "_");
+            String filename = "Planning_Responsable_" + teacherName + ".pdf";
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
@@ -289,13 +310,13 @@ public class ScheduleExportController {
                     .body(resource);
 
         } catch (Exception e) {
-            logger.error("Erreur export PDF enseignant responsable: {}", teacherName, e);
+            logger.error("Erreur export PDF enseignant responsable par email: {}", teacherEmail, e);
             return ResponseEntity.badRequest().build();
         }
     }
 
     /**
-     * GET - Vérifie si un enseignant a des responsabilités
+     * GET - Vérifie si un enseignant a des responsabilités PAR NOM
      */
     @GetMapping("/teachers/{teacherName}/is-responsible")
     public ResponseEntity<Map<String, Object>> isTeacherResponsible(@PathVariable String teacherName) {
@@ -307,6 +328,30 @@ public class ScheduleExportController {
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             logger.error("Erreur vérification responsable: {}", teacherName, e);
+            return ResponseEntity.badRequest().build();
+        }
+    }
+
+    /**
+     * GET - Vérifie si un enseignant a des responsabilités PAR EMAIL (NOUVEAU)
+     * Exemple: /api/schedule/teachers/email/john.doe@example.com/is-responsible
+     */
+    @GetMapping("/teachers/email/{teacherEmail}/is-responsible")
+    public ResponseEntity<Map<String, Object>> isTeacherResponsibleByEmail(@PathVariable String teacherEmail) {
+        try {
+            // Vérifier si l'enseignant existe d'abord
+            TeacherAssignmentsDTO teacher = jsonDataLoaderService.getTeacherDataByEmail(teacherEmail);
+
+            // Vérifier s'il a des responsabilités
+            boolean isResponsible = jsonDataLoaderService.isResponsibleTeacher(teacher.getTeacherName());
+
+            Map<String, Object> response = new HashMap<>();
+            response.put("teacherEmail", teacherEmail);
+            response.put("teacherName", teacher.getTeacherName());
+            response.put("isResponsible", isResponsible);
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            logger.error("Erreur vérification responsable par email: {}", teacherEmail, e);
             return ResponseEntity.badRequest().build();
         }
     }

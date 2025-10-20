@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.teacherdistributionsystem.distribution_system.dtos.assignment.TeacherAssignmentsDTO;
 
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -23,7 +22,248 @@ public class ExcelScheduleService {
     public ExcelScheduleService(JsonDataLoaderService jsonDataLoaderService) {
         this.jsonDataLoaderService = jsonDataLoaderService;
     }
+    /**
+     * 2bis. Génère le planning surveillant en Excel PAR EMAIL (SANS colonne signature)
+     */
+    public ByteArrayOutputStream generateTeacherScheduleByEmail(String teacherEmail) throws IOException {
+        logger.info("Génération Excel planning surveillant par email: {}", teacherEmail);
 
+        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getTeacherDataByEmail(teacherEmail);
+
+        // Réutiliser la logique existante de génération
+        return generateTeacherScheduleInternal(teacherData);
+    }
+
+    /**
+     * 3bis. Génère le planning responsable en Excel PAR EMAIL (SANS colonne signature)
+     */
+    public ByteArrayOutputStream generateResponsibleTeacherScheduleByEmail(String teacherEmail) throws IOException {
+        logger.info("Génération Excel planning responsable par email: {}", teacherEmail);
+
+        TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getResponsibleTeacherDataByEmail(teacherEmail);
+
+        // Réutiliser la logique existante de génération
+        return generateResponsibleTeacherScheduleInternal(teacherData);
+    }
+
+    /**
+     * Méthode interne pour générer le planning surveillant (réutilisable)
+     */
+    private ByteArrayOutputStream generateTeacherScheduleInternal(TeacherAssignmentsDTO teacherData) throws IOException {
+        XSSFWorkbook workbook = new XSSFWorkbook();
+        XSSFSheet sheet = workbook.createSheet("Planning " + teacherData.getTeacherName());
+
+        // Styles
+        CellStyle titleStyle = createTitleStyle(workbook);
+        CellStyle yellowHeaderStyle = createYellowHeaderStyle(workbook);
+        CellStyle blueHeaderStyle = createBlueHeaderStyle(workbook);
+        CellStyle dataStyle = createBorderStyle(workbook);
+        CellStyle statsStyle = createStatsStyle(workbook);
+
+        int rowNum = 0;
+
+        // En-tête principal
+        Row titleRow = sheet.createRow(rowNum++);
+        Cell titleCell = titleRow.createCell(0);
+        titleCell.setCellValue("PLANNING DE SURVEILLANCE DES EXAMENS");
+        titleCell.setCellStyle(titleStyle);
+        sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 3));
+        titleRow.setHeightInPoints(30);
+
+        // Informations de l'enseignant
+        Row teacherRow = sheet.createRow(rowNum++);
+        Cell teacherCell = teacherRow.createCell(0);
+        teacherCell.setCellValue("Enseignant : " + teacherData.getTeacherName() +
+                (teacherData.getGrade() != null ? " | Grade : " + teacherData.getGrade() : "") +
+                (teacherData.getEmail() != null ? " | Email : " + teacherData.getEmail() : ""));
+        teacherCell.setCellStyle(yellowHeaderStyle);
+        sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, 3));
+
+        // Statistiques
+        Row statsRow = sheet.createRow(rowNum++);
+        Cell statsCell = statsRow.createCell(0);
+        statsCell.setCellValue(String.format("Affectations: %d/%d (%.1f%%)",
+                teacherData.getAssignedSupervisions(),
+                teacherData.getQuotaSupervisions(),
+                teacherData.getUtilizationPercentage()));
+        statsCell.setCellStyle(statsStyle);
+        sheet.addMergedRegion(new CellRangeAddress(2, 2, 0, 3));
+
+        rowNum++;
+
+        // En-têtes du tableau
+        Row headerRow = sheet.createRow(rowNum++);
+        String[] headers = {"Date", "Heure", "Durée", "Salle"};
+        for (int i = 0; i < headers.length; i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellValue(headers[i]);
+            cell.setCellStyle(blueHeaderStyle);
+        }
+
+        // Données des affectations
+        if (teacherData.getAssignments() != null && !teacherData.getAssignments().isEmpty()) {
+            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacherData.getAssignments().stream()
+                    .sorted((a1, a2) -> {
+                        int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
+                        if (dateCompare != 0) return dateCompare;
+                        return a1.getSeance().compareTo(a2.getSeance());
+                    })
+                    .collect(Collectors.toList());
+
+            for (TeacherAssignmentsDTO.TeacherAssignment assignment : sortedAssignments) {
+                Row dataRow = sheet.createRow(rowNum++);
+                dataRow.setHeightInPoints(25);
+
+                Cell dateCell = dataRow.createCell(0);
+                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
+                dateCell.setCellValue(date);
+                dateCell.setCellStyle(dataStyle);
+
+                Cell timeCell = dataRow.createCell(1);
+                timeCell.setCellValue(getRealTimeSlot(assignment));
+                timeCell.setCellStyle(dataStyle);
+
+                Cell durationCell = dataRow.createCell(2);
+                durationCell.setCellValue(getDuration(assignment));
+                durationCell.setCellStyle(dataStyle);
+
+                Cell roomCell = dataRow.createCell(3);
+                roomCell.setCellValue(assignment.getRoom());
+                roomCell.setCellStyle(dataStyle);
+            }
+        } else {
+            Row emptyRow = sheet.createRow(rowNum++);
+            Cell emptyCell = emptyRow.createCell(0);
+            emptyCell.setCellValue("Aucune affectation de surveillance");
+            emptyCell.setCellStyle(dataStyle);
+            sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 3));
+        }
+
+        // Ajuster les largeurs
+        sheet.setColumnWidth(0, 4000);
+        sheet.setColumnWidth(1, 5000);
+        sheet.setColumnWidth(2, 4000);
+        sheet.setColumnWidth(3, 4000);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        workbook.write(outputStream);
+        workbook.close();
+
+        return outputStream;
+    }
+
+    /**
+     * Méthode interne pour générer le planning responsable (réutilisable)
+     */
+    private ByteArrayOutputStream generateResponsibleTeacherScheduleInternal(TeacherAssignmentsDTO teacherData) throws IOException {
+        XSSFWorkbook workbook = new XSSFWorkbook();
+        XSSFSheet sheet = workbook.createSheet("Planning Responsable " + teacherData.getTeacherName());
+
+        // Styles
+        CellStyle titleStyle = createTitleStyle(workbook);
+        CellStyle responsibleHeaderStyle = createResponsibleHeaderStyle(workbook);
+        CellStyle blueHeaderStyle = createBlueHeaderStyle(workbook);
+        CellStyle dataStyle = createBorderStyle(workbook);
+        CellStyle messageStyle = createMessageStyle(workbook);
+
+        int rowNum = 0;
+
+        // En-tête principal
+        Row titleRow = sheet.createRow(rowNum++);
+        Cell titleCell = titleRow.createCell(0);
+        titleCell.setCellValue("PLANNING DE RESPONSABILITÉ DES EXAMENS");
+        titleCell.setCellStyle(titleStyle);
+        sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 5));
+        titleRow.setHeightInPoints(30);
+
+        // Informations de l'enseignant responsable
+        Row teacherRow = sheet.createRow(rowNum++);
+        Cell teacherCell = teacherRow.createCell(0);
+        teacherCell.setCellValue("ENSEIGNANT RESPONSABLE : " + teacherData.getTeacherName() +
+                (teacherData.getGrade() != null ? " | Grade : " + teacherData.getGrade() : ""));
+        teacherCell.setCellStyle(responsibleHeaderStyle);
+        sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, 5));
+
+        rowNum++;
+
+        // Message
+        Row messageRow = sheet.createRow(rowNum++);
+        Cell messageCell = messageRow.createCell(0);
+        messageCell.setCellStyle(messageStyle);
+        sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 5));
+
+        rowNum++;
+
+        // En-têtes du tableau
+        Row headerRow = sheet.createRow(rowNum++);
+        String[] headers = {"Date", "Heure", "Durée", "Matière", "Salle", "Surveillants"};
+        for (int i = 0; i < headers.length; i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellValue(headers[i]);
+            cell.setCellStyle(blueHeaderStyle);
+        }
+
+        // Données des affectations
+        if (teacherData.getAssignments() != null && !teacherData.getAssignments().isEmpty()) {
+            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacherData.getAssignments().stream()
+                    .sorted((a1, a2) -> {
+                        int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
+                        if (dateCompare != 0) return dateCompare;
+                        return a1.getSeance().compareTo(a2.getSeance());
+                    })
+                    .collect(Collectors.toList());
+
+            for (TeacherAssignmentsDTO.TeacherAssignment assignment : sortedAssignments) {
+                Row dataRow = sheet.createRow(rowNum++);
+                dataRow.setHeightInPoints(25);
+
+                Cell dateCell = dataRow.createCell(0);
+                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
+                dateCell.setCellValue(date);
+                dateCell.setCellStyle(dataStyle);
+
+                Cell timeCell = dataRow.createCell(1);
+                timeCell.setCellValue(getRealTimeSlot(assignment));
+                timeCell.setCellStyle(dataStyle);
+
+                Cell durationCell = dataRow.createCell(2);
+                durationCell.setCellValue(getDuration(assignment));
+                durationCell.setCellStyle(dataStyle);
+
+                Cell subjectCell = dataRow.createCell(3);
+                subjectCell.setCellValue("Examen");
+                subjectCell.setCellStyle(dataStyle);
+
+                Cell roomCell = dataRow.createCell(4);
+                roomCell.setCellValue(assignment.getRoom());
+                roomCell.setCellStyle(dataStyle);
+
+                Cell supervisorsCell = dataRow.createCell(5);
+                supervisorsCell.setCellValue("2");
+                supervisorsCell.setCellStyle(dataStyle);
+            }
+        } else {
+            Row emptyRow = sheet.createRow(rowNum++);
+            Cell emptyCell = emptyRow.createCell(0);
+            emptyCell.setCellValue("Aucune responsabilité d'examen");
+            emptyCell.setCellStyle(dataStyle);
+            sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 5));
+        }
+
+        // Ajuster les largeurs
+        sheet.setColumnWidth(0, 4000);
+        sheet.setColumnWidth(1, 5000);
+        sheet.setColumnWidth(2, 4000);
+        sheet.setColumnWidth(3, 6000);
+        sheet.setColumnWidth(4, 4000);
+        sheet.setColumnWidth(5, 4000);
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        workbook.write(outputStream);
+        workbook.close();
+
+        return outputStream;
+    }
     /**
      * 1. Génère le planning par séance en Excel (tous les enseignants pour une séance)
      */
@@ -127,255 +367,21 @@ public class ExcelScheduleService {
     }
 
     /**
-     * 2. Génère le planning surveillant en Excel (SANS colonne signature)
+     * 2. Génère le planning surveillant en Excel PAR NOM (SANS colonne signature)
      */
     public ByteArrayOutputStream generateTeacherSchedule(String teacherName) throws IOException {
-        logger.info("Génération Excel planning surveillant pour: {}", teacherName);
-
+        logger.info("Génération Excel planning surveillant par nom: {}", teacherName);
         TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getTeacherDataByName(teacherName);
-
-        XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet = workbook.createSheet("Planning " + teacherName);
-
-        // Styles
-        CellStyle titleStyle = createTitleStyle(workbook);
-        CellStyle yellowHeaderStyle = createYellowHeaderStyle(workbook);
-        CellStyle blueHeaderStyle = createBlueHeaderStyle(workbook);
-        CellStyle dataStyle = createBorderStyle(workbook);
-        CellStyle statsStyle = createStatsStyle(workbook);
-
-        int rowNum = 0;
-
-        // En-tête principal
-        Row titleRow = sheet.createRow(rowNum++);
-        Cell titleCell = titleRow.createCell(0);
-        titleCell.setCellValue("PLANNING DE SURVEILLANCE DES EXAMENS");
-        titleCell.setCellStyle(titleStyle);
-        sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 3)); // 4 colonnes
-        titleRow.setHeightInPoints(30);
-
-        // Informations de l'enseignant
-        Row teacherRow = sheet.createRow(rowNum++);
-        Cell teacherCell = teacherRow.createCell(0);
-        teacherCell.setCellValue("Enseignant : " + teacherData.getTeacherName() +
-                (teacherData.getGrade() != null ? " | Grade : " + teacherData.getGrade() : "") +
-                (teacherData.getEmail() != null ? " | Email : " + teacherData.getEmail() : ""));
-        teacherCell.setCellStyle(yellowHeaderStyle);
-        sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, 3));
-
-        // Statistiques
-        Row statsRow = sheet.createRow(rowNum++);
-        Cell statsCell = statsRow.createCell(0);
-        statsCell.setCellValue(String.format("Affectations: %d/%d (%.1f%%)",
-                teacherData.getAssignedSupervisions(),
-                teacherData.getQuotaSupervisions(),
-                teacherData.getUtilizationPercentage()));
-        statsCell.setCellStyle(statsStyle);
-        sheet.addMergedRegion(new CellRangeAddress(2, 2, 0, 3));
-
-        rowNum++; // Ligne vide
-
-        // En-têtes du tableau SANS colonne signature
-        Row headerRow = sheet.createRow(rowNum++);
-        String[] headers = {"Date", "Heure", "Durée", "Salle"};
-        for (int i = 0; i < headers.length; i++) {
-            Cell cell = headerRow.createCell(i);
-            cell.setCellValue(headers[i]);
-            cell.setCellStyle(blueHeaderStyle);
-        }
-
-        // Données des affectations avec dates RÉELLES
-        if (teacherData.getAssignments() != null && !teacherData.getAssignments().isEmpty()) {
-            // Trier les affectations par date puis par séance
-            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacherData.getAssignments().stream()
-                    .sorted((a1, a2) -> {
-                        int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
-                        if (dateCompare != 0) return dateCompare;
-                        return a1.getSeance().compareTo(a2.getSeance());
-                    })
-                    .collect(Collectors.toList());
-
-            for (TeacherAssignmentsDTO.TeacherAssignment assignment : sortedAssignments) {
-                Row dataRow = sheet.createRow(rowNum++);
-                dataRow.setHeightInPoints(25);
-
-                // Date RÉELLE
-                Cell dateCell = dataRow.createCell(0);
-                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
-                dateCell.setCellValue(date);
-                dateCell.setCellStyle(dataStyle);
-
-                // Heure RÉELLE
-                Cell timeCell = dataRow.createCell(1);
-                String timeSlot = getRealTimeSlot(assignment);
-                timeCell.setCellValue(timeSlot);
-                timeCell.setCellStyle(dataStyle);
-
-                // Durée calculée
-                Cell durationCell = dataRow.createCell(2);
-                durationCell.setCellValue(getDuration(assignment));
-                durationCell.setCellStyle(dataStyle);
-
-                // Salle
-                Cell roomCell = dataRow.createCell(3);
-                roomCell.setCellValue(assignment.getRoom());
-                roomCell.setCellStyle(dataStyle);
-            }
-        } else {
-            Row emptyRow = sheet.createRow(rowNum++);
-            Cell emptyCell = emptyRow.createCell(0);
-            emptyCell.setCellValue("Aucune affectation de surveillance");
-            emptyCell.setCellStyle(dataStyle);
-            sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 3));
-        }
-
-        // Footer
-        rowNum += 2;
-        Row footerRow = sheet.createRow(rowNum++);
-        Cell footerCell = footerRow.createCell(0);
-        footerCell.setCellValue("Cher(e) Collègue,\nVous êtes prié(e) d'assurer la surveillance des examens selon le calendrier ci-dessus.");
-        footerCell.setCellStyle(createMessageStyle(workbook));
-        sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 3));
-
-        // Ajuster les largeurs de colonnes
-        sheet.setColumnWidth(0, 4000);  // Date
-        sheet.setColumnWidth(1, 5000);  // Heure
-        sheet.setColumnWidth(2, 4000);  // Durée
-        sheet.setColumnWidth(3, 4000);  // Salle
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        workbook.write(outputStream);
-        workbook.close();
-
-        logger.info("Excel planning surveillant généré avec succès pour: {}", teacherName);
-        return outputStream;
+        return generateTeacherScheduleInternal(teacherData);
     }
 
     /**
-     * 3. Génère le planning responsable en Excel (SANS colonne signature)
+     * 3. Génère le planning responsable en Excel PAR NOM (SANS colonne signature)
      */
     public ByteArrayOutputStream generateResponsibleTeacherSchedule(String teacherName) throws IOException {
-        logger.info("Génération Excel planning responsable pour: {}", teacherName);
-
+        logger.info("Génération Excel planning responsable par nom: {}", teacherName);
         TeacherAssignmentsDTO teacherData = jsonDataLoaderService.getResponsibleTeacherDataByName(teacherName);
-
-        XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet = workbook.createSheet("Planning Responsable " + teacherName);
-
-        // Styles
-        CellStyle titleStyle = createTitleStyle(workbook);
-        CellStyle responsibleHeaderStyle = createResponsibleHeaderStyle(workbook);
-        CellStyle blueHeaderStyle = createBlueHeaderStyle(workbook);
-        CellStyle dataStyle = createBorderStyle(workbook);
-        CellStyle messageStyle = createMessageStyle(workbook);
-
-        int rowNum = 0;
-
-        // En-tête principal
-        Row titleRow = sheet.createRow(rowNum++);
-        Cell titleCell = titleRow.createCell(0);
-        titleCell.setCellValue("PLANNING DE RESPONSABILITÉ DES EXAMENS");
-        titleCell.setCellStyle(titleStyle);
-        sheet.addMergedRegion(new CellRangeAddress(0, 0, 0, 5)); // 6 colonnes
-        titleRow.setHeightInPoints(30);
-
-        // Informations de l'enseignant responsable
-        Row teacherRow = sheet.createRow(rowNum++);
-        Cell teacherCell = teacherRow.createCell(0);
-        teacherCell.setCellValue("ENSEIGNANT RESPONSABLE : " + teacherData.getTeacherName() +
-                (teacherData.getGrade() != null ? " | Grade : " + teacherData.getGrade() : ""));
-        teacherCell.setCellStyle(responsibleHeaderStyle);
-        sheet.addMergedRegion(new CellRangeAddress(1, 1, 0, 5));
-
-        rowNum++; // Ligne vide
-
-        // Message spécifique pour responsable
-        Row messageRow = sheet.createRow(rowNum++);
-        Cell messageCell = messageRow.createCell(0);
-        messageCell.setCellValue("Cher(e) Collègue,\nVous êtes prié(e) d'assurer la RESPONSABILITÉ des examens suivants selon le calendrier ci-dessous.");
-        messageCell.setCellStyle(messageStyle);
-        sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 5));
-
-        rowNum++; // Ligne vide
-
-        // En-têtes du tableau SANS colonne signature
-        Row headerRow = sheet.createRow(rowNum++);
-        String[] headers = {"Date", "Heure", "Durée", "Matière", "Salle", "Surveillants"};
-        for (int i = 0; i < headers.length; i++) {
-            Cell cell = headerRow.createCell(i);
-            cell.setCellValue(headers[i]);
-            cell.setCellStyle(blueHeaderStyle);
-        }
-
-        // Données des affectations responsables avec dates RÉELLES
-        if (teacherData.getAssignments() != null && !teacherData.getAssignments().isEmpty()) {
-            // Trier les affectations par date puis par séance
-            List<TeacherAssignmentsDTO.TeacherAssignment> sortedAssignments = teacherData.getAssignments().stream()
-                    .sorted((a1, a2) -> {
-                        int dateCompare = a1.getExamDate().compareTo(a2.getExamDate());
-                        if (dateCompare != 0) return dateCompare;
-                        return a1.getSeance().compareTo(a2.getSeance());
-                    })
-                    .collect(Collectors.toList());
-
-            for (TeacherAssignmentsDTO.TeacherAssignment assignment : sortedAssignments) {
-                Row dataRow = sheet.createRow(rowNum++);
-                dataRow.setHeightInPoints(25);
-
-                // Date RÉELLE
-                Cell dateCell = dataRow.createCell(0);
-                String date = assignment.getExamDate() != null ? assignment.getExamDate() : "Jour " + assignment.getDay();
-                dateCell.setCellValue(date);
-                dateCell.setCellStyle(dataStyle);
-
-                // Heure RÉELLE
-                Cell timeCell = dataRow.createCell(1);
-                String timeSlot = getRealTimeSlot(assignment);
-                timeCell.setCellValue(timeSlot);
-                timeCell.setCellStyle(dataStyle);
-
-                // Durée calculée
-                Cell durationCell = dataRow.createCell(2);
-                durationCell.setCellValue(getDuration(assignment));
-                durationCell.setCellStyle(dataStyle);
-
-                // Matière
-                Cell subjectCell = dataRow.createCell(3);
-                subjectCell.setCellValue("Examen"); // À adapter selon vos données
-                subjectCell.setCellStyle(dataStyle);
-
-                // Salle
-                Cell roomCell = dataRow.createCell(4);
-                roomCell.setCellValue(assignment.getRoom());
-                roomCell.setCellStyle(dataStyle);
-
-                // Surveillants
-                Cell supervisorsCell = dataRow.createCell(5);
-                supervisorsCell.setCellValue("2"); // À adapter selon vos données
-                supervisorsCell.setCellStyle(dataStyle);
-            }
-        } else {
-            Row emptyRow = sheet.createRow(rowNum++);
-            Cell emptyCell = emptyRow.createCell(0);
-            emptyCell.setCellValue("Aucune responsabilité d'examen");
-            emptyCell.setCellStyle(dataStyle);
-            sheet.addMergedRegion(new CellRangeAddress(rowNum-1, rowNum-1, 0, 5));
-        }
-
-        // Ajuster les largeurs de colonnes
-        sheet.setColumnWidth(0, 4000);  // Date
-        sheet.setColumnWidth(1, 5000);  // Heure
-        sheet.setColumnWidth(2, 4000);  // Durée
-        sheet.setColumnWidth(3, 6000);  // Matière
-        sheet.setColumnWidth(4, 4000);  // Salle
-        sheet.setColumnWidth(5, 4000);  // Surveillants
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        workbook.write(outputStream);
-        workbook.close();
-
-        logger.info("Excel planning responsable généré avec succès pour: {}", teacherName);
-        return outputStream;
+        return generateResponsibleTeacherScheduleInternal(teacherData);
     }
 
     /**

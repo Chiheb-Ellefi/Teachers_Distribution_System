@@ -46,7 +46,7 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Format JSON invalide: champ examAssignments manquant");
             }
 
-            //  CHARGER TOUTES LES DONNÉES DES ENSEIGNANTS EN UNE FOIS
+            // ✅ CHARGER TOUTES LES DONNÉES DES ENSEIGNANTS EN UNE FOIS
             Map<Long, String> allGrades = teacherService.getAllGrades();
             Map<Long, String> allEmails = teacherService.getAllEmails();
             Map<Long, String> allNames = teacherService.getAllNames();
@@ -70,7 +70,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     *  MÉTHODE MODIFIÉE - Convertit avec enrichissement
+     * ✅ MÉTHODE MODIFIÉE - Convertit avec enrichissement
      */
     private List<TeacherAssignmentsDTO> convertToTeacherAssignments(
             List<Map<String, Object>> examAssignments,
@@ -104,7 +104,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     *  MÉTHODE MODIFIÉE - Enrichissement avec les maps
+     * ✅ MÉTHODE MODIFIÉE - Enrichissement avec les maps
      */
     private void addExamToTeacher(Map<Long, TeacherAssignmentsDTO> teacherMap,
                                   Map<String, Object> exam,
@@ -124,22 +124,22 @@ public class JsonDataLoaderService {
             TeacherAssignmentsDTO newTeacher = new TeacherAssignmentsDTO();
             newTeacher.setTeacherId(teacherId);
 
-            // Nom complet depuis la DB ou depuis le JSON
+            // ✅ Nom complet depuis la DB ou depuis le JSON
             String fullName = allNames.getOrDefault(teacherId, teacherName);
             newTeacher.setTeacherName(fullName);
 
             newTeacher.setAssignments(new ArrayList<>());
             newTeacher.setAssignedSupervisions(0);
 
-            //  GRADE depuis la DB
+            // ✅ GRADE depuis la DB
             String grade = allGrades.get(teacherId);
             newTeacher.setGrade(grade != null ? grade : "N/A");
 
-            //  EMAIL depuis la DB
+            // ✅ EMAIL depuis la DB
             String email = allEmails.get(teacherId);
             newTeacher.setEmail(email != null ? email : "N/A");
 
-            // QUOTA selon le grade (à adapter selon votre logique)
+            // ✅ QUOTA selon le grade (à adapter selon votre logique)
             newTeacher.setQuotaSupervisions(getQuotaByGrade(grade));
 
             newTeacher.setUtilizationPercentage(0.0);
@@ -175,7 +175,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     *  NOUVELLE MÉTHODE - Détermine le quota selon le grade
+     * ✅ NOUVELLE MÉTHODE - Détermine le quota selon le grade
      */
     private Integer getQuotaByGrade(String gradeCode) {
         if (gradeCode == null) return 10;
@@ -193,7 +193,7 @@ public class JsonDataLoaderService {
     }
 
     /**
-     *  MÉTHODE MODIFIÉE - Responsable avec enrichissement
+     * ✅ MÉTHODE MODIFIÉE - Responsable avec enrichissement
      */
     public TeacherAssignmentsDTO getResponsibleTeacherDataByName(String teacherName) {
         try {
@@ -217,7 +217,7 @@ public class JsonDataLoaderService {
                 throw new RuntimeException("Enseignant responsable non trouvé: " + teacherName);
             }
 
-            //  CHARGER LES DONNÉES
+            // ✅ CHARGER LES DONNÉES
             Map<Long, String> allGrades = teacherService.getAllGrades();
             Map<Long, String> allEmails = teacherService.getAllEmails();
             Map<Long, String> allNames = teacherService.getAllNames();
@@ -359,5 +359,99 @@ public class JsonDataLoaderService {
         if (value instanceof Integer) return (Integer) value;
         if (value instanceof Long) return ((Long) value).intValue();
         return null;
+    }
+
+    /**
+     * Récupère les données d'un enseignant par EMAIL
+     */
+    public TeacherAssignmentsDTO getTeacherDataByEmail(String teacherEmail) {
+        List<TeacherAssignmentsDTO> teachers = loadTeacherAssignments();
+        return teachers.stream()
+                .filter(teacher -> teacher.getEmail() != null &&
+                        teacher.getEmail().equalsIgnoreCase(teacherEmail.trim()))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Enseignant non trouvé avec l'email: " + teacherEmail));
+    }
+
+    /**
+     * Récupère les données d'un enseignant RESPONSABLE par EMAIL
+     */
+    public TeacherAssignmentsDTO getResponsibleTeacherDataByEmail(String teacherEmail) {
+        try {
+            File file = new File("data/assignments.json");
+            Map<String, Object> jsonMap = objectMapper.readValue(file, new TypeReference<Map<String, Object>>() {});
+            List<Map<String, Object>> examAssignments = (List<Map<String, Object>>) jsonMap.get("examAssignments");
+
+            if (examAssignments == null) {
+                throw new RuntimeException("Format JSON invalide: champ examAssignments manquant");
+            }
+
+            // ✅ Charger les données des enseignants
+            Map<Long, String> allGrades = teacherService.getAllGrades();
+            Map<Long, String> allEmails = teacherService.getAllEmails();
+            Map<Long, String> allNames = teacherService.getAllNames();
+
+            // Trouver le teacherId correspondant à l'email
+            Long targetTeacherId = null;
+            for (Map.Entry<Long, String> entry : allEmails.entrySet()) {
+                if (entry.getValue() != null && entry.getValue().equalsIgnoreCase(teacherEmail.trim())) {
+                    targetTeacherId = entry.getKey();
+                    break;
+                }
+            }
+
+            if (targetTeacherId == null) {
+                throw new RuntimeException("Aucun enseignant trouvé avec l'email: " + teacherEmail);
+            }
+
+            // Filtrer les examens où cet enseignant est propriétaire
+            final Long finalTeacherId = targetTeacherId;
+            List<Map<String, Object>> responsibleExams = examAssignments.stream()
+                    .filter(exam -> {
+                        Long ownerTeacherId = getLongValue(exam.get("ownerTeacherId"));
+                        return ownerTeacherId != null && ownerTeacherId.equals(finalTeacherId);
+                    })
+                    .collect(Collectors.toList());
+
+            if (responsibleExams.isEmpty()) {
+                throw new RuntimeException("Enseignant non responsable d'examens: " + teacherEmail);
+            }
+
+            // Convertir
+            Map<Long, TeacherAssignmentsDTO> teacherMap = new HashMap<>();
+            for (Map<String, Object> exam : responsibleExams) {
+                Long ownerTeacherId = getLongValue(exam.get("ownerTeacherId"));
+                String ownerTeacherName = (String) exam.get("ownerTeacherName");
+                addExamToTeacher(teacherMap, exam, ownerTeacherId, ownerTeacherName, "responsible",
+                        allGrades, allEmails, allNames);
+            }
+
+            TeacherAssignmentsDTO responsibleTeacher = teacherMap.values().iterator().next();
+            logger.info("Données responsable chargées pour email {}: {} examens",
+                    teacherEmail, responsibleTeacher.getAssignments().size());
+            return responsibleTeacher;
+
+        } catch (IOException e) {
+            logger.error("Erreur lors du chargement des données responsable par email", e);
+            throw new RuntimeException("Erreur: " + e.getMessage(), e);
+        }
+    }
+    /**
+     * Récupère la liste de tous les emails des enseignants
+     */
+    public List<String> getAllTeacherEmails() {
+        try {
+            List<TeacherAssignmentsDTO> teachers = loadTeacherAssignments();
+            return teachers.stream()
+                    .map(TeacherAssignmentsDTO::getEmail)
+                    .filter(Objects::nonNull)
+                    .filter(email -> !email.isEmpty() && !email.equals("N/A"))
+                    .distinct()
+                    .sorted()
+                    .collect(Collectors.toList());
+        } catch (Exception e) {
+            logger.error("Erreur lors de la récupération de la liste des emails", e);
+            throw new RuntimeException("Erreur lors de la récupération des emails: " + e.getMessage(), e);
+        }
     }
 }

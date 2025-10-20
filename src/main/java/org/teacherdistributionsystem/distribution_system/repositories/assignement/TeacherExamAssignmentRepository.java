@@ -47,7 +47,6 @@ public interface TeacherExamAssignmentRepository extends JpaRepository<TeacherEx
     WHERE t.teacherId = :teacherId 
       AND t.examDay = :examDay 
       AND t.seance = :seance 
-      AND t.isActive = true
 """)
     Long findAssignmentIdByTeacherAndDayAndSeance(
             @Param("teacherId") Long teacherId,

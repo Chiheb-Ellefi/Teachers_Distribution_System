@@ -105,6 +105,17 @@ public class TeacherController {
         return ResponseEntity.ok(teachers);
     }
 
+    @GetMapping("/by-email")
+    public ResponseEntity<Long> getTeacherIdByEmail(
+            @RequestParam String email) {
+
+        if (email == null ) {
+            throw new InvalidSearchParameterException("Request parameter invalid"," Email cannot be null or empty");
+        }
+        Long teacherId = teacherService.getTeacherIDbyEmail(email);
+        return ResponseEntity.ok(teacherId);
+    }
+
 
 
 }

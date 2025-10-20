@@ -183,4 +183,9 @@ public class TeacherService {
   public   TeacherDto getTeacherById(Long teacherId) {
         return TeacherMapper.toTeacherDto(teacherRepository.findById(teacherId).orElseThrow(EntityNotFoundException::new));
     }
+
+    public Long getTeacherIDbyEmail(String email) {
+        Teacher foundedTeacher=teacherRepository.getTeacherByEmail(email);
+        return foundedTeacher.getId();
+    }
 }
