@@ -260,7 +260,7 @@ public class AssignmentConstraintConfig {
         // Optimization preferences
         config.setOptimizeConflictAvoidance(true);
         config.setConflictAvoidancePenalty(1);
-        config.setUnavailabilityViolationPenalty(1000);            // Heavy penalty for breaching unavailability
+        config.setUnavailabilityViolationPenalty(1000);            // Heavy penalty for breaching unavailabili
 
         return config;
     }
