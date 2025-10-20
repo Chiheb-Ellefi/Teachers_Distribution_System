@@ -104,7 +104,7 @@ public class AssignmentController {
             @PathVariable Long sessionId,
             @RequestBody AssignmentConstraintConfig config) {
 
-        DeferredResult<ResponseEntity<Object>> deferredResult = new DeferredResult<>(15000L);
+        DeferredResult<ResponseEntity<Object>> deferredResult = new DeferredResult<>(40000L);
 
         try {
             assignmentAlgorithmService.executeAssignmentWithConfig(sessionId, config)
