@@ -41,4 +41,19 @@ public interface TeacherExamAssignmentRepository extends JpaRepository<TeacherEx
             nativeQuery = true)
     List<AssignmentDetailsProjection> getAllBySession(@Param("sessionId") Long sessionId);
 
+    @Query("""
+    SELECT t.id 
+    FROM TeacherExamAssignment t 
+    WHERE t.teacherId = :teacherId 
+      AND t.examDay = :examDay 
+      AND t.seance = :seance 
+      AND t.isActive = true
+""")
+    Long findAssignmentIdByTeacherAndDayAndSeance(
+            @Param("teacherId") Long teacherId,
+            @Param("examDay") Integer examDay,
+            @Param("seance") Integer seance
+    );
+
+
 }

@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public  class SwapRequest {
-    private Long assignmentId1;
-    private Long assignmentId2;
+    private TeacherSwapRequest teacher1;
+    private TeacherSwapRequest teacher2;
 
 
 }

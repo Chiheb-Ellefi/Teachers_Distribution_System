@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.teacherdistributionsystem.distribution_system.entities.assignment.TeacherExamAssignment;
 import org.teacherdistributionsystem.distribution_system.models.requests.SwapRequest;
+import org.teacherdistributionsystem.distribution_system.models.requests.TeacherSwapRequest;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResponse;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.SwapResult;
 import org.teacherdistributionsystem.distribution_system.models.responses.assignment.ValidationResponse;
@@ -30,31 +31,36 @@ public class AssignmentSwapController {
     @PostMapping("/swap")
     public ResponseEntity<SwapResponse> swapAssignments(@RequestBody SwapRequest request) {
         try {
+            TeacherSwapRequest t1 = request.getTeacher1();
+            TeacherSwapRequest t2 = request.getTeacher2();
 
-            if (request.getAssignmentId1() == null || request.getAssignmentId2() == null) {
-                return ResponseEntity.badRequest()
-                        .body(SwapResponse.error("Both assignment IDs are required"));
-            }
+            Long assignmentId1 = assignmentPersistenceService.getAssignmentIdByTeacherDayAndSeance(
+                    t1.getTeacherId(), t1.getDay(), t1.getSeance()
+            );
+            Long assignmentId2 = assignmentPersistenceService.getAssignmentIdByTeacherDayAndSeance(
+                    t2.getTeacherId(), t2.getDay(), t2.getSeance()
+            );
 
-            if (request.getAssignmentId1().equals(request.getAssignmentId2())) {
+            if (assignmentId1.equals(assignmentId2)) {
                 return ResponseEntity.badRequest()
                         .body(SwapResponse.error("Cannot swap an assignment with itself"));
             }
 
 
+
             SwapResult result = swapService.swapAssignments(
-                    request.getAssignmentId1(),
-                    request.getAssignmentId2()
+                    assignmentId1,
+                   assignmentId2
             );
 
             if (result.isSuccess()) {
 
 
                 //----------------------------------------------------------------------------sendEmail---------------------------------
-                TeacherExamAssignment newAssignment1 = assignmentPersistenceService.getAssignmentById(request.getAssignmentId1());
-                TeacherExamAssignment newAssignment2 = assignmentPersistenceService.getAssignmentById(request.getAssignmentId2());
-                String email1=teacherService.getTeacherById(request.getAssignmentId1()).getEmail();
-                String email2=teacherService.getTeacherById(request.getAssignmentId2()).getEmail();
+                TeacherExamAssignment newAssignment1 = assignmentPersistenceService.getAssignmentById(assignmentId1);
+                TeacherExamAssignment newAssignment2 = assignmentPersistenceService.getAssignmentById(assignmentId2);
+                String email1=teacherService.getTeacherById(assignmentId1).getEmail();
+                String email2=teacherService.getTeacherById(assignmentId2).getEmail();
                 //sendEmail(newAssignment,1email1,,newAssignment2,email2)
 
 

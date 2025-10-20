@@ -241,4 +241,14 @@ public class AssignmentPersistenceService {
     public TeacherExamAssignment getAssignmentById(Long id) {
         return assignmentRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
+
+    public Long getAssignmentIdByTeacherDayAndSeance(Long teacherId, Integer day, Integer seance) {
+        Long assignmentId = assignmentRepository.findAssignmentIdByTeacherAndDayAndSeance(teacherId, day, seance);
+        if (assignmentId == null) {
+            throw new IllegalArgumentException(
+                    String.format("No assignment found for teacher %d on day %d, seance %d", teacherId, day, seance)
+            );
+        }
+        return assignmentId;
+    }
 }
