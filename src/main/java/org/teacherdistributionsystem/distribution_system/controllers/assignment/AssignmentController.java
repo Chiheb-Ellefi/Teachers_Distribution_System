@@ -197,7 +197,7 @@ public class AssignmentController {
     }
 
 
-    private void cleanUp(Long sessionId) {
+    /*private void cleanUp(Long sessionId) {
         examService.clearAllExams(sessionId);
         teacherQuotaService.clearAllQuotas(sessionId);
         quotaPerGradeService.clearAllQuotasPerGrade();
@@ -205,11 +205,11 @@ public class AssignmentController {
         teacherUnavailabilityService.cleanUp();
         teacherService.clearAllTeachers();
 
-    }
+    }*/
 
     @PostMapping("/{sessionId}/cleanup")
     public ResponseEntity<Void> cleanUpDB(@PathVariable Long sessionId) {
-        cleanUp(sessionId);
+       assignmentPersistenceService.cleanUp();
         return ResponseEntity.noContent().build();
     }
 

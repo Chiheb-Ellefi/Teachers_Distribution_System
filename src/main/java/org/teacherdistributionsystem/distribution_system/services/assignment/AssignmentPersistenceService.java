@@ -36,6 +36,7 @@ public class AssignmentPersistenceService {
     private final AssignmentSessionRepository sessionRepository;
     private final TeacherRepository teacherRepository;
     private final TeacherService teacherService;
+    private final AssignmentSessionRepository assignmentSessionRepository;
 
 
     @Transactional
@@ -251,4 +252,9 @@ public class AssignmentPersistenceService {
         }
         return assignmentId;
     }
+
+    public void cleanUp() {
+         assignmentSessionRepository.truncateAllTables();
+    }
+
 }

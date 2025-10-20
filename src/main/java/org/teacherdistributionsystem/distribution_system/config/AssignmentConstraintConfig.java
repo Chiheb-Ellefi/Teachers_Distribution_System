@@ -250,15 +250,14 @@ public class AssignmentConstraintConfig {
         // YOUR TOP PRIORITIES - HARD
         config.setEqualAssignmentMode(ConstraintMode.HARD);        // ✓ Perfect equality for same grade
 
-
         // CAN BE BREACHED - Will be relaxed if needed
         config.setUnavailabilityMode(ConstraintMode.HARD);         // ✓ Respect unavailability (relaxable)
 
         // NICE TO HAVE - SOFT
-        config.setOwnerPresenceMode(ConstraintMode.SOFT);          // Prefer owner presence
+        config.setOwnerPresenceMode(ConstraintMode.HARD);          // Prefer owner presence
         config.setOwnerPresencePenalty(5);
         config.setNoGapsMode(ConstraintMode.DISABLED);                 // ✓ No gaps in schedule
-        config.setNoGapsSkipUnavailableTeachers(false);             // Skip teachers with unavailability
+        config.setNoGapsSkipUnavailableTeachers(true);             // Skip teachers with unavailability
         // Optimization preferences
         config.setOptimizeConflictAvoidance(true);
         config.setConflictAvoidancePenalty(1);
@@ -273,11 +272,29 @@ public class AssignmentConstraintConfig {
      */
     public static AssignmentConstraintConfig strictConfig() {
         AssignmentConstraintConfig config = new AssignmentConstraintConfig();
-        config.setOwnerPresenceMode(ConstraintMode.HARD);
-        config.setNoGapsMode(ConstraintMode.HARD);
-        config.setNoGapsSkipUnavailableTeachers(true);
+        // CRITICAL REQUIREMENTS - HARD (cannot be violated)
+        config.setExamCoverageMode(ConstraintMode.HARD);
+        config.setParticipationMode(ConstraintMode.HARD);
+        config.setOwnershipExclusionMode(ConstraintMode.HARD);
+        config.setQuotaLimitMode(ConstraintMode.HARD);
+        config.setTimeConflictMode(ConstraintMode.HARD);
+
+        // YOUR TOP PRIORITIES - HARD
         config.setEqualAssignmentMode(ConstraintMode.HARD);
-        config.setEqualAssignmentPenalty(10);
+
+
+        // CAN BE BREACHED - Will be relaxed if needed
+        config.setUnavailabilityMode(ConstraintMode.HARD);
+
+        // NICE TO HAVE - SOFT
+        config.setOwnerPresenceMode(ConstraintMode.HARD);
+        config.setOwnerPresencePenalty(5);
+        config.setNoGapsMode(ConstraintMode.SOFT);
+        config.setNoGapsSkipUnavailableTeachers(true);
+        // Optimization preferences
+        config.setOptimizeConflictAvoidance(true);
+        config.setConflictAvoidancePenalty(1);
+        config.setUnavailabilityViolationPenalty(1000);
 
         return config;
     }
@@ -288,9 +305,30 @@ public class AssignmentConstraintConfig {
      */
     public static AssignmentConstraintConfig relaxedConfig() {
         AssignmentConstraintConfig config = new AssignmentConstraintConfig();
+        // CRITICAL REQUIREMENTS - HARD (cannot be violated)
+        config.setExamCoverageMode(ConstraintMode.HARD);
+        config.setParticipationMode(ConstraintMode.HARD);
+        config.setOwnershipExclusionMode(ConstraintMode.HARD);
+        config.setQuotaLimitMode(ConstraintMode.HARD);
+        config.setTimeConflictMode(ConstraintMode.HARD);
+
+        // YOUR TOP PRIORITIES - HARD
+        config.setEqualAssignmentMode(ConstraintMode.HARD);
+
+
+        // CAN BE BREACHED - Will be relaxed if needed
+        config.setUnavailabilityMode(ConstraintMode.SOFT);
+
+        // NICE TO HAVE - SOFT
         config.setOwnerPresenceMode(ConstraintMode.SOFT);
-        config.setNoGapsMode(ConstraintMode.DISABLED);
-        config.setEqualAssignmentMode(ConstraintMode.DISABLED);
+        config.setOwnerPresencePenalty(5);
+        config.setNoGapsMode(ConstraintMode.SOFT);
+        config.setNoGapsSkipUnavailableTeachers(true);
+        // Optimization preferences
+        config.setOptimizeConflictAvoidance(true);
+        config.setConflictAvoidancePenalty(1);
+        config.setUnavailabilityViolationPenalty(1000);
+
         return config;
     }
 
@@ -300,12 +338,27 @@ public class AssignmentConstraintConfig {
      */
     public static AssignmentConstraintConfig fairnessOptimizedConfig() {
         AssignmentConstraintConfig config = new AssignmentConstraintConfig();
-        config.setOwnerPresenceMode(ConstraintMode.SOFT);
-        config.setOwnerPresencePenalty(10);
-        config.setNoGapsMode(ConstraintMode.SOFT);
-        config.setNoGapsPenalty(5);
-        config.setEqualAssignmentMode(ConstraintMode.SOFT);
-        config.setEqualAssignmentPenalty(15);
+        // CRITICAL REQUIREMENTS - HARD (cannot be violated)
+        config.setExamCoverageMode(ConstraintMode.HARD);
+        config.setParticipationMode(ConstraintMode.HARD);
+        config.setOwnershipExclusionMode(ConstraintMode.HARD);
+        config.setQuotaLimitMode(ConstraintMode.HARD);
+        config.setTimeConflictMode(ConstraintMode.HARD);
+
+        // YOUR TOP PRIORITIES - HARD
+        config.setEqualAssignmentMode(ConstraintMode.HARD);
+
+        // CAN BE BREACHED - Will be relaxed if needed
+        config.setUnavailabilityMode(ConstraintMode.HARD);
+        // NICE TO HAVE - SOFT
+        config.setOwnerPresenceMode(ConstraintMode.DISABLED);
+        config.setNoGapsMode(ConstraintMode.HARD);
+        config.setNoGapsSkipUnavailableTeachers(true);
+        // Optimization preferences
+        config.setOptimizeConflictAvoidance(true);
+        config.setConflictAvoidancePenalty(1);
+        config.setUnavailabilityViolationPenalty(1000);
+
         return config;
     }
 }
